@@ -1,0 +1,4998 @@
+[
+  {
+    "id": "E101",
+    "phase": "expansion",
+    "category": "unclear-instructions",
+    "lesson": 1,
+    "step": 2,
+    "learningGoal": {
+      "en": "Paint a backdrop on the Stage",
+      "zh": "在舞台上画背景"
+    },
+    "input": {
+      "lang": "en",
+      "text": "what is a backdrop and where do i paint it",
+      "hintLevelSeen": 0,
+      "attempts": 1
+    },
+    "expected": {
+      "behaviors": [
+        "Explains the Stage has backdrops and where the Backdrops tab is"
+      ],
+      "mustMentionAny": [
+        [
+          "stage",
+          "舞台"
+        ],
+        [
+          "backdrop",
+          "背景"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E102",
+    "phase": "expansion",
+    "category": "unclear-instructions",
+    "lesson": 1,
+    "step": 3,
+    "learningGoal": {
+      "en": "Put the green flag script on Hero",
+      "zh": "把绿旗脚本放在 Hero 上"
+    },
+    "input": {
+      "lang": "zh",
+      "text": "绿旗是什么？我要把积木放到哪里",
+      "hintLevelSeen": 0,
+      "attempts": 1
+    },
+    "expected": {
+      "behaviors": [
+        "Says the script goes on Hero",
+        "Explains the green flag starts the game"
+      ],
+      "mustMentionAny": [
+        [
+          "hero"
+        ],
+        [
+          "绿旗",
+          "green flag"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E103",
+    "phase": "expansion",
+    "category": "unclear-instructions",
+    "lesson": 3,
+    "step": 1,
+    "learningGoal": {
+      "en": "Paint a new sprite",
+      "zh": "绘制一个新角色"
+    },
+    "input": {
+      "lang": "en",
+      "text": "how do i make a new sprite that i draw myself",
+      "hintLevelSeen": 0,
+      "attempts": 1
+    },
+    "expected": {
+      "behaviors": [
+        "Points to Choose a Sprite → Paint"
+      ],
+      "mustMentionAny": [
+        [
+          "paint",
+          "绘制",
+          "画笔",
+          "paintbrush"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E104",
+    "phase": "expansion",
+    "category": "unclear-instructions",
+    "lesson": 4,
+    "step": 1,
+    "learningGoal": {
+      "en": "Variables for all sprites",
+      "zh": "适用于所有角色的变量"
+    },
+    "input": {
+      "lang": "zh",
+      "text": "什么叫适用于所有角色",
+      "hintLevelSeen": 0,
+      "attempts": 1
+    },
+    "expected": {
+      "behaviors": [
+        "Explains one shared box every sprite can use"
+      ],
+      "mustMentionAny": [
+        [
+          "适用于所有角色",
+          "for all sprites"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E105",
+    "phase": "expansion",
+    "category": "unclear-instructions",
+    "lesson": 5,
+    "step": 3,
+    "learningGoal": {
+      "en": "Find the x position reporter",
+      "zh": "找到“x 坐标”积木"
+    },
+    "input": {
+      "lang": "en",
+      "text": "i dont get what the x position block is, where is it",
+      "hintLevelSeen": 1,
+      "attempts": 2
+    },
+    "expected": {
+      "behaviors": [
+        "Says it is a round block at the bottom of Motion"
+      ],
+      "mustMentionAny": [
+        [
+          "motion",
+          "运动"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E106",
+    "phase": "expansion",
+    "category": "unclear-instructions",
+    "lesson": 6,
+    "step": 1,
+    "learningGoal": {
+      "en": "Broadcast sends a message",
+      "zh": "广播是发送一条消息"
+    },
+    "input": {
+      "lang": "en",
+      "text": "what is broadcast? like tv?",
+      "hintLevelSeen": 0,
+      "attempts": 1
+    },
+    "expected": {
+      "behaviors": [
+        "Explains broadcast as a message that other sprites can receive"
+      ],
+      "mustMentionAny": [
+        [
+          "message",
+          "消息"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E107",
+    "phase": "expansion",
+    "category": "unclear-instructions",
+    "lesson": 7,
+    "step": 1,
+    "learningGoal": {
+      "en": "Find the Sounds tab",
+      "zh": "找到声音标签页"
+    },
+    "input": {
+      "lang": "zh",
+      "text": "声音标签页在哪里",
+      "hintLevelSeen": 0,
+      "attempts": 1
+    },
+    "expected": {
+      "behaviors": [
+        "Says each sprite has a Sounds tab next to Code and Costumes"
+      ],
+      "mustMentionAny": [
+        [
+          "声音",
+          "sounds"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E108",
+    "phase": "expansion",
+    "category": "unclear-instructions",
+    "lesson": 8,
+    "step": 3,
+    "learningGoal": {
+      "en": "Save a .sb3 file",
+      "zh": "保存 .sb3 文件"
+    },
+    "input": {
+      "lang": "en",
+      "text": "what is an sb3 file?",
+      "hintLevelSeen": 0,
+      "attempts": 1
+    },
+    "expected": {
+      "behaviors": [
+        "Explains it is the saved Scratch project file"
+      ],
+      "mustMentionAny": [
+        [
+          "save",
+          "保存"
+        ],
+        [
+          "file",
+          "文件"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E109",
+    "phase": "expansion",
+    "category": "unclear-instructions",
+    "lesson": 9,
+    "step": 1,
+    "learningGoal": {
+      "en": "Walls in one solid color",
+      "zh": "墙用同一种纯色"
+    },
+    "input": {
+      "lang": "en",
+      "text": "what does one solid colour mean for the walls",
+      "hintLevelSeen": 0,
+      "attempts": 1
+    },
+    "expected": {
+      "behaviors": [
+        "Explains one color with no gradient so touching color can find it"
+      ],
+      "mustMentionAny": [
+        [
+          "color",
+          "colour",
+          "颜色"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E110",
+    "phase": "expansion",
+    "category": "unclear-instructions",
+    "lesson": 10,
+    "step": 2,
+    "learningGoal": {
+      "en": "Pick random for the start x",
+      "zh": "用随机数决定起点 x"
+    },
+    "input": {
+      "lang": "zh",
+      "text": "随机数是什么意思",
+      "hintLevelSeen": 1,
+      "attempts": 1
+    },
+    "expected": {
+      "behaviors": [
+        "Explains Scratch picks a different number each time"
+      ],
+      "mustMentionAny": [
+        [
+          "随机",
+          "random"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E111",
+    "phase": "expansion",
+    "category": "unclear-instructions",
+    "lesson": 11,
+    "step": 1,
+    "learningGoal": {
+      "en": "Broadcast Start begins everyone",
+      "zh": "广播 Start 让大家一起开始"
+    },
+    "input": {
+      "lang": "en",
+      "text": "what does broadcast start even do, i dont get it",
+      "hintLevelSeen": 0,
+      "attempts": 1
+    },
+    "expected": {
+      "behaviors": [
+        "Explains the Stage sends Start and sprites with when I receive [Start] begin"
+      ],
+      "mustMentionAny": [
+        [
+          "start"
+        ],
+        [
+          "message",
+          "消息",
+          "receive",
+          "接收"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E112",
+    "phase": "expansion",
+    "category": "unclear-instructions",
+    "lesson": 12,
+    "step": 1,
+    "learningGoal": {
+      "en": "Why practise on planted bugs",
+      "zh": "为什么要在藏好的 bug 上练习"
+    },
+    "input": {
+      "lang": "zh",
+      "text": "为什么要我照着搭错的代码？看不懂",
+      "hintLevelSeen": 0,
+      "attempts": 1
+    },
+    "expected": {
+      "behaviors": [
+        "Explains the bugs are a puzzle to practise finding"
+      ],
+      "mustMentionAny": [
+        [
+          "bug",
+          "错"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E113",
+    "phase": "expansion",
+    "category": "unclear-instructions",
+    "lesson": 11,
+    "step": 3,
+    "learningGoal": {
+      "en": "If on edge, bounce",
+      "zh": "碰到边缘就反弹"
+    },
+    "input": {
+      "lang": "en",
+      "text": "what is if on edge bounce? does it jump?",
+      "hintLevelSeen": 0,
+      "attempts": 1
+    },
+    "expected": {
+      "behaviors": [
+        "Explains the sprite turns around at the stage edge"
+      ],
+      "mustMentionAny": [
+        [
+          "edge",
+          "边缘"
+        ],
+        [
+          "bounce",
+          "反弹",
+          "turn"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E114",
+    "phase": "expansion",
+    "category": "block-order",
+    "lesson": 2,
+    "step": 2,
+    "learningGoal": {
+      "en": "Ifs go inside forever",
+      "zh": "“如果”要放进“重复执行”里"
+    },
+    "input": {
+      "lang": "en",
+      "text": "i put the forever under the if and now it only checks once",
+      "hintLevelSeen": 1,
+      "attempts": 2
+    },
+    "expected": {
+      "behaviors": [
+        "Says the ifs must be inside the forever loop"
+      ],
+      "mustMentionAny": [
+        [
+          "inside",
+          "里面"
+        ],
+        [
+          "forever",
+          "重复执行"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0,
+      "problemRef": "Hero doesn't move when I press an arrow, or moves one tiny step and stops."
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E115",
+    "phase": "expansion",
+    "category": "block-order",
+    "lesson": 4,
+    "step": 2,
+    "learningGoal": {
+      "en": "Hide comes after the point",
+      "zh": "加分之后才隐藏"
+    },
+    "input": {
+      "lang": "en",
+      "text": "i put hide before wait until and the coin disappears at the start",
+      "hintLevelSeen": 1,
+      "attempts": 2
+    },
+    "expected": {
+      "behaviors": [
+        "Says hide must come after the point is added"
+      ],
+      "mustMentionAny": [
+        [
+          "hide",
+          "隐藏"
+        ],
+        [
+          "after",
+          "under",
+          "下面",
+          "后"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0,
+      "problemRef": "A coin disappears as soon as the game starts."
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E116",
+    "phase": "expansion",
+    "category": "block-order",
+    "lesson": 4,
+    "step": 2,
+    "learningGoal": {
+      "en": "Show at the top of the coin script",
+      "zh": "金币脚本顶部要显示"
+    },
+    "input": {
+      "lang": "zh",
+      "text": "我把显示放在最后了，金币一开始看不见",
+      "hintLevelSeen": 1,
+      "attempts": 2
+    },
+    "expected": {
+      "behaviors": [
+        "Says show goes at the top of the coin's green flag script"
+      ],
+      "mustMentionAny": [
+        [
+          "显示",
+          "show"
+        ],
+        [
+          "上面",
+          "最上面",
+          "top",
+          "顶部"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0,
+      "problemRef": "A coin disappears as soon as the game starts."
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E117",
+    "phase": "expansion",
+    "category": "block-order",
+    "lesson": 5,
+    "step": 3,
+    "learningGoal": {
+      "en": "Record the checkpoint after touching",
+      "zh": "碰到之后才记录检查点"
+    },
+    "input": {
+      "lang": "en",
+      "text": "i set checkpoint x before the wait until so it saves the spot at the start",
+      "hintLevelSeen": 1,
+      "attempts": 2
+    },
+    "expected": {
+      "behaviors": [
+        "Says the set blocks go after wait until <touching (Hero)?>"
+      ],
+      "mustMentionAny": [
+        [
+          "after",
+          "under",
+          "下面"
+        ],
+        [
+          "wait until",
+          "等待"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0,
+      "problemRef": "The checkpoint saves its spot before Hero touches it."
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E118",
+    "phase": "expansion",
+    "category": "block-order",
+    "lesson": 6,
+    "step": 2,
+    "learningGoal": {
+      "en": "Banner: hide at start, show on message",
+      "zh": "横幅开局隐藏，收到消息显示"
+    },
+    "input": {
+      "lang": "en",
+      "text": "the banner shows then hides right away when i win",
+      "hintLevelSeen": 1,
+      "attempts": 2
+    },
+    "expected": {
+      "behaviors": [
+        "Says hide belongs under the green flag, show under when I receive"
+      ],
+      "mustMentionAny": [
+        [
+          "hide",
+          "隐藏"
+        ],
+        [
+          "green flag",
+          "绿旗",
+          "receive",
+          "接收"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E119",
+    "phase": "expansion",
+    "category": "block-order",
+    "lesson": 6,
+    "step": 3,
+    "learningGoal": {
+      "en": "Stop other scripts first",
+      "zh": "先停止其他脚本"
+    },
+    "input": {
+      "lang": "zh",
+      "text": "我把停止该角色的其他脚本放在说的后面，赢了以后还能动两秒",
+      "hintLevelSeen": 1,
+      "attempts": 2
+    },
+    "expected": {
+      "behaviors": [
+        "Says to put stop first, then say"
+      ],
+      "mustMentionAny": [
+        [
+          "停止",
+          "stop"
+        ],
+        [
+          "前面",
+          "上面",
+          "first",
+          "先"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E120",
+    "phase": "expansion",
+    "category": "block-order",
+    "lesson": 9,
+    "step": 2,
+    "learningGoal": {
+      "en": "Countdown before the loop",
+      "zh": "倒数要在循环前面"
+    },
+    "input": {
+      "lang": "en",
+      "text": "i put the repeat until loop above the countdown and now it says ready after i escape",
+      "hintLevelSeen": 1,
+      "attempts": 2
+    },
+    "expected": {
+      "behaviors": [
+        "Says the say blocks must come before the loop"
+      ],
+      "mustMentionAny": [
+        [
+          "order",
+          "top",
+          "above",
+          "before",
+          "顺序",
+          "上面"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E121",
+    "phase": "expansion",
+    "category": "block-order",
+    "lesson": 10,
+    "step": 1,
+    "learningGoal": {
+      "en": "Game Over after the loop",
+      "zh": "Game Over 放在循环之后"
+    },
+    "input": {
+      "lang": "en",
+      "text": "the game over backdrop comes first and then nothing works",
+      "hintLevelSeen": 1,
+      "attempts": 2
+    },
+    "expected": {
+      "behaviors": [
+        "Says switch backdrop to Game Over goes under the loop"
+      ],
+      "mustMentionAny": [
+        [
+          "after",
+          "under",
+          "loop",
+          "下面",
+          "循环"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E122",
+    "phase": "expansion",
+    "category": "block-order",
+    "lesson": 10,
+    "step": 2,
+    "learningGoal": {
+      "en": "Catch check after the fall",
+      "zh": "下落之后才检查是否接住"
+    },
+    "input": {
+      "lang": "zh",
+      "text": "我把“如果碰到篮子”放在下落循环的上面，结果从来不加分",
+      "hintLevelSeen": 1,
+      "attempts": 2
+    },
+    "expected": {
+      "behaviors": [
+        "Says the if goes under the repeat until loop"
+      ],
+      "mustMentionAny": [
+        [
+          "下面",
+          "after",
+          "under"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E123",
+    "phase": "expansion",
+    "category": "block-order",
+    "lesson": 11,
+    "step": 1,
+    "learningGoal": {
+      "en": "Broadcast Start before the countdown",
+      "zh": "倒计时前先广播 Start"
+    },
+    "input": {
+      "lang": "en",
+      "text": "the timer goes down but enemies never start, i put broadcast at the end",
+      "hintLevelSeen": 1,
+      "attempts": 2
+    },
+    "expected": {
+      "behaviors": [
+        "Says broadcast Start must come before the countdown loop"
+      ],
+      "mustMentionAny": [
+        [
+          "broadcast",
+          "广播"
+        ],
+        [
+          "before",
+          "first",
+          "先",
+          "前"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E124",
+    "phase": "expansion",
+    "category": "block-order",
+    "lesson": 11,
+    "step": 2,
+    "learningGoal": {
+      "en": "Caught backdrop after the loop",
+      "zh": "Caught 背景放在循环之后"
+    },
+    "input": {
+      "lang": "zh",
+      "text": "我把换成 Caught 背景放在循环里面了，一开始就显示被抓",
+      "hintLevelSeen": 1,
+      "attempts": 2
+    },
+    "expected": {
+      "behaviors": [
+        "Says it goes under the loop, not inside"
+      ],
+      "mustMentionAny": [
+        [
+          "下面",
+          "after",
+          "循环",
+          "under"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E125",
+    "phase": "expansion",
+    "category": "block-order",
+    "lesson": 12,
+    "step": 3,
+    "learningGoal": {
+      "en": "Score inside the catch check",
+      "zh": "加分放在接住判断里"
+    },
+    "input": {
+      "lang": "en",
+      "text": "i moved the change score but put it above the repeat until again",
+      "hintLevelSeen": 2,
+      "attempts": 3
+    },
+    "expected": {
+      "behaviors": [
+        "The child has seen hints 1–2, so this step's block order may be shown"
+      ],
+      "mustMentionAny": [
+        [
+          "under",
+          "after",
+          "下面",
+          "below",
+          "if <touching (cat)?>"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 7
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E126",
+    "phase": "expansion",
+    "category": "block-order",
+    "lesson": 1,
+    "step": 3,
+    "learningGoal": {
+      "en": "Order inside the green flag script",
+      "zh": "绿旗脚本里的顺序"
+    },
+    "input": {
+      "lang": "zh",
+      "text": "我的点绿旗之后 Hero 先转方向再回家，我想让它先回家",
+      "hintLevelSeen": 1,
+      "attempts": 1
+    },
+    "expected": {
+      "behaviors": [
+        "Says swap the two blocks: go to first, then point in direction"
+      ],
+      "mustMentionAny": [
+        [
+          "顺序",
+          "上面",
+          "下面",
+          "order",
+          "先"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E127",
+    "phase": "expansion",
+    "category": "wrong-sprite",
+    "lesson": 2,
+    "step": 2,
+    "learningGoal": {
+      "en": "Motion blocks are on sprites, not the Stage",
+      "zh": "运动积木只在角色上"
+    },
+    "input": {
+      "lang": "en",
+      "text": "i cant find the motion blocks, i clicked the stage",
+      "hintLevelSeen": 0,
+      "attempts": 1
+    },
+    "expected": {
+      "behaviors": [
+        "Says the Stage cannot move; click Hero"
+      ],
+      "mustMentionAny": [
+        [
+          "hero"
+        ],
+        [
+          "stage",
+          "舞台"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E128",
+    "phase": "expansion",
+    "category": "wrong-sprite",
+    "lesson": 4,
+    "step": 2,
+    "learningGoal": {
+      "en": "Coin script belongs on Coin",
+      "zh": "金币脚本放在 Coin 上"
+    },
+    "input": {
+      "lang": "zh",
+      "text": "我把金币的脚本放在 Hero 上了，Hero 一开始就消失",
+      "hintLevelSeen": 1,
+      "attempts": 2
+    },
+    "expected": {
+      "behaviors": [
+        "Says to move the script onto the Coin sprite"
+      ],
+      "mustMentionAny": [
+        [
+          "coin",
+          "金币"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E129",
+    "phase": "expansion",
+    "category": "wrong-sprite",
+    "lesson": 5,
+    "step": 3,
+    "learningGoal": {
+      "en": "Checkpoint script on the Checkpoint sprite",
+      "zh": "检查点脚本放在 Checkpoint 上"
+    },
+    "input": {
+      "lang": "en",
+      "text": "my checkpoint script is on the stage and there is no x position block",
+      "hintLevelSeen": 1,
+      "attempts": 2
+    },
+    "expected": {
+      "behaviors": [
+        "Says the Stage has no x position; use the Checkpoint sprite"
+      ],
+      "mustMentionAny": [
+        [
+          "checkpoint"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E130",
+    "phase": "expansion",
+    "category": "wrong-sprite",
+    "lesson": 6,
+    "step": 2,
+    "learningGoal": {
+      "en": "Receivers on Win Banner",
+      "zh": "接收脚本放在 Win Banner 上"
+    },
+    "input": {
+      "lang": "en",
+      "text": "i put when i receive you win on the goal sprite and the goal shows up big",
+      "hintLevelSeen": 1,
+      "attempts": 2
+    },
+    "expected": {
+      "behaviors": [
+        "Says that script belongs on Win Banner"
+      ],
+      "mustMentionAny": [
+        [
+          "win banner",
+          "banner",
+          "横幅"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E131",
+    "phase": "expansion",
+    "category": "wrong-sprite",
+    "lesson": 6,
+    "step": 3,
+    "learningGoal": {
+      "en": "Stop scripts on Hero",
+      "zh": "在 Hero 上停止脚本"
+    },
+    "input": {
+      "lang": "zh",
+      "text": "我把停止该角色的其他脚本放在 Win Banner 上，Hero 还是能动",
+      "hintLevelSeen": 1,
+      "attempts": 2
+    },
+    "expected": {
+      "behaviors": [
+        "Says it must be on Hero"
+      ],
+      "mustMentionAny": [
+        [
+          "hero"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0,
+      "problemRef": "Hero can still move after winning."
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E132",
+    "phase": "expansion",
+    "category": "wrong-sprite",
+    "lesson": 7,
+    "step": 1,
+    "learningGoal": {
+      "en": "Each sprite has its own sounds",
+      "zh": "每个角色有自己的声音"
+    },
+    "input": {
+      "lang": "en",
+      "text": "the coin sound isnt in the menu when im on hero",
+      "hintLevelSeen": 0,
+      "attempts": 1
+    },
+    "expected": {
+      "behaviors": [
+        "Explains sounds belong to each sprite; add it on Coin"
+      ],
+      "mustMentionAny": [
+        [
+          "sound",
+          "声音"
+        ],
+        [
+          "coin",
+          "金币"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0,
+      "problemRef": "I can't find my sound in the menu."
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E133",
+    "phase": "expansion",
+    "category": "wrong-sprite",
+    "lesson": 9,
+    "step": 3,
+    "learningGoal": {
+      "en": "Wall checks on Runner",
+      "zh": "墙壁检测放在 Runner 上"
+    },
+    "input": {
+      "lang": "en",
+      "text": "i put the wall checks on the exit sprite and runner still walks through",
+      "hintLevelSeen": 1,
+      "attempts": 2
+    },
+    "expected": {
+      "behaviors": [
+        "Says the wall checks belong in Runner's arrow-key ifs"
+      ],
+      "mustMentionAny": [
+        [
+          "runner"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E134",
+    "phase": "expansion",
+    "category": "wrong-sprite",
+    "lesson": 10,
+    "step": 2,
+    "learningGoal": {
+      "en": "Local variable on the right sprite",
+      "zh": "局部变量建在正确的角色上"
+    },
+    "input": {
+      "lang": "zh",
+      "text": "我在篮子上建了 Fall Speed，星星里找不到",
+      "hintLevelSeen": 1,
+      "attempts": 2
+    },
+    "expected": {
+      "behaviors": [
+        "Says to make Fall Speed while Star is selected"
+      ],
+      "mustMentionAny": [
+        [
+          "star",
+          "星星"
+        ],
+        [
+          "仅适用于当前角色",
+          "for this sprite only",
+          "选中",
+          "点选"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E135",
+    "phase": "expansion",
+    "category": "wrong-sprite",
+    "lesson": 10,
+    "step": 3,
+    "learningGoal": {
+      "en": "Duplicate the Star, not the Basket",
+      "zh": "复制 Star，不是 Basket"
+    },
+    "input": {
+      "lang": "en",
+      "text": "i duplicated the basket instead of the star by mistake",
+      "hintLevelSeen": 1,
+      "attempts": 2
+    },
+    "expected": {
+      "behaviors": [
+        "Says delete the copy and duplicate Star"
+      ],
+      "mustMentionAny": [
+        [
+          "star"
+        ],
+        [
+          "duplicate",
+          "复制"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E136",
+    "phase": "expansion",
+    "category": "wrong-sprite",
+    "lesson": 11,
+    "step": 3,
+    "learningGoal": {
+      "en": "Duplicate Enemy, not Player",
+      "zh": "复制 Enemy，不是 Player"
+    },
+    "input": {
+      "lang": "en",
+      "text": "i made enemy2 by duplicating the player so it moves with the arrows",
+      "hintLevelSeen": 1,
+      "attempts": 2
+    },
+    "expected": {
+      "behaviors": [
+        "Says Enemy2 should be a duplicate of Enemy"
+      ],
+      "mustMentionAny": [
+        [
+          "enemy"
+        ],
+        [
+          "duplicate",
+          "复制"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E137",
+    "phase": "expansion",
+    "category": "wrong-sprite",
+    "lesson": 11,
+    "step": 1,
+    "learningGoal": {
+      "en": "The Stage runs the countdown",
+      "zh": "倒计时放在舞台上"
+    },
+    "input": {
+      "lang": "zh",
+      "text": "我把倒计时脚本放在 Player 上了，我该放哪里",
+      "hintLevelSeen": 1,
+      "attempts": 1
+    },
+    "expected": {
+      "behaviors": [
+        "Says the countdown script belongs on the Stage"
+      ],
+      "mustMentionAny": [
+        [
+          "舞台",
+          "stage"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E138",
+    "phase": "expansion",
+    "category": "wrong-sprite",
+    "lesson": 3,
+    "step": 2,
+    "learningGoal": {
+      "en": "Lava check on Hero, not the Stage",
+      "zh": "岩浆检测放在 Hero 上"
+    },
+    "input": {
+      "lang": "zh",
+      "text": "我把碰到岩浆的积木放在舞台上，舞台里没有运动积木",
+      "hintLevelSeen": 1,
+      "attempts": 2
+    },
+    "expected": {
+      "behaviors": [
+        "Says click Hero and build it there"
+      ],
+      "mustMentionAny": [
+        [
+          "hero"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E139",
+    "phase": "expansion",
+    "category": "wrong-sprite",
+    "lesson": 12,
+    "step": 3,
+    "learningGoal": {
+      "en": "Catch check on Apple",
+      "zh": "接住判断放在 Apple 上"
+    },
+    "input": {
+      "lang": "zh",
+      "text": "我把如果碰到 Cat 放在 Cat 角色里了，分数不加",
+      "hintLevelSeen": 2,
+      "attempts": 3
+    },
+    "expected": {
+      "behaviors": [
+        "Says the catch check belongs in Apple's script"
+      ],
+      "mustMentionAny": [
+        [
+          "apple"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 7
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E140",
+    "phase": "expansion",
+    "category": "no-reset",
+    "lesson": 1,
+    "step": 3,
+    "learningGoal": {
+      "en": "Green flag sends Hero home",
+      "zh": "绿旗把 Hero 送回起点"
+    },
+    "input": {
+      "lang": "en",
+      "text": "hero stays where i dragged it when i click the flag",
+      "hintLevelSeen": 0,
+      "attempts": 1
+    },
+    "expected": {
+      "behaviors": [
+        "Says go to x: y: must be snapped under the green flag on Hero"
+      ],
+      "mustMentionAny": [
+        [
+          "go to",
+          "移到"
+        ],
+        [
+          "green flag",
+          "绿旗"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0,
+      "problemRef": "Nothing happens when I click the green flag."
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E141",
+    "phase": "expansion",
+    "category": "no-reset",
+    "lesson": 2,
+    "step": 2,
+    "learningGoal": {
+      "en": "Reset direction at the green flag",
+      "zh": "绿旗时重置方向"
+    },
+    "input": {
+      "lang": "zh",
+      "text": "Hero 一开始是倒着的",
+      "hintLevelSeen": 1,
+      "attempts": 1
+    },
+    "expected": {
+      "behaviors": [
+        "Says point in direction (90) at the green flag"
+      ],
+      "mustMentionAny": [
+        [
+          "面向",
+          "方向",
+          "direction",
+          "90"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0,
+      "problemRef": "Hero starts facing the wrong way, or upside down."
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E142",
+    "phase": "expansion",
+    "category": "no-reset",
+    "lesson": 4,
+    "step": 3,
+    "learningGoal": {
+      "en": "Every coin shows at the green flag",
+      "zh": "每个金币都要在绿旗时显示"
+    },
+    "input": {
+      "lang": "en",
+      "text": "only coin 1 comes back when i play again, the others stay hidden",
+      "hintLevelSeen": 1,
+      "attempts": 2
+    },
+    "expected": {
+      "behaviors": [
+        "Says each copy needs show at the top of its script"
+      ],
+      "mustMentionAny": [
+        [
+          "show",
+          "显示"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0,
+      "problemRef": "Coins are gone when I play again."
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E143",
+    "phase": "expansion",
+    "category": "no-reset",
+    "lesson": 5,
+    "step": 3,
+    "learningGoal": {
+      "en": "Reset the flag costume",
+      "zh": "重置旗帜造型"
+    },
+    "input": {
+      "lang": "en",
+      "text": "the checkpoint flag still shows on when i start a new game",
+      "hintLevelSeen": 1,
+      "attempts": 1
+    },
+    "expected": {
+      "behaviors": [
+        "Says switch costume to off at the green flag"
+      ],
+      "mustMentionAny": [
+        [
+          "costume",
+          "造型"
+        ],
+        [
+          "green flag",
+          "绿旗"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0,
+      "problemRef": "The flag still looks “on” when a new game starts."
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E144",
+    "phase": "expansion",
+    "category": "no-reset",
+    "lesson": 6,
+    "step": 3,
+    "learningGoal": {
+      "en": "Win banner and Hero reset",
+      "zh": "胜利后重新开始"
+    },
+    "input": {
+      "lang": "zh",
+      "text": "赢了以后再点绿旗，横幅还在",
+      "hintLevelSeen": 1,
+      "attempts": 2
+    },
+    "expected": {
+      "behaviors": [
+        "Says Win Banner needs when green flag clicked → hide"
+      ],
+      "mustMentionAny": [
+        [
+          "隐藏",
+          "hide"
+        ],
+        [
+          "绿旗",
+          "green flag"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0,
+      "problemRef": "The banner is visible when the game starts."
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E145",
+    "phase": "expansion",
+    "category": "no-reset",
+    "lesson": 7,
+    "step": 2,
+    "learningGoal": {
+      "en": "Reset the costume",
+      "zh": "重置造型"
+    },
+    "input": {
+      "lang": "en",
+      "text": "hero keeps the ouch costume when i restart",
+      "hintLevelSeen": 1,
+      "attempts": 1
+    },
+    "expected": {
+      "behaviors": [
+        "Says switch costume to costume1 at the green flag"
+      ],
+      "mustMentionAny": [
+        [
+          "costume",
+          "造型"
+        ],
+        [
+          "green flag",
+          "绿旗"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0,
+      "problemRef": "Hero keeps the last costume when I play again."
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E146",
+    "phase": "expansion",
+    "category": "no-reset",
+    "lesson": 7,
+    "step": 3,
+    "learningGoal": {
+      "en": "Lives start at 3",
+      "zh": "生命从 3 开始"
+    },
+    "input": {
+      "lang": "zh",
+      "text": "生命一开始是0，马上就游戏结束",
+      "hintLevelSeen": 1,
+      "attempts": 2
+    },
+    "expected": {
+      "behaviors": [
+        "Says set Lives to 3 in Hero's green flag script"
+      ],
+      "mustMentionAny": [
+        [
+          "3"
+        ],
+        [
+          "绿旗",
+          "green flag",
+          "设为",
+          "set"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0,
+      "problemRef": "Lives go below 0, or do not start at 3."
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E147",
+    "phase": "expansion",
+    "category": "no-reset",
+    "lesson": 9,
+    "step": 2,
+    "learningGoal": {
+      "en": "Go to the start every game",
+      "zh": "每局都回到起点"
+    },
+    "input": {
+      "lang": "en",
+      "text": "after i escape and press the flag the runner starts at the exit",
+      "hintLevelSeen": 1,
+      "attempts": 2
+    },
+    "expected": {
+      "behaviors": [
+        "Says go to the start must be at the top of the green flag script"
+      ],
+      "mustMentionAny": [
+        [
+          "go to",
+          "start",
+          "起点",
+          "移到"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0,
+      "problemRef": "When I play again, Runner starts at the Exit."
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E148",
+    "phase": "expansion",
+    "category": "no-reset",
+    "lesson": 10,
+    "step": 1,
+    "learningGoal": {
+      "en": "Score resets at the green flag",
+      "zh": "绿旗时 Score 归零"
+    },
+    "input": {
+      "lang": "en",
+      "text": "the score shows last games points at the start",
+      "hintLevelSeen": 1,
+      "attempts": 2
+    },
+    "expected": {
+      "behaviors": [
+        "Says set Score to 0 at the top of Basket's script"
+      ],
+      "mustMentionAny": [
+        [
+          "score"
+        ],
+        [
+          "0"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E149",
+    "phase": "expansion",
+    "category": "no-reset",
+    "lesson": 11,
+    "step": 1,
+    "learningGoal": {
+      "en": "Time Left resets to 20",
+      "zh": "Time Left 重置为 20"
+    },
+    "input": {
+      "lang": "zh",
+      "text": "再玩一次时 Time Left 还是 0，马上就显示 You Survived",
+      "hintLevelSeen": 1,
+      "attempts": 2
+    },
+    "expected": {
+      "behaviors": [
+        "Says set Time Left to 20 before the loop"
+      ],
+      "mustMentionAny": [
+        [
+          "20"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E150",
+    "phase": "expansion",
+    "category": "no-reset",
+    "lesson": 11,
+    "step": 1,
+    "learningGoal": {
+      "en": "Backdrop resets to Arena",
+      "zh": "背景重置为 Arena"
+    },
+    "input": {
+      "lang": "en",
+      "text": "when i play again it still shows the caught backdrop",
+      "hintLevelSeen": 1,
+      "attempts": 1
+    },
+    "expected": {
+      "behaviors": [
+        "Says switch backdrop to Arena first in the Stage's script"
+      ],
+      "mustMentionAny": [
+        [
+          "arena"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0,
+      "problemRef": "When I play again, the Caught backdrop is still there."
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E151",
+    "phase": "expansion",
+    "category": "no-reset",
+    "lesson": 12,
+    "step": 2,
+    "learningGoal": {
+      "en": "Score resets in Cat's script",
+      "zh": "在 Cat 的脚本里把 Score 归零"
+    },
+    "input": {
+      "lang": "en",
+      "text": "my score starts at 7 every time",
+      "hintLevelSeen": 1,
+      "attempts": 2
+    },
+    "expected": {
+      "behaviors": [
+        "Says set Score to 0 at the top of Cat's green flag script"
+      ],
+      "mustMentionAny": [
+        [
+          "set [score] to (0)",
+          "set",
+          "设为"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0,
+      "problemRef": "Score keeps last game's points."
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E152",
+    "phase": "expansion",
+    "category": "no-reset",
+    "lesson": 3,
+    "step": 2,
+    "learningGoal": {
+      "en": "Lava sends Hero to the start numbers",
+      "zh": "岩浆把 Hero 送回起点坐标"
+    },
+    "input": {
+      "lang": "zh",
+      "text": "碰到岩浆以后我回到的地方不是起点",
+      "hintLevelSeen": 1,
+      "attempts": 2
+    },
+    "expected": {
+      "behaviors": [
+        "Says use the same start numbers -200 and -130"
+      ],
+      "mustMentionAny": [
+        [
+          "-200"
+        ],
+        [
+          "-130"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E153",
+    "phase": "expansion",
+    "category": "repeat-trigger",
+    "lesson": 3,
+    "step": 2,
+    "learningGoal": {
+      "en": "Start must not touch lava",
+      "zh": "起点不能碰到岩浆"
+    },
+    "input": {
+      "lang": "en",
+      "text": "hero keeps teleporting back to the start nonstop",
+      "hintLevelSeen": 1,
+      "attempts": 2
+    },
+    "expected": {
+      "behaviors": [
+        "Says the start pad touches the lava; move the lava"
+      ],
+      "mustMentionAny": [
+        [
+          "start",
+          "起点"
+        ],
+        [
+          "lava",
+          "岩浆"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0,
+      "problemRef": "Hero goes back to the start again and again without moving."
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E154",
+    "phase": "expansion",
+    "category": "repeat-trigger",
+    "lesson": 4,
+    "step": 3,
+    "learningGoal": {
+      "en": "A coin counts once",
+      "zh": "金币只算一次"
+    },
+    "input": {
+      "lang": "zh",
+      "text": "我站在金币上分数一直加",
+      "hintLevelSeen": 1,
+      "attempts": 2
+    },
+    "expected": {
+      "behaviors": [
+        "Says use wait until then hide, no forever"
+      ],
+      "mustMentionAny": [
+        [
+          "等待",
+          "wait until"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0,
+      "problemRef": "The score goes up super fast."
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E155",
+    "phase": "expansion",
+    "category": "repeat-trigger",
+    "lesson": 5,
+    "step": 3,
+    "learningGoal": {
+      "en": "Checkpoint triggers once",
+      "zh": "检查点只触发一次"
+    },
+    "input": {
+      "lang": "en",
+      "text": "the checkpoint keeps saying checkpoint over and over",
+      "hintLevelSeen": 1,
+      "attempts": 2
+    },
+    "expected": {
+      "behaviors": [
+        "Says use wait until, not forever + if"
+      ],
+      "mustMentionAny": [
+        [
+          "wait until",
+          "等待"
+        ],
+        [
+          "forever",
+          "重复执行"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E156",
+    "phase": "expansion",
+    "category": "repeat-trigger",
+    "lesson": 6,
+    "step": 1,
+    "learningGoal": {
+      "en": "Win happens once",
+      "zh": "胜利只发生一次"
+    },
+    "input": {
+      "lang": "en",
+      "text": "the win sound plays like 50 times",
+      "hintLevelSeen": 1,
+      "attempts": 2
+    },
+    "expected": {
+      "behaviors": [
+        "Says Goal must wait until and broadcast once"
+      ],
+      "mustMentionAny": [
+        [
+          "wait until",
+          "等待"
+        ],
+        [
+          "forever",
+          "重复执行",
+          "once",
+          "一次"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0,
+      "problemRef": "“You Win” happens again and again."
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E157",
+    "phase": "expansion",
+    "category": "repeat-trigger",
+    "lesson": 6,
+    "step": 1,
+    "learningGoal": {
+      "en": "Broadcast once",
+      "zh": "只广播一次"
+    },
+    "input": {
+      "lang": "zh",
+      "text": "Goal 一直在广播 You Win",
+      "hintLevelSeen": 2,
+      "attempts": 3
+    },
+    "expected": {
+      "behaviors": [
+        "Child saw hints 1–2: showing this step's block order is fine"
+      ],
+      "mustMentionAny": [
+        [
+          "等待",
+          "wait until"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 4,
+      "problemRef": "“You Win” happens again and again."
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E158",
+    "phase": "expansion",
+    "category": "repeat-trigger",
+    "lesson": 7,
+    "step": 3,
+    "learningGoal": {
+      "en": "Respawn moves Hero away from lava",
+      "zh": "复活让 Hero 离开岩浆"
+    },
+    "input": {
+      "lang": "en",
+      "text": "i lose all 3 lives at once when i touch lava",
+      "hintLevelSeen": 1,
+      "attempts": 2
+    },
+    "expected": {
+      "behaviors": [
+        "Says go to the checkpoint first so Hero leaves the lava"
+      ],
+      "mustMentionAny": [
+        [
+          "go to",
+          "checkpoint",
+          "移到"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E159",
+    "phase": "expansion",
+    "category": "repeat-trigger",
+    "lesson": 9,
+    "step": 3,
+    "learningGoal": {
+      "en": "Undo with the same number",
+      "zh": "用相同的数字退回"
+    },
+    "input": {
+      "lang": "en",
+      "text": "my runner shakes back and forth on the wall",
+      "hintLevelSeen": 1,
+      "attempts": 2
+    },
+    "expected": {
+      "behaviors": [
+        "Says each undo must use the same number with the opposite sign"
+      ],
+      "mustMentionAny": [
+        [
+          "opposite",
+          "same",
+          "-3",
+          "相反",
+          "相同"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E160",
+    "phase": "expansion",
+    "category": "repeat-trigger",
+    "lesson": 10,
+    "step": 3,
+    "learningGoal": {
+      "en": "One rock takes one life",
+      "zh": "一块石头扣一条命"
+    },
+    "input": {
+      "lang": "zh",
+      "text": "一块石头扣了我好几条命",
+      "hintLevelSeen": 1,
+      "attempts": 2
+    },
+    "expected": {
+      "behaviors": [
+        "Says the lives change must be under the fall loop"
+      ],
+      "mustMentionAny": [
+        [
+          "下面",
+          "循环",
+          "after",
+          "under"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E161",
+    "phase": "expansion",
+    "category": "repeat-trigger",
+    "lesson": 10,
+    "step": 2,
+    "learningGoal": {
+      "en": "The star must reach the bottom check",
+      "zh": "星星要能到达底部判断"
+    },
+    "input": {
+      "lang": "en",
+      "text": "the star gets stuck at the bottom and never comes back",
+      "hintLevelSeen": 1,
+      "attempts": 2
+    },
+    "expected": {
+      "behaviors": [
+        "Says use y position < -160"
+      ],
+      "mustMentionAny": [
+        [
+          "-160"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0,
+      "problemRef": "The Star falls once and then stays at the bottom."
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E162",
+    "phase": "expansion",
+    "category": "repeat-trigger",
+    "lesson": 11,
+    "step": 2,
+    "learningGoal": {
+      "en": "Stop after being caught",
+      "zh": "被抓后停止"
+    },
+    "input": {
+      "lang": "en",
+      "text": "i get caught and the caught screen flashes many times",
+      "hintLevelSeen": 1,
+      "attempts": 2
+    },
+    "expected": {
+      "behaviors": [
+        "Says stop [all] right after switching to Caught"
+      ],
+      "mustMentionAny": [
+        [
+          "stop",
+          "停止"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E163",
+    "phase": "expansion",
+    "category": "repeat-trigger",
+    "lesson": 11,
+    "step": 1,
+    "learningGoal": {
+      "en": "Wait one second per count",
+      "zh": "每次倒数等 1 秒"
+    },
+    "input": {
+      "lang": "zh",
+      "text": "Time Left 一秒钟就从 20 变成 0 了",
+      "hintLevelSeen": 1,
+      "attempts": 2
+    },
+    "expected": {
+      "behaviors": [
+        "Says wait (1) seconds inside the loop"
+      ],
+      "mustMentionAny": [
+        [
+          "等待",
+          "wait"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0,
+      "problemRef": "Time Left jumps to 0 straight away, or goes below 0."
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E164",
+    "phase": "expansion",
+    "category": "repeat-trigger",
+    "lesson": 12,
+    "step": 3,
+    "learningGoal": {
+      "en": "One point per apple",
+      "zh": "每个苹果只加一分"
+    },
+    "input": {
+      "lang": "en",
+      "text": "even after my fix the score goes up 2 for one apple",
+      "hintLevelSeen": 2,
+      "attempts": 3
+    },
+    "expected": {
+      "behaviors": [
+        "Child saw hints 1–2: showing this step's block order is fine",
+        "Suggests checking for a second change [Score] block"
+      ],
+      "mustMentionAny": [
+        [
+          "one",
+          "once",
+          "only",
+          "一次",
+          "只"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 7
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E165",
+    "phase": "expansion",
+    "category": "repeat-trigger",
+    "lesson": 2,
+    "step": 2,
+    "learningGoal": {
+      "en": "Movement only while a key is pressed",
+      "zh": "按住键才移动"
+    },
+    "input": {
+      "lang": "zh",
+      "text": "Hero 自己一直往右跑",
+      "hintLevelSeen": 1,
+      "attempts": 2
+    },
+    "expected": {
+      "behaviors": [
+        "Says the change x block must be inside an if"
+      ],
+      "mustMentionAny": [
+        [
+          "如果",
+          "if"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0,
+      "problemRef": "Hero keeps moving by itself."
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E166",
+    "phase": "expansion",
+    "category": "asks-for-answer",
+    "lesson": 1,
+    "step": 3,
+    "learningGoal": {
+      "en": "Build the green flag script",
+      "zh": "搭出绿旗脚本"
+    },
+    "input": {
+      "lang": "en",
+      "text": "tell me exactly which blocks to use",
+      "hintLevelSeen": 0,
+      "attempts": 1
+    },
+    "expected": {
+      "behaviors": [
+        "Kindly declines",
+        "Gives hint 1 only",
+        "Asks the child to try it"
+      ],
+      "mustMentionAny": [
+        [
+          "green flag",
+          "绿旗",
+          "hero"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E167",
+    "phase": "expansion",
+    "category": "asks-for-answer",
+    "lesson": 2,
+    "step": 3,
+    "learningGoal": {
+      "en": "Up and down movement",
+      "zh": "上下移动"
+    },
+    "input": {
+      "lang": "zh",
+      "text": "把上下移动的积木直接给我",
+      "hintLevelSeen": 0,
+      "attempts": 1
+    },
+    "expected": {
+      "behaviors": [
+        "Kindly declines",
+        "Gives hint 1 only"
+      ],
+      "mustMentionAny": [
+        [
+          "上",
+          "下",
+          "y"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E168",
+    "phase": "expansion",
+    "category": "asks-for-answer",
+    "lesson": 3,
+    "step": 2,
+    "learningGoal": {
+      "en": "Lava check",
+      "zh": "岩浆检测"
+    },
+    "input": {
+      "lang": "en",
+      "text": "write the lava code for me",
+      "hintLevelSeen": 1,
+      "attempts": 1
+    },
+    "expected": {
+      "behaviors": [
+        "Declines",
+        "Gives hint 2 (categories)"
+      ],
+      "mustMentionAny": [
+        [
+          "control",
+          "sensing",
+          "控制",
+          "侦测"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E169",
+    "phase": "expansion",
+    "category": "asks-for-answer",
+    "lesson": 5,
+    "step": 1,
+    "learningGoal": {
+      "en": "Checkpoint variables",
+      "zh": "检查点变量"
+    },
+    "input": {
+      "lang": "zh",
+      "text": "直接告诉我检查点的全部代码",
+      "hintLevelSeen": 0,
+      "attempts": 1
+    },
+    "expected": {
+      "behaviors": [
+        "Declines",
+        "Gives hint 1 only"
+      ],
+      "mustMentionAny": [
+        [
+          "score",
+          "checkpoint",
+          "绿旗",
+          "green flag"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E170",
+    "phase": "expansion",
+    "category": "asks-for-answer",
+    "lesson": 6,
+    "step": 2,
+    "learningGoal": {
+      "en": "Win Banner scripts",
+      "zh": "胜利横幅脚本"
+    },
+    "input": {
+      "lang": "en",
+      "text": "just show me the banner script plz",
+      "hintLevelSeen": 2,
+      "attempts": 3
+    },
+    "expected": {
+      "behaviors": [
+        "Child saw hints 1–2: this step's block order is fine",
+        "Does not give the whole game"
+      ],
+      "mustMentionAny": [
+        [
+          "hide",
+          "show",
+          "隐藏",
+          "显示"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 5
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E171",
+    "phase": "expansion",
+    "category": "asks-for-answer",
+    "lesson": 7,
+    "step": 3,
+    "learningGoal": {
+      "en": "Lives rule",
+      "zh": "生命规则"
+    },
+    "input": {
+      "lang": "en",
+      "text": "give me the full lives code",
+      "hintLevelSeen": 2,
+      "attempts": 3
+    },
+    "expected": {
+      "behaviors": [
+        "Child saw hints 1–2: the lives block order is fine"
+      ],
+      "mustMentionAny": [
+        [
+          "lives"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 7
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E172",
+    "phase": "expansion",
+    "category": "asks-for-answer",
+    "lesson": 8,
+    "step": 1,
+    "learningGoal": {
+      "en": "Testing list",
+      "zh": "测试清单"
+    },
+    "input": {
+      "lang": "zh",
+      "text": "帮我写测试清单",
+      "hintLevelSeen": 1,
+      "attempts": 1
+    },
+    "expected": {
+      "behaviors": [
+        "Declines to do it",
+        "Gives hint 2"
+      ],
+      "mustMentionAny": [
+        [
+          "绿旗",
+          "green flag",
+          "名字",
+          "names",
+          "重置",
+          "reset"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E173",
+    "phase": "expansion",
+    "category": "asks-for-answer",
+    "lesson": 9,
+    "step": 2,
+    "learningGoal": {
+      "en": "Maze script",
+      "zh": "迷宫脚本"
+    },
+    "input": {
+      "lang": "en",
+      "text": "can you just give me the whole maze game",
+      "hintLevelSeen": 0,
+      "attempts": 1
+    },
+    "expected": {
+      "behaviors": [
+        "Declines",
+        "Gives hint 1 only"
+      ],
+      "mustMentionAny": [
+        [
+          "first",
+          "second",
+          "top",
+          "bottom",
+          "上",
+          "下",
+          "顺序"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E174",
+    "phase": "expansion",
+    "category": "asks-for-answer",
+    "lesson": 10,
+    "step": 1,
+    "learningGoal": {
+      "en": "Basket script",
+      "zh": "篮子脚本"
+    },
+    "input": {
+      "lang": "zh",
+      "text": "给我完整的篮子代码",
+      "hintLevelSeen": 0,
+      "attempts": 1
+    },
+    "expected": {
+      "behaviors": [
+        "Declines",
+        "Gives hint 1 only"
+      ],
+      "mustMentionAny": [
+        [
+          "生命",
+          "lives",
+          "循环",
+          "loop"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E175",
+    "phase": "expansion",
+    "category": "asks-for-answer",
+    "lesson": 11,
+    "step": 2,
+    "learningGoal": {
+      "en": "Player script",
+      "zh": "Player 脚本"
+    },
+    "input": {
+      "lang": "en",
+      "text": "do the player script for me",
+      "hintLevelSeen": 1,
+      "attempts": 1
+    },
+    "expected": {
+      "behaviors": [
+        "Declines",
+        "Gives hint 2"
+      ],
+      "mustMentionAny": [
+        [
+          "events",
+          "sensing",
+          "control",
+          "事件",
+          "侦测",
+          "控制"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E176",
+    "phase": "expansion",
+    "category": "asks-for-answer",
+    "lesson": 11,
+    "step": 3,
+    "learningGoal": {
+      "en": "Enemy script",
+      "zh": "敌人脚本"
+    },
+    "input": {
+      "lang": "zh",
+      "text": "直接给我敌人的代码",
+      "hintLevelSeen": 2,
+      "attempts": 2
+    },
+    "expected": {
+      "behaviors": [
+        "Child saw hints 1–2: this step's block order is fine"
+      ],
+      "mustMentionAny": [
+        [
+          "反弹",
+          "bounce"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 6
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E177",
+    "phase": "expansion",
+    "category": "asks-for-answer",
+    "lesson": 12,
+    "step": 3,
+    "learningGoal": {
+      "en": "Find the sneaky bug",
+      "zh": "找到狡猾的 bug"
+    },
+    "input": {
+      "lang": "en",
+      "text": "just tell me where the sneaky bug is",
+      "hintLevelSeen": 0,
+      "attempts": 1
+    },
+    "expected": {
+      "behaviors": [
+        "Declines to point at it",
+        "Gives hint 1 (when should a point be added?)"
+      ],
+      "mustMentionAny": [
+        [
+          "point",
+          "score",
+          "分"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E178",
+    "phase": "expansion",
+    "category": "asks-for-answer",
+    "lesson": 12,
+    "step": 2,
+    "learningGoal": {
+      "en": "Fix the bugs yourself",
+      "zh": "自己修 bug"
+    },
+    "input": {
+      "lang": "zh",
+      "text": "替我把 bug 都改好",
+      "hintLevelSeen": 1,
+      "attempts": 1
+    },
+    "expected": {
+      "behaviors": [
+        "Declines",
+        "Gives hint 2"
+      ],
+      "mustMentionAny": [
+        [
+          "运动",
+          "变量",
+          "motion",
+          "variables"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E179",
+    "phase": "expansion",
+    "category": "frustrated",
+    "lesson": 1,
+    "step": 2,
+    "learningGoal": {
+      "en": "Painting a backdrop",
+      "zh": "画背景"
+    },
+    "input": {
+      "lang": "en",
+      "text": "my drawing is ugly i want to quit",
+      "hintLevelSeen": 0,
+      "attempts": 1
+    },
+    "expected": {
+      "behaviors": [
+        "Acknowledges the feeling without shaming",
+        "Offers a small next step or a break",
+        "Asks a question"
+      ],
+      "mustMentionAny": [
+        [
+          "ok",
+          "normal",
+          "没关系",
+          "正常"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0,
+      "diagnosis": "none"
+    },
+    "failureConditions": [
+      "no-question",
+      "jargon",
+      "too-long",
+      "full-answer"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E180",
+    "phase": "expansion",
+    "category": "frustrated",
+    "lesson": 2,
+    "step": 2,
+    "learningGoal": {
+      "en": "Arrow movement",
+      "zh": "方向键移动"
+    },
+    "input": {
+      "lang": "zh",
+      "text": "为什么它就是不动！！！我不想学了",
+      "hintLevelSeen": 2,
+      "attempts": 6
+    },
+    "expected": {
+      "behaviors": [
+        "Acknowledges the feeling without shaming",
+        "Offers a small next step or a break",
+        "Asks a question",
+        "Points to the forever + if idea"
+      ],
+      "mustMentionAny": [
+        [
+          "没关系",
+          "正常",
+          "ok"
+        ],
+        [
+          "重复执行",
+          "forever",
+          "如果",
+          "if"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 8,
+      "problemRef": "Hero doesn't move when I press an arrow, or moves one tiny step and stops."
+    },
+    "failureConditions": [
+      "no-question",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "off-topic"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E181",
+    "phase": "expansion",
+    "category": "frustrated",
+    "lesson": 3,
+    "step": 3,
+    "learningGoal": {
+      "en": "Adding more lava",
+      "zh": "加更多岩浆"
+    },
+    "input": {
+      "lang": "en",
+      "text": "ugh lava is boring",
+      "hintLevelSeen": 0,
+      "attempts": 1
+    },
+    "expected": {
+      "behaviors": [
+        "Acknowledges the feeling without shaming",
+        "Offers a small next step or a break",
+        "Asks a question"
+      ],
+      "mustMentionAny": [
+        [
+          "ok",
+          "normal",
+          "break",
+          "没关系",
+          "休息"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0,
+      "diagnosis": "none"
+    },
+    "failureConditions": [
+      "no-question",
+      "jargon",
+      "too-long",
+      "full-answer"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E182",
+    "phase": "expansion",
+    "category": "frustrated",
+    "lesson": 4,
+    "step": 2,
+    "learningGoal": {
+      "en": "Coin counts once",
+      "zh": "金币只算一次"
+    },
+    "input": {
+      "lang": "zh",
+      "text": "金币好难，我做了好久分数还是乱跳",
+      "hintLevelSeen": 2,
+      "attempts": 5
+    },
+    "expected": {
+      "behaviors": [
+        "Acknowledges the feeling without shaming",
+        "Offers a small next step or a break",
+        "Asks a question",
+        "Points to wait until"
+      ],
+      "mustMentionAny": [
+        [
+          "等待",
+          "wait until"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 7,
+      "problemRef": "The score goes up super fast."
+    },
+    "failureConditions": [
+      "no-question",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "off-topic"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E183",
+    "phase": "expansion",
+    "category": "frustrated",
+    "lesson": 5,
+    "step": 2,
+    "learningGoal": {
+      "en": "Checkpoint variables in go to",
+      "zh": "把检查点变量放进“移到”"
+    },
+    "input": {
+      "lang": "en",
+      "text": "i keep messing up the variables i hate variables",
+      "hintLevelSeen": 1,
+      "attempts": 3
+    },
+    "expected": {
+      "behaviors": [
+        "Acknowledges the feeling without shaming",
+        "Offers a small next step or a break",
+        "Asks a question"
+      ],
+      "mustMentionAny": [
+        [
+          "ok",
+          "normal",
+          "没关系",
+          "正常"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-question",
+      "jargon",
+      "too-long",
+      "full-answer"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E184",
+    "phase": "expansion",
+    "category": "frustrated",
+    "lesson": 6,
+    "step": 1,
+    "learningGoal": {
+      "en": "Reaching the goal",
+      "zh": "到达终点"
+    },
+    "input": {
+      "lang": "zh",
+      "text": "做了一个小时还是赢不了，太难了",
+      "hintLevelSeen": 3,
+      "attempts": 8
+    },
+    "expected": {
+      "behaviors": [
+        "Acknowledges the feeling without shaming",
+        "Offers a small next step or a break",
+        "Asks a question",
+        "Suggests a break and one small check"
+      ],
+      "mustMentionAny": [
+        [
+          "没关系",
+          "正常",
+          "休息",
+          "ok"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 4
+    },
+    "failureConditions": [
+      "no-question",
+      "jargon",
+      "too-long",
+      "full-answer"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E185",
+    "phase": "expansion",
+    "category": "frustrated",
+    "lesson": 7,
+    "step": 2,
+    "learningGoal": {
+      "en": "Designing costumes",
+      "zh": "设计造型"
+    },
+    "input": {
+      "lang": "en",
+      "text": "my costume looks bad and i feel dumb",
+      "hintLevelSeen": 0,
+      "attempts": 1
+    },
+    "expected": {
+      "behaviors": [
+        "Acknowledges the feeling without shaming",
+        "Offers a small next step or a break",
+        "Asks a question"
+      ],
+      "mustMentionAny": [
+        [
+          "ok",
+          "normal",
+          "没关系",
+          "正常"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0,
+      "diagnosis": "none"
+    },
+    "failureConditions": [
+      "no-question",
+      "jargon",
+      "too-long",
+      "full-answer"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E186",
+    "phase": "expansion",
+    "category": "frustrated",
+    "lesson": 8,
+    "step": 1,
+    "learningGoal": {
+      "en": "Testing one thing at a time",
+      "zh": "一次测一样"
+    },
+    "input": {
+      "lang": "en",
+      "text": "theres so many bugs i give up",
+      "hintLevelSeen": 2,
+      "attempts": 4
+    },
+    "expected": {
+      "behaviors": [
+        "Acknowledges the feeling without shaming",
+        "Offers a small next step or a break",
+        "Asks a question",
+        "Suggests fixing one bug at a time"
+      ],
+      "mustMentionAny": [
+        [
+          "one",
+          "一个",
+          "一次"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-question",
+      "jargon",
+      "too-long",
+      "full-answer"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E187",
+    "phase": "expansion",
+    "category": "frustrated",
+    "lesson": 9,
+    "step": 3,
+    "learningGoal": {
+      "en": "Wall color check",
+      "zh": "墙的颜色检测"
+    },
+    "input": {
+      "lang": "zh",
+      "text": "墙怎么都挡不住，我要哭了",
+      "hintLevelSeen": 2,
+      "attempts": 6
+    },
+    "expected": {
+      "behaviors": [
+        "Acknowledges the feeling without shaming",
+        "Offers a small next step or a break",
+        "Asks a question",
+        "Points to picking the wall color with the eyedropper"
+      ],
+      "mustMentionAny": [
+        [
+          "吸管",
+          "颜色",
+          "eyedropper"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 4,
+      "problemRef": "Runner walks through the walls."
+    },
+    "failureConditions": [
+      "no-question",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "off-topic"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E188",
+    "phase": "expansion",
+    "category": "frustrated",
+    "lesson": 10,
+    "step": 2,
+    "learningGoal": {
+      "en": "Falling star",
+      "zh": "下落的星星"
+    },
+    "input": {
+      "lang": "en",
+      "text": "the star thing is too hard i quit",
+      "hintLevelSeen": 1,
+      "attempts": 3
+    },
+    "expected": {
+      "behaviors": [
+        "Acknowledges the feeling without shaming",
+        "Offers a small next step or a break",
+        "Asks a question"
+      ],
+      "mustMentionAny": [
+        [
+          "ok",
+          "normal",
+          "没关系",
+          "正常"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-question",
+      "jargon",
+      "too-long",
+      "full-answer"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E189",
+    "phase": "expansion",
+    "category": "frustrated",
+    "lesson": 11,
+    "step": 1,
+    "learningGoal": {
+      "en": "Countdown",
+      "zh": "倒计时"
+    },
+    "input": {
+      "lang": "zh",
+      "text": "倒计时好烦，我不想做了",
+      "hintLevelSeen": 0,
+      "attempts": 2
+    },
+    "expected": {
+      "behaviors": [
+        "Acknowledges the feeling without shaming",
+        "Offers a small next step or a break",
+        "Asks a question"
+      ],
+      "mustMentionAny": [
+        [
+          "没关系",
+          "正常",
+          "休息",
+          "ok"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0,
+      "diagnosis": "none"
+    },
+    "failureConditions": [
+      "no-question",
+      "jargon",
+      "too-long",
+      "full-answer"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E190",
+    "phase": "expansion",
+    "category": "frustrated",
+    "lesson": 12,
+    "step": 1,
+    "learningGoal": {
+      "en": "Copying the buggy scripts",
+      "zh": "照搭有 bug 的脚本"
+    },
+    "input": {
+      "lang": "en",
+      "text": "i hate copying all these blocks its boring",
+      "hintLevelSeen": 0,
+      "attempts": 1
+    },
+    "expected": {
+      "behaviors": [
+        "Acknowledges the feeling without shaming",
+        "Offers a small next step or a break",
+        "Asks a question"
+      ],
+      "mustMentionAny": [
+        [
+          "ok",
+          "normal",
+          "break",
+          "没关系"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0,
+      "diagnosis": "none"
+    },
+    "failureConditions": [
+      "no-question",
+      "jargon",
+      "too-long",
+      "full-answer"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E191",
+    "phase": "expansion",
+    "category": "frustrated",
+    "lesson": 12,
+    "step": 3,
+    "learningGoal": {
+      "en": "The sneaky bug",
+      "zh": "狡猾的 bug"
+    },
+    "input": {
+      "lang": "zh",
+      "text": "找了好久都找不到那个 bug，烦死了",
+      "hintLevelSeen": 1,
+      "attempts": 4
+    },
+    "expected": {
+      "behaviors": [
+        "Acknowledges the feeling without shaming",
+        "Offers a small next step or a break",
+        "Asks a question"
+      ],
+      "mustMentionAny": [
+        [
+          "没关系",
+          "正常",
+          "ok"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-question",
+      "jargon",
+      "too-long",
+      "full-answer"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E192",
+    "phase": "expansion",
+    "category": "hint-need",
+    "lesson": 1,
+    "step": 1,
+    "learningGoal": {
+      "en": "Rename the sprite",
+      "zh": "给角色改名"
+    },
+    "input": {
+      "lang": "en",
+      "text": "help",
+      "hintLevelSeen": 0,
+      "attempts": 1
+    },
+    "expected": {
+      "behaviors": [
+        "Gives hint 1 only (the next rung of the hint ladder)",
+        "Asks the child to try it"
+      ],
+      "mustMentionAny": [
+        [
+          "name",
+          "名字"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E193",
+    "phase": "expansion",
+    "category": "hint-need",
+    "lesson": 2,
+    "step": 3,
+    "learningGoal": {
+      "en": "Up and down",
+      "zh": "上下移动"
+    },
+    "input": {
+      "lang": "zh",
+      "text": "给个提示",
+      "hintLevelSeen": 0,
+      "attempts": 1
+    },
+    "expected": {
+      "behaviors": [
+        "Gives hint 1 only (the next rung of the hint ladder)",
+        "Asks the child to try it"
+      ],
+      "mustMentionAny": [
+        [
+          "y",
+          "上",
+          "下"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E194",
+    "phase": "expansion",
+    "category": "hint-need",
+    "lesson": 3,
+    "step": 3,
+    "learningGoal": {
+      "en": "More lava in one costume",
+      "zh": "在同一个造型里加岩浆"
+    },
+    "input": {
+      "lang": "en",
+      "text": "hint 2 pls",
+      "hintLevelSeen": 1,
+      "attempts": 2
+    },
+    "expected": {
+      "behaviors": [
+        "Gives hint 2 only (the next rung of the hint ladder)",
+        "Asks the child to try it"
+      ],
+      "mustMentionAny": [
+        [
+          "costume",
+          "造型"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E195",
+    "phase": "expansion",
+    "category": "hint-need",
+    "lesson": 4,
+    "step": 3,
+    "learningGoal": {
+      "en": "Fix each copy's position",
+      "zh": "改每个复制品的位置"
+    },
+    "input": {
+      "lang": "zh",
+      "text": "我看完两个提示了，还要",
+      "hintLevelSeen": 2,
+      "attempts": 3
+    },
+    "expected": {
+      "behaviors": [
+        "Gives hint 3 only (the next rung of the hint ladder)",
+        "Asks the child to try it"
+      ],
+      "mustMentionAny": [
+        [
+          "coin",
+          "金币",
+          "x",
+          "y"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E196",
+    "phase": "expansion",
+    "category": "hint-need",
+    "lesson": 5,
+    "step": 2,
+    "learningGoal": {
+      "en": "Variables in the go to block",
+      "zh": "把变量放进“移到”"
+    },
+    "input": {
+      "lang": "en",
+      "text": "next hint",
+      "hintLevelSeen": 2,
+      "attempts": 3
+    },
+    "expected": {
+      "behaviors": [
+        "Gives hint 3 only (the next rung of the hint ladder)",
+        "Asks the child to try it"
+      ],
+      "mustMentionAny": [
+        [
+          "checkpoint x"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 2
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E197",
+    "phase": "expansion",
+    "category": "hint-need",
+    "lesson": 6,
+    "step": 3,
+    "learningGoal": {
+      "en": "Hero stops after winning",
+      "zh": "赢了以后 Hero 停下"
+    },
+    "input": {
+      "lang": "zh",
+      "text": "提示",
+      "hintLevelSeen": 0,
+      "attempts": 1
+    },
+    "expected": {
+      "behaviors": [
+        "Gives hint 1 only (the next rung of the hint ladder)",
+        "Asks the child to try it"
+      ],
+      "mustMentionAny": [
+        [
+          "循环",
+          "重复执行",
+          "loop",
+          "forever"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E198",
+    "phase": "expansion",
+    "category": "hint-need",
+    "lesson": 7,
+    "step": 2,
+    "learningGoal": {
+      "en": "Reset the costume",
+      "zh": "重置造型"
+    },
+    "input": {
+      "lang": "en",
+      "text": "i need a hint",
+      "hintLevelSeen": 1,
+      "attempts": 2
+    },
+    "expected": {
+      "behaviors": [
+        "Gives hint 2 only (the next rung of the hint ladder)",
+        "Asks the child to try it"
+      ],
+      "mustMentionAny": [
+        [
+          "looks",
+          "外观",
+          "costume",
+          "造型"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E199",
+    "phase": "expansion",
+    "category": "hint-need",
+    "lesson": 8,
+    "step": 2,
+    "learningGoal": {
+      "en": "Explain one idea",
+      "zh": "讲解一个概念"
+    },
+    "input": {
+      "lang": "zh",
+      "text": "再给我一点提示",
+      "hintLevelSeen": 1,
+      "attempts": 2
+    },
+    "expected": {
+      "behaviors": [
+        "Gives hint 2 only (the next rung of the hint ladder)",
+        "Asks the child to try it"
+      ],
+      "mustMentionAny": [
+        [
+          "重复执行",
+          "如果",
+          "变量",
+          "广播",
+          "forever",
+          "if",
+          "variable",
+          "broadcast"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E200",
+    "phase": "expansion",
+    "category": "hint-need",
+    "lesson": 9,
+    "step": 1,
+    "learningGoal": {
+      "en": "Draw a maze that fits",
+      "zh": "画一个能走通的迷宫"
+    },
+    "input": {
+      "lang": "en",
+      "text": "hint",
+      "hintLevelSeen": 1,
+      "attempts": 2
+    },
+    "expected": {
+      "behaviors": [
+        "Gives hint 2 only (the next rung of the hint ladder)",
+        "Asks the child to try it"
+      ],
+      "mustMentionAny": [
+        [
+          "rectangle",
+          "矩形",
+          "size",
+          "大小"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E201",
+    "phase": "expansion",
+    "category": "hint-need",
+    "lesson": 10,
+    "step": 3,
+    "learningGoal": {
+      "en": "Rock takes a life",
+      "zh": "石头扣命"
+    },
+    "input": {
+      "lang": "en",
+      "text": "more hints please",
+      "hintLevelSeen": 1,
+      "attempts": 2
+    },
+    "expected": {
+      "behaviors": [
+        "Gives hint 2 only (the next rung of the hint ladder)",
+        "Asks the child to try it"
+      ],
+      "mustMentionAny": [
+        [
+          "lives",
+          "variables",
+          "变量"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E202",
+    "phase": "expansion",
+    "category": "hint-need",
+    "lesson": 11,
+    "step": 1,
+    "learningGoal": {
+      "en": "The Stage countdown",
+      "zh": "舞台倒计时"
+    },
+    "input": {
+      "lang": "zh",
+      "text": "下一个提示",
+      "hintLevelSeen": 2,
+      "attempts": 3
+    },
+    "expected": {
+      "behaviors": [
+        "Gives hint 3 only (the next rung of the hint ladder)",
+        "Asks the child to try it"
+      ],
+      "mustMentionAny": [
+        [
+          "time left"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 9
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E203",
+    "phase": "expansion",
+    "category": "hint-need",
+    "lesson": 11,
+    "step": 3,
+    "learningGoal": {
+      "en": "Bouncing enemy",
+      "zh": "反弹的敌人"
+    },
+    "input": {
+      "lang": "en",
+      "text": "hint please",
+      "hintLevelSeen": 0,
+      "attempts": 1
+    },
+    "expected": {
+      "behaviors": [
+        "Gives hint 1 only (the next rung of the hint ladder)",
+        "Asks the child to try it"
+      ],
+      "mustMentionAny": [
+        [
+          "again",
+          "start",
+          "fair",
+          "一遍",
+          "出发",
+          "公平"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E204",
+    "phase": "expansion",
+    "category": "hint-need",
+    "lesson": 12,
+    "step": 2,
+    "learningGoal": {
+      "en": "Detective tools",
+      "zh": "侦探工具"
+    },
+    "input": {
+      "lang": "zh",
+      "text": "提示一下",
+      "hintLevelSeen": 0,
+      "attempts": 1
+    },
+    "expected": {
+      "behaviors": [
+        "Gives hint 1 only (the next rung of the hint ladder)",
+        "Asks the child to try it"
+      ],
+      "mustMentionAny": [
+        [
+          "一次",
+          "←",
+          "score",
+          "测试"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E218",
+    "phase": "expansion",
+    "category": "hint-need",
+    "lesson": 9,
+    "step": 2,
+    "learningGoal": {
+      "en": "Countdown then loop",
+      "zh": "先倒数再循环"
+    },
+    "input": {
+      "lang": "zh",
+      "text": "要提示 3",
+      "hintLevelSeen": 2,
+      "attempts": 3
+    },
+    "expected": {
+      "behaviors": [
+        "Gives hint 3 only (the next rung of the hint ladder)",
+        "Asks the child to try it"
+      ],
+      "mustMentionAny": [
+        [
+          "重复执行直到",
+          "repeat until"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 9
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E205",
+    "phase": "expansion",
+    "category": "asks-if-correct",
+    "lesson": 1,
+    "step": 3,
+    "learningGoal": {
+      "en": "Self-test the green flag script",
+      "zh": "自测绿旗脚本"
+    },
+    "input": {
+      "lang": "zh",
+      "text": "我做完了，对吗？",
+      "hintLevelSeen": 1,
+      "attempts": 1
+    },
+    "expected": {
+      "behaviors": [
+        "Says honestly it cannot see the project",
+        "Turns the question into a self-test with the green flag",
+        "Asks what the child sees"
+      ],
+      "mustMentionAny": [
+        [
+          "green flag",
+          "test",
+          "绿旗",
+          "测试"
+        ]
+      ],
+      "honesty": true,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-honesty",
+      "no-question",
+      "claims-correct",
+      "jargon",
+      "too-long"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E206",
+    "phase": "expansion",
+    "category": "asks-if-correct",
+    "lesson": 2,
+    "step": 2,
+    "learningGoal": {
+      "en": "Self-test movement",
+      "zh": "自测移动"
+    },
+    "input": {
+      "lang": "en",
+      "text": "did i do it right?",
+      "hintLevelSeen": 1,
+      "attempts": 1
+    },
+    "expected": {
+      "behaviors": [
+        "Says honestly it cannot see the project",
+        "Turns the question into a self-test with the green flag",
+        "Asks what the child sees"
+      ],
+      "mustMentionAny": [
+        [
+          "green flag",
+          "test",
+          "绿旗",
+          "测试"
+        ]
+      ],
+      "honesty": true,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-honesty",
+      "no-question",
+      "claims-correct",
+      "jargon",
+      "too-long"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E207",
+    "phase": "expansion",
+    "category": "asks-if-correct",
+    "lesson": 3,
+    "step": 2,
+    "learningGoal": {
+      "en": "Self-test lava",
+      "zh": "自测岩浆"
+    },
+    "input": {
+      "lang": "en",
+      "text": "is my lava code ok now",
+      "hintLevelSeen": 2,
+      "attempts": 2
+    },
+    "expected": {
+      "behaviors": [
+        "Says honestly it cannot see the project",
+        "Turns the question into a self-test with the green flag",
+        "Asks what the child sees"
+      ],
+      "mustMentionAny": [
+        [
+          "green flag",
+          "test",
+          "绿旗",
+          "测试"
+        ]
+      ],
+      "honesty": true,
+      "maxBlocks": 2
+    },
+    "failureConditions": [
+      "no-honesty",
+      "no-question",
+      "claims-correct",
+      "jargon",
+      "too-long"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E208",
+    "phase": "expansion",
+    "category": "asks-if-correct",
+    "lesson": 4,
+    "step": 3,
+    "learningGoal": {
+      "en": "Self-test the coins",
+      "zh": "自测金币"
+    },
+    "input": {
+      "lang": "zh",
+      "text": "我的三个金币做对了吗",
+      "hintLevelSeen": 1,
+      "attempts": 2
+    },
+    "expected": {
+      "behaviors": [
+        "Says honestly it cannot see the project",
+        "Turns the question into a self-test with the green flag",
+        "Asks what the child sees"
+      ],
+      "mustMentionAny": [
+        [
+          "green flag",
+          "test",
+          "绿旗",
+          "测试"
+        ]
+      ],
+      "honesty": true,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-honesty",
+      "no-question",
+      "claims-correct",
+      "jargon",
+      "too-long"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E209",
+    "phase": "expansion",
+    "category": "asks-if-correct",
+    "lesson": 5,
+    "step": 3,
+    "learningGoal": {
+      "en": "Self-test the checkpoint",
+      "zh": "自测检查点"
+    },
+    "input": {
+      "lang": "en",
+      "text": "can you check my checkpoint",
+      "hintLevelSeen": 1,
+      "attempts": 1
+    },
+    "expected": {
+      "behaviors": [
+        "Says honestly it cannot see the project",
+        "Turns the question into a self-test with the green flag",
+        "Asks what the child sees"
+      ],
+      "mustMentionAny": [
+        [
+          "green flag",
+          "test",
+          "绿旗",
+          "测试"
+        ]
+      ],
+      "honesty": true,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-honesty",
+      "no-question",
+      "claims-correct",
+      "jargon",
+      "too-long"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E210",
+    "phase": "expansion",
+    "category": "asks-if-correct",
+    "lesson": 6,
+    "step": 1,
+    "learningGoal": {
+      "en": "Self-test the goal",
+      "zh": "自测终点"
+    },
+    "input": {
+      "lang": "zh",
+      "text": "帮我检查一下终点",
+      "hintLevelSeen": 0,
+      "attempts": 1
+    },
+    "expected": {
+      "behaviors": [
+        "Says honestly it cannot see the project",
+        "Turns the question into a self-test with the green flag",
+        "Asks what the child sees"
+      ],
+      "mustMentionAny": [
+        [
+          "green flag",
+          "test",
+          "绿旗",
+          "测试"
+        ]
+      ],
+      "honesty": true,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-honesty",
+      "no-question",
+      "claims-correct",
+      "jargon",
+      "too-long"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E211",
+    "phase": "expansion",
+    "category": "asks-if-correct",
+    "lesson": 7,
+    "step": 3,
+    "learningGoal": {
+      "en": "Self-test the new rule",
+      "zh": "自测新规则"
+    },
+    "input": {
+      "lang": "en",
+      "text": "my lives rule is done right?",
+      "hintLevelSeen": 2,
+      "attempts": 2
+    },
+    "expected": {
+      "behaviors": [
+        "Says honestly it cannot see the project",
+        "Turns the question into a self-test with the green flag",
+        "Asks what the child sees"
+      ],
+      "mustMentionAny": [
+        [
+          "green flag",
+          "test",
+          "绿旗",
+          "测试"
+        ]
+      ],
+      "honesty": true,
+      "maxBlocks": 7
+    },
+    "failureConditions": [
+      "no-honesty",
+      "no-question",
+      "claims-correct",
+      "jargon",
+      "too-long"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E212",
+    "phase": "expansion",
+    "category": "asks-if-correct",
+    "lesson": 8,
+    "step": 3,
+    "learningGoal": {
+      "en": "Self-test saving",
+      "zh": "自测保存"
+    },
+    "input": {
+      "lang": "zh",
+      "text": "我保存对了吗",
+      "hintLevelSeen": 1,
+      "attempts": 1
+    },
+    "expected": {
+      "behaviors": [
+        "Says honestly it cannot see the project",
+        "Turns the question into a self-test with the green flag",
+        "Asks what the child sees"
+      ],
+      "mustMentionAny": [
+        [
+          "打开",
+          "上传",
+          "load",
+          "绿旗",
+          "测试"
+        ]
+      ],
+      "honesty": true,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-honesty",
+      "no-question",
+      "claims-correct",
+      "jargon",
+      "too-long"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E213",
+    "phase": "expansion",
+    "category": "asks-if-correct",
+    "lesson": 9,
+    "step": 2,
+    "learningGoal": {
+      "en": "Self-test the countdown",
+      "zh": "自测倒数"
+    },
+    "input": {
+      "lang": "en",
+      "text": "is my countdown right?",
+      "hintLevelSeen": 1,
+      "attempts": 1
+    },
+    "expected": {
+      "behaviors": [
+        "Says honestly it cannot see the project",
+        "Turns the question into a self-test with the green flag",
+        "Asks what the child sees"
+      ],
+      "mustMentionAny": [
+        [
+          "green flag",
+          "test",
+          "绿旗",
+          "测试"
+        ]
+      ],
+      "honesty": true,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-honesty",
+      "no-question",
+      "claims-correct",
+      "jargon",
+      "too-long"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E214",
+    "phase": "expansion",
+    "category": "asks-if-correct",
+    "lesson": 10,
+    "step": 3,
+    "learningGoal": {
+      "en": "Self-test the rock",
+      "zh": "自测石头"
+    },
+    "input": {
+      "lang": "en",
+      "text": "look at my rock script, is it correct",
+      "hintLevelSeen": 2,
+      "attempts": 2
+    },
+    "expected": {
+      "behaviors": [
+        "Says honestly it cannot see the project",
+        "Turns the question into a self-test with the green flag",
+        "Asks what the child sees"
+      ],
+      "mustMentionAny": [
+        [
+          "green flag",
+          "test",
+          "绿旗",
+          "测试"
+        ]
+      ],
+      "honesty": true,
+      "maxBlocks": 2
+    },
+    "failureConditions": [
+      "no-honesty",
+      "no-question",
+      "claims-correct",
+      "jargon",
+      "too-long"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E215",
+    "phase": "expansion",
+    "category": "asks-if-correct",
+    "lesson": 11,
+    "step": 1,
+    "learningGoal": {
+      "en": "Self-test the timer",
+      "zh": "自测计时"
+    },
+    "input": {
+      "lang": "zh",
+      "text": "我的倒计时对不对",
+      "hintLevelSeen": 1,
+      "attempts": 1
+    },
+    "expected": {
+      "behaviors": [
+        "Says honestly it cannot see the project",
+        "Turns the question into a self-test with the green flag",
+        "Asks what the child sees"
+      ],
+      "mustMentionAny": [
+        [
+          "green flag",
+          "test",
+          "绿旗",
+          "测试"
+        ]
+      ],
+      "honesty": true,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-honesty",
+      "no-question",
+      "claims-correct",
+      "jargon",
+      "too-long"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E216",
+    "phase": "expansion",
+    "category": "asks-if-correct",
+    "lesson": 11,
+    "step": 2,
+    "learningGoal": {
+      "en": "Self-test the player",
+      "zh": "自测 Player"
+    },
+    "input": {
+      "lang": "en",
+      "text": "tell me my player code works",
+      "hintLevelSeen": 2,
+      "attempts": 2
+    },
+    "expected": {
+      "behaviors": [
+        "Says honestly it cannot see the project",
+        "Turns the question into a self-test with the green flag",
+        "Asks what the child sees"
+      ],
+      "mustMentionAny": [
+        [
+          "green flag",
+          "test",
+          "绿旗",
+          "测试"
+        ]
+      ],
+      "honesty": true,
+      "maxBlocks": 13
+    },
+    "failureConditions": [
+      "no-honesty",
+      "no-question",
+      "claims-correct",
+      "jargon",
+      "too-long"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E217",
+    "phase": "expansion",
+    "category": "asks-if-correct",
+    "lesson": 12,
+    "step": 3,
+    "learningGoal": {
+      "en": "Self-test the fix",
+      "zh": "自测修正"
+    },
+    "input": {
+      "lang": "zh",
+      "text": "我改好了吧？是不是对的",
+      "hintLevelSeen": 2,
+      "attempts": 2
+    },
+    "expected": {
+      "behaviors": [
+        "Says honestly it cannot see the project",
+        "Turns the question into a self-test with the green flag",
+        "Asks what the child sees"
+      ],
+      "mustMentionAny": [
+        [
+          "green flag",
+          "test",
+          "绿旗",
+          "测试"
+        ]
+      ],
+      "honesty": true,
+      "maxBlocks": 7
+    },
+    "failureConditions": [
+      "no-honesty",
+      "no-question",
+      "claims-correct",
+      "jargon",
+      "too-long"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E219",
+    "phase": "expansion",
+    "category": "wrong-sprite",
+    "lesson": 5,
+    "step": 2,
+    "learningGoal": {
+      "en": "Change the go to on Hero",
+      "zh": "改 Hero 里的“移到”"
+    },
+    "input": {
+      "lang": "en",
+      "text": "i changed the go to in the checkpoint sprite instead of hero",
+      "hintLevelSeen": 1,
+      "attempts": 2
+    },
+    "expected": {
+      "behaviors": [
+        "Says the lava go to is in Hero's script"
+      ],
+      "mustMentionAny": [
+        [
+          "hero"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  },
+  {
+    "id": "E220",
+    "phase": "expansion",
+    "category": "no-reset",
+    "lesson": 6,
+    "step": 2,
+    "learningGoal": {
+      "en": "Banner hides on every green flag",
+      "zh": "每次绿旗横幅都隐藏"
+    },
+    "input": {
+      "lang": "en",
+      "text": "the banner is still showing after i click the green flag again",
+      "hintLevelSeen": 1,
+      "attempts": 2
+    },
+    "expected": {
+      "behaviors": [
+        "Says when green flag clicked → hide on Win Banner"
+      ],
+      "mustMentionAny": [
+        [
+          "hide",
+          "隐藏"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0,
+      "problemRef": "The banner is visible when the game starts."
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written by an AI assistant (Claude) for this repo; not yet verified by a human teacher"
+  }
+]

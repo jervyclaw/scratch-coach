@@ -75,7 +75,7 @@
             t("Delete any extra sprites you do not need.", "删掉用不到的其他角色。")
           ],
           hints: [
-            t("Look under the stage. Find the box that shows your sprite's name (like Sprite1).", "看看舞台下方，找到写着角色名字（比如“角色1”）的那个框。"),
+            t("Look under the stage. Can you find the box that shows your sprite's name (like Sprite1)?", "看看舞台下方，你能找到写着角色名字（比如“角色1”）的那个框吗？"),
             t("This step uses no blocks. It uses the sprite info area: the name box next to “Sprite”.", "这一步不需要积木，用的是角色信息区：“角色”旁边的名字框。"),
             { en: "Do it in this order:", zh: "按这个顺序做：", list: [
               t("Click your sprite in the sprite list.", "在角色列表里点击你的角色。"),
@@ -130,7 +130,7 @@
           fix: t("Click Hero in the sprite list. Is the script there? Make sure “go to” is snapped under the green flag block with no gap.", "在角色列表里点击 Hero，看看脚本在不在。确认“移到”紧紧拼在绿旗积木下面，中间没有缝隙。") },
         { symptom: t("Hero goes to the wrong place.", "Hero 跑到了错误的位置。"),
           fix: t("Check the numbers: x is -200 and y is -130. Both have a minus sign. Minus x means left. Minus y means down.", "检查数字：x 是 -200，y 是 -130，都有负号。x 为负表示靠左，y 为负表示靠下。") },
-        { symptom: t("I can't find the Motion blocks.", "我找不到“运动”积木。"),
+        { kind: "ui", symptom: t("I can't find the Motion blocks.", "我找不到“运动”积木。"),
           fix: t("You probably clicked the Stage. The Stage can't move, so it has no Motion blocks. Click Hero.", "你大概选中了舞台。舞台不能移动，所以没有运动积木。请点击 Hero。") }
       ],
       challenge: {
@@ -176,7 +176,7 @@
             t("Find the middle of the stage. What are x and y there?", "找到舞台中间。那里的 x 和 y 是多少？")
           ],
           hints: [
-            t("Look under the stage at the boxes named x and y. Move Hero and see which number changes.", "看舞台下方叫 x 和 y 的两个框。移动 Hero，看看哪个数字在变。"),
+            t("Look under the stage at the boxes named x and y. Move Hero: which number changes?", "看舞台下方叫 x 和 y 的两个框。移动 Hero：哪个数字在变？"),
             t("No blocks yet. Left and right change x. Up and down change y.", "这一步还不用积木。左右移动改变 x，上下移动改变 y。"),
             { en: "Try these spots:", zh: "试试这些位置：", list: [
               t("Middle of the stage: x is 0, y is 0.", "舞台中间：x = 0，y = 0。"),
@@ -235,12 +235,14 @@
         t("The green flag still sends Hero back to the start.", "点击绿旗，Hero 仍然会回到起点。")
       ],
       problems: [
-        { symptom: t("Hero moves only one tiny step, then stops working.", "Hero 只动了一小步，然后就不动了。"),
+        { symptom: t("Hero doesn't move when I press an arrow, or moves one tiny step and stops.", "按方向键 Hero 不动，或者只动一小步就不动了。"),
           fix: t("The “if” blocks must be INSIDE the “forever” loop. Without forever, the check happens only once.", "“如果”积木必须放在“重复执行”里面。没有重复执行，检查只会发生一次。") },
         { symptom: t("Hero keeps moving by itself.", "Hero 自己一直在动。"),
           fix: t("A “change x by” block is inside forever but not inside an “if”. Move it into the right “if” block.", "有一个“将x坐标增加”在重复执行里，但没放进“如果”里。把它移进对应的“如果”积木。") },
         { symptom: t("Pressing up makes Hero go down.", "按 ↑ 键 Hero 却往下走。"),
           fix: t("Swap the numbers: up is change y by (5), down is change y by (-5).", "把数字换过来：↑ 用 将y坐标增加 (5)，↓ 用 将y坐标增加 (-5)。") },
+        { symptom: t("Hero starts facing the wrong way, or upside down.", "Hero 一开始朝向不对，或者倒过来了。"),
+          fix: t("Make sure “point in direction (90)” is in Hero's green flag script. If Hero flips upside down when turning, add “set rotation style [left-right]”.", "确认 Hero 的绿旗脚本里有“面向 (90) 方向”。如果转身时会倒过来，再加“将旋转方式设为 [左右翻转]”。") },
         { symptom: t("Hero is too fast or too slow.", "Hero 太快或太慢。"),
           fix: t("Change all four numbers together, for example 3 for slow or 8 for fast. Keep the minus signs.", "四个数字一起改，比如慢一点用 3，快一点用 8，负号保留。") }
       ],
@@ -463,6 +465,8 @@
       problems: [
         { symptom: t("The score goes up super fast.", "分数涨得飞快。"),
           fix: t("You probably used “forever” + “if touching”. Use “wait until <touching (Hero)?>”, then change Score by 1, then hide — with no forever.", "你可能用了“重复执行”+“如果碰到”。请改用“等待 <碰到 (Hero)?>”，然后 Score 增加 1，再隐藏——不要重复执行。") },
+        { symptom: t("A coin disappears as soon as the game starts.", "游戏一开始，金币就消失了。"),
+          fix: t("Check the order in the coin script: show → go to → wait → wait until <touching (Hero)?> → change Score → hide. “hide” must be last.", "检查金币脚本的顺序：显示 → 移到 → 等待 → 等待 <碰到 (Hero)?> → Score 增加 → 隐藏。“隐藏”必须在最后。") },
         { symptom: t("Coins are gone when I play again.", "再玩一次时，金币都不见了。"),
           fix: t("Add “show” at the top of each coin's green flag script. A hidden coin stays hidden until something shows it.", "在每个金币绿旗脚本的最上面加“显示”。隐藏的金币会一直隐藏，直到有积木让它显示。") },
         { symptom: t("All my coins jump to the same spot.", "所有金币都跳到同一个位置。"),
@@ -580,6 +584,10 @@
           fix: t("The variables were never set, so they are 0. Add the two “set” blocks to Hero's green flag script.", "变量从没被设置过，所以是 0。在 Hero 的绿旗脚本里加上那两个“设为”积木。") },
         { symptom: t("Hero respawns where Hero was standing, not at the flag.", "Hero 在自己刚才站的地方复活，而不是旗帜那里。"),
           fix: t("The “x position” block was used in Hero's script, so it means Hero's position. Move the flag script to the Checkpoint sprite.", "“x 坐标”积木被用在了 Hero 的脚本里，所以表示 Hero 的位置。把旗帜脚本移到 Checkpoint 角色上。") },
+        { symptom: t("The checkpoint saves its spot before Hero touches it.", "Hero 还没碰到，检查点就保存了位置。"),
+          fix: t("The two “set [Checkpoint X/Y]” blocks must come after “wait until <touching (Hero)?>”, not before it.", "两个“将 [Checkpoint X/Y] 设为”积木必须放在“等待 <碰到 (Hero)?>”之后，不能放在前面。") },
+        { symptom: t("The flag still looks “on” when a new game starts.", "新的一局开始时，旗帜还是“点亮”的样子。"),
+          fix: t("Add “switch costume to [off]” right after the Checkpoint's green flag block.", "在 Checkpoint 的绿旗积木后面加“换成 [off] 造型”。") },
         { symptom: t("Hero dies again and again after respawning.", "Hero 复活后一次又一次地“死掉”。"),
           fix: t("The checkpoint is touching lava. Move the flag to safe ground.", "检查点碰到了岩浆。把旗帜移到安全的地面上。") }
       ],
@@ -805,8 +813,10 @@
       problems: [
         { symptom: t("Hero freezes when a sound plays.", "播放声音时 Hero 卡住了。"),
           fix: t("Use “start sound” instead of “play sound until done” inside the forever loop.", "在重复执行里用“播放声音”，不要用“播放声音……等待播完”。") },
-        { symptom: t("I can't find my sound in the menu.", "菜单里找不到我的声音。"),
+        { kind: "ui", symptom: t("I can't find my sound in the menu.", "菜单里找不到我的声音。"),
           fix: t("The menu only shows sounds of the sprite you are editing. Add the sound in THAT sprite's Sounds tab.", "菜单只显示当前角色的声音。请在“这个”角色的声音标签页里添加。") },
+        { symptom: t("Hero keeps the last costume when I play again.", "再玩一次时，Hero 还是上一次的造型。"),
+          fix: t("Add “switch costume to [costume1]” (your starting costume) to Hero's green flag script.", "在 Hero 的绿旗脚本里加“换成 [costume1] 造型”（你的开始造型）。") },
         { symptom: t("My new rule broke the old game.", "新规则把原来的游戏弄坏了。"),
           fix: t("Pull the new blocks away from the script so they are loose, and test again. Add them back one block at a time.", "把新积木从脚本上拖开放着，再测试一次。然后一块一块地加回去。") },
         { symptom: t("Lives go below 0, or do not start at 3.", "生命值变成负数，或开局不是 3。"),
@@ -910,11 +920,11 @@
         t("I saved my .sb3 file and opened it again.", "我保存了 .sb3 文件，并重新打开过。")
       ],
       problems: [
-        { symptom: t("I can't find my saved file.", "找不到保存的文件。"),
+        { kind: "ui", symptom: t("I can't find my saved file.", "找不到保存的文件。"),
           fix: t("Look in the Downloads folder. Newer copies may be called “Scratch Project (1).sb3”. The newest file is the last one saved.", "看看“下载”文件夹。新的副本可能叫“Scratch Project (1).sb3”，最后保存的那个才是最新的。") },
         { symptom: t("I found a bug but don't know where it is.", "发现了问题，但不知道在哪里。"),
           fix: t("Check one sprite at a time. Read its scripts from top to bottom, and click each script to run it alone. Check the names match.", "一次检查一个角色。从上到下读它的脚本，单独点击每段脚本运行，并检查名字是否一致。") },
-        { symptom: t("The file opens, but it's an old version.", "文件能打开，但是旧版本。"),
+        { kind: "ui", symptom: t("The file opens, but it's an old version.", "文件能打开，但是旧版本。"),
           fix: t("Save again after your last change. Then open the newest file.", "在最后一次修改后再保存一次，然后打开最新的文件。") }
       ],
       challenge: {
@@ -1004,6 +1014,108 @@
     8: "请孩子用一句话讲解一个概念；陪他把 .sb3 文件保存到电脑并重新打开验证。"
   };
 
+  /* ───────────── Project metadata for Levels 1–8 (Block Quest main game) ─────────────
+   * prereqs: what the child should already know (and which levels teach it)
+   * setup:   where to build, sprites, variables (with scope) and messages used by the end of the level
+   * init:    what the green flag must reset
+   * parentGuide: Chinese notes for grown-ups (focus, questions to ask, what to avoid)
+   */
+  var SPR = {
+    Hero: { name: "Hero", role: t("The player you control", "你控制的主角") },
+    Lava: { name: "Lava", role: t("Danger: touching it sends Hero back", "危险区：碰到就被送回") },
+    Coin: { name: "Coin", role: t("Collect for 1 point (copies: Coin2, Coin3)", "收集得 1 分（复制品 Coin2、Coin3）") },
+    Checkpoint: { name: "Checkpoint", role: t("Remembers a new respawn spot", "记录新的复活点") },
+    Goal: { name: "Goal", role: t("Reach it to win", "到达这里就赢了") },
+    WinBanner: { name: "Win Banner", role: t("Shows YOU WIN!", "显示 YOU WIN!") }
+  };
+  var VAR_SCORE = { name: "Score", scope: "all", role: t("Points from coins. Set to 0 by Hero at the green flag.", "金币得分。绿旗时由 Hero 设为 0。") };
+  var VAR_CPX = { name: "Checkpoint X", scope: "all", role: t("Respawn x. Set to -200 by Hero at the green flag.", "复活点 x。绿旗时由 Hero 设为 -200。") };
+  var VAR_CPY = { name: "Checkpoint Y", scope: "all", role: t("Respawn y. Set to -130 by Hero at the green flag.", "复活点 y。绿旗时由 Hero 设为 -130。") };
+  var VAR_LIVES = { name: "Lives", scope: "all", role: t("Optional rule: lives left. Set to 3 at the green flag.", "可选规则：剩余生命。绿旗时设为 3。") };
+  var MSG_WIN = { name: "You Win", role: t("Sent once by Goal. Win Banner and Hero listen.", "由 Goal 发送一次，Win Banner 和 Hero 接收。") };
+  var BQ_PROJECT = t("Your Block Quest project (keep adding to the same project)", "你的“积木大冒险”项目（一直在同一个项目里继续做）");
+
+  var META = {
+    1: {
+      track: "quest", requires: [],
+      prereqs: t("Nothing yet! You only need to open Scratch and drag blocks with the mouse.", "不需要任何基础！只要会打开 Scratch、用鼠标拖动积木。"),
+      setup: { project: t("Start a new Scratch project. Call it Block Quest (a game name, not your real name).", "新建一个 Scratch 项目，取名 Block Quest（用游戏名，不要用真名）。"), sprites: [SPR.Hero], variables: [], messages: [] },
+      init: t("Green flag: Hero goes to x: -200, y: -130 and points in direction 90.", "绿旗：Hero 移到 x: -200, y: -130，面向 90 方向。"),
+      parentGuide: { focus: "孩子能否说出“点绿旗会运行绿旗下面的脚本”，并在角色信息区找到 x、y。", ask: ["点绿旗以后，电脑是按什么顺序做事的？", "如果把“移到 x: y:”拿掉，再点绿旗会怎样？"], avoid: "不要替孩子拖积木；改名和画背景可以慢一点，这是熟悉界面的好机会。" }
+    },
+    2: {
+      track: "quest", requires: [1],
+      prereqs: t("Level 1: the green flag block and “go to x: y:”.", "第 1 关：绿旗积木和“移到 x: y:”。"),
+      setup: { project: BQ_PROJECT, sprites: [SPR.Hero], variables: [], messages: [] },
+      init: t("Green flag: Hero goes to the start before the forever loop begins.", "绿旗：在“重复执行”开始之前，Hero 先回到起点。"),
+      parentGuide: { focus: "重点是“重复执行”里面放“如果”。理解“一直检查”是循环的核心。", ask: ["为什么松开按键 Hero 就停下了？", "x 变大是往哪边走？y 变小呢？"], avoid: "孩子把正负号写反时，先让他测试并说出看到的现象，再自己改。" }
+    },
+    3: {
+      track: "quest", requires: [2],
+      prereqs: t("Level 2: “if” blocks inside a “forever” loop on Hero.", "第 2 关：Hero 的“重复执行”里放“如果”。"),
+      setup: { project: BQ_PROJECT, sprites: [SPR.Hero, SPR.Lava], variables: [], messages: [] },
+      init: t("Green flag: Hero starts at x: -200, y: -130. Lava sends Hero back to the same spot.", "绿旗：Hero 从 x: -200, y: -130 出发。碰到岩浆也回到同一个位置。"),
+      parentGuide: { focus: "确认岩浆是独立角色（不是画在背景上），检测脚本放在 Hero 上。", ask: ["是谁在问“我碰到岩浆了吗”？Hero 还是 Lava？", "为什么起点不能碰到岩浆？"], avoid: "不要急着解释“碰撞检测”这个词，先让孩子描述“碰到以后发生了什么”。" }
+    },
+    4: {
+      track: "quest", requires: [3],
+      prereqs: t("Level 3: “touching ( )?” and “if”. Knowing how to make a new sprite.", "第 3 关：“碰到 ( )?”和“如果”；会新建角色。"),
+      setup: { project: BQ_PROJECT, sprites: [SPR.Hero, SPR.Lava, SPR.Coin], variables: [VAR_SCORE], messages: [] },
+      init: t("Green flag: Hero sets Score to 0. Each coin shows itself and goes to its own spot.", "绿旗：Hero 把 Score 设为 0；每个金币显示自己并回到各自的位置。"),
+      parentGuide: { focus: "关注“只能收集一次”：金币用“等待……”而不是“重复执行”；分数在绿旗时归零。", ask: ["Score 这个盒子里装的是什么？什么时候会变？", "金币为什么只加一次分？哪个积木让它停下来？"], avoid: "如果分数狂涨，不要直接说答案，问孩子：“哪个积木在一遍遍地运行？”" }
+    },
+    5: {
+      track: "quest", requires: [4],
+      prereqs: t("Level 4: making a variable “For all sprites” and the “set” block.", "第 4 关：建立“适用于所有角色”的变量，会用“设为”积木。"),
+      setup: { project: BQ_PROJECT, sprites: [SPR.Hero, SPR.Lava, SPR.Coin, SPR.Checkpoint], variables: [VAR_SCORE, VAR_CPX, VAR_CPY], messages: [] },
+      init: t("Green flag: Hero sets Checkpoint X to -200 and Checkpoint Y to -130, so a new game respawns at the start.", "绿旗：Hero 把 Checkpoint X 设为 -200、Checkpoint Y 设为 -130，新一局从起点复活。"),
+      parentGuide: { focus: "关注“检查点复位”：绿旗时把 Checkpoint X/Y 设回起点；“x 坐标”要在 Checkpoint 角色里使用。", ask: ["“x 坐标”这个积木，放在 Hero 里和放在 Checkpoint 里，意思一样吗？", "新的一局为什么要忘掉检查点？"], avoid: "变量作用域对孩子较抽象，用“每个角色有自己的口袋 / 大家共用的盒子”打比方即可。" }
+    },
+    6: {
+      track: "quest", requires: [5],
+      prereqs: t("Level 4: “wait until <touching (Hero)?>”. Knowing a sprite can have two scripts.", "第 4 关：“等待 <碰到 (Hero)?>”；知道一个角色可以有两段脚本。"),
+      setup: { project: BQ_PROJECT, sprites: [SPR.Hero, SPR.Lava, SPR.Coin, SPR.Checkpoint, SPR.Goal, SPR.WinBanner], variables: [VAR_SCORE, VAR_CPX, VAR_CPY], messages: [MSG_WIN] },
+      init: t("Green flag: Win Banner hides. Goal waits for Hero again. Hero can move again.", "绿旗：Win Banner 隐藏，Goal 重新等待 Hero，Hero 可以重新移动。"),
+      parentGuide: { focus: "关注“胜利只触发一次”：终点用“等待……”加一次广播；横幅开局隐藏；Hero 收到消息后停止其他脚本。", ask: ["是谁发出了 You Win 消息？谁在听？", "如果终点用了“重复执行”，会发生什么？"], avoid: "广播名字要完全一致，出错时让孩子逐字比对，而不是替他改。" }
+    },
+    7: {
+      track: "quest", requires: [6],
+      prereqs: t("Levels 1–6: a working game with Hero, Lava, coins, checkpoint and goal.", "第 1–6 关：一个能玩的游戏（Hero、岩浆、金币、检查点、终点）。"),
+      setup: { project: BQ_PROJECT, sprites: [SPR.Hero, SPR.Lava, SPR.Coin, SPR.Checkpoint, SPR.Goal, SPR.WinBanner], variables: [VAR_SCORE, VAR_CPX, VAR_CPY, VAR_LIVES], messages: [MSG_WIN] },
+      init: t("Green flag: everything you add must also reset (for example Lives to 3, Hero's costume back to costume1).", "绿旗：你新加的东西也要重置（比如 Lives 回到 3，Hero 换回 costume1 造型）。"),
+      parentGuide: { focus: "鼓励孩子自己做决定，只要求“改一样、测一次”，并检查新规则也被绿旗重置。", ask: ["你的新规则用一句话怎么说？“当……时，就……”", "点绿旗以后，你的新东西回到开始的样子了吗？"], avoid: "不要追求“做得多”，一条想清楚并测试过的规则比五条半成品更好。" }
+    },
+    8: {
+      track: "quest", requires: [7],
+      prereqs: t("Levels 1–7: your finished game.", "第 1–7 关：你完成的游戏。"),
+      setup: { project: BQ_PROJECT, sprites: [SPR.Hero, SPR.Lava, SPR.Coin, SPR.Checkpoint, SPR.Goal, SPR.WinBanner], variables: [VAR_SCORE, VAR_CPX, VAR_CPY], messages: [MSG_WIN] },
+      init: t("Green flag: Hero at the start, Score 0, coins back, checkpoint reset, banner hidden.", "绿旗：Hero 在起点、Score 为 0、金币回来、检查点复位、横幅隐藏。"),
+      parentGuide: { focus: "请孩子用一句话讲解一个概念；陪他把 .sb3 文件保存到电脑并重新打开验证。", ask: ["你最喜欢哪个积木？它在游戏里做什么？", "如果游戏出错了，你会先看哪个角色？为什么？"], avoid: "测试清单是孩子自己勾的；请他实际演示一遍，比看勾选更可靠。" }
+    }
+  };
+
+  // Arcade projects (Level 9+) live in content-arcade.js.
+  var arcadeBuild = root.SCRATCH_COACH_ARCADE || (typeof require === "function" ? require("./content-arcade.js") : null);
+  if (arcadeBuild) arcadeBuild({ t: t, b: b, note: note }).lessons.forEach(function (l) { lessons.push(l); });
+
+  lessons.forEach(function (l) { var m = META[l.id]; if (m) Object.keys(m).forEach(function (k) { l[k] = m[k]; }); });
+
+  // Kid-friendly word list (shown on the home page; used by the offline coach for "what does X mean?").
+  var glossary = [
+    { term: t("sprite", "角色"), match: ["sprite", "角色"], def: t("A sprite is a character or thing in your game, like Hero, a Coin or the Goal. Each sprite has its own scripts.", "角色就是游戏里的人物或东西，比如 Hero、金币或终点。每个角色都有自己的脚本。") },
+    { term: t("stage", "舞台"), match: ["stage", "舞台"], def: t("The stage is the big area where your game plays. It is 480 wide and 360 tall.", "舞台是游戏运行的大区域，宽 480、高 360。") },
+    { term: t("backdrop", "背景"), match: ["backdrop", "背景"], def: t("A backdrop is a picture behind everything on the stage. Click the Stage, then the Backdrops tab.", "背景是舞台最后面的图片。点舞台，再点“背景”标签页。") },
+    { term: t("costume", "造型"), match: ["costume", "造型"], def: t("A costume is one look of a sprite. A sprite can switch between costumes.", "造型是角色的一种样子。角色可以在不同造型之间切换。") },
+    { term: t("script", "脚本"), match: ["script", "脚本"], def: t("A script is a stack of blocks snapped together. It runs from top to bottom.", "脚本是一串拼在一起的积木，从上到下运行。") },
+    { term: t("green flag", "绿旗"), match: ["green flag", "绿旗"], def: t("The green flag above the stage starts your game. Scripts that begin with “when green flag clicked” run then.", "舞台上方的绿旗用来开始游戏。以“当绿旗被点击”开头的脚本会在这时运行。") },
+    { term: t("x and y", "x 和 y"), match: [" x ", "x and y", "x和y", "x 和 y", "coordinates", "坐标"], def: t("x tells how far left or right (bigger x = more right). y tells how far up or down (bigger y = higher). The middle is x 0, y 0.", "x 表示左右位置（x 越大越靠右），y 表示上下位置（y 越大越靠上）。中间是 x 0, y 0。") },
+    { term: t("loop", "循环"), match: ["loop", "forever", "循环", "重复执行"], def: t("A loop repeats the blocks inside it. “forever” never stops; “repeat until” stops when something becomes true.", "循环会重复里面的积木。“重复执行”永不停止；“重复执行直到”在条件成立时停止。") },
+    { term: t("variable", "变量"), match: ["variable", "变量"], def: t("A variable is a box with a name that remembers a number, like Score.", "变量是一个有名字、能记住数字的盒子，比如 Score。") },
+    { term: t("broadcast", "广播"), match: ["broadcast", "广播"], def: t("A broadcast is a message one sprite sends. Every script that starts with “when I receive” that message runs.", "广播是一个角色发出的消息。所有以“当接收到”这条消息开头的脚本都会运行。") },
+    { term: t("rename", "改名"), match: ["rename", "改名"], def: t("Rename means giving something a new name. Type the new name in its name box.", "改名就是给它换一个新名字。在名字框里输入新名字。") },
+    { term: t("undo", "退回"), match: ["undo", "退回"], def: t("In the maze, undo means moving back by the same number you just moved, but with the opposite sign (3 then -3).", "在迷宫里，“退回”是指按刚才走的数字往回走，符号相反（先 3，再 -3）。") }
+  ];
+
   var content = {
     START_X: START_X,
     START_Y: START_Y,
@@ -1011,7 +1123,8 @@
     NAMES: NAMES,
     lessons: lessons,
     finalScripts: finalScripts,
-    parentNotes: parentNotes
+    parentNotes: parentNotes,
+    glossary: glossary
   };
 
   root.SCRATCH_COACH_CONTENT = content;

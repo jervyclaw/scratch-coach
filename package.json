@@ -5,8 +5,12 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "test": "node --test tests/content.test.js tests/storage.test.js",
+    "test": "node --test tests/content.test.js tests/storage.test.js tests/eval.test.js",
+    "eval": "node eval/run.js",
+    "eval:controls": "node eval/run.js --controls",
+    "eval:estimate": "node eval/run.js --model-estimate --no-write",
     "test:browser": "node --test tests/browser.test.js",
-    "test:all": "node --test tests/"
+    "test:scratch": "node --test --test-concurrency=1 tests/scratch-engine/*.test.js",
+    "test:all": "npm test && npm run test:browser && npm run test:scratch"
   }
 }

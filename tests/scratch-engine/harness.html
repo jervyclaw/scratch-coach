@@ -1,0 +1,70 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Scratch engine harness</title></head>
+<body>
+<canvas id="stage" width="480" height="360"></canvas>
+<script src="node_modules/scratch-storage/dist/web/scratch-storage.js"></script>
+<script src="node_modules/scratch-svg-renderer/dist/web/scratch-svg-renderer.js"></script>
+<script src="node_modules/scratch-render/dist/web/scratch-render.js"></script>
+<script src="node_modules/scratch-vm/dist/web/scratch-vm.js"></script>
+<script>
+/* Minimal host for scratch-vm: loads a project, presses keys, reports state. Test-only. */
+window.SE = (function () {
+  let vm = null;
+  const broadcasts = [];
+  const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+  async function load(project, assets) {
+    if (vm) { vm.stopAll(); vm.quit && vm.quit(); }
+    broadcasts.length = 0;
+    const storage = new ScratchStorage.ScratchStorage();
+    const enc = new TextEncoder();
+    Object.entries(assets).forEach(([id, svg]) => storage.builtinHelper._store(storage.AssetType.ImageVector, storage.DataFormat.SVG, enc.encode(svg), id));
+    vm = new VirtualMachine();
+    vm.attachStorage(storage);
+    vm.attachRenderer(new ScratchRender(document.getElementById("stage")));
+    vm.attachV2SVGAdapter(new ScratchSVGRenderer.SVGRenderer());
+    vm.attachV2BitmapAdapter(new ScratchSVGRenderer.BitmapAdapter());
+    await vm.loadProject(JSON.stringify(project));
+    const orig = vm.runtime.startHats.bind(vm.runtime);
+    vm.runtime.startHats = function (opcode, fields, target) {
+      if (opcode === "event_whenbroadcastreceived" && fields) broadcasts.push(fields.BROADCAST_OPTION);
+      return orig(opcode, fields, target);
+    };
+    vm.start();
+    await sleep(100);
+    return true;
+  }
+  function sprite(name) {
+    const t = vm.runtime.getSpriteTargetByName(name);
+    if (!t) return null;
+    const say = t.getCustomState("Scratch.looks");
+    const vars = {};
+    Object.values(t.variables).forEach((v) => { vars[v.name] = v.value; });
+    return { x: Math.round(t.x * 100) / 100, y: Math.round(t.y * 100) / 100, visible: t.visible, costume: t.getCostumes()[t.currentCostume].name, say: say && say.text ? say.text : "", vars };
+  }
+  function globals() {
+    const out = {};
+    Object.values(vm.runtime.getTargetForStage().variables).forEach((v) => { out[v.name] = v.value; });
+    return out;
+  }
+  function state(names) {
+    const st = vm.runtime.getTargetForStage();
+    const s = { vars: globals(), sprites: {}, broadcasts: broadcasts.slice(), threads: vm.runtime.threads.length, backdrop: st.getCostumes()[st.currentCostume].name };
+    (names || vm.runtime.targets.filter((t) => !t.isStage && t.isOriginal).map((t) => t.getName())).forEach((n) => { s.sprites[n] = sprite(n); });
+    return s;
+  }
+  const KEYS = { right: "ArrowRight", left: "ArrowLeft", up: "ArrowUp", down: "ArrowDown", space: " " };
+  return {
+    load,
+    greenFlag: () => { broadcasts.length = 0; vm.greenFlag(); },
+    stopAll: () => vm.stopAll(),
+    key: (k, down) => vm.postIOData("keyboard", { key: KEYS[k] || k, isDown: down }),
+    releaseAll: () => Object.values(KEYS).forEach((k) => vm.postIOData("keyboard", { key: k, isDown: false })),
+    setPos: (name, x, y) => { vm.runtime.getSpriteTargetByName(name).setXY(x, y); },
+    setVar: (name, value) => { const v = Object.values(vm.runtime.getTargetForStage().variables).find((x) => x.name === name); v.value = value; },
+    state,
+    sprite,
+    globals,
+  };
+})();
+</script>
+</body></html>

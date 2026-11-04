@@ -1,0 +1,10 @@
+{
+  "name": "scratch-coach-engine-tests",
+  "private": true,
+  "description": "Runs the course's Scratch scripts inside the real Scratch 3 runtime (scratch-vm + scratch-render) in headless Chromium.",
+  "license": "MIT",
+  "dependencies": {
+    "scratch-render": "2.2.84",
+    "scratch-vm": "5.0.300"
+  }
+}

@@ -1,0 +1,6523 @@
+{
+  "summary": {
+    "n": 157,
+    "pass": 138,
+    "passRate": 0.8789808917197452,
+    "dims": {
+      "technical": 0.8407643312101911,
+      "clarity": 1,
+      "independence": 1,
+      "age": 1,
+      "honesty": 1,
+      "noFalseClaims": 1
+    },
+    "byCategory": {
+      "unclear-instructions": {
+        "n": 17,
+        "pass": 17
+      },
+      "block-order": {
+        "n": 16,
+        "pass": 11
+      },
+      "wrong-sprite": {
+        "n": 18,
+        "pass": 12
+      },
+      "no-reset": {
+        "n": 19,
+        "pass": 16
+      },
+      "repeat-trigger": {
+        "n": 19,
+        "pass": 15
+      },
+      "asks-for-answer": {
+        "n": 16,
+        "pass": 16
+      },
+      "frustrated": {
+        "n": 17,
+        "pass": 16
+      },
+      "hint-need": {
+        "n": 19,
+        "pass": 19
+      },
+      "asks-if-correct": {
+        "n": 16,
+        "pass": 16
+      }
+    },
+    "failures": {
+      "unfounded-diagnosis": 10,
+      "off-topic": 12,
+      "wrong-diagnosis": 2
+    }
+  },
+  "rows": [
+    {
+      "id": "E101",
+      "category": "unclear-instructions",
+      "lesson": 1,
+      "input": {
+        "lang": "en",
+        "text": "what is a backdrop and where do i paint it",
+        "hintLevelSeen": 0,
+        "attempts": 1
+      },
+      "response": {
+        "text": "A backdrop is a picture behind everything on the stage. Click the Stage, then the Backdrops tab.\nLet's do one small piece at a time.\nTry this part: Name the backdrop Level 1.\nWhere: Stage → Backdrops tab\nHint 1: Where does Hero start? Look at the bottom-left corner of the stage. That is a good start spot.\nTry it in Scratch. What happened?",
+        "lang": "en",
+        "meta": {
+          "intent": "unclear-instructions",
+          "hintShown": 1,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 63,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E102",
+      "category": "unclear-instructions",
+      "lesson": 1,
+      "input": {
+        "lang": "zh",
+        "text": "绿旗是什么？我要把积木放到哪里",
+        "hintLevelSeen": 0,
+        "attempts": 1
+      },
+      "response": {
+        "text": "舞台上方的绿旗用来开始游戏。以“当绿旗被点击”开头的脚本会在这时运行。\n我们一次只做一小块。\n先做这一部分： 点击 Hero，把“当绿旗被点击”拖到代码区。\n位置： Hero 角色 → 代码 标签页\n提示 1: 把 Hero 拖到别处再点绿旗——现在什么都没发生。哪个积木表示“游戏开始的时候”？\n在 Scratch 里试试看。发生了什么？",
+        "lang": "zh",
+        "meta": {
+          "intent": "unclear-instructions",
+          "hintShown": 1,
+          "problem": null,
+          "problemScore": 0.19
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 61,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E103",
+      "category": "unclear-instructions",
+      "lesson": 3,
+      "input": {
+        "lang": "en",
+        "text": "how do i make a new sprite that i draw myself",
+        "hintLevelSeen": 0,
+        "attempts": 1
+      },
+      "response": {
+        "text": "A sprite is a character or thing in your game, like Hero, a Coin or the Goal. Each sprite has its own scripts.\nLet's do one small piece at a time.\nTry this part: Draw a red or orange shape. Name the sprite Lava.\nWhere: New sprite → Paint\nHint 1: Lava must be its own sprite, not part of the backdrop. Why? Hero can only check “touching” for sprites.\nTry it in Scratch. What happened?",
+        "lang": "en",
+        "meta": {
+          "intent": "unclear-instructions",
+          "hintShown": 1,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 75,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E104",
+      "category": "unclear-instructions",
+      "lesson": 4,
+      "input": {
+        "lang": "zh",
+        "text": "什么叫适用于所有角色",
+        "hintLevelSeen": 0,
+        "attempts": 1
+      },
+      "response": {
+        "text": "角色就是游戏里的人物或东西，比如 Hero、金币或终点。每个角色都有自己的脚本。\n我们一次只做一小块。\n先做这一部分： 点“变量”→“建立一个变量”，命名为 Score，选“适用于所有角色”，点确定。\n位置： “变量”分类，然后是 Hero 的绿旗脚本\n提示 1: 每一局新游戏都应从 0 分开始。哪个脚本会在新游戏开始时运行一次？\n在 Scratch 里试试看。发生了什么？",
+        "lang": "zh",
+        "meta": {
+          "intent": "unclear-instructions",
+          "hintShown": 1,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 68,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E105",
+      "category": "unclear-instructions",
+      "lesson": 5,
+      "input": {
+        "lang": "en",
+        "text": "i dont get what the x position block is, where is it",
+        "hintLevelSeen": 1,
+        "attempts": 2
+      },
+      "response": {
+        "text": "x tells how far left or right (bigger x = more right). y tells how far up or down (bigger y = higher). The middle is x 0, y 0.\nLet's do one small piece at a time.\nTry this part: Then set Checkpoint X to (x position) and Checkpoint Y to (y position), and say “Checkpoint!”.\nWhere: New sprite named Checkpoint → Code tab\nHint 2: Control: “wait”, “wait until”. Sensing: “touching (Hero)?”. Variables: “set”. Motion (at the bottom of the list): the round “x position” and “y position” blocks.\nTry it in Scratch. What happened?",
+        "lang": "en",
+        "meta": {
+          "intent": "unclear-instructions",
+          "hintShown": 2,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 94,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E106",
+      "category": "unclear-instructions",
+      "lesson": 6,
+      "input": {
+        "lang": "en",
+        "text": "what is broadcast? like tv?",
+        "hintLevelSeen": 0,
+        "attempts": 1
+      },
+      "response": {
+        "text": "A broadcast is a message one sprite sends. Every script that starts with “when I receive” that message runs.\nLet's do one small piece at a time.\nTry this part: In the broadcast menu choose “New message” and type You Win.\nWhere: New sprite named Goal → Code tab\nHint 1: This is like a coin, but instead of adding points it tells everyone “we won”. How did the coin wait for Hero?\nTry it in Scratch. What happened?",
+        "lang": "en",
+        "meta": {
+          "intent": "unclear-instructions",
+          "hintShown": 1,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 78,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E107",
+      "category": "unclear-instructions",
+      "lesson": 7,
+      "input": {
+        "lang": "zh",
+        "text": "声音标签页在哪里",
+        "hintLevelSeen": 0,
+        "attempts": 1
+      },
+      "response": {
+        "text": "我们一次只做一小块。\n先做这一部分： 点 Coin → 声音 标签页 → 选一个短音效（比如 Pop 或 Collect）。\n位置： Coin（和 Hero）→ 声音 标签页，再到代码\n提示 1: 每个角色只有自己的声音。金币的音效应该加在哪个角色的声音标签页里？\n在 Scratch 里试试看。发生了什么？",
+        "lang": "zh",
+        "meta": {
+          "intent": "unclear-instructions",
+          "hintShown": 1,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 50,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E108",
+      "category": "unclear-instructions",
+      "lesson": 8,
+      "input": {
+        "lang": "en",
+        "text": "what is an sb3 file?",
+        "hintLevelSeen": 0,
+        "attempts": 1
+      },
+      "response": {
+        "text": "Let's do one small piece at a time.\nTry this part: Find the .sb3 file (usually in Downloads). Give it a game name, like block-quest.sb3 — not your real name.\nWhere: Scratch menu: File\nHint 1: Look at the top menu bar of Scratch. Which menu is about files?\nTry it in Scratch. What happened?",
+        "lang": "en",
+        "meta": {
+          "intent": "unclear-instructions",
+          "hintShown": 1,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 1,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [
+          "missing keyword groups: save/保存"
+        ],
+        "stats": {
+          "words": 55,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E109",
+      "category": "unclear-instructions",
+      "lesson": 9,
+      "input": {
+        "lang": "en",
+        "text": "what does one solid colour mean for the walls",
+        "hintLevelSeen": 0,
+        "attempts": 1
+      },
+      "response": {
+        "text": "Let's do one small piece at a time.\nTry this part: Paint a backdrop named Maze. Draw thick walls in ONE dark color. Keep the paths wide.\nWhere: Stage → Backdrops; then the sprite list\nHint 1: Runner must fit through every path. Compare Runner's size with the paths. Are the walls easy to see?\nTry it in Scratch. What happened?",
+        "lang": "en",
+        "meta": {
+          "intent": "unclear-instructions",
+          "hintShown": 1,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 60,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E110",
+      "category": "unclear-instructions",
+      "lesson": 10,
+      "input": {
+        "lang": "zh",
+        "text": "随机数是什么意思",
+        "hintLevelSeen": 1,
+        "attempts": 1
+      },
+      "response": {
+        "text": "我们一次只做一小块。\n先做这一部分： 绿旗 → 将 Fall Speed 设为 (-3) → 重复执行：先移到顶部的随机位置，再下落（y 坐标增加 Fall Speed），直到碰到 Basket 或者 y 坐标小于 -160。\n位置： Star 角色 → 代码 标签页\n提示 2: “运算”：“在 ( ) 和 ( ) 之间取随机数”“< > 或 < >”“( ) < ( )”。“运动”：圆形的“y 坐标”——它放在“( ) < ( )”的左边空格，-160 放在右边。“控制”：“重复执行”“重复执行直到”“如果那么”。“变量”：Fall Speed。\n在 Scratch 里试试看。发生了什么？",
+        "lang": "zh",
+        "meta": {
+          "intent": "unclear-instructions",
+          "hintShown": 2,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 76,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E111",
+      "category": "unclear-instructions",
+      "lesson": 11,
+      "input": {
+        "lang": "en",
+        "text": "what does broadcast start even do, i dont get it",
+        "hintLevelSeen": 0,
+        "attempts": 1
+      },
+      "response": {
+        "text": "A broadcast is a message one sprite sends. Every script that starts with “when I receive” that message runs.\nLet's do one small piece at a time.\nTry this part: On the Stage: green flag → switch backdrop to Arena → set Time Left to 20 → broadcast Start (New message: Start).\nWhere: Stage → Code tab (click the Stage first)\nHint 1: A countdown takes away 1 every second. What should happen BEFORE the countdown starts, and what happens when it reaches 0?\nTry it in Scratch. What happened?",
+        "lang": "en",
+        "meta": {
+          "intent": "unclear-instructions",
+          "hintShown": 1,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 86,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E112",
+      "category": "unclear-instructions",
+      "lesson": 12,
+      "input": {
+        "lang": "zh",
+        "text": "为什么要我照着搭错的代码？看不懂",
+        "hintLevelSeen": 0,
+        "attempts": 1
+      },
+      "response": {
+        "text": "我们一次只做一小块。\n先做这一部分： 点绿旗之前先预测：会出什么问题？\n位置： Cat 和 Apple 角色 → 代码 标签页\n提示 1: 这一步不一样：你要照着搭故意写错的脚本。你觉得侦探为什么要先在有线索的谜题上练习？\n在 Scratch 里试试看。发生了什么？",
+        "lang": "zh",
+        "meta": {
+          "intent": "unclear-instructions",
+          "hintShown": 1,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 49,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E113",
+      "category": "unclear-instructions",
+      "lesson": 11,
+      "input": {
+        "lang": "en",
+        "text": "what is if on edge bounce? does it jump?",
+        "hintLevelSeen": 0,
+        "attempts": 1
+      },
+      "response": {
+        "text": "Let's do one small piece at a time.\nTry this part: On Enemy: when I receive Start → go to x: (-180) y: (120) → point in direction (15) → forever: move 5 steps, if on edge, bounce.\nWhere: Enemy sprite → Code tab; then duplicate it\nHint 1: An Enemy keeps moving and turns around at the walls. What should it do again and again? Where should it start so the game is fair?\nTry it in Scratch. What happened?",
+        "lang": "en",
+        "meta": {
+          "intent": "unclear-instructions",
+          "hintShown": 1,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 77,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E114",
+      "category": "block-order",
+      "lesson": 2,
+      "input": {
+        "lang": "en",
+        "text": "i put the forever under the if and now it only checks once",
+        "hintLevelSeen": 1,
+        "attempts": 2
+      },
+      "response": {
+        "text": "I can't see your Scratch project, so I can't check your code for you.\nLet's be bug detectives:\n1. Is the script on the sprite that should do the action? This step's script goes here: Hero sprite → green flag script.\n2. Read the script from top to bottom. Is every block in the right order, and inside the right loop?\n3. Click the script on its own and watch. What does the sprite do?\nHint 2: Control (orange): “forever” and “if then”. Sensing (light blue): “key (space) pressed?” — change the menu to right arrow. Motion: “change x by”.\nWhich of these did you check first?",
+        "lang": "en",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 2,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 105,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E115",
+      "category": "block-order",
+      "lesson": 4,
+      "input": {
+        "lang": "en",
+        "text": "i put hide before wait until and the coin disappears at the start",
+        "hintLevelSeen": 1,
+        "attempts": 2
+      },
+      "response": {
+        "text": "I can't see your project, but this sounds like a common problem: “A coin disappears as soon as the game starts.”\nCheck the order in the coin script: show → go to → wait → wait until <touching (Hero)?> → change Score → hide. “hide” must be last.\nChange it, click the green flag, and test again. What happens now?",
+        "lang": "en",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 0,
+          "problem": 1,
+          "problemScore": 0.46
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 1,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [
+          "missing keyword groups: after/under/下面/后"
+        ],
+        "stats": {
+          "words": 55,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": [
+            1
+          ]
+        }
+      }
+    },
+    {
+      "id": "E116",
+      "category": "block-order",
+      "lesson": 4,
+      "input": {
+        "lang": "zh",
+        "text": "我把显示放在最后了，金币一开始看不见",
+        "hintLevelSeen": 1,
+        "attempts": 2
+      },
+      "response": {
+        "text": "我看不到你的项目，不过这听起来像一个常见问题： “游戏一开始，金币就消失了。”\n检查金币脚本的顺序：显示 → 移到 → 等待 → 等待 <碰到 (Hero)?> → Score 增加 → 隐藏。“隐藏”必须在最后。\n改好以后点绿旗再测试一次。现在会怎样？",
+        "lang": "zh",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 0,
+          "problem": 1,
+          "problemScore": 0.25
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 1,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [
+          "missing keyword groups: 上面/最上面/top/顶部"
+        ],
+        "stats": {
+          "words": 42,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": [
+            1
+          ]
+        }
+      }
+    },
+    {
+      "id": "E117",
+      "category": "block-order",
+      "lesson": 5,
+      "input": {
+        "lang": "en",
+        "text": "i set checkpoint x before the wait until so it saves the spot at the start",
+        "hintLevelSeen": 1,
+        "attempts": 2
+      },
+      "response": {
+        "text": "I can't see your project, but this sounds like a common problem: “The checkpoint saves its spot before Hero touches it.”\nThe two “set [Checkpoint X/Y]” blocks must come after “wait until <touching (Hero)?>”, not before it.\nChange it, click the green flag, and test again. What happens now?",
+        "lang": "en",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 0,
+          "problem": 4,
+          "problemScore": 0.57
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 50,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": [
+            4
+          ]
+        }
+      }
+    },
+    {
+      "id": "E118",
+      "category": "block-order",
+      "lesson": 6,
+      "input": {
+        "lang": "en",
+        "text": "the banner shows then hides right away when i win",
+        "hintLevelSeen": 1,
+        "attempts": 2
+      },
+      "response": {
+        "text": "Hint 2: Events: “when green flag clicked” and “when I receive [ ]”. Looks: “hide”, “show”, “go to [front] layer”.\nTry it in Scratch. What happened?",
+        "lang": "en",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 2,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 24,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E119",
+      "category": "block-order",
+      "lesson": 6,
+      "input": {
+        "lang": "zh",
+        "text": "我把停止该角色的其他脚本放在说的后面，赢了以后还能动两秒",
+        "hintLevelSeen": 1,
+        "attempts": 2
+      },
+      "response": {
+        "text": "我看不到你的项目，不过这听起来像一个常见问题： “赢了以后 Hero 还能动。”\n把“停止 [该角色的其他脚本]”放在 Hero 的“当接收到 [You Win]”下面——不是放在别的角色上。\n改好以后点绿旗再测试一次。现在会怎样？",
+        "lang": "zh",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 0,
+          "problem": 3,
+          "problemScore": 0.32
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 0,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [
+          "unfounded-diagnosis"
+        ],
+        "pass": false,
+        "notes": [
+          "missing keyword groups: 前面/上面/first/先"
+        ],
+        "stats": {
+          "words": 41,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": [
+            3
+          ]
+        }
+      }
+    },
+    {
+      "id": "E120",
+      "category": "block-order",
+      "lesson": 9,
+      "input": {
+        "lang": "en",
+        "text": "i put the repeat until loop above the countdown and now it says ready after i escape",
+        "hintLevelSeen": 1,
+        "attempts": 2
+      },
+      "response": {
+        "text": "I can't see your project, but this sounds like a common problem: “Runner says “Go!” before “Ready?”.”\nBlocks run from top to bottom. Dragging a block also drags everything under it, so: pull “say (Go!)” and the blocks under it away, snap “say (Ready?)” back in its place, then snap the rest back under it.\nChange it, click the green flag, and test again. What happens now?",
+        "lang": "en",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 0,
+          "problem": 6,
+          "problemScore": 0.29
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 0,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [
+          "unfounded-diagnosis"
+        ],
+        "pass": false,
+        "notes": [],
+        "stats": {
+          "words": 67,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": [
+            6
+          ]
+        }
+      }
+    },
+    {
+      "id": "E121",
+      "category": "block-order",
+      "lesson": 10,
+      "input": {
+        "lang": "en",
+        "text": "the game over backdrop comes first and then nothing works",
+        "hintLevelSeen": 1,
+        "attempts": 2
+      },
+      "response": {
+        "text": "I can't see your project, but this sounds like a common problem: “The Game Over backdrop is still there when I play again.”\nAdd “switch backdrop to [Sky]” at the top of Basket's green flag script.\nChange it, click the green flag, and test again. What happens now?",
+        "lang": "en",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 0,
+          "problem": 3,
+          "problemScore": 0.55
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 0,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [
+          "off-topic",
+          "unfounded-diagnosis"
+        ],
+        "pass": false,
+        "notes": [
+          "missing keyword groups: after/under/loop/下面/循环"
+        ],
+        "stats": {
+          "words": 48,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": [
+            3
+          ]
+        }
+      }
+    },
+    {
+      "id": "E122",
+      "category": "block-order",
+      "lesson": 10,
+      "input": {
+        "lang": "zh",
+        "text": "我把“如果碰到篮子”放在下落循环的上面，结果从来不加分",
+        "hintLevelSeen": 1,
+        "attempts": 2
+      },
+      "response": {
+        "text": "我看不到你的 Scratch 项目，没法替你检查代码。\n我们来当捉虫侦探：\n1. 脚本放在负责这个动作的角色上了吗？这一步的脚本应该在：Star 角色 → 代码 标签页。\n2. 从上到下读一遍脚本。每个积木的顺序对吗？是不是放在了正确的循环里面？\n3. 单独点击这段脚本，看看角色会做什么？\n提示 2: “运算”：“在 ( ) 和 ( ) 之间取随机数”“< > 或 < >”“( ) < ( )”。“运动”：圆形的“y 坐标”——它放在“( ) < ( )”的左边空格，-160 放在右边。“控制”：“重复执行”“重复执行直到”“如果那么”。“变量”：Fall Speed。\n你先检查哪一条？",
+        "lang": "zh",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 2,
+          "problem": null,
+          "problemScore": 0.18
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 0,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [
+          "off-topic"
+        ],
+        "pass": false,
+        "notes": [
+          "missing keyword groups: 下面/after/under"
+        ],
+        "stats": {
+          "words": 90,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E123",
+      "category": "block-order",
+      "lesson": 11,
+      "input": {
+        "lang": "en",
+        "text": "the timer goes down but enemies never start, i put broadcast at the end",
+        "hintLevelSeen": 1,
+        "attempts": 2
+      },
+      "response": {
+        "text": "I can't see your Scratch project, so I can't check your code for you.\nLet's be bug detectives:\n1. Is the script on the sprite that should do the action? This step's script goes here: Stage → Code tab (click the Stage first).\n2. Read the script from top to bottom. Is every block in the right order, and inside the right loop?\n3. Click the script on its own and watch. What does the sprite do?\nHint 2: Events: “broadcast ( )” → New message. Control: “repeat until < >”, “wait ( ) seconds”, “stop [all]”. Variables: “set” and “change”. Looks: “switch backdrop to [ ]”. Operators: “( ) < ( )”.\nWhich of these did you check first?",
+        "lang": "en",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 2,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 105,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E124",
+      "category": "block-order",
+      "lesson": 11,
+      "input": {
+        "lang": "zh",
+        "text": "我把换成 Caught 背景放在循环里面了，一开始就显示被抓",
+        "hintLevelSeen": 1,
+        "attempts": 2
+      },
+      "response": {
+        "text": "我看不到你的 Scratch 项目，没法替你检查代码。\n我们来当捉虫侦探：\n1. 脚本放在负责这个动作的角色上了吗？这一步的脚本应该在：Player 角色 → 代码 标签页。\n2. 从上到下读一遍脚本。每个积木的顺序对吗？是不是放在了正确的循环里面？\n3. 单独点击这段脚本，看看角色会做什么？\n提示 2: “事件”：“当接收到 [ ]”。“控制”：“重复执行直到 < >”。“运算”：“< > 或 < >”。“侦测”：“碰到 ( )?”和“按下 ( ) 键?”。\n你先检查哪一条？",
+        "lang": "zh",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 2,
+          "problem": null,
+          "problemScore": 0.21
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 75,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E125",
+      "category": "block-order",
+      "lesson": 12,
+      "input": {
+        "lang": "en",
+        "text": "i moved the change score but put it above the repeat until again",
+        "hintLevelSeen": 2,
+        "attempts": 3
+      },
+      "response": {
+        "text": "Hint 3: The fixed Apple script:\n▸ when green flag clicked\n▸   forever\n▸     go to x: (pick random (-200) to (200)) y: (170)\n▸     repeat until <<touching (Cat)?> or <(y position) < (-160)>>\n▸       change y by (-4)\n▸     if <touching (Cat)?> then\n▸       change [Score] by (1)\nThis is the block order for this step only.\nTry it in Scratch. What happened?",
+        "lang": "en",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 3,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 21,
+          "blocksShown": 7,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E126",
+      "category": "block-order",
+      "lesson": 1,
+      "input": {
+        "lang": "zh",
+        "text": "我的点绿旗之后 Hero 先转方向再回家，我想让它先回家",
+        "hintLevelSeen": 1,
+        "attempts": 1
+      },
+      "response": {
+        "text": "提示 2: 在“事件”（黄色）里找带绿旗的积木，在“运动”（蓝色）里找“移到 x: y:”。\n在 Scratch 里试试看。发生了什么？",
+        "lang": "zh",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 2,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 0,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [
+          "off-topic"
+        ],
+        "pass": false,
+        "notes": [
+          "missing keyword groups: 顺序/上面/下面/order/先"
+        ],
+        "stats": {
+          "words": 21,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E127",
+      "category": "wrong-sprite",
+      "lesson": 2,
+      "input": {
+        "lang": "en",
+        "text": "i cant find the motion blocks, i clicked the stage",
+        "hintLevelSeen": 0,
+        "attempts": 1
+      },
+      "response": {
+        "text": "I can't see your Scratch project, so I can't check your code for you.\nLet's be bug detectives:\n1. Is the script on the sprite that should do the action? This step's script goes here: Hero sprite → green flag script.\n2. Read the script from top to bottom. Is every block in the right order, and inside the right loop?\n3. Click the script on its own and watch. What does the sprite do?\nHint 1: When you hold a key, the game must check again and again: “Is the key pressed?” Which block repeats again and again?\nWhich of these did you check first?",
+        "lang": "en",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 1,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 1,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [
+          "missing keyword groups: stage/舞台"
+        ],
+        "stats": {
+          "words": 105,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E128",
+      "category": "wrong-sprite",
+      "lesson": 4,
+      "input": {
+        "lang": "zh",
+        "text": "我把金币的脚本放在 Hero 上了，Hero 一开始就消失",
+        "hintLevelSeen": 1,
+        "attempts": 2
+      },
+      "response": {
+        "text": "我看不到你的项目，不过这听起来像一个常见问题： “游戏一开始，金币就消失了。”\n检查金币脚本的顺序：显示 → 移到 → 等待 → 等待 <碰到 (Hero)?> → Score 增加 → 隐藏。“隐藏”必须在最后。\n改好以后点绿旗再测试一次。现在会怎样？",
+        "lang": "zh",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 0,
+          "problem": 1,
+          "problemScore": 0.42
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 0,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [
+          "unfounded-diagnosis"
+        ],
+        "pass": false,
+        "notes": [],
+        "stats": {
+          "words": 42,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": [
+            1
+          ]
+        }
+      }
+    },
+    {
+      "id": "E129",
+      "category": "wrong-sprite",
+      "lesson": 5,
+      "input": {
+        "lang": "en",
+        "text": "my checkpoint script is on the stage and there is no x position block",
+        "hintLevelSeen": 1,
+        "attempts": 2
+      },
+      "response": {
+        "text": "Hint 2: Control: “wait”, “wait until”. Sensing: “touching (Hero)?”. Variables: “set”. Motion (at the bottom of the list): the round “x position” and “y position” blocks.\nTry it in Scratch. What happened?",
+        "lang": "en",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 2,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 0,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [
+          "off-topic"
+        ],
+        "pass": false,
+        "notes": [
+          "missing keyword groups: checkpoint"
+        ],
+        "stats": {
+          "words": 32,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E130",
+      "category": "wrong-sprite",
+      "lesson": 6,
+      "input": {
+        "lang": "en",
+        "text": "i put when i receive you win on the goal sprite and the goal shows up big",
+        "hintLevelSeen": 1,
+        "attempts": 2
+      },
+      "response": {
+        "text": "I can't see your project, but this sounds like a common problem: ““You Win” happens again and again.”\nThe Goal uses “forever” + “if”. Use “wait until <touching (Hero)?>” and one broadcast, with no forever.\nChange it, click the green flag, and test again. What happens now?",
+        "lang": "en",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 0,
+          "problem": 2,
+          "problemScore": 0.36
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 0,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [
+          "off-topic",
+          "unfounded-diagnosis"
+        ],
+        "pass": false,
+        "notes": [
+          "missing keyword groups: win banner/banner/横幅"
+        ],
+        "stats": {
+          "words": 46,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": [
+            2
+          ]
+        }
+      }
+    },
+    {
+      "id": "E131",
+      "category": "wrong-sprite",
+      "lesson": 6,
+      "input": {
+        "lang": "zh",
+        "text": "我把停止该角色的其他脚本放在 Win Banner 上，Hero 还是能动",
+        "hintLevelSeen": 1,
+        "attempts": 2
+      },
+      "response": {
+        "text": "我看不到你的 Scratch 项目，没法替你检查代码。\n我们来当捉虫侦探：\n1. 脚本放在负责这个动作的角色上了吗？这一步的脚本应该在：Hero 角色 → 新的一段脚本。\n2. 从上到下读一遍脚本。每个积木的顺序对吗？是不是放在了正确的循环里面？\n3. 单独点击这段脚本，看看角色会做什么？\n提示 2: “事件”：“当接收到 [You Win]”。“控制”：“停止 [全部脚本]”——把菜单改成“该角色的其他脚本”。“外观”：“说……秒”。\n你先检查哪一条？",
+        "lang": "zh",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 2,
+          "problem": null,
+          "problemScore": 0.16
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 80,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E132",
+      "category": "wrong-sprite",
+      "lesson": 7,
+      "input": {
+        "lang": "en",
+        "text": "the coin sound isnt in the menu when im on hero",
+        "hintLevelSeen": 0,
+        "attempts": 1
+      },
+      "response": {
+        "text": "I can't see your project, but this sounds like a common problem: “I can't find my sound in the menu.”\nThe menu only shows sounds of the sprite you are editing. Add the sound in THAT sprite's Sounds tab.\nTry that. Did it help?",
+        "lang": "en",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 0,
+          "problem": 1,
+          "problemScore": 0.5
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 1,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [
+          "missing keyword groups: coin/金币"
+        ],
+        "stats": {
+          "words": 44,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": [
+            1
+          ]
+        }
+      }
+    },
+    {
+      "id": "E133",
+      "category": "wrong-sprite",
+      "lesson": 9,
+      "input": {
+        "lang": "en",
+        "text": "i put the wall checks on the exit sprite and runner still walks through",
+        "hintLevelSeen": 1,
+        "attempts": 2
+      },
+      "response": {
+        "text": "I can't see your project, but this sounds like a common problem: “Runner walks through the walls.”\nThe color in the block is not exactly the wall color. Click the color circle → eyedropper → click the middle of a wall. Walls must be one solid color.\nChange it, click the green flag, and test again. What happens now?",
+        "lang": "en",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 0,
+          "problem": 0,
+          "problemScore": 0.67
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 0,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [
+          "unfounded-diagnosis"
+        ],
+        "pass": false,
+        "notes": [],
+        "stats": {
+          "words": 57,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": [
+            0
+          ]
+        }
+      }
+    },
+    {
+      "id": "E134",
+      "category": "wrong-sprite",
+      "lesson": 10,
+      "input": {
+        "lang": "zh",
+        "text": "我在篮子上建了 Fall Speed，星星里找不到",
+        "hintLevelSeen": 1,
+        "attempts": 2
+      },
+      "response": {
+        "text": "我看不到你的 Scratch 项目，没法替你检查代码。\n我们来当捉虫侦探：\n1. 脚本放在负责这个动作的角色上了吗？这一步的脚本应该在：Star 角色 → 代码 标签页。\n2. 从上到下读一遍脚本。每个积木的顺序对吗？是不是放在了正确的循环里面？\n3. 单独点击这段脚本，看看角色会做什么？\n提示 2: “运算”：“在 ( ) 和 ( ) 之间取随机数”“< > 或 < >”“( ) < ( )”。“运动”：圆形的“y 坐标”——它放在“( ) < ( )”的左边空格，-160 放在右边。“控制”：“重复执行”“重复执行直到”“如果那么”。“变量”：Fall Speed。\n你先检查哪一条？",
+        "lang": "zh",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 2,
+          "problem": null,
+          "problemScore": 0.16
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 1,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [
+          "missing keyword groups: 仅适用于当前角色/for this sprite only/选中/点选"
+        ],
+        "stats": {
+          "words": 90,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E135",
+      "category": "wrong-sprite",
+      "lesson": 10,
+      "input": {
+        "lang": "en",
+        "text": "i duplicated the basket instead of the star by mistake",
+        "hintLevelSeen": 1,
+        "attempts": 2
+      },
+      "response": {
+        "text": "I can't see your project, but this sounds like a common problem: “One Star gives many points when it touches the Basket.”\nThe fall loop keeps going while the Star sits on the Basket. Make the loop stop on touching too: “repeat until <<touching (Basket)?> or <(y position) < (-160)>>”, and keep the “if <touching (Basket)?>” check UNDER the loop.\nChange it, click the green flag, and test again. What happens now?",
+        "lang": "en",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 0,
+          "problem": 0,
+          "problemScore": 0.33
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 0,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [
+          "unfounded-diagnosis"
+        ],
+        "pass": false,
+        "notes": [
+          "missing keyword groups: duplicate/复制"
+        ],
+        "stats": {
+          "words": 71,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": [
+            0
+          ]
+        }
+      }
+    },
+    {
+      "id": "E136",
+      "category": "wrong-sprite",
+      "lesson": 11,
+      "input": {
+        "lang": "en",
+        "text": "i made enemy2 by duplicating the player so it moves with the arrows",
+        "hintLevelSeen": 1,
+        "attempts": 2
+      },
+      "response": {
+        "text": "I can't see your Scratch project, so I can't check your code for you.\nLet's be bug detectives:\n1. Is the script on the sprite that should do the action? This step's script goes here: Enemy sprite → Code tab; then duplicate it.\n2. Read the script from top to bottom. Is every block in the right order, and inside the right loop?\n3. Click the script on its own and watch. What does the sprite do?\nHint 2: Events: “when I receive [Start]”. Motion: “go to x: y:”, “point in direction”, “move ( ) steps”, “if on edge, bounce”. Control: “forever”.\nWhich of these did you check first?",
+        "lang": "en",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 2,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 106,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E137",
+      "category": "wrong-sprite",
+      "lesson": 11,
+      "input": {
+        "lang": "zh",
+        "text": "我把倒计时脚本放在 Player 上了，我该放哪里",
+        "hintLevelSeen": 1,
+        "attempts": 1
+      },
+      "response": {
+        "text": "我看不到你的 Scratch 项目，没法替你检查代码。\n我们来当捉虫侦探：\n1. 脚本放在负责这个动作的角色上了吗？这一步的脚本应该在：舞台 → 代码 标签页（先点舞台）。\n2. 从上到下读一遍脚本。每个积木的顺序对吗？是不是放在了正确的循环里面？\n3. 单独点击这段脚本，看看角色会做什么？\n提示 2: “事件”：“广播 ( )”→ 新消息。“控制”：“重复执行直到 < >”“等待 ( ) 秒”“停止 [全部脚本]”。“变量”：“设为”和“增加”。“外观”：“换成 [ ] 背景”。“运算”：“( ) < ( )”。\n你先检查哪一条？",
+        "lang": "zh",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 2,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 83,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E138",
+      "category": "wrong-sprite",
+      "lesson": 3,
+      "input": {
+        "lang": "zh",
+        "text": "我把碰到岩浆的积木放在舞台上，舞台里没有运动积木",
+        "hintLevelSeen": 1,
+        "attempts": 2
+      },
+      "response": {
+        "text": "我看不到你的 Scratch 项目，没法替你检查代码。\n我们来当捉虫侦探：\n1. 脚本放在负责这个动作的角色上了吗？这一步的脚本应该在：Hero 角色 → “重复执行”里面。\n2. 从上到下读一遍脚本。每个积木的顺序对吗？是不是放在了正确的循环里面？\n3. 单独点击这段脚本，看看角色会做什么？\n提示 2: “控制”：“如果那么”。“侦测”：“碰到 (鼠标指针)?”——在菜单里选 Lava。“运动”：“移到 x: y:”。\n你先检查哪一条？",
+        "lang": "zh",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 2,
+          "problem": null,
+          "problemScore": 0.23
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 77,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E139",
+      "category": "wrong-sprite",
+      "lesson": 12,
+      "input": {
+        "lang": "zh",
+        "text": "我把如果碰到 Cat 放在 Cat 角色里了，分数不加",
+        "hintLevelSeen": 2,
+        "attempts": 3
+      },
+      "response": {
+        "text": "我看不到你的 Scratch 项目，没法替你检查代码。\n我们来当捉虫侦探：\n1. 脚本放在负责这个动作的角色上了吗？这一步的脚本应该在：Apple 角色 → 代码 标签页。\n2. 从上到下读一遍脚本。每个积木的顺序对吗？是不是放在了正确的循环里面？\n3. 单独点击这段脚本，看看角色会做什么？\n提示 3: 修好后的 Apple 脚本：\n▸ 当 绿旗 被点击\n▸   重复执行\n▸     移到 x: (在 (-200) 和 (200) 之间取随机数) y: (170)\n▸     重复执行直到 <<碰到 (Cat)?> 或 <(y 坐标) < (-160)>>\n▸       将y坐标增加 (-4)\n▸     如果 <碰到 (Cat)?> 那么\n▸       将 [Score] 增加 (1)\n这只是这一步的积木顺序。\n你先检查哪一条？",
+        "lang": "zh",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 3,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 72,
+          "blocksShown": 7,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E140",
+      "category": "no-reset",
+      "lesson": 1,
+      "input": {
+        "lang": "en",
+        "text": "hero stays where i dragged it when i click the flag",
+        "hintLevelSeen": 0,
+        "attempts": 1
+      },
+      "response": {
+        "text": "I can't see your project, but this sounds like a common problem: “Nothing happens when I click the green flag.”\nClick Hero in the sprite list. Is the script there? Make sure “go to” is snapped under the green flag block with no gap.\nChange it, click the green flag, and test again. What happens now?",
+        "lang": "en",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 0,
+          "problem": 0,
+          "problemScore": 0.36
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 56,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": [
+            0
+          ]
+        }
+      }
+    },
+    {
+      "id": "E141",
+      "category": "no-reset",
+      "lesson": 2,
+      "input": {
+        "lang": "zh",
+        "text": "Hero 一开始是倒着的",
+        "hintLevelSeen": 1,
+        "attempts": 1
+      },
+      "response": {
+        "text": "我看不到你的项目，不过这听起来像一个常见问题： “Hero 一开始朝向不对，或者倒过来了。”\n确认 Hero 的绿旗脚本里有“面向 (90) 方向”。如果转身时会倒过来，再加“将旋转方式设为 [左右翻转]”。\n改好以后点绿旗再测试一次。现在会怎样？",
+        "lang": "zh",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 0,
+          "problem": 3,
+          "problemScore": 0.32
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 46,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": [
+            3
+          ]
+        }
+      }
+    },
+    {
+      "id": "E142",
+      "category": "no-reset",
+      "lesson": 4,
+      "input": {
+        "lang": "en",
+        "text": "only coin 1 comes back when i play again, the others stay hidden",
+        "hintLevelSeen": 1,
+        "attempts": 2
+      },
+      "response": {
+        "text": "I can't see your project, but this sounds like a common problem: “Coins are gone when I play again.”\nAdd “show” at the top of each coin's green flag script. A hidden coin stays hidden until something shows it.\nChange it, click the green flag, and test again. What happens now?",
+        "lang": "en",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 0,
+          "problem": 2,
+          "problemScore": 0.36
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 51,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": [
+            2
+          ]
+        }
+      }
+    },
+    {
+      "id": "E143",
+      "category": "no-reset",
+      "lesson": 5,
+      "input": {
+        "lang": "en",
+        "text": "the checkpoint flag still shows on when i start a new game",
+        "hintLevelSeen": 1,
+        "attempts": 1
+      },
+      "response": {
+        "text": "I can't see your project, but this sounds like a common problem: “The flag still looks “on” when a new game starts.”\nAdd “switch costume to [off]” right after the Checkpoint's green flag block.\nChange it, click the green flag, and test again. What happens now?",
+        "lang": "en",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 0,
+          "problem": 5,
+          "problemScore": 0.73
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 46,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": [
+            5
+          ]
+        }
+      }
+    },
+    {
+      "id": "E144",
+      "category": "no-reset",
+      "lesson": 6,
+      "input": {
+        "lang": "zh",
+        "text": "赢了以后再点绿旗，横幅还在",
+        "hintLevelSeen": 1,
+        "attempts": 2
+      },
+      "response": {
+        "text": "我看不到你的项目，不过这听起来像一个常见问题： “赢了以后 Hero 还能动。”\n把“停止 [该角色的其他脚本]”放在 Hero 的“当接收到 [You Win]”下面——不是放在别的角色上。\n改好以后点绿旗再测试一次。现在会怎样？",
+        "lang": "zh",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 0,
+          "problem": 3,
+          "problemScore": 0.38
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 0,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [
+          "wrong-diagnosis"
+        ],
+        "pass": false,
+        "notes": [
+          "missing keyword groups: 隐藏/hide"
+        ],
+        "stats": {
+          "words": 41,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": [
+            3
+          ]
+        }
+      }
+    },
+    {
+      "id": "E145",
+      "category": "no-reset",
+      "lesson": 7,
+      "input": {
+        "lang": "en",
+        "text": "hero keeps the ouch costume when i restart",
+        "hintLevelSeen": 1,
+        "attempts": 1
+      },
+      "response": {
+        "text": "I can't see your project, but this sounds like a common problem: “Hero keeps the last costume when I play again.”\nAdd “switch costume to [costume1]” (your starting costume) to Hero's green flag script.\nChange it, click the green flag, and test again. What happens now?",
+        "lang": "en",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 0,
+          "problem": 2,
+          "problemScore": 0.5
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 46,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": [
+            2
+          ]
+        }
+      }
+    },
+    {
+      "id": "E146",
+      "category": "no-reset",
+      "lesson": 7,
+      "input": {
+        "lang": "zh",
+        "text": "生命一开始是0，马上就游戏结束",
+        "hintLevelSeen": 1,
+        "attempts": 2
+      },
+      "response": {
+        "text": "提示 2: “变量”：建立变量 Lives，用“设为”和“增加”。“控制”：“如果那么”“停止 [全部脚本]”。“运算”（绿色）：“( ) = ( )”。\n在 Scratch 里试试看。发生了什么？",
+        "lang": "zh",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 2,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 1,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [
+          "missing keyword groups: 3"
+        ],
+        "stats": {
+          "words": 23,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E147",
+      "category": "no-reset",
+      "lesson": 9,
+      "input": {
+        "lang": "en",
+        "text": "after i escape and press the flag the runner starts at the exit",
+        "hintLevelSeen": 1,
+        "attempts": 2
+      },
+      "response": {
+        "text": "I can't see your project, but this sounds like a common problem: “When I play again, Runner starts at the Exit.”\n“go to x: y:” with the start spot must be right under the green flag block, before the countdown.\nChange it, click the green flag, and test again. What happens now?",
+        "lang": "en",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 0,
+          "problem": 7,
+          "problemScore": 0.55
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 52,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": [
+            7
+          ]
+        }
+      }
+    },
+    {
+      "id": "E148",
+      "category": "no-reset",
+      "lesson": 10,
+      "input": {
+        "lang": "en",
+        "text": "the score shows last games points at the start",
+        "hintLevelSeen": 1,
+        "attempts": 2
+      },
+      "response": {
+        "text": "Hint 2: Looks: “switch backdrop to [ ]”. Variables: “set [ ] to ( )”. Control: “repeat until < >” and “stop [all]”. Operators (green): “( ) < ( )” — “Lives less than 1” is safer than “Lives = 0” if two Rocks hit at once. Sensing: “key ( ) pressed?”.\nTry it in Scratch. What happened?",
+        "lang": "en",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 2,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 1,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [
+          "missing keyword groups: score"
+        ],
+        "stats": {
+          "words": 41,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E149",
+      "category": "no-reset",
+      "lesson": 11,
+      "input": {
+        "lang": "zh",
+        "text": "再玩一次时 Time Left 还是 0，马上就显示 You Survived",
+        "hintLevelSeen": 1,
+        "attempts": 2
+      },
+      "response": {
+        "text": "我看不到你的项目，不过这听起来像一个常见问题： “再玩一次时，Caught 背景还在。”\n舞台的绿旗脚本必须先换成 Arena 背景。\n改好以后点绿旗再测试一次。现在会怎样？",
+        "lang": "zh",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 0,
+          "problem": 4,
+          "problemScore": 0.38
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 0,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [
+          "off-topic",
+          "unfounded-diagnosis"
+        ],
+        "pass": false,
+        "notes": [
+          "missing keyword groups: 20"
+        ],
+        "stats": {
+          "words": 33,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": [
+            4
+          ]
+        }
+      }
+    },
+    {
+      "id": "E150",
+      "category": "no-reset",
+      "lesson": 11,
+      "input": {
+        "lang": "en",
+        "text": "when i play again it still shows the caught backdrop",
+        "hintLevelSeen": 1,
+        "attempts": 1
+      },
+      "response": {
+        "text": "I can't see your project, but this sounds like a common problem: “When I play again, the Caught backdrop is still there.”\nThe Stage's green flag script must switch backdrop to Arena first.\nChange it, click the green flag, and test again. What happens now?",
+        "lang": "en",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 0,
+          "problem": 4,
+          "problemScore": 0.86
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 45,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": [
+            4
+          ]
+        }
+      }
+    },
+    {
+      "id": "E151",
+      "category": "no-reset",
+      "lesson": 12,
+      "input": {
+        "lang": "en",
+        "text": "my score starts at 7 every time",
+        "hintLevelSeen": 1,
+        "attempts": 2
+      },
+      "response": {
+        "text": "I can't see your Scratch project, so I can't check your code for you.\nLet's be bug detectives:\n1. Is the script on the sprite that should do the action? This step's script goes here: Cat sprite → Code tab.\n2. Read the script from top to bottom. Is every block in the right order, and inside the right loop?\n3. Click the script on its own and watch. What does the sprite do?\nHint 2: The fixes use Motion (“change x by”, a negative number for left) and Variables (“set [Score] to (0)” at the top of the green flag script). Looks: “say ( )” is a handy detective block.\nWhich of these did you check first?",
+        "lang": "en",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 2,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 115,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E152",
+      "category": "no-reset",
+      "lesson": 3,
+      "input": {
+        "lang": "zh",
+        "text": "碰到岩浆以后我回到的地方不是起点",
+        "hintLevelSeen": 1,
+        "attempts": 2
+      },
+      "response": {
+        "text": "我看不到你的 Scratch 项目，没法替你检查代码。\n我们来当捉虫侦探：\n1. 脚本放在负责这个动作的角色上了吗？这一步的脚本应该在：Hero 角色 → “重复执行”里面。\n2. 从上到下读一遍脚本。每个积木的顺序对吗？是不是放在了正确的循环里面？\n3. 单独点击这段脚本，看看角色会做什么？\n提示 2: “控制”：“如果那么”。“侦测”：“碰到 (鼠标指针)?”——在菜单里选 Lava。“运动”：“移到 x: y:”。\n你先检查哪一条？",
+        "lang": "zh",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 2,
+          "problem": null,
+          "problemScore": 0.15
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 0,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [
+          "off-topic"
+        ],
+        "pass": false,
+        "notes": [
+          "missing keyword groups: -200, -130"
+        ],
+        "stats": {
+          "words": 77,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E153",
+      "category": "repeat-trigger",
+      "lesson": 3,
+      "input": {
+        "lang": "en",
+        "text": "hero keeps teleporting back to the start nonstop",
+        "hintLevelSeen": 1,
+        "attempts": 2
+      },
+      "response": {
+        "text": "I can't see your project, but this sounds like a common problem: “Hero goes back to the start again and again without moving.”\nThe lava is touching the start pad. Drag Lava away from the start, or erase the lava near it.\nChange it, click the green flag, and test again. What happens now?",
+        "lang": "en",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 0,
+          "problem": 1,
+          "problemScore": 0.55
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 54,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": [
+            1
+          ]
+        }
+      }
+    },
+    {
+      "id": "E154",
+      "category": "repeat-trigger",
+      "lesson": 4,
+      "input": {
+        "lang": "zh",
+        "text": "我站在金币上分数一直加",
+        "hintLevelSeen": 1,
+        "attempts": 2
+      },
+      "response": {
+        "text": "我看不到你的项目，不过这听起来像一个常见问题： “分数一点都没变。”\n检查“将 [ ] 增加 (1)”的菜单，必须是 Score，而不是“我的变量”。\n改好以后点绿旗再测试一次。现在会怎样？",
+        "lang": "zh",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 0,
+          "problem": 5,
+          "problemScore": 0.25
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 0,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [
+          "off-topic",
+          "wrong-diagnosis"
+        ],
+        "pass": false,
+        "notes": [
+          "missing keyword groups: 等待/wait until"
+        ],
+        "stats": {
+          "words": 34,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": [
+            5
+          ]
+        }
+      }
+    },
+    {
+      "id": "E155",
+      "category": "repeat-trigger",
+      "lesson": 5,
+      "input": {
+        "lang": "en",
+        "text": "the checkpoint keeps saying checkpoint over and over",
+        "hintLevelSeen": 1,
+        "attempts": 2
+      },
+      "response": {
+        "text": "I can't see your Scratch project, so I can't check your code for you.\nLet's be bug detectives:\n1. Is the script on the sprite that should do the action? This step's script goes here: New sprite named Checkpoint → Code tab.\n2. Read the script from top to bottom. Is every block in the right order, and inside the right loop?\n3. Click the script on its own and watch. What does the sprite do?\nHint 2: Control: “wait”, “wait until”. Sensing: “touching (Hero)?”. Variables: “set”. Motion (at the bottom of the list): the round “x position” and “y position” blocks.\nWhich of these did you check first?",
+        "lang": "en",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 2,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 1,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [
+          "missing keyword groups: forever/重复执行"
+        ],
+        "stats": {
+          "words": 108,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E156",
+      "category": "repeat-trigger",
+      "lesson": 6,
+      "input": {
+        "lang": "en",
+        "text": "the win sound plays like 50 times",
+        "hintLevelSeen": 1,
+        "attempts": 2
+      },
+      "response": {
+        "text": "Hint 2: Control: “wait”, “wait until”. Sensing: “touching (Hero)?”. Events (yellow): “broadcast ( )” → New message.\nTry it in Scratch. What happened?",
+        "lang": "en",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 2,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 1,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [
+          "missing keyword groups: forever/重复执行/once/一次"
+        ],
+        "stats": {
+          "words": 20,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E157",
+      "category": "repeat-trigger",
+      "lesson": 6,
+      "input": {
+        "lang": "zh",
+        "text": "Goal 一直在广播 You Win",
+        "hintLevelSeen": 2,
+        "attempts": 3
+      },
+      "response": {
+        "text": "我看不到你的项目，不过这听起来像一个常见问题： ““You Win”一次又一次地出现。”\n终点用了“重复执行”+“如果”。请改用“等待 <碰到 (Hero)?>”加一次广播，不要重复执行。\n改好以后点绿旗再测试一次。现在会怎样？",
+        "lang": "zh",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 0,
+          "problem": 2,
+          "problemScore": 0.4
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 40,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": [
+            2
+          ]
+        }
+      }
+    },
+    {
+      "id": "E158",
+      "category": "repeat-trigger",
+      "lesson": 7,
+      "input": {
+        "lang": "en",
+        "text": "i lose all 3 lives at once when i touch lava",
+        "hintLevelSeen": 1,
+        "attempts": 2
+      },
+      "response": {
+        "text": "Hint 2: Variables: make a variable Lives, then “set” and “change”. Control: “if then”, “stop [all]”. Operators (green): “( ) = ( )”.\nTry it in Scratch. What happened?",
+        "lang": "en",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 2,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 0,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [
+          "off-topic"
+        ],
+        "pass": false,
+        "notes": [
+          "missing keyword groups: go to/checkpoint/移到"
+        ],
+        "stats": {
+          "words": 24,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E159",
+      "category": "repeat-trigger",
+      "lesson": 9,
+      "input": {
+        "lang": "en",
+        "text": "my runner shakes back and forth on the wall",
+        "hintLevelSeen": 1,
+        "attempts": 2
+      },
+      "response": {
+        "text": "I can't see your Scratch project, so I can't check your code for you.\nLet's be bug detectives:\n1. Is the script on the sprite that should do the action? This step's script goes here: Runner sprite → inside each arrow-key “if”.\n2. Read the script from top to bottom. Is every block in the right order, and inside the right loop?\n3. Click the script on its own and watch. What does the sprite do?\nHint 2: Control: “if then”. Sensing: “touching color ( )?” — set the color with the eyedropper. Motion: “change x by” / “change y by” with the opposite number.\nWhich of these did you check first?",
+        "lang": "en",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 2,
+          "problem": null,
+          "problemScore": 0.44
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 107,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E160",
+      "category": "repeat-trigger",
+      "lesson": 10,
+      "input": {
+        "lang": "zh",
+        "text": "一块石头扣了我好几条命",
+        "hintLevelSeen": 1,
+        "attempts": 2
+      },
+      "response": {
+        "text": "我看不到你的 Scratch 项目，没法替你检查代码。\n我们来当捉虫侦探：\n1. 脚本放在负责这个动作的角色上了吗？这一步的脚本应该在：角色列表 → 右键 Star → 复制 → 改名 Rock。\n2. 从上到下读一遍脚本。每个积木的顺序对吗？是不是放在了正确的循环里面？\n3. 单独点击这段脚本，看看角色会做什么？\n提示 2: 不需要新积木。复制，然后修改一个“变量”积木。检查它的菜单是 Lives，数字是 -1。\n你先检查哪一条？",
+        "lang": "zh",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 2,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 81,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E161",
+      "category": "repeat-trigger",
+      "lesson": 10,
+      "input": {
+        "lang": "en",
+        "text": "the star gets stuck at the bottom and never comes back",
+        "hintLevelSeen": 1,
+        "attempts": 2
+      },
+      "response": {
+        "text": "I can't see your Scratch project, so I can't check your code for you.\nLet's be bug detectives:\n1. Is the script on the sprite that should do the action? This step's script goes here: Star sprite → Code tab.\n2. Read the script from top to bottom. Is every block in the right order, and inside the right loop?\n3. Click the script on its own and watch. What does the sprite do?\nHint 2: Operators: “pick random ( ) to ( )”, “< > or < >”, “( ) < ( )”. Motion: the round “y position” block — it goes in the LEFT slot of “( ) < ( )”, and -160 in the right slot. Control: “forever”, “repeat until”, “if then”. Variables: Fall Speed.\nWhich of these did you check first?",
+        "lang": "en",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 2,
+          "problem": null,
+          "problemScore": 0.36
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 115,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E162",
+      "category": "repeat-trigger",
+      "lesson": 11,
+      "input": {
+        "lang": "en",
+        "text": "i get caught and the caught screen flashes many times",
+        "hintLevelSeen": 1,
+        "attempts": 2
+      },
+      "response": {
+        "text": "I can't see your Scratch project, so I can't check your code for you.\nLet's be bug detectives:\n1. Is the script on the sprite that should do the action? This step's script goes here: Player sprite → Code tab.\n2. Read the script from top to bottom. Is every block in the right order, and inside the right loop?\n3. Click the script on its own and watch. What does the sprite do?\nHint 2: Events: “when I receive [ ]”. Control: “repeat until < >”. Operators: “< > or < >”. Sensing: “touching ( )?” and “key ( ) pressed?”.\nWhich of these did you check first?",
+        "lang": "en",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 2,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 0,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [
+          "off-topic"
+        ],
+        "pass": false,
+        "notes": [
+          "missing keyword groups: stop/停止"
+        ],
+        "stats": {
+          "words": 96,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E163",
+      "category": "repeat-trigger",
+      "lesson": 11,
+      "input": {
+        "lang": "zh",
+        "text": "Time Left 一秒钟就从 20 变成 0 了",
+        "hintLevelSeen": 1,
+        "attempts": 2
+      },
+      "response": {
+        "text": "提示 2: “事件”：“广播 ( )”→ 新消息。“控制”：“重复执行直到 < >”“等待 ( ) 秒”“停止 [全部脚本]”。“变量”：“设为”和“增加”。“外观”：“换成 [ ] 背景”。“运算”：“( ) < ( )”。\n在 Scratch 里试试看。发生了什么？",
+        "lang": "zh",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 2,
+          "problem": null,
+          "problemScore": 0.35
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 28,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E164",
+      "category": "repeat-trigger",
+      "lesson": 12,
+      "input": {
+        "lang": "en",
+        "text": "even after my fix the score goes up 2 for one apple",
+        "hintLevelSeen": 2,
+        "attempts": 3
+      },
+      "response": {
+        "text": "I can't see your project, but this sounds like a common problem: “The Score goes up even when I don't catch anything.”\n“change [Score] by (1)” runs before the catch check. Move it into “if <touching (Cat)?> then” under the repeat until loop.\nChange it, click the green flag, and test again. What happens now?",
+        "lang": "en",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 0,
+          "problem": 1,
+          "problemScore": 0.5
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 0,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [
+          "off-topic",
+          "unfounded-diagnosis"
+        ],
+        "pass": false,
+        "notes": [
+          "missing keyword groups: one/once/only/一次/只"
+        ],
+        "stats": {
+          "words": 55,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": [
+            1
+          ]
+        }
+      }
+    },
+    {
+      "id": "E165",
+      "category": "repeat-trigger",
+      "lesson": 2,
+      "input": {
+        "lang": "zh",
+        "text": "Hero 自己一直往右跑",
+        "hintLevelSeen": 1,
+        "attempts": 2
+      },
+      "response": {
+        "text": "我看不到你的项目，不过这听起来像一个常见问题： “Hero 自己一直在动。”\n有一个“将x坐标增加”在重复执行里，但没放进“如果”里。把它移进对应的“如果”积木。\n改好以后点绿旗再测试一次。现在会怎样？",
+        "lang": "zh",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 0,
+          "problem": 1,
+          "problemScore": 0.62
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 40,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": [
+            1
+          ]
+        }
+      }
+    },
+    {
+      "id": "E166",
+      "category": "asks-for-answer",
+      "lesson": 1,
+      "input": {
+        "lang": "en",
+        "text": "tell me exactly which blocks to use",
+        "hintLevelSeen": 0,
+        "attempts": 1
+      },
+      "response": {
+        "text": "I won't give you the whole answer — you can build this! Here is your next hint:\nHint 1: Drag Hero somewhere else and click the green flag. Nothing happens yet. What block means “when the game starts”?\nTry it in Scratch. What happened?",
+        "lang": "en",
+        "meta": {
+          "intent": "asks-for-answer",
+          "hintShown": 1,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 43,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E167",
+      "category": "asks-for-answer",
+      "lesson": 2,
+      "input": {
+        "lang": "zh",
+        "text": "把上下移动的积木直接给我",
+        "hintLevelSeen": 0,
+        "attempts": 1
+      },
+      "response": {
+        "text": "我不会直接给你完整答案——你自己能做出来！这是下一个提示：\n提示 1: 左右改变的是 x。上下改变的是哪个字母？\n在 Scratch 里试试看。发生了什么？",
+        "lang": "zh",
+        "meta": {
+          "intent": "asks-for-answer",
+          "hintShown": 1,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 30,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E168",
+      "category": "asks-for-answer",
+      "lesson": 3,
+      "input": {
+        "lang": "en",
+        "text": "write the lava code for me",
+        "hintLevelSeen": 1,
+        "attempts": 1
+      },
+      "response": {
+        "text": "I won't give you the whole answer — you can build this! Here is your next hint:\nHint 2: Control: “if then”. Sensing: “touching (mouse-pointer)?” — pick Lava in the menu. Motion: “go to x: y:”.\nTry it in Scratch. What happened?",
+        "lang": "en",
+        "meta": {
+          "intent": "asks-for-answer",
+          "hintShown": 2,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 40,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E169",
+      "category": "asks-for-answer",
+      "lesson": 5,
+      "input": {
+        "lang": "zh",
+        "text": "直接告诉我检查点的全部代码",
+        "hintLevelSeen": 0,
+        "attempts": 1
+      },
+      "response": {
+        "text": "我不会直接给你完整答案——你自己能做出来！这是下一个提示：\n提示 1: 新游戏应该忘掉旧的检查点。点绿旗时 Hero 是怎样处理 Score 的？这里也一样做。\n在 Scratch 里试试看。发生了什么？",
+        "lang": "zh",
+        "meta": {
+          "intent": "asks-for-answer",
+          "hintShown": 1,
+          "problem": null,
+          "problemScore": 0.17
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 37,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E170",
+      "category": "asks-for-answer",
+      "lesson": 6,
+      "input": {
+        "lang": "en",
+        "text": "just show me the banner script plz",
+        "hintLevelSeen": 2,
+        "attempts": 3
+      },
+      "response": {
+        "text": "I won't give you the whole answer — you can build this! Here is your next hint:\nHint 3: Two scripts on Win Banner:\n▸ when green flag clicked\n▸   hide\n  (— second script —)\n▸ when I receive [You Win]\n▸   go to [front] layer\n▸   show\nThis is the block order for this step only.\nTry it in Scratch. What happened?",
+        "lang": "en",
+        "meta": {
+          "intent": "asks-for-answer",
+          "hintShown": 3,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 40,
+          "blocksShown": 5,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E171",
+      "category": "asks-for-answer",
+      "lesson": 7,
+      "input": {
+        "lang": "en",
+        "text": "give me the full lives code",
+        "hintLevelSeen": 2,
+        "attempts": 3
+      },
+      "response": {
+        "text": "I won't give you the whole answer — you can build this! Here is your next hint:\nHint 3: The 3-lives idea on Hero (add set Lives to the green flag script; change the lava if):\n▸   set [Lives] to (3)\n    (…inside the forever loop:)\n▸     if <touching (Lava)?> then\n▸       go to x: (Checkpoint X) y: (Checkpoint Y)\n▸       change [Lives] by (-1)\n▸       if <(Lives) = (0)> then\n▸         say (Game Over) for (2) seconds\n▸         stop [all]\nThis is the block order for this step only.\nTry it in Scratch. What happened?",
+        "lang": "en",
+        "meta": {
+          "intent": "asks-for-answer",
+          "hintShown": 3,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 54,
+          "blocksShown": 7,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E172",
+      "category": "asks-for-answer",
+      "lesson": 8,
+      "input": {
+        "lang": "zh",
+        "text": "帮我写测试清单",
+        "hintLevelSeen": 1,
+        "attempts": 1
+      },
+      "response": {
+        "text": "我不会直接给你完整答案——你自己能做出来！这是下一个提示：\n提示 2: 大多数问题藏在绿旗脚本（重置）里，以及名字不一致的地方（Hero、Lava、Score、You Win）。\n在 Scratch 里试试看。发生了什么？",
+        "lang": "zh",
+        "meta": {
+          "intent": "asks-for-answer",
+          "hintShown": 2,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 38,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E173",
+      "category": "asks-for-answer",
+      "lesson": 9,
+      "input": {
+        "lang": "en",
+        "text": "can you just give me the whole maze game",
+        "hintLevelSeen": 0,
+        "attempts": 1
+      },
+      "response": {
+        "text": "I won't give you the whole answer — you can build this! Here is your next hint:\nHint 1: Scratch runs blocks from top to bottom. What should Runner do first, second and third? When should the moving stop?\nTry it in Scratch. What happened?",
+        "lang": "en",
+        "meta": {
+          "intent": "asks-for-answer",
+          "hintShown": 1,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 44,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E174",
+      "category": "asks-for-answer",
+      "lesson": 10,
+      "input": {
+        "lang": "zh",
+        "text": "给我完整的篮子代码",
+        "hintLevelSeen": 0,
+        "attempts": 1
+      },
+      "response": {
+        "text": "我不会直接给你完整答案——你自己能做出来！这是下一个提示：\n提示 1: 还有生命时游戏就要继续。哪种循环在条件成立时会自己停下？循环开始之前，Lives 应该是多少？\n在 Scratch 里试试看。发生了什么？",
+        "lang": "zh",
+        "meta": {
+          "intent": "asks-for-answer",
+          "hintShown": 1,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 40,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E175",
+      "category": "asks-for-answer",
+      "lesson": 11,
+      "input": {
+        "lang": "en",
+        "text": "do the player script for me",
+        "hintLevelSeen": 1,
+        "attempts": 1
+      },
+      "response": {
+        "text": "I won't give you the whole answer — you can build this! Here is your next hint:\nHint 2: Events: “when I receive [ ]”. Control: “repeat until < >”. Operators: “< > or < >”. Sensing: “touching ( )?” and “key ( ) pressed?”.\nTry it in Scratch. What happened?",
+        "lang": "en",
+        "meta": {
+          "intent": "asks-for-answer",
+          "hintShown": 2,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 38,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E176",
+      "category": "asks-for-answer",
+      "lesson": 11,
+      "input": {
+        "lang": "zh",
+        "text": "直接给我敌人的代码",
+        "hintLevelSeen": 2,
+        "attempts": 2
+      },
+      "response": {
+        "text": "我不会直接给你完整答案——你自己能做出来！这是下一个提示：\n提示 3: Enemy 的脚本（Enemy2：起点 x: (180) y: (-120)，方向 (-165)）：\n▸ 当接收到 [Start]\n▸   移到 x: (-180) y: (120)\n▸   面向 (15) 方向\n▸   重复执行\n▸     移动 (5) 步\n▸     碰到边缘就反弹\n这只是这一步的积木顺序。\n在 Scratch 里试试看。发生了什么？",
+        "lang": "zh",
+        "meta": {
+          "intent": "asks-for-answer",
+          "hintShown": 3,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 37,
+          "blocksShown": 6,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E177",
+      "category": "asks-for-answer",
+      "lesson": 12,
+      "input": {
+        "lang": "en",
+        "text": "just tell me where the sneaky bug is",
+        "hintLevelSeen": 0,
+        "attempts": 1
+      },
+      "response": {
+        "text": "I won't give you the whole answer — you can build this! Here is your next hint:\nHint 1: When exactly should a point be added? Read the Apple script from top to bottom: where does the point happen now?\nTry it in Scratch. What happened?",
+        "lang": "en",
+        "meta": {
+          "intent": "asks-for-answer",
+          "hintShown": 1,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 45,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E178",
+      "category": "asks-for-answer",
+      "lesson": 12,
+      "input": {
+        "lang": "zh",
+        "text": "替我把 bug 都改好",
+        "hintLevelSeen": 1,
+        "attempts": 1
+      },
+      "response": {
+        "text": "我不会直接给你完整答案——你自己能做出来！这是下一个提示：\n提示 2: 修正要用“运动”（“将x坐标增加”，向左用负数）和“变量”（绿旗脚本顶部的“将 [Score] 设为 (0)”）。“外观”里的“说 ( )”是好用的侦探积木。\n在 Scratch 里试试看。发生了什么？",
+        "lang": "zh",
+        "meta": {
+          "intent": "asks-for-answer",
+          "hintShown": 2,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 45,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E179",
+      "category": "frustrated",
+      "lesson": 1,
+      "input": {
+        "lang": "en",
+        "text": "my drawing is ugly i want to quit",
+        "hintLevelSeen": 0,
+        "attempts": 1
+      },
+      "response": {
+        "text": "It's OK to feel stuck. Bugs are normal — every game maker gets them.\nIf you are tired, save your project and take a short break. Then try just one small step.\nHint 1: Where does Hero start? Look at the bottom-left corner of the stage. That is a good start spot.\nWhich part already works?",
+        "lang": "en",
+        "meta": {
+          "intent": "frustrated",
+          "hintShown": 1,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 55,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E180",
+      "category": "frustrated",
+      "lesson": 2,
+      "input": {
+        "lang": "zh",
+        "text": "为什么它就是不动！！！我不想学了",
+        "hintLevelSeen": 2,
+        "attempts": 6
+      },
+      "response": {
+        "text": "卡住的时候有点难受，这很正常。每个游戏设计师都会遇到 bug。\n如果累了，先保存项目、休息一下，再只试一个小步骤。\n提示 3: 把循环加在 Hero 原来的第 1 关积木下面：\n▸ 当 绿旗 被点击\n▸   移到 x: (-200) y: (-130)\n▸   面向 (90) 方向\n▸   重复执行\n▸     如果 <按下 (→) 键?> 那么\n▸       将x坐标增加 (5)\n▸     如果 <按下 (←) 键?> 那么\n▸       将x坐标增加 (-5)\n这只是这一步的积木顺序。\n哪一部分已经能用了？",
+        "lang": "zh",
+        "meta": {
+          "intent": "frustrated",
+          "hintShown": 3,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 45,
+          "blocksShown": 8,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E181",
+      "category": "frustrated",
+      "lesson": 3,
+      "input": {
+        "lang": "en",
+        "text": "ugh lava is boring",
+        "hintLevelSeen": 0,
+        "attempts": 1
+      },
+      "response": {
+        "text": "It's OK to feel stuck. Bugs are normal — every game maker gets them.\nIf you are tired, save your project and take a short break. Then try just one small step.\nHint 1: Hero only checks the sprite named Lava. Where should extra lava go so Hero can feel it?\nWhich part already works?",
+        "lang": "en",
+        "meta": {
+          "intent": "frustrated",
+          "hintShown": 1,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 54,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E182",
+      "category": "frustrated",
+      "lesson": 4,
+      "input": {
+        "lang": "zh",
+        "text": "金币好难，我做了好久分数还是乱跳",
+        "hintLevelSeen": 2,
+        "attempts": 5
+      },
+      "response": {
+        "text": "我看不到你的 Scratch 项目，没法替你检查代码。\n我们来当捉虫侦探：\n1. 脚本放在负责这个动作的角色上了吗？这一步的脚本应该在：新角色 Coin → 代码 标签页。\n2. 从上到下读一遍脚本。每个积木的顺序对吗？是不是放在了正确的循环里面？\n3. 单独点击这段脚本，看看角色会做什么？\n提示 3: 把这段放在 Coin 上。小技巧：先把 Coin 拖到想要的位置，这时“运动”列表里的“移到 x: y:”积木会自动显示它的坐标。\n▸ 当 绿旗 被点击\n▸   显示\n▸   移到 x: (0) y: (0)\n      (换成你的金币自己的坐标)\n▸   等待 (0.2) 秒\n▸   等待 <碰到 (Hero)?>\n▸   将 [Score] 增加 (1)\n▸   隐藏\n这只是这一步的积木顺序。\n你先检查哪一条？",
+        "lang": "zh",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 3,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 97,
+          "blocksShown": 7,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E183",
+      "category": "frustrated",
+      "lesson": 5,
+      "input": {
+        "lang": "en",
+        "text": "i keep messing up the variables i hate variables",
+        "hintLevelSeen": 1,
+        "attempts": 3
+      },
+      "response": {
+        "text": "It's OK to feel stuck. Bugs are normal — every game maker gets them.\nIf you are tired, save your project and take a short break. Then try just one small step.\nHint 2: Variables: the round orange reporter blocks named Checkpoint X and Checkpoint Y. Drop them into the white number slots.\nWhich part already works?",
+        "lang": "en",
+        "meta": {
+          "intent": "frustrated",
+          "hintShown": 2,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 56,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E184",
+      "category": "frustrated",
+      "lesson": 6,
+      "input": {
+        "lang": "zh",
+        "text": "做了一个小时还是赢不了，太难了",
+        "hintLevelSeen": 3,
+        "attempts": 8
+      },
+      "response": {
+        "text": "卡住的时候有点难受，这很正常。每个游戏设计师都会遇到 bug。\n如果累了，先保存项目、休息一下，再只试一个小步骤。\n提示你都看过了。打开“遇到问题”，或者请大人和你一起看看。\n哪一部分已经能用了？",
+        "lang": "zh",
+        "meta": {
+          "intent": "frustrated",
+          "hintShown": 0,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 40,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E185",
+      "category": "frustrated",
+      "lesson": 7,
+      "input": {
+        "lang": "en",
+        "text": "my costume looks bad and i feel dumb",
+        "hintLevelSeen": 0,
+        "attempts": 1
+      },
+      "response": {
+        "text": "It's OK to feel stuck. Bugs are normal — every game maker gets them.\nIf you are tired, save your project and take a short break. Then try just one small step.\nHint 1: Anything that can change during the game must be reset when the game starts. Does a costume count?\nWhich part already works?",
+        "lang": "en",
+        "meta": {
+          "intent": "frustrated",
+          "hintShown": 1,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 55,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E186",
+      "category": "frustrated",
+      "lesson": 8,
+      "input": {
+        "lang": "en",
+        "text": "theres so many bugs i give up",
+        "hintLevelSeen": 2,
+        "attempts": 4
+      },
+      "response": {
+        "text": "It's OK to feel stuck. Bugs are normal — every game maker gets them.\nIf you are tired, save your project and take a short break. Then try just one small step.\nHint 3: Test list — check each one:\n1. Green flag: Hero at the start, Score 0, all coins visible, banner hidden.\n2. Lava before the checkpoint → back to the start.\n3. Checkpoint, then lava → back to the checkpoint.\n4. Each coin adds 1 point only once.\n5. Goal → YOU WIN! once, and Hero stops.\n6. Green flag again → everything resets.\nWhich part already works?",
+        "lang": "en",
+        "meta": {
+          "intent": "frustrated",
+          "hintShown": 3,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 95,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E187",
+      "category": "frustrated",
+      "lesson": 9,
+      "input": {
+        "lang": "zh",
+        "text": "墙怎么都挡不住，我要哭了",
+        "hintLevelSeen": 2,
+        "attempts": 6
+      },
+      "response": {
+        "text": "卡住的时候有点难受，这很正常。每个游戏设计师都会遇到 bug。\n如果累了，先保存项目、休息一下，再只试一个小步骤。\n提示 3: → 键部分变成这样，然后把这个办法用到另外 3 个方向：\n▸     如果 <按下 (→) 键?> 那么\n▸       将x坐标增加 (3)\n▸       如果 <碰到颜色 (墙的颜色)?> 那么\n▸         将x坐标增加 (-3)\n      (←、↑、↓：先移动，再用相反的数字退回)\n这只是这一步的积木顺序。\n哪一部分已经能用了？",
+        "lang": "zh",
+        "meta": {
+          "intent": "frustrated",
+          "hintShown": 3,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 53,
+          "blocksShown": 4,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E188",
+      "category": "frustrated",
+      "lesson": 10,
+      "input": {
+        "lang": "en",
+        "text": "the star thing is too hard i quit",
+        "hintLevelSeen": 1,
+        "attempts": 3
+      },
+      "response": {
+        "text": "It's OK to feel stuck. Bugs are normal — every game maker gets them.\nI can't see your project, but this sounds like a common problem: “When Star speeds up, Rock speeds up too.”\nFall Speed was made “For all sprites”, so they share it. Deleting a variable also deletes the blocks that use it, so: on Star, make a new “For this sprite only” variable, drop it into both Star blocks, then delete the old one. Finally delete Rock and duplicate Star again.\nChange it, click the green flag, and test again. What happens now?",
+        "lang": "en",
+        "meta": {
+          "intent": "frustrated",
+          "hintShown": 0,
+          "problem": 6,
+          "problemScore": 0.44
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 0,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [
+          "unfounded-diagnosis"
+        ],
+        "pass": false,
+        "notes": [],
+        "stats": {
+          "words": 95,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": [
+            6
+          ]
+        }
+      }
+    },
+    {
+      "id": "E189",
+      "category": "frustrated",
+      "lesson": 11,
+      "input": {
+        "lang": "zh",
+        "text": "倒计时好烦，我不想做了",
+        "hintLevelSeen": 0,
+        "attempts": 2
+      },
+      "response": {
+        "text": "卡住的时候有点难受，这很正常。每个游戏设计师都会遇到 bug。\n如果累了，先保存项目、休息一下，再只试一个小步骤。\n提示 1: 倒计时每秒减 1。倒计时开始之前要做什么？到 0 的时候又要做什么？\n哪一部分已经能用了？",
+        "lang": "zh",
+        "meta": {
+          "intent": "frustrated",
+          "hintShown": 1,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 45,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E190",
+      "category": "frustrated",
+      "lesson": 12,
+      "input": {
+        "lang": "en",
+        "text": "i hate copying all these blocks its boring",
+        "hintLevelSeen": 0,
+        "attempts": 1
+      },
+      "response": {
+        "text": "It's OK to feel stuck. Bugs are normal — every game maker gets them.\nIf you are tired, save your project and take a short break. Then try just one small step.\nHint 1: This step is different: you copy scripts that are wrong on purpose. Why do you think detectives practise on a puzzle with known clues?\nWhich part already works?",
+        "lang": "en",
+        "meta": {
+          "intent": "frustrated",
+          "hintShown": 1,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 61,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E191",
+      "category": "frustrated",
+      "lesson": 12,
+      "input": {
+        "lang": "zh",
+        "text": "找了好久都找不到那个 bug，烦死了",
+        "hintLevelSeen": 1,
+        "attempts": 4
+      },
+      "response": {
+        "text": "卡住的时候有点难受，这很正常。每个游戏设计师都会遇到 bug。\n如果累了，先保存项目、休息一下，再只试一个小步骤。\n提示 2: “控制”：“如果 < > 那么”。“侦测”：“碰到 (Cat)?”。移动现有的“变量”积木就行，不需要新的。\n哪一部分已经能用了？",
+        "lang": "zh",
+        "meta": {
+          "intent": "frustrated",
+          "hintShown": 2,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 44,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E192",
+      "category": "hint-need",
+      "lesson": 1,
+      "input": {
+        "lang": "en",
+        "text": "help",
+        "hintLevelSeen": 0,
+        "attempts": 1
+      },
+      "response": {
+        "text": "Hint 1: Look under the stage. Can you find the box that shows your sprite's name (like Sprite1)?\nTry it in Scratch. What happened?",
+        "lang": "en",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 1,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 24,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E193",
+      "category": "hint-need",
+      "lesson": 2,
+      "input": {
+        "lang": "zh",
+        "text": "给个提示",
+        "hintLevelSeen": 0,
+        "attempts": 1
+      },
+      "response": {
+        "text": "提示 1: 左右改变的是 x。上下改变的是哪个字母？\n在 Scratch 里试试看。发生了什么？",
+        "lang": "zh",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 1,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 17,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E194",
+      "category": "hint-need",
+      "lesson": 3,
+      "input": {
+        "lang": "en",
+        "text": "hint 2 pls",
+        "hintLevelSeen": 1,
+        "attempts": 2
+      },
+      "response": {
+        "text": "Hint 2: No new blocks. Use the Costumes tab of the Lava sprite and the paint tools.\nTry it in Scratch. What happened?",
+        "lang": "en",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 2,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 23,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E195",
+      "category": "hint-need",
+      "lesson": 4,
+      "input": {
+        "lang": "zh",
+        "text": "我看完两个提示了，还要",
+        "hintLevelSeen": 2,
+        "attempts": 3
+      },
+      "response": {
+        "text": "提示 3: 对每个复制品（Coin2、Coin3）：\n1. 在角色列表里点击这个金币。\n2. 在舞台上把它拖到新位置。\n3. 把角色信息区里显示的 x、y 填进它的“移到 x: y:”积木。\n在 Scratch 里试试看。发生了什么？",
+        "lang": "zh",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 3,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 41,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E196",
+      "category": "hint-need",
+      "lesson": 5,
+      "input": {
+        "lang": "en",
+        "text": "next hint",
+        "hintLevelSeen": 2,
+        "attempts": 3
+      },
+      "response": {
+        "text": "Hint 3: The lava part of Hero's loop becomes:\n▸     if <touching (Lava)?> then\n▸       go to x: (Checkpoint X) y: (Checkpoint Y)\nThis is the block order for this step only.\nTry it in Scratch. What happened?",
+        "lang": "en",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 3,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 24,
+          "blocksShown": 2,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E197",
+      "category": "hint-need",
+      "lesson": 6,
+      "input": {
+        "lang": "zh",
+        "text": "提示",
+        "hintLevelSeen": 0,
+        "attempts": 1
+      },
+      "response": {
+        "text": "提示 1: 赢了以后，Hero 的重复执行还在运行，所以还能走进岩浆。用什么能让这个循环停下？\n在 Scratch 里试试看。发生了什么？",
+        "lang": "zh",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 1,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 25,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E198",
+      "category": "hint-need",
+      "lesson": 7,
+      "input": {
+        "lang": "en",
+        "text": "i need a hint",
+        "hintLevelSeen": 1,
+        "attempts": 2
+      },
+      "response": {
+        "text": "Hint 2: Costumes tab for drawing. Looks (purple): “switch costume to [ ]” for the green flag script.\nTry it in Scratch. What happened?",
+        "lang": "en",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 2,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 22,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E199",
+      "category": "hint-need",
+      "lesson": 8,
+      "input": {
+        "lang": "zh",
+        "text": "再给我一点提示",
+        "hintLevelSeen": 1,
+        "attempts": 2
+      },
+      "response": {
+        "text": "提示 2: 循环 = “控制”里的“重复执行”。如果 = “控制”里的“如果那么”。变量 = “变量”里的 Score。广播 = “事件”里的“广播”。\n在 Scratch 里试试看。发生了什么？",
+        "lang": "zh",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 2,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 26,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E200",
+      "category": "hint-need",
+      "lesson": 9,
+      "input": {
+        "lang": "en",
+        "text": "hint",
+        "hintLevelSeen": 1,
+        "attempts": 2
+      },
+      "response": {
+        "text": "Hint 2: No blocks yet. Use the paint editor's Rectangle tool with one solid color (no gradient). The Size box under the stage makes Runner smaller.\nTry it in Scratch. What happened?",
+        "lang": "en",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 2,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 32,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E201",
+      "category": "hint-need",
+      "lesson": 10,
+      "input": {
+        "lang": "en",
+        "text": "more hints please",
+        "hintLevelSeen": 1,
+        "attempts": 2
+      },
+      "response": {
+        "text": "Hint 2: No new blocks. Duplicate, then change one Variables block. Check its menu says Lives, and the number is -1.\nTry it in Scratch. What happened?",
+        "lang": "en",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 2,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 27,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E202",
+      "category": "hint-need",
+      "lesson": 11,
+      "input": {
+        "lang": "zh",
+        "text": "下一个提示",
+        "hintLevelSeen": 2,
+        "attempts": 3
+      },
+      "response": {
+        "text": "提示 3: 舞台的脚本：\n▸ 当 绿旗 被点击\n▸   换成 [Arena] 背景\n▸   将 [Time Left] 设为 (20)\n▸   广播 (Start)\n▸   重复执行直到 <(Time Left) < (1)>\n▸     等待 (1) 秒\n▸     将 [Time Left] 增加 (-1)\n▸   换成 [You Survived] 背景\n▸   停止 [全部脚本]\n这只是这一步的积木顺序。\n在 Scratch 里试试看。发生了什么？",
+        "lang": "zh",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 3,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 16,
+          "blocksShown": 9,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E203",
+      "category": "hint-need",
+      "lesson": 11,
+      "input": {
+        "lang": "en",
+        "text": "hint please",
+        "hintLevelSeen": 0,
+        "attempts": 1
+      },
+      "response": {
+        "text": "Hint 1: An Enemy keeps moving and turns around at the walls. What should it do again and again? Where should it start so the game is fair?\nTry it in Scratch. What happened?",
+        "lang": "en",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 1,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 34,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E204",
+      "category": "hint-need",
+      "lesson": 12,
+      "input": {
+        "lang": "zh",
+        "text": "提示一下",
+        "hintLevelSeen": 0,
+        "attempts": 1
+      },
+      "response": {
+        "text": "提示 1: 一次只测一样。只按 ← 键：你预期会怎样？实际怎样？点绿旗后 Score 一开始是多少？\n在 Scratch 里试试看。发生了什么？",
+        "lang": "zh",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 1,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 24,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E218",
+      "category": "hint-need",
+      "lesson": 9,
+      "input": {
+        "lang": "zh",
+        "text": "要提示 3",
+        "hintLevelSeen": 2,
+        "attempts": 3
+      },
+      "response": {
+        "text": "提示 3: Runner 的脚本（换成你自己的起点 x 和 y）：\n▸ 当 绿旗 被点击\n▸   移到 x: (-210) y: (150)\n▸   面向 (90) 方向\n▸   说 (准备好了吗？) (1) 秒\n▸   说 (出发！) (1) 秒\n▸   重复执行直到 <碰到 (Exit)?>\n▸     如果 <按下 (→) 键?> 那么\n▸       将x坐标增加 (3)\n      (……左、上、下同样做……)\n▸   说 (我逃出来了！) (2) 秒\n这只是这一步的积木顺序。\n在 Scratch 里试试看。发生了什么？",
+        "lang": "zh",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 3,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 26,
+          "blocksShown": 9,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E205",
+      "category": "asks-if-correct",
+      "lesson": 1,
+      "input": {
+        "lang": "zh",
+        "text": "我做完了，对吗？",
+        "hintLevelSeen": 1,
+        "attempts": 1
+      },
+      "response": {
+        "text": "我看不到你的 Scratch 项目，没法替你检查代码。\n你可以自己测试——点绿旗，看看：\n• 我把 Hero 拖走，点击绿旗后，Hero 跳回了起点。\n• 我的角色名字是 Hero。\n哪一部分已经能用了？",
+        "lang": "zh",
+        "meta": {
+          "intent": "asks-if-correct",
+          "hintShown": 0,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 33,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E206",
+      "category": "asks-if-correct",
+      "lesson": 2,
+      "input": {
+        "lang": "en",
+        "text": "did i do it right?",
+        "hintLevelSeen": 1,
+        "attempts": 1
+      },
+      "response": {
+        "text": "I can't see your Scratch project, so I can't check your code for you.\nClick the green flag and test what you built in this step (“Move right and left”). Does it do what the step says?\nWhich part already works?",
+        "lang": "en",
+        "meta": {
+          "intent": "asks-if-correct",
+          "hintShown": 0,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 41,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E207",
+      "category": "asks-if-correct",
+      "lesson": 3,
+      "input": {
+        "lang": "en",
+        "text": "is my lava code ok now",
+        "hintLevelSeen": 2,
+        "attempts": 2
+      },
+      "response": {
+        "text": "I can't see your Scratch project, so I can't check your code for you.\nClick the green flag and test what you built in this step (“Touch lava → back to start”). Does it do what the step says?\nWhich part already works?",
+        "lang": "en",
+        "meta": {
+          "intent": "asks-if-correct",
+          "hintShown": 0,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 42,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E208",
+      "category": "asks-if-correct",
+      "lesson": 4,
+      "input": {
+        "lang": "zh",
+        "text": "我的三个金币做对了吗",
+        "hintLevelSeen": 1,
+        "attempts": 2
+      },
+      "response": {
+        "text": "我看不到你的 Scratch 项目，没法替你检查代码。\n你可以自己测试——点绿旗，看看：\n• 每个金币正好加 1 分。\n• 站在金币原来的位置上，不会继续加分。\n哪一部分已经能用了？",
+        "lang": "zh",
+        "meta": {
+          "intent": "asks-if-correct",
+          "hintShown": 0,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 33,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E209",
+      "category": "asks-if-correct",
+      "lesson": 5,
+      "input": {
+        "lang": "en",
+        "text": "can you check my checkpoint",
+        "hintLevelSeen": 1,
+        "attempts": 1
+      },
+      "response": {
+        "text": "I can't see your Scratch project, so I can't check your code for you.\nYou can test it yourself — click the green flag and check:\n• Before the checkpoint: lava sends Hero to the start.\n• After touching the checkpoint: lava sends Hero to the checkpoint.\nWhich part already works?",
+        "lang": "en",
+        "meta": {
+          "intent": "asks-if-correct",
+          "hintShown": 0,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 48,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E210",
+      "category": "asks-if-correct",
+      "lesson": 6,
+      "input": {
+        "lang": "zh",
+        "text": "帮我检查一下终点",
+        "hintLevelSeen": 0,
+        "attempts": 1
+      },
+      "response": {
+        "text": "我看不到你的 Scratch 项目，没法替你检查代码。\n点绿旗，测试你在这一步做的东西（“做出终点”）。它做到这一步要求的事了吗？\n哪一部分已经能用了？",
+        "lang": "zh",
+        "meta": {
+          "intent": "asks-if-correct",
+          "hintShown": 0,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 29,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E211",
+      "category": "asks-if-correct",
+      "lesson": 7,
+      "input": {
+        "lang": "en",
+        "text": "my lives rule is done right?",
+        "hintLevelSeen": 2,
+        "attempts": 2
+      },
+      "response": {
+        "text": "I can't see your Scratch project, so I can't check your code for you.\nYou can test it yourself — click the green flag and check:\n• My new sound or look works.\n• My new rule works when I test it 3 times.\nWhich part already works?",
+        "lang": "en",
+        "meta": {
+          "intent": "asks-if-correct",
+          "hintShown": 0,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 45,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E212",
+      "category": "asks-if-correct",
+      "lesson": 8,
+      "input": {
+        "lang": "zh",
+        "text": "我保存对了吗",
+        "hintLevelSeen": 1,
+        "attempts": 1
+      },
+      "response": {
+        "text": "我看不到你的 Scratch 项目，没法替你检查代码。\n你可以自己测试——点绿旗，看看：\n• 我从绿旗开始完整玩了一遍，测试清单每一项都通过。\n• 我给大人讲解了一个概念。\n哪一部分已经能用了？",
+        "lang": "zh",
+        "meta": {
+          "intent": "asks-if-correct",
+          "hintShown": 0,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 36,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E213",
+      "category": "asks-if-correct",
+      "lesson": 9,
+      "input": {
+        "lang": "en",
+        "text": "is my countdown right?",
+        "hintLevelSeen": 1,
+        "attempts": 1
+      },
+      "response": {
+        "text": "I can't see your Scratch project, so I can't check your code for you.\nClick the green flag and test what you built in this step (“Countdown, then steer until the Exit”). Does it do what the step says?\nWhich part already works?",
+        "lang": "en",
+        "meta": {
+          "intent": "asks-if-correct",
+          "hintShown": 0,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 43,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E214",
+      "category": "asks-if-correct",
+      "lesson": 10,
+      "input": {
+        "lang": "en",
+        "text": "look at my rock script, is it correct",
+        "hintLevelSeen": 2,
+        "attempts": 2
+      },
+      "response": {
+        "text": "I can't see your Scratch project, so I can't check your code for you.\nYou can test it yourself — click the green flag and check:\n• Each Star caught adds exactly 1 point, then a new Star falls from a random place at the top.\n• A missed Star or Rock goes back to the top — it never gets stuck at the bottom.\nWhich part already works?",
+        "lang": "en",
+        "meta": {
+          "intent": "asks-if-correct",
+          "hintShown": 0,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 65,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E215",
+      "category": "asks-if-correct",
+      "lesson": 11,
+      "input": {
+        "lang": "zh",
+        "text": "我的倒计时对不对",
+        "hintLevelSeen": 1,
+        "attempts": 1
+      },
+      "response": {
+        "text": "我看不到你的 Scratch 项目，没法替你检查代码。\n点绿旗，测试你在这一步做的东西（“舞台负责计时”）。它做到这一步要求的事了吗？\n哪一部分已经能用了？",
+        "lang": "zh",
+        "meta": {
+          "intent": "asks-if-correct",
+          "hintShown": 0,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 30,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E216",
+      "category": "asks-if-correct",
+      "lesson": 11,
+      "input": {
+        "lang": "en",
+        "text": "tell me my player code works",
+        "hintLevelSeen": 2,
+        "attempts": 2
+      },
+      "response": {
+        "text": "I can't see your Scratch project, so I can't check your code for you.\nClick the green flag and test what you built in this step (“Player moves until caught”). Does it do what the step says?\nWhich part already works?",
+        "lang": "en",
+        "meta": {
+          "intent": "asks-if-correct",
+          "hintShown": 0,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 41,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E217",
+      "category": "asks-if-correct",
+      "lesson": 12,
+      "input": {
+        "lang": "zh",
+        "text": "我改好了吧？是不是对的",
+        "hintLevelSeen": 2,
+        "attempts": 2
+      },
+      "response": {
+        "text": "我看不到你的 Scratch 项目，没法替你检查代码。\n你可以自己测试——点绿旗，看看：\n• → 键让小猫向右，← 键让小猫向左。\n• 每次点绿旗后，Score 都从 0 开始。\n哪一部分已经能用了？",
+        "lang": "zh",
+        "meta": {
+          "intent": "asks-if-correct",
+          "hintShown": 0,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 33,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E219",
+      "category": "wrong-sprite",
+      "lesson": 5,
+      "input": {
+        "lang": "en",
+        "text": "i changed the go to in the checkpoint sprite instead of hero",
+        "hintLevelSeen": 1,
+        "attempts": 2
+      },
+      "response": {
+        "text": "Hint 2: Variables: the round orange reporter blocks named Checkpoint X and Checkpoint Y. Drop them into the white number slots.\nTry it in Scratch. What happened?",
+        "lang": "en",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 2,
+          "problem": null,
+          "problemScore": 0.36
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 0,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [
+          "off-topic"
+        ],
+        "pass": false,
+        "notes": [
+          "missing keyword groups: hero"
+        ],
+        "stats": {
+          "words": 27,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "E220",
+      "category": "no-reset",
+      "lesson": 6,
+      "input": {
+        "lang": "en",
+        "text": "the banner is still showing after i click the green flag again",
+        "hintLevelSeen": 1,
+        "attempts": 2
+      },
+      "response": {
+        "text": "Hint 2: Events: “when green flag clicked” and “when I receive [ ]”. Looks: “hide”, “show”, “go to [front] layer”.\nTry it in Scratch. What happened?",
+        "lang": "en",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 2,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 24,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "P01",
+      "category": "unclear-instructions",
+      "lesson": 1,
+      "input": {
+        "lang": "en",
+        "text": "whats a sprite? i dont understand what rename means",
+        "hintLevelSeen": 0,
+        "attempts": 1
+      },
+      "response": {
+        "text": "A sprite is a character or thing in your game, like Hero, a Coin or the Goal. Each sprite has its own scripts.\nRename means giving something a new name. Type the new name in its name box.\nLet's do one small piece at a time.\nTry this part: Rename it to Hero. Type Hero in the “Sprite” name box.\nWhere: Sprite list (under the stage)\nHint 1: Look under the stage. Can you find the box that shows your sprite's name (like Sprite1)?\nTry it in Scratch. What happened?",
+        "lang": "en",
+        "meta": {
+          "intent": "unclear-instructions",
+          "hintShown": 1,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 90,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "P02",
+      "category": "unclear-instructions",
+      "lesson": 2,
+      "input": {
+        "lang": "zh",
+        "text": "x和y是什么意思啊，看不懂",
+        "hintLevelSeen": 0,
+        "attempts": 1
+      },
+      "response": {
+        "text": "x 表示左右位置（x 越大越靠右），y 表示上下位置（y 越大越靠上）。中间是 x 0, y 0。\n我们一次只做一小块。\n先做这一部分： 把 Hero 拖到舞台右边，观察 x 框里的数字。\n位置： 角色信息区（x 和 y 框）\n提示 1: 看舞台下方叫 x 和 y 的两个框。移动 Hero：哪个数字在变？\n在 Scratch 里试试看。发生了什么？",
+        "lang": "zh",
+        "meta": {
+          "intent": "unclear-instructions",
+          "hintShown": 1,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 64,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "P03",
+      "category": "unclear-instructions",
+      "lesson": 9,
+      "input": {
+        "lang": "en",
+        "text": "what does undo mean?? and how do i pick the wall colour",
+        "hintLevelSeen": 1,
+        "attempts": 2
+      },
+      "response": {
+        "text": "In the maze, undo means moving back by the same number you just moved, but with the opposite sign (3 then -3).\nLet's do one small piece at a time.\nTry this part: Pick the color: click the color circle in the block, then the eyedropper, then click a wall.\nWhere: Runner sprite → inside each arrow-key “if”\nHint 2: Control: “if then”. Sensing: “touching color ( )?” — set the color with the eyedropper. Motion: “change x by” / “change y by” with the opposite number.\nTry it in Scratch. What happened?",
+        "lang": "en",
+        "meta": {
+          "intent": "unclear-instructions",
+          "hintShown": 2,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 88,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "P04",
+      "category": "block-order",
+      "lesson": 1,
+      "input": {
+        "lang": "en",
+        "text": "i put go to x y on top and the green flag under it and nothing happens",
+        "hintLevelSeen": 1,
+        "attempts": 2
+      },
+      "response": {
+        "text": "I can't see your project, but this sounds like a common problem: “Nothing happens when I click the green flag.”\nClick Hero in the sprite list. Is the script there? Make sure “go to” is snapped under the green flag block with no gap.\nChange it, click the green flag, and test again. What happens now?",
+        "lang": "en",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 0,
+          "problem": 0,
+          "problemScore": 0.67
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 56,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": [
+            0
+          ]
+        }
+      }
+    },
+    {
+      "id": "P05",
+      "category": "block-order",
+      "lesson": 9,
+      "input": {
+        "lang": "zh",
+        "text": "我的 Runner 一开始先说出发，然后才说准备好了吗",
+        "hintLevelSeen": 0,
+        "attempts": 1
+      },
+      "response": {
+        "text": "我看不到你的项目，不过这听起来像一个常见问题： “Runner 先说“出发！”，后说“准备好了吗？”。”\n积木从上到下运行。拖动一个积木时，它下面的积木也会一起被拖走。所以：先把“说 (出发！)”连同下面的积木拉开，把“说 (准备好了吗？)”拼回原位，再把其余的拼回它下面。\n改好以后点绿旗再测试一次。现在会怎样？",
+        "lang": "zh",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 0,
+          "problem": 6,
+          "problemScore": 0.58
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 58,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": [
+            6
+          ]
+        }
+      }
+    },
+    {
+      "id": "P06",
+      "category": "block-order",
+      "lesson": 9,
+      "input": {
+        "lang": "en",
+        "text": "it keeps saying I escaped while i am still walking around the maze",
+        "hintLevelSeen": 1,
+        "attempts": 3
+      },
+      "response": {
+        "text": "I can't see your project, but this sounds like a common problem: “Runner keeps saying “I escaped!” while still walking, and keeps stopping.”\nThe say block is inside the loop, so it runs every time round. Drag it out and snap it under the “repeat until” loop.\nChange it, click the green flag, and test again. What happens now?",
+        "lang": "en",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 0,
+          "problem": 4,
+          "problemScore": 0.67
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 59,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": [
+            4
+          ]
+        }
+      }
+    },
+    {
+      "id": "P07",
+      "category": "wrong-sprite",
+      "lesson": 3,
+      "input": {
+        "lang": "en",
+        "text": "when i touch the lava the lava moves to the start not my hero",
+        "hintLevelSeen": 0,
+        "attempts": 2
+      },
+      "response": {
+        "text": "I can't see your project, but this sounds like a common problem: “The Lava moves instead of Hero.”\nYou put the script on Lava. Drag the script onto Hero in the sprite list to copy it, then delete it from Lava.\nChange it, click the green flag, and test again. What happens now?",
+        "lang": "en",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 0,
+          "problem": 2,
+          "problemScore": 0.67
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 53,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": [
+            2
+          ]
+        }
+      }
+    },
+    {
+      "id": "P08",
+      "category": "wrong-sprite",
+      "lesson": 5,
+      "input": {
+        "lang": "zh",
+        "text": "我碰到旗子以后，复活在我刚才站的地方，不是旗子那里",
+        "hintLevelSeen": 1,
+        "attempts": 2
+      },
+      "response": {
+        "text": "我看不到你的项目，不过这听起来像一个常见问题： “Hero 在自己刚才站的地方复活，而不是旗帜那里。”\n“x 坐标”积木被用在了 Hero 的脚本里，所以表示 Hero 的位置。把旗帜脚本移到 Checkpoint 角色上。\n改好以后点绿旗再测试一次。现在会怎样？",
+        "lang": "zh",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 0,
+          "problem": 3,
+          "problemScore": 0.5
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 48,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": [
+            3
+          ]
+        }
+      }
+    },
+    {
+      "id": "P09",
+      "category": "wrong-sprite",
+      "lesson": 10,
+      "input": {
+        "lang": "en",
+        "text": "i cant find the for this sprite only button when i make fall speed",
+        "hintLevelSeen": 0,
+        "attempts": 2
+      },
+      "response": {
+        "text": "I can't see your project, but this sounds like a common problem: “I can't find the “For this sprite only” option.”\nClick the Star sprite first, then make the variable. When the Stage is selected, Scratch only offers variables for all sprites.\nTry that. Did it help?",
+        "lang": "en",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 0,
+          "problem": 10,
+          "problemScore": 0.55
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 47,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": [
+            10
+          ]
+        }
+      }
+    },
+    {
+      "id": "P10",
+      "category": "no-reset",
+      "lesson": 4,
+      "input": {
+        "lang": "en",
+        "text": "my score keeps the old points when i play again",
+        "hintLevelSeen": 1,
+        "attempts": 2
+      },
+      "response": {
+        "text": "I can't see your Scratch project, so I can't check your code for you.\nLet's be bug detectives:\n1. Is the script on the sprite that should do the action? This step's script goes here: Variables category, then Hero's green flag script.\n2. Read the script from top to bottom. Is every block in the right order, and inside the right loop?\n3. Click the script on its own and watch. What does the sprite do?\nHint 2: Variables (dark orange): “Make a Variable” button, then the “set [ ] to ( )” block. Pick Score in its menu.\nWhich of these did you check first?",
+        "lang": "en",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 2,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 1,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [
+          "missing keyword groups: set [score] to (0)/设为 (0)/to (0)"
+        ],
+        "stats": {
+          "words": 102,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "P11",
+      "category": "no-reset",
+      "lesson": 5,
+      "input": {
+        "lang": "en",
+        "text": "after i click the green flag i still come back at the checkpoint flag",
+        "hintLevelSeen": 1,
+        "attempts": 2
+      },
+      "response": {
+        "text": "I can't see your project, but this sounds like a common problem: “After the green flag, Hero still respawns at the checkpoint.”\nHero's green flag script must set Checkpoint X to (-200) and Checkpoint Y to (-130) before the forever loop.\nChange it, click the green flag, and test again. What happens now?",
+        "lang": "en",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 0,
+          "problem": 0,
+          "problemScore": 0.62
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 53,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": [
+            0
+          ]
+        }
+      }
+    },
+    {
+      "id": "P12",
+      "category": "no-reset",
+      "lesson": 10,
+      "input": {
+        "lang": "zh",
+        "text": "一点绿旗游戏就结束了",
+        "hintLevelSeen": 0,
+        "attempts": 1
+      },
+      "response": {
+        "text": "我看不到你的项目，不过这听起来像一个常见问题： “一点绿旗游戏就结束了。”\nLives 还是上一局剩下的 0。把“将 [Lives] 设为 (3)”放在 Basket 脚本顶部、循环之前。\n改好以后点绿旗再测试一次。现在会怎样？",
+        "lang": "zh",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 0,
+          "problem": 2,
+          "problemScore": 1
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 40,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": [
+            2
+          ]
+        }
+      }
+    },
+    {
+      "id": "P13",
+      "category": "no-reset",
+      "lesson": 6,
+      "input": {
+        "lang": "en",
+        "text": "the YOU WIN banner is already there when the game starts",
+        "hintLevelSeen": 0,
+        "attempts": 1
+      },
+      "response": {
+        "text": "I can't see your project, but this sounds like a common problem: “The banner is visible when the game starts.”\nAdd “when green flag clicked → hide” on the Win Banner.\nChange it, click the green flag, and test again. What happens now?",
+        "lang": "en",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 0,
+          "problem": 1,
+          "problemScore": 0.6
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 42,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": [
+            1
+          ]
+        }
+      }
+    },
+    {
+      "id": "P14",
+      "category": "repeat-trigger",
+      "lesson": 4,
+      "input": {
+        "lang": "en",
+        "text": "my score goes up super fast like 100 when i touch one coin",
+        "hintLevelSeen": 1,
+        "attempts": 3
+      },
+      "response": {
+        "text": "I can't see your project, but this sounds like a common problem: “The score goes up super fast.”\nYou probably used “forever” + “if touching”. Use “wait until <touching (Hero)?>”, then change Score by 1, then hide — with no forever.\nChange it, click the green flag, and test again. What happens now?",
+        "lang": "en",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 0,
+          "problem": 0,
+          "problemScore": 0.73
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 51,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": [
+            0
+          ]
+        }
+      }
+    },
+    {
+      "id": "P15",
+      "category": "repeat-trigger",
+      "lesson": 6,
+      "input": {
+        "lang": "zh",
+        "text": "You Win 一直一直出现，停不下来",
+        "hintLevelSeen": 1,
+        "attempts": 2
+      },
+      "response": {
+        "text": "我看不到你的项目，不过这听起来像一个常见问题： ““You Win”一次又一次地出现。”\n终点用了“重复执行”+“如果”。请改用“等待 <碰到 (Hero)?>”加一次广播，不要重复执行。\n改好以后点绿旗再测试一次。现在会怎样？",
+        "lang": "zh",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 0,
+          "problem": 2,
+          "problemScore": 0.35
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 40,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": [
+            2
+          ]
+        }
+      }
+    },
+    {
+      "id": "P16",
+      "category": "repeat-trigger",
+      "lesson": 10,
+      "input": {
+        "lang": "en",
+        "text": "the star gives like 20 points every time it touches the basket",
+        "hintLevelSeen": 1,
+        "attempts": 2
+      },
+      "response": {
+        "text": "I can't see your project, but this sounds like a common problem: “One Star gives many points when it touches the Basket.”\nThe fall loop keeps going while the Star sits on the Basket. Make the loop stop on touching too: “repeat until <<touching (Basket)?> or <(y position) < (-160)>>”, and keep the “if <touching (Basket)?>” check UNDER the loop.\nChange it, click the green flag, and test again. What happens now?",
+        "lang": "en",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 0,
+          "problem": 0,
+          "problemScore": 0.71
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 71,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": [
+            0
+          ]
+        }
+      }
+    },
+    {
+      "id": "P17",
+      "category": "repeat-trigger",
+      "lesson": 7,
+      "input": {
+        "lang": "en",
+        "text": "lives go to minus numbers when i touch lava",
+        "hintLevelSeen": 1,
+        "attempts": 2
+      },
+      "response": {
+        "text": "Hint 2: Variables: make a variable Lives, then “set” and “change”. Control: “if then”, “stop [all]”. Operators (green): “( ) = ( )”.\nTry it in Scratch. What happened?",
+        "lang": "en",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 2,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 1,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [
+          "missing keyword groups: inside/green flag/里面/绿旗"
+        ],
+        "stats": {
+          "words": 24,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "P18",
+      "category": "asks-for-answer",
+      "lesson": 4,
+      "input": {
+        "lang": "en",
+        "text": "just give me the whole code for the coin pls",
+        "hintLevelSeen": 0,
+        "attempts": 1
+      },
+      "response": {
+        "text": "I won't give you the whole answer — you can build this! Here is your next hint:\nHint 1: A coin should: come back when the game starts, wait for Hero, add 1 point, then vanish. Which of these makes it count only once?\nTry it in Scratch. What happened?",
+        "lang": "en",
+        "meta": {
+          "intent": "asks-for-answer",
+          "hintShown": 1,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 49,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "P19",
+      "category": "asks-for-answer",
+      "lesson": 9,
+      "input": {
+        "lang": "zh",
+        "text": "直接把迷宫墙的完整代码给我",
+        "hintLevelSeen": 2,
+        "attempts": 4
+      },
+      "response": {
+        "text": "我不会直接给你完整答案——你自己能做出来！这是下一个提示：\n提示 3: → 键部分变成这样，然后把这个办法用到另外 3 个方向：\n▸     如果 <按下 (→) 键?> 那么\n▸       将x坐标增加 (3)\n▸       如果 <碰到颜色 (墙的颜色)?> 那么\n▸         将x坐标增加 (-3)\n      (←、↑、↓：先移动，再用相反的数字退回)\n这只是这一步的积木顺序。\n在 Scratch 里试试看。发生了什么？",
+        "lang": "zh",
+        "meta": {
+          "intent": "asks-for-answer",
+          "hintShown": 3,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 44,
+          "blocksShown": 4,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "P20",
+      "category": "asks-for-answer",
+      "lesson": 10,
+      "input": {
+        "lang": "en",
+        "text": "can you do the star script for me? im lazy lol",
+        "hintLevelSeen": 1,
+        "attempts": 1
+      },
+      "response": {
+        "text": "I won't give you the whole answer — you can build this! Here is your next hint:\nHint 2: Operators: “pick random ( ) to ( )”, “< > or < >”, “( ) < ( )”. Motion: the round “y position” block — it goes in the LEFT slot of “( ) < ( )”, and -160 in the right slot. Control: “forever”, “repeat until”, “if then”. Variables: Fall Speed.\nTry it in Scratch. What happened?",
+        "lang": "en",
+        "meta": {
+          "intent": "asks-for-answer",
+          "hintShown": 2,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 57,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "P21",
+      "category": "frustrated",
+      "lesson": 3,
+      "input": {
+        "lang": "en",
+        "text": "this is too hard i give up, the touching thing never works",
+        "hintLevelSeen": 3,
+        "attempts": 5
+      },
+      "response": {
+        "text": "It's OK to feel stuck. Bugs are normal — every game maker gets them.\nIf you are tired, save your project and take a short break. Then try just one small step.\nYou have seen all the hints. Open “Something's wrong”, or ask a grown-up to look with you.\nWhich part already works?",
+        "lang": "en",
+        "meta": {
+          "intent": "frustrated",
+          "hintShown": 0,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 52,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "P22",
+      "category": "frustrated",
+      "lesson": 9,
+      "input": {
+        "lang": "zh",
+        "text": "画迷宫好烦，我画了好久还是不好看",
+        "hintLevelSeen": 0,
+        "attempts": 3
+      },
+      "response": {
+        "text": "卡住的时候有点难受，这很正常。每个游戏设计师都会遇到 bug。\n如果累了，先保存项目、休息一下，再只试一个小步骤。\n提示 1: Runner 必须能穿过每一条路。比一比 Runner 和路的大小。墙看得清楚吗？\n哪一部分已经能用了？",
+        "lang": "zh",
+        "meta": {
+          "intent": "frustrated",
+          "hintShown": 1,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 44,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "P23",
+      "category": "frustrated",
+      "lesson": 2,
+      "input": {
+        "lang": "en",
+        "text": "I HATE THIS it doesnt move when i press the arrow",
+        "hintLevelSeen": 1,
+        "attempts": 3
+      },
+      "response": {
+        "text": "It's OK to feel stuck. Bugs are normal — every game maker gets them.\nI can't see your project, but this sounds like a common problem: “Hero doesn't move when I press an arrow, or moves one tiny step and stops.”\nThe “if” blocks must be INSIDE the “forever” loop. Without forever, the check happens only once.\nChange it, click the green flag, and test again. What happens now?",
+        "lang": "en",
+        "meta": {
+          "intent": "frustrated",
+          "hintShown": 0,
+          "problem": 0,
+          "problemScore": 0.4
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 68,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": [
+            0
+          ]
+        }
+      }
+    },
+    {
+      "id": "P24",
+      "category": "hint-need",
+      "lesson": 5,
+      "input": {
+        "lang": "en",
+        "text": "hint please",
+        "hintLevelSeen": 0,
+        "attempts": 1
+      },
+      "response": {
+        "text": "Hint 1: When Hero touches the flag, the game should remember WHERE the flag is. Which sprite knows the flag's position?\nTry it in Scratch. What happened?",
+        "lang": "en",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 1,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 27,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "P25",
+      "category": "hint-need",
+      "lesson": 5,
+      "input": {
+        "lang": "en",
+        "text": "another hint",
+        "hintLevelSeen": 1,
+        "attempts": 2
+      },
+      "response": {
+        "text": "Hint 2: Control: “wait”, “wait until”. Sensing: “touching (Hero)?”. Variables: “set”. Motion (at the bottom of the list): the round “x position” and “y position” blocks.\nTry it in Scratch. What happened?",
+        "lang": "en",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 2,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 32,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "P26",
+      "category": "hint-need",
+      "lesson": 10,
+      "input": {
+        "lang": "zh",
+        "text": "还要提示",
+        "hintLevelSeen": 2,
+        "attempts": 3
+      },
+      "response": {
+        "text": "提示 3: Rock 脚本的结尾：\n    (……和 Star 一样，但将 [Fall Speed] 设为 (-4)……)\n▸     如果 <碰到 (Basket)?> 那么\n▸       将 [Lives] 增加 (-1)\n这只是这一步的积木顺序。\n在 Scratch 里试试看。发生了什么？",
+        "lang": "zh",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 3,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 25,
+          "blocksShown": 2,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "P27",
+      "category": "hint-need",
+      "lesson": 8,
+      "input": {
+        "lang": "en",
+        "text": "I already saw all the hints and still cant find my sb3 file",
+        "hintLevelSeen": 3,
+        "attempts": 4
+      },
+      "response": {
+        "text": "I can't see your project, but this sounds like a common problem: “I can't find my saved file.”\nLook in the Downloads folder. Newer copies may be called “Scratch Project (1).sb3”. The newest file is the last one saved.\nTry that. Did it help?",
+        "lang": "en",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 0,
+          "problem": 0,
+          "problemScore": 0.4
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 45,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": [
+            0
+          ]
+        }
+      }
+    },
+    {
+      "id": "P28",
+      "category": "asks-if-correct",
+      "lesson": 4,
+      "input": {
+        "lang": "en",
+        "text": "is my coin code right? i think its done",
+        "hintLevelSeen": 1,
+        "attempts": 2
+      },
+      "response": {
+        "text": "I can't see your Scratch project, so I can't check your code for you.\nClick the green flag and test what you built in this step (“Make one Coin”). Does it do what the step says?\nWhich part already works?",
+        "lang": "en",
+        "meta": {
+          "intent": "asks-if-correct",
+          "hintShown": 0,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 40,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "P29",
+      "category": "asks-if-correct",
+      "lesson": 10,
+      "input": {
+        "lang": "zh",
+        "text": "你帮我看看我的代码对不对",
+        "hintLevelSeen": 0,
+        "attempts": 1
+      },
+      "response": {
+        "text": "我看不到你的 Scratch 项目，没法替你检查代码。\n点绿旗，测试你在这一步做的东西（“篮子和游戏循环”）。它做到这一步要求的事了吗？\n哪一部分已经能用了？",
+        "lang": "zh",
+        "meta": {
+          "intent": "asks-if-correct",
+          "hintShown": 0,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 30,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "P30",
+      "category": "asks-if-correct",
+      "lesson": 9,
+      "input": {
+        "lang": "en",
+        "text": "it works now right? tell me its correct",
+        "hintLevelSeen": 2,
+        "attempts": 3
+      },
+      "response": {
+        "text": "I can't see your Scratch project, so I can't check your code for you.\nYou can test it yourself — click the green flag and check:\n• Every green flag: Runner goes to the start and says “Ready?” then “Go!”, in that order.\n• Runner cannot pass through any wall, in all 4 directions.\nWhich part already works?",
+        "lang": "en",
+        "meta": {
+          "intent": "asks-if-correct",
+          "hintShown": 0,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 55,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "P31",
+      "category": "repeat-trigger",
+      "lesson": 9,
+      "input": {
+        "lang": "en",
+        "text": "my runner just walks right through the walls",
+        "hintLevelSeen": 1,
+        "attempts": 3
+      },
+      "response": {
+        "text": "I can't see your project, but this sounds like a common problem: “Runner walks through the walls.”\nThe color in the block is not exactly the wall color. Click the color circle → eyedropper → click the middle of a wall. Walls must be one solid color.\nChange it, click the green flag, and test again. What happens now?",
+        "lang": "en",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 0,
+          "problem": 0,
+          "problemScore": 0.89
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 57,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": [
+            0
+          ]
+        }
+      }
+    },
+    {
+      "id": "P32",
+      "category": "wrong-sprite",
+      "lesson": 10,
+      "input": {
+        "lang": "zh",
+        "text": "石头也给我加分",
+        "hintLevelSeen": 1,
+        "attempts": 2
+      },
+      "response": {
+        "text": "我看不到你的项目，不过这听起来像一个常见问题： “石头也给我加分。”\n复制以后，要把 Rock 的积木改成“将 [Lives] 增加 (-1)”。\n改好以后点绿旗再测试一次。现在会怎样？",
+        "lang": "zh",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 0,
+          "problem": 5,
+          "problemScore": 1
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 33,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": [
+            5
+          ]
+        }
+      }
+    },
+    {
+      "id": "P33",
+      "category": "no-reset",
+      "lesson": 10,
+      "input": {
+        "lang": "en",
+        "text": "when the star gets faster the rock gets faster too",
+        "hintLevelSeen": 1,
+        "attempts": 2
+      },
+      "response": {
+        "text": "I can't see your project, but this sounds like a common problem: “When Star speeds up, Rock speeds up too.”\nFall Speed was made “For all sprites”, so they share it. Deleting a variable also deletes the blocks that use it, so: on Star, make a new “For this sprite only” variable, drop it into both Star blocks, then delete the old one. Finally delete Rock and duplicate Star again.\nChange it, click the green flag, and test again. What happens now?",
+        "lang": "en",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 0,
+          "problem": 6,
+          "problemScore": 0.67
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 82,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": [
+            6
+          ]
+        }
+      }
+    },
+    {
+      "id": "P34",
+      "category": "hint-need",
+      "lesson": 5,
+      "input": {
+        "lang": "en",
+        "text": "something is weird with my game",
+        "hintLevelSeen": 0,
+        "attempts": 1
+      },
+      "response": {
+        "text": "Hint 1: The “go to” inside the lava “if” still has fixed numbers. What could hold a number that changes?\nTry it in Scratch. What happened?",
+        "lang": "en",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 1,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 26,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "P35",
+      "category": "frustrated",
+      "lesson": 2,
+      "input": {
+        "lang": "en",
+        "text": "my teacher says im slow at this. how do i make the cat move",
+        "hintLevelSeen": 0,
+        "attempts": 2
+      },
+      "response": {
+        "text": "It's OK to feel stuck. Bugs are normal — every game maker gets them.\nIf you are tired, save your project and take a short break. Then try just one small step.\nHint 1: When you hold a key, the game must check again and again: “Is the key pressed?” Which block repeats again and again?\nWhich part already works?",
+        "lang": "en",
+        "meta": {
+          "intent": "frustrated",
+          "hintShown": 1,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 59,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "P36",
+      "category": "unclear-instructions",
+      "lesson": 3,
+      "input": {
+        "lang": "en",
+        "text": "how do i use the when touching lava block",
+        "hintLevelSeen": 0,
+        "attempts": 1
+      },
+      "response": {
+        "text": "Scratch has no “when touching” block. Use “if <touching ( )?> then” inside a “forever” loop instead.\nHint 1: Hero needs to keep asking “Am I touching lava?”. Where in Hero's script does something happen again and again?\nTry it in Scratch. What happened?",
+        "lang": "en",
+        "meta": {
+          "intent": "misconception",
+          "hintShown": 1,
+          "problem": null,
+          "problemScore": 0.57
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 42,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    },
+    {
+      "id": "P37",
+      "category": "repeat-trigger",
+      "lesson": 4,
+      "input": {
+        "lang": "zh",
+        "text": "我的 coin 不会 hide 怎么办",
+        "hintLevelSeen": 1,
+        "attempts": 2
+      },
+      "response": {
+        "text": "我看不到你的 Scratch 项目，没法替你检查代码。\n我们来当捉虫侦探：\n1. 脚本放在负责这个动作的角色上了吗？这一步的脚本应该在：新角色 Coin → 代码 标签页。\n2. 从上到下读一遍脚本。每个积木的顺序对吗？是不是放在了正确的循环里面？\n3. 单独点击这段脚本，看看角色会做什么？\n提示 2: “事件”：绿旗。“外观”：“显示”“隐藏”。“控制”：“等待”和“等待……”。“侦测”：“碰到 (Hero)?”。“变量”：“将 [Score] 增加 (1)”。\n你先检查哪一条？",
+        "lang": "zh",
+        "meta": {
+          "intent": "hint",
+          "hintShown": 2,
+          "problem": null,
+          "problemScore": 0
+        }
+      },
+      "grade": {
+        "scores": {
+          "technical": 2,
+          "clarity": 2,
+          "independence": 2,
+          "age": 2,
+          "honesty": 2,
+          "noFalseClaims": 2
+        },
+        "failures": [],
+        "pass": true,
+        "notes": [],
+        "stats": {
+          "words": 79,
+          "blocksShown": 0,
+          "hasQuestion": true,
+          "presentedProblems": []
+        }
+      }
+    }
+  ]
+}

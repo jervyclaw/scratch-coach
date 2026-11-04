@@ -1,78 +1,63 @@
-// Course content consistency tests. Run: node --test tests/
+// Course content consistency tests. Run: npm test
 "use strict";
 const test = require("node:test");
 const assert = require("node:assert/strict");
 const C = require("../js/content.js");
+const { translateScripts } = require("./scratch-engine/translate.js");
 
 const LANGS = ["en", "zh"];
 const isLoc = (o) => o && LANGS.every((l) => typeof o[l] === "string" && o[l].trim().length > 0);
+const lesson = (id) => C.lessons.find((l) => l.id === id);
 
-// Every block line used in the course must match a real Scratch 3 block (English + Chinese pair).
-const REAL_BLOCKS = [
-  ["events", /^when green flag clicked$/, /^当 绿旗 被点击$/],
-  ["events", /^broadcast \(You Win\)$/, /^广播 \(You Win\)$/],
-  ["events", /^when I receive \[You Win\]$/, /^当接收到 \[You Win\]$/],
-  ["motion", /^go to x: \((-?\d+|Checkpoint X)\) y: \((-?\d+|Checkpoint Y)\)$/, /^移到 x: \((-?\d+|Checkpoint X)\) y: \((-?\d+|Checkpoint Y)\)$/],
-  ["motion", /^point in direction \((-?\d+)\)$/, /^面向 \((-?\d+)\) 方向$/],
-  ["motion", /^change x by \((-?\d+)\)$/, /^将x坐标增加 \((-?\d+)\)$/],
-  ["motion", /^change y by \((-?\d+)\)$/, /^将y坐标增加 \((-?\d+)\)$/],
-  ["motion", /^x position$/, /^x 坐标$/],
-  ["motion", /^y position$/, /^y 坐标$/],
-  ["motion", /^set rotation style \[left-right\]$/, /^将旋转方式设为 \[左右翻转\]$/],
-  ["motion", /^glide \(\d+\) secs to x: \(-?\d+\) y: \(-?\d+\)$/, /^在 \(\d+\) 秒内滑行到 x: \(-?\d+\) y: \(-?\d+\)$/],
-  ["looks", /^show$/, /^显示$/],
-  ["looks", /^hide$/, /^隐藏$/],
-  ["looks", /^say \(.+\) for \(\d+\) seconds$/, /^说 \(.+\) \(\d+\) 秒$/],
-  ["looks", /^switch costume to \[.*\]$/, /^换成 \[.*\] 造型$/],
-  ["looks", /^go to \[front\] layer$/, /^移到最 \[前面\]$/],
-  ["sound", /^start sound \(.*\)$/, /^播放声音 \(.*\)$/],
-  ["control", /^forever$/, /^重复执行$/],
-  ["control", /^if <.*> then$/, /^如果 <.*> 那么$/],
-  ["control", /^wait \(0\.2\) seconds$/, /^等待 \(0\.2\) 秒$/],
-  ["control", /^wait until <.+>$/, /^等待 <.+>$/],
-  ["control", /^stop \[other scripts in sprite\]$/, /^停止 \[该角色的其他脚本\]$/],
-  ["control", /^stop \[all\]$/, /^停止 \[全部脚本\]$/],
-  ["sensing", /^key \(right arrow\) pressed\?$/, /^按下 \(→\) 键\?$/],
-  ["sensing", /^touching \(Lava\)\?$/, /^碰到 \(Lava\)\?$/],
-  ["sensing", /^reset timer$/, /^计时器归零$/],
-  ["operators", /^\( \) = \( \)$/, /^\( \) = \( \)$/],
-  ["variables", /^set \[(Score|Checkpoint X|Checkpoint Y|Lives)\] to \(.+\)$/, /^将 \[(Score|Checkpoint X|Checkpoint Y|Lives)\] 设为 \(.+\)$/],
-  ["variables", /^change \[(Score|Lives)\] by \(-?\d+\)$/, /^将 \[(Score|Lives)\] 增加 \(-?\d+\)$/],
-];
-
+// Every block list a child or parent can see, with the lesson it belongs to.
 function allBlockLists() {
   const out = [];
   C.lessons.forEach((l) => {
-    out.push({ where: `L${l.id} blocks`, blocks: l.blocks });
-    l.steps.forEach((s, i) => s.hints.forEach((h, j) => { if (h.blocks) out.push({ where: `L${l.id} step${i + 1} hint${j + 1}`, blocks: h.blocks }); }));
-    if (l.challenge.hint.blocks) out.push({ where: `L${l.id} challenge`, blocks: l.challenge.hint.blocks });
+    out.push({ lesson: l, where: `L${l.id} blocks`, blocks: l.blocks, catalog: true });
+    l.steps.forEach((s, i) => s.hints.forEach((h, j) => { if (h.blocks) out.push({ lesson: l, where: `L${l.id} step${i + 1} hint${j + 1}`, blocks: h.blocks }); }));
+    if (l.challenge.hint.blocks) out.push({ lesson: l, where: `L${l.id} challenge`, blocks: l.challenge.hint.blocks });
+    (l.reference || []).forEach((r) => out.push({ lesson: l, where: `L${l.id} reference ${r.sprite}`, blocks: r.blocks }));
   });
-  C.finalScripts.forEach((s) => out.push({ where: `final ${s.sprite}`, blocks: s.blocks }));
+  C.finalScripts.forEach((s) => out.push({ lesson: lesson(6), where: `final ${s.sprite}`, blocks: s.blocks }));
   return out;
 }
-const hint3 = (lessonId, stepNo) => C.lessons[lessonId - 1].steps[stepNo - 1].hints[2].blocks;
+const hint3 = (lessonId, stepNo) => lesson(lessonId).steps[stepNo - 1].hints[2].blocks;
 const final = (sprite) => C.finalScripts.find((s) => s.sprite === sprite).blocks;
+const refOf = (id, sprite) => lesson(id).reference.find((r) => r.sprite === sprite).blocks;
 const idx = (blocks, re) => blocks.findIndex((b) => re.test(b.en));
+const lessonNames = (l, key) => ((l.setup && l.setup[key]) || []).map((x) => x.name);
 
-test("there are exactly 8 lessons, in the required order", () => {
-  assert.equal(C.lessons.length, 8);
+test("course structure: 8 main-quest levels, then up to 4 arcade projects, ids in order", () => {
+  assert.ok(C.lessons.length >= 8 && C.lessons.length <= 12, "8–12 projects");
   C.lessons.forEach((l, i) => assert.equal(l.id, i + 1));
+  const quest = C.lessons.filter((l) => l.track === "quest");
+  assert.equal(quest.length, 8);
+  assert.deepEqual(quest.map((l) => l.id), [1, 2, 3, 4, 5, 6, 7, 8]);
+  C.lessons.filter((l) => l.id > 8).forEach((l) => assert.equal(l.track, "arcade"));
   const concepts = C.lessons.map((l) => l.concept.en.toLowerCase());
   assert.match(concepts[0], /green flag/);
   assert.match(concepts[1], /loop/);
   assert.match(concepts[1], /coordinates/);
   assert.match(concepts[2], /touching/);
   assert.match(concepts[3], /variable/);
-  assert.match(C.lessons[4].goal.en, /checkpoint/i);
+  assert.match(lesson(5).goal.en, /checkpoint/i);
   assert.match(concepts[5], /broadcast/);
   assert.match(concepts[6], /sound/);
   assert.match(concepts[7], /saving/);
+  // Prerequisites only point backwards.
+  C.lessons.forEach((l) => (l.requires || []).forEach((r) => assert.ok(r < l.id, `L${l.id} requires L${r}`)));
+});
+
+test("the course covers every required concept", () => {
+  const text = C.lessons.map((l) => (l.concept.en + " " + l.goal.en).toLowerCase()).join(" ");
+  ["green flag", "sequence", "loop", "if", "coordinates", "touching", "variable", "broadcast", "debug"].forEach((k) =>
+    assert.ok(text.includes(k), `concept "${k}" is taught`));
 });
 
 test("every lesson has all required parts in English and Chinese", () => {
   C.lessons.forEach((l) => {
     const w = `Level ${l.id}`;
-    ["title", "concept", "goal", "reflect"].forEach((k) => assert.ok(isLoc(l[k]), `${w} ${k}`));
+    ["title", "concept", "goal", "reflect", "prereqs", "init"].forEach((k) => assert.ok(isLoc(l[k]), `${w} ${k}`));
     assert.ok(isLoc(l.predict.q) && isLoc(l.predict.a), `${w} predict`);
     assert.ok(l.steps.length >= 2 && l.steps.length <= 3, `${w} has 2–3 steps`);
     l.steps.forEach((s, i) => {
@@ -84,12 +69,24 @@ test("every lesson has all required parts in English and Chinese", () => {
       assert.ok(!s.hints[0].blocks && !s.hints[1].blocks, `${w} step ${i + 1}: hints 1–2 have no block order`);
       assert.ok(s.hints[2].blocks || s.hints[2].list, `${w} step ${i + 1}: hint 3 shows order`);
       (s.hints[2].list || []).forEach((it) => assert.ok(isLoc(it)));
+      // Hint 1 asks the child to look or think (a question), it does not instruct blocks.
+      assert.match(s.hints[0].en, /\?/, `${w} step ${i + 1}: hint 1 contains a question`);
     });
     assert.ok(l.check.length >= 1 && l.check.every(isLoc), `${w} run check`);
     assert.ok(l.problems.length >= 2, `${w} has at least 2 common problems`);
     l.problems.forEach((p) => assert.ok(isLoc(p.symptom) && isLoc(p.fix), `${w} problem text`));
     assert.ok(isLoc(l.challenge.title) && isLoc(l.challenge.text) && isLoc(l.challenge.hint), `${w} challenge`);
-    assert.ok(C.parentNotes[l.id], `${w} parent note`);
+    // Setup card: where to build, sprites, variable scope; parent guidance.
+    assert.ok(l.setup && isLoc(l.setup.project), `${w} setup.project`);
+    assert.ok(Array.isArray(l.setup.sprites) && l.setup.sprites.length >= 1, `${w} setup.sprites`);
+    l.setup.sprites.forEach((sp) => assert.ok(sp.name && isLoc(sp.role), `${w} sprite ${sp.name}`));
+    (l.setup.variables || []).forEach((v) => {
+      assert.ok(["all", "sprite"].includes(v.scope), `${w} variable ${v.name} scope`);
+      assert.ok(isLoc(v.role), `${w} variable ${v.name} role`);
+      if (v.scope === "sprite") assert.ok(v.owner, `${w} local variable ${v.name} names its sprite`);
+    });
+    const g = l.parentGuide;
+    assert.ok(g && g.focus && Array.isArray(g.ask) && g.ask.length >= 2 && g.avoid, `${w} parentGuide`);
   });
 });
 
@@ -105,36 +102,78 @@ test("no placeholders or TODOs", () => {
   assert.doesNotMatch(raw, /TODO|FIXME|TBD|lorem|XXX|待补充|待定/i);
 });
 
-test("every block is a real Scratch 3 block with matching Chinese name", () => {
-  allBlockLists().forEach(({ where, blocks }) => {
+// Turn catalog entries with empty slots into something the translator can parse.
+function fillBlanks(en) {
+  return en.replace(/<>/g, "<touching (edge)?>").replace(/\( \)/g, "(1)").replace(/\[ \]/g, "[costume1]");
+}
+const STUB_OPTS = (l) => {
+  const vars = {};
+  (C.NAMES.variables.concat(...C.lessons.map((x) => lessonNames(x, "variables")))).forEach((n, i) => { vars[n] = "v" + i; });
+  const messages = {};
+  C.NAMES.messages.concat(...C.lessons.map((x) => lessonNames(x, "messages"))).forEach((n, i) => { messages[n] = "m" + i; });
+  return { globalVars: vars, localVars: {}, messages, colors: { "wall color": "#1f3a93" } };
+};
+
+test("every block line translates to a real Scratch 3 opcode (same translator as the engine tests)", () => {
+  allBlockLists().forEach(({ lesson: l, where, blocks }) => {
     blocks.forEach((b) => {
       if (b.cat === "note") return;
       assert.ok(C.CATEGORIES[b.cat], `${where}: unknown category ${b.cat}`);
-      // Normalise arrow-key variants for matching.
-      const en = b.en.replace(/key \((left|up|down) arrow\)/, "key (right arrow)").replace(/^if <key/, "key").replace(/> then$/, "");
-      const zh = b.zh.replace(/按下 \((←|↑|↓)\) 键/, "按下 (→) 键").replace(/^如果 <按下/, "按下").replace(/> 那么$/, "");
-      const isIf = /^if </.test(b.en);
-      const match = REAL_BLOCKS.find(([cat, reEn, reZh]) => {
-        if (isIf && /^key/.test(en)) return cat === "sensing" && reEn.test(en) && reZh.test(zh);
-        return cat === b.cat && reEn.test(b.en) && reZh.test(b.zh);
-      }) || (b.cat === "looks" && /^say \(join/.test(b.en)) || (b.cat === "sensing" && /^key \(/.test(b.en) && /^按下 \(/.test(b.zh));
-      assert.ok(match, `${where}: not a known Scratch 3 block: "${b.en}" / "${b.zh}"`);
+      const en = fillBlanks(b.en);
+      let lines;
+      if (/^when /.test(en)) lines = [{ cat: b.cat, en, indent: 0 }];
+      else if (/(\?|^\( \)|=)/.test(b.en) && !/^(if|wait until|repeat until)/.test(b.en) && /^(key|touching|\()/.test(b.en)) lines = [{ cat: "events", en: "when green flag clicked", indent: 0 }, { cat: "control", en: `wait until <${en}>`, indent: 1 }];
+      else if (["x position", "y position", "timer"].includes(en) || /^pick random/.test(en)) lines = [{ cat: "events", en: "when green flag clicked", indent: 0 }, { cat: "looks", en: `say (${en})`, indent: 1 }];
+      else lines = [{ cat: "events", en: "when green flag clicked", indent: 0 }, { cat: b.cat, en, indent: 1 }];
+      assert.doesNotThrow(() => translateScripts(lines, STUB_OPTS(l)), `${where}: "${b.en}" is not a Scratch 3 block`);
     });
   });
 });
 
-test("sprite, variable and message names are consistent everywhere", () => {
-  const text = allBlockLists().flatMap((x) => x.blocks).filter((b) => b.cat !== "note");
-  text.forEach((b) => {
-    for (const m of b.en.matchAll(/touching \(([^)]+)\)\?/g)) assert.ok(C.NAMES.sprites.includes(m[1]), `touching unknown sprite ${m[1]}`);
-    for (const m of b.en.matchAll(/^(?:set|change) \[([^\]]+)\]/g)) assert.ok(C.NAMES.variables.includes(m[1]), `unknown variable ${m[1]}`);
-    for (const m of b.en.matchAll(/(?:broadcast \(|when I receive \[)([^)\]]+)/g)) assert.ok(C.NAMES.messages.includes(m[1]), `unknown message ${m[1]}`);
-  });
-  // Every sprite used in steps is a known sprite (or the Stage).
-  C.lessons.forEach((l) => l.steps.forEach((s) => {
-    if (s.sprite) assert.ok(s.sprite === "Stage" || C.NAMES.sprites.includes(s.sprite), `L${l.id} unknown sprite ${s.sprite}`);
+// Each English keyword must appear with the Scratch 3 Simplified Chinese label.
+const ZH_PAIRS = [
+  [/^when green flag clicked$/, /^当 绿旗 被点击$/], [/^go to x:/, /^移到 x:/], [/^point in direction/, /^面向 /],
+  [/^change x by/, /^将x坐标增加/], [/^change y by/, /^将y坐标增加/], [/^glide/, /^在 .* 秒内滑行到/],
+  [/^set rotation style/, /^将旋转方式设为/], [/^show$/, /^显示$/], [/^hide$/, /^隐藏$/], [/^say \(.*\) for/, /^说 .* 秒$/],
+  [/^switch costume to/, /造型$/], [/^switch backdrop to/, /背景$/], [/^go to \[front\] layer$/, /^移到最 \[前面\]$/],
+  [/^start sound/, /^播放声音/], [/^forever$/, /^重复执行$/], [/^if <.*> then$/, /^如果 <.*> 那么$/],
+  [/^wait \(/, /^等待 \(/], [/^wait until/, /^等待 </], [/^repeat until/, /^重复执行直到 </], [/^stop \[all\]$/, /^停止 \[全部脚本\]$/],
+  [/^stop \[other scripts in sprite\]$/, /^停止 \[该角色的其他脚本\]$/], [/^reset timer$/, /^计时器归零$/],
+  [/^set \[/, /^将 \[.*\] 设为/], [/^change \[/, /^将 \[.*\] 增加/], [/^broadcast/, /^广播/], [/^when I receive/, /^当接收到/],
+  [/key \(right arrow\)/, /按下 \(→\) 键/], [/key \(left arrow\)/, /按下 \(←\) 键/], [/key \(up arrow\)/, /按下 \(↑\) 键/], [/key \(down arrow\)/, /按下 \(↓\) 键/],
+  [/touching \(/, /碰到 \(/], [/touching color/, /碰到颜色/], [/pick random/, /取随机数/], [/x position/, /x 坐标/], [/y position/, /y 坐标/],
+  [/> and </, /> 与 </], [/> or </, /> 或 </], [/\bjoin\b/, /连接/], [/\bround\b/, /四舍五入/], [/\(timer\)/, /\(计时器\)/],
+];
+test("Chinese block labels match the English block (Scratch 3 zh-cn wording)", () => {
+  allBlockLists().forEach(({ where, blocks }) => blocks.forEach((b) => {
+    if (b.cat === "note") return;
+    ZH_PAIRS.forEach(([en, zh]) => {
+      if (en.test(b.en)) assert.match(b.zh, zh, `${where}: "${b.en}" ↔ "${b.zh}"`);
+    });
+    // Numbers and names in slots match between languages.
+    const nums = (s) => (s.match(/\(-?\d+(\.\d+)?\)/g) || []).join(",");
+    assert.equal(nums(b.zh), nums(b.en), `${where}: numbers differ in "${b.en}" / "${b.zh}"`);
   }));
-  // Every broadcast has at least one receiver in the final game.
+});
+
+test("sprite, variable, message and backdrop names match each lesson's setup card", () => {
+  allBlockLists().forEach(({ lesson: l, where, blocks, catalog }) => {
+    const sprites = lessonNames(l, "sprites").concat(["edge", "mouse-pointer"]);
+    const vars = lessonNames(l, "variables");
+    const msgs = lessonNames(l, "messages");
+    const bds = lessonNames(l, "backdrops");
+    blocks.filter((b) => b.cat !== "note").forEach((b) => {
+      for (const m of b.en.matchAll(/touching \(([^)]+)\)\?/g)) assert.ok(sprites.includes(m[1]), `${where}: touching unknown sprite ${m[1]}`);
+      for (const m of b.en.matchAll(/^(?:set|change) \[([^\]]+)\]/g)) assert.ok(vars.includes(m[1]), `${where}: variable ${m[1]} not in setup`);
+      for (const m of b.en.matchAll(/(?:broadcast \(|when I receive \[)([^)\]]+)/g)) assert.ok(msgs.includes(m[1]), `${where}: message ${m[1]} not in setup`);
+      for (const m of b.en.matchAll(/switch backdrop to \[([^\]]+)\]/g)) assert.ok(bds.includes(m[1]), `${where}: backdrop ${m[1]} not in setup`);
+    });
+    if (catalog) return;
+  });
+  C.lessons.forEach((l) => l.steps.forEach((s) => {
+    if (s.sprite) assert.ok(s.sprite === "Stage" || lessonNames(l, "sprites").includes(s.sprite), `L${l.id} step sprite ${s.sprite} not in setup`);
+  }));
+  // Every broadcast in the main game has receivers.
   const finalText = C.finalScripts.flatMap((s) => s.blocks.map((b) => b.en));
   assert.ok(finalText.includes("broadcast (You Win)"));
   assert.ok(finalText.filter((t) => t === "when I receive [You Win]").length >= 2);
@@ -250,4 +289,94 @@ test("arrow keys: right/up are positive, left/down are negative", () => {
 test("final reference covers every sprite that has scripts", () => {
   const sprites = C.finalScripts.map((s) => s.sprite);
   ["Hero", "Coin", "Checkpoint", "Goal", "Win Banner"].forEach((s) => assert.ok(sprites.includes(s), s));
+});
+
+/* ───────── Arcade projects ───────── */
+test("Level 9 Maze: countdown in order, loop ends at the Exit, every wall check undoes its own move", () => {
+  const r = refOf(9, "Runner");
+  const ready = idx(r, /^say \(Ready\?\)/), go = idx(r, /^say \(Go!\)/), loop = idx(r, /^repeat until <touching \(Exit\)\?>$/), done = idx(r, /^say \(I escaped!\)/);
+  assert.ok(ready > 0 && go > ready && loop > go && done > loop, "sequence: Ready → Go → loop → escaped");
+  assert.equal(r[done].indent, r[loop].indent, "I escaped! is under the loop, not inside it");
+  assert.equal(idx(r, /^forever$/), -1, "uses repeat until, not forever");
+  ["right", "left", "up", "down"].forEach((dir) => {
+    const k = idx(r, new RegExp(`^if <key \\(${dir} arrow\\) pressed\\?> then$`));
+    const move = r[k + 1].en.match(/^change ([xy]) by \((-?\d+)\)$/);
+    assert.equal(r[k + 2].en, "if <touching color (wall color)?> then", `${dir}: wall check follows the move`);
+    const undo = r[k + 3].en.match(/^change ([xy]) by \((-?\d+)\)$/);
+    assert.equal(undo[1], move[1], `${dir}: undo on the same axis`);
+    assert.equal(Number(undo[2]), -Number(move[2]), `${dir}: undo with the opposite number`);
+    assert.ok(r[k + 3].indent > r[k + 2].indent && r[k + 2].indent > r[k].indent);
+  });
+  // The hint for step 2 shows the same order as the reference.
+  const h = hint3(9, 2);
+  assert.ok(idx(h, /^say \(Ready\?\)/) < idx(h, /^say \(Go!\)/));
+});
+
+test("Level 10 Star Catcher: init before the loop, one point per fall, safe bottom check, own Fall Speed", () => {
+  const basket = refOf(10, "Basket");
+  const loop = idx(basket, /^repeat until <\(Lives\) < \(1\)>$/);
+  ["^switch backdrop to \\[Sky\\]$", "^set \\[Score\\] to \\(0\\)$", "^set \\[Lives\\] to \\(3\\)$"].forEach((p) => {
+    const i = idx(basket, new RegExp(p));
+    assert.ok(i > 0 && i < loop, `${p} before the loop`);
+  });
+  const over = idx(basket, /^switch backdrop to \[Game Over\]$/), stop = idx(basket, /^stop \[all\]$/);
+  assert.ok(over > loop && stop > over && basket[over].indent === basket[loop].indent, "Game Over after the loop, then stop all");
+  assert.equal(idx(basket, /^say/), -1, "no speech bubble right before stop [all] (it would be cleared)");
+  for (const sprite of ["Star", "Rock"]) {
+    const s = refOf(10, sprite);
+    const fall = idx(s, /^repeat until <<touching \(Basket\)\?> or <\(y position\) < \((-?\d+)\)>>$/);
+    assert.ok(fall > 0, `${sprite} fall loop`);
+    const bottom = Number(s[fall].en.match(/< \((-?\d+)\)>>$/)[1]);
+    assert.ok(bottom >= -165, `${sprite}: bottom check ${bottom} is reachable (sprites cannot fully leave the stage)`);
+    const ifc = idx(s, /^if <touching \(Basket\)\?> then$/);
+    assert.ok(ifc > fall && s[ifc].indent === s[fall].indent, `${sprite}: the catch check runs once, after the fall`);
+    assert.ok(idx(s, /^go to x: \(pick random/) < fall, `${sprite}: random start at the top, inside forever`);
+    assert.match(s[0].en, /^when green flag clicked$/);
+    assert.match(s[1].en, /^set \[Fall Speed\] to/);
+  }
+  assert.equal(refOf(10, "Star")[idx(refOf(10, "Star"), /^if <touching/) + 1].en, "change [Score] by (1)");
+  assert.equal(refOf(10, "Rock")[idx(refOf(10, "Rock"), /^if <touching/) + 1].en, "change [Lives] by (-1)");
+  const fs = lesson(10).setup.variables.find((v) => v.name === "Fall Speed");
+  assert.equal(fs.scope, "sprite");
+  assert.equal(lesson(10).setup.variables.find((v) => v.name === "Score").scope, "all");
+});
+
+test("every arcade project has reference scripts for parents", () => {
+  C.lessons.filter((l) => l.track === "arcade").forEach((l) => {
+    assert.ok(Array.isArray(l.reference) && l.reference.length >= 1, `L${l.id} reference`);
+    l.reference.forEach((r) => assert.ok(r.sprite === "Stage" || lessonNames(l, "sprites").includes(r.sprite), `L${l.id} reference sprite ${r.sprite}`));
+  });
+});
+
+test("Level 11 Dodge Arena: Stage resets then broadcasts Start; everyone else starts on Start", () => {
+  const st = refOf(11, "Stage");
+  const setT = idx(st, /^set \[Time Left\] to \(20\)$/), bc = idx(st, /^broadcast \(Start\)$/), loop = idx(st, /^repeat until <\(Time Left\) < \(1\)>$/);
+  assert.ok(idx(st, /^switch backdrop to \[Arena\]$/) < setT && setT < bc && bc < loop, "reset → broadcast → countdown");
+  assert.ok(st[loop + 1].en === "wait (1) seconds" && st[loop + 1].indent > st[loop].indent, "wait inside the countdown loop");
+  for (const sp of ["Player", "Enemy", "Enemy2"]) assert.equal(refOf(11, sp)[0].en, "when I receive [Start]", `${sp} starts on Start`);
+  const pl = refOf(11, "Player");
+  assert.ok(idx(pl, /^repeat until <<touching \(Enemy\)\?> or <touching \(Enemy2\)\?>>$/) > 0, "Player checks both enemies");
+  assert.ok(idx(pl, /^switch backdrop to \[Caught\]$/) < idx(pl, /^stop \[all\]$/));
+  const dir = (sp) => Number(refOf(11, sp).find((b) => /^point in direction/.test(b.en)).en.match(/\((-?\d+)\)/)[1]);
+  assert.notEqual(dir("Enemy"), dir("Enemy2"), "Enemy2 has its own direction");
+});
+
+test("Level 12 Bug Hunt: the buggy scripts contain exactly the three planted bugs; the reference fixes them", () => {
+  const all = hint3(12, 1);
+  const cut = all.findIndex((b) => b.cat === "note");
+  const cat = all.slice(0, cut), apple = all.slice(cut + 1);
+  const leftIf = idx(cat, /^if <key \(left arrow\) pressed\?> then$/);
+  assert.equal(cat[leftIf + 1].en, "change x by (10)", "bug 1: left arrow moves right");
+  assert.equal(idx(cat, /^set \[Score\]/), -1, "bug 2: no Score reset");
+  assert.ok(idx(apple, /^change \[Score\] by \(1\)$/) < idx(apple, /^repeat until/), "bug 3: point before the fall");
+  const fc = refOf(12, "Cat"), fa = refOf(12, "Apple");
+  assert.equal(fc[idx(fc, /^if <key \(left arrow\)/) + 1].en, "change x by (-10)");
+  assert.ok(idx(fc, /^set \[Score\] to \(0\)$/) > 0 && idx(fc, /^set \[Score\] to \(0\)$/) < idx(fc, /^forever$/));
+  const loop = idx(fa, /^repeat until/), ifc = idx(fa, /^if <touching \(Cat\)\?> then$/);
+  assert.ok(ifc > loop && fa[ifc].indent === fa[loop].indent && fa[ifc + 1].en === "change [Score] by (1)");
+});
+
+test("glossary: every entry has both languages and match words", () => {
+  assert.ok(Array.isArray(C.glossary) && C.glossary.length >= 10);
+  C.glossary.forEach((g) => { assert.ok(isLoc(g.term) && isLoc(g.def)); assert.ok(g.match.length >= 1); });
 });

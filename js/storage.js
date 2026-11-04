@@ -10,7 +10,7 @@
   var LANGS = ["en", "zh"];
   var MINUTES = [0, 15, 20, 25, 30];
   var FEELINGS = ["easy", "ok", "hard"];
-  var LESSON_COUNT = 8;
+  var LESSON_COUNT = 12; // maximum number of projects the course can hold
 
   function defaults() {
     return {

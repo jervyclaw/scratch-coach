@@ -41,14 +41,15 @@
       howTitle: "How it works",
       how: ["Open Scratch next to this window.", "Do one small step at a time.", "Tap “I tried it!” — or ask for a hint."],
       openScratch: "Open Scratch online ↗",
+      glossaryTitle: "📖 Scratch words",
       desktopNote: "No internet? The Scratch desktop app works offline.",
       cantSee: "This coach can't see your Scratch project. You test your own game — like a real game maker!",
       mapTitle: "Quest map",
-      levelsDone: function (d) { return "⭐ " + d + " of 8 levels done"; },
+      levelsDone: function (d, n) { return "⭐ " + d + " of " + n + " levels done"; },
       level: function (n) { return "Level " + n; },
       status: { done: "Done ⭐", progress: "In progress", fresh: "New" },
       back: "← Back", map: "← Map", next: "Next →",
-      levelOf: function (n) { return "Level " + n + " of 8"; },
+      levelOf: function (n, total) { return "Level " + n + " of " + total; },
       screenIntro: "Start", screenStep: function (n) { return "Step " + n; }, screenCheck: "Test", screenFinish: "Finish",
       screenNav: "Level screens",
       bigIdea: "Big idea", mission: "Your mission", blocksTitle: "Blocks you will use",
@@ -92,7 +93,23 @@
       levelupBody: "Great building! Save your Scratch project now: File → Save to your computer.",
       nextLevel: function (n) { return "Go to Level " + n + " →"; },
       backMap: "Back to the map",
-      allDoneTitle: "You finished all 8 levels!",
+      allDoneTitle: function (n) { return "You finished all " + n + " levels!"; },
+      questDoneTitle: "You finished the Block Quest game!",
+      questDoneBody: "Your whole adventure game works. Next up: the Arcade projects — new mini games that use the same ideas in new ways.",
+      trackTitle: { quest: "🗺️ Main quest: build Block Quest (one game, level by level)", arcade: "🕹️ Arcade: new mini games" },
+      trackNote: { quest: "Levels 1–8 all add to the same Scratch project.", arcade: "Each arcade level starts a NEW Scratch project. Do the main quest first." },
+      prereqTitle: "Before you start",
+      setupTitle: "Project setup",
+      setupProject: "Where to build",
+      setupSprites: "Sprites",
+      setupVars: "Variables",
+      setupMsgs: "Broadcast messages",
+      setupBackdrops: "Backdrops",
+      scopeAll: "For all sprites",
+      scopeSprite: "For this sprite only",
+      scopeOn: function (s) { return "on " + s; },
+      initTitle: "🟢 Green flag resets",
+      parentDetails: "给家长 · For grown-ups",
       allDoneBody: "You built a whole game in Scratch: moving, lava, coins, a checkpoint, a goal, and your own ideas. Amazing!",
       breakMsg: function (n) { return "You've been building for " + n + " minutes. Great time to save your Scratch project and take a little break!"; },
       ok: "OK",
@@ -116,14 +133,15 @@
       howTitle: "怎么用",
       how: ["把 Scratch 打开，放在这个窗口旁边。", "一次只做一个小步骤。", "做完点“我试过了！”——或者要一个提示。"],
       openScratch: "打开在线 Scratch ↗",
+      glossaryTitle: "📖 Scratch 词语",
       desktopNote: "没有网络？Scratch 桌面版可以离线使用。",
       cantSee: "小教练看不到你的 Scratch 项目。你要自己测试游戏——就像真正的游戏设计师！",
       mapTitle: "冒险地图",
-      levelsDone: function (d) { return "⭐ 已完成 " + d + " / 8 关"; },
+      levelsDone: function (d, n) { return "⭐ 已完成 " + d + " / " + n + " 关"; },
       level: function (n) { return "第 " + n + " 关"; },
       status: { done: "完成 ⭐", progress: "进行中", fresh: "未开始" },
       back: "← 返回", map: "← 地图", next: "下一步 →",
-      levelOf: function (n) { return "第 " + n + " 关 / 共 8 关"; },
+      levelOf: function (n, total) { return "第 " + n + " 关 / 共 " + total + " 关"; },
       screenIntro: "开始", screenStep: function (n) { return "步骤 " + n; }, screenCheck: "测试", screenFinish: "完成",
       screenNav: "本关页面",
       bigIdea: "核心概念", mission: "你的任务", blocksTitle: "会用到的积木",
@@ -167,7 +185,23 @@
       levelupBody: "做得真棒！现在保存你的 Scratch 项目：文件 → 保存到你的电脑。",
       nextLevel: function (n) { return "去第 " + n + " 关 →"; },
       backMap: "回到地图",
-      allDoneTitle: "8 关全部完成！",
+      allDoneTitle: function (n) { return n + " 关全部完成！"; },
+      questDoneTitle: "“积木大冒险”游戏完成了！",
+      questDoneBody: "你的整个闯关游戏都能玩了。接下来是“街机”项目——用同样的概念做全新的小游戏。",
+      trackTitle: { quest: "🗺️ 主线任务：做出“积木大冒险”（一个游戏，一关一关做）", arcade: "🕹️ 街机：全新的小游戏" },
+      trackNote: { quest: "第 1–8 关都在同一个 Scratch 项目里继续做。", arcade: "每个街机关卡都要新建一个 Scratch 项目。建议先完成主线。" },
+      prereqTitle: "开始之前",
+      setupTitle: "项目准备",
+      setupProject: "在哪里做",
+      setupSprites: "角色",
+      setupVars: "变量",
+      setupMsgs: "广播消息",
+      setupBackdrops: "背景",
+      scopeAll: "适用于所有角色",
+      scopeSprite: "仅适用于当前角色",
+      scopeOn: function (s) { return "属于 " + s; },
+      initTitle: "🟢 绿旗时要重置",
+      parentDetails: "给家长 · For grown-ups",
       allDoneBody: "你在 Scratch 里做出了一个完整的游戏：移动、岩浆、金币、检查点、终点，还有你自己的点子。太厉害了！",
       breakMsg: function (n) { return "你已经搭建了 " + n + " 分钟。现在很适合保存 Scratch 项目，休息一下！"; },
       ok: "好的",
@@ -335,7 +369,7 @@
       var tl = getLesson(target.lesson);
       cta = '<a class="btn btn-primary btn-big" id="btn-continue" href="' + lessonHash(target.lesson, target.screen) + '">' + esc(u("continueBtn")(tl.id, L(tl.title))) + "</a>";
     }
-    var map = C.lessons.map(function (l) {
+    function mapItem(l) {
       var st = lessonStatus(l.id);
       return '<li class="map-item map-' + st + '">' +
         '<a class="map-card" id="map-level-' + l.id + '" href="' + lessonHash(l.id, store.getLesson(l.id).screen) + '">' +
@@ -343,6 +377,14 @@
         '<span class="map-body"><span class="map-level">' + esc(u("level")(l.id)) + '</span><span class="map-title">' + esc(L(l.title)) + '</span><span class="map-concept">' + esc(L(l.concept)) + "</span></span>" +
         '<span class="badge badge-' + st + '">' + esc(u("status")[st]) + "</span>" +
         "</a></li>";
+    }
+    var tracks = [];
+    C.lessons.forEach(function (l) { var tr = l.track || "quest"; if (tracks.indexOf(tr) === -1) tracks.push(tr); });
+    var map = tracks.map(function (tr) {
+      var items = C.lessons.filter(function (l) { return (l.track || "quest") === tr; });
+      return '<section class="track" aria-labelledby="track-' + tr + '"><h3 id="track-' + tr + '" class="track-title">' + esc(u("trackTitle")[tr]) + "</h3>" +
+        '<p class="muted">' + esc(u("trackNote")[tr]) + "</p>" +
+        '<ol class="quest-map">' + items.map(mapItem).join("") + "</ol></section>";
     }).join("");
     return (route.notFound ? '<p class="banner banner-warn" role="status">' + esc(u("notFound")) + "</p>" : "") +
       '<section class="card hero-card">' +
@@ -353,9 +395,12 @@
       '<ol class="how-list">' + u("how").map(function (s) { return "<li>" + esc(s) + "</li>"; }).join("") + "</ol>" +
       '<p><a class="btn btn-secondary" href="https://scratch.mit.edu/projects/editor/" target="_blank" rel="noopener noreferrer">' + esc(u("openScratch")) + "</a></p>" +
       '<p class="muted">' + esc(u("desktopNote")) + "</p>" +
-      '<p class="note-box">🔍 ' + esc(u("cantSee")) + "</p></section>" +
-      '<section class="card"><div class="map-head"><h2>' + esc(u("mapTitle")) + '</h2><span class="chip">' + esc(u("levelsDone")(doneCount())) + "</span></div>" +
-      '<ol class="quest-map">' + map + "</ol></section>";
+      '<p class="note-box">🔍 ' + esc(u("cantSee")) + "</p>" +
+      (C.glossary ? '<details class="glossary" id="glossary"><summary>' + esc(u("glossaryTitle")) + '</summary><dl class="glossary-dl">' +
+        C.glossary.map(function (g) { return "<dt>" + esc(L(g.term)) + ' <span class="muted" lang="' + htmlLang(otherLang(lang())) + '">' + esc(g.term[otherLang(lang())]) + "</span></dt><dd>" + esc(L(g.def)) + "</dd>"; }).join("") +
+        "</dl></details>" : "") + "</section>" +
+      '<section class="card"><div class="map-head"><h2>' + esc(u("mapTitle")) + '</h2><span class="chip">' + esc(u("levelsDone")(doneCount(), C.lessons.length)) + "</span></div>" +
+      map + "</section>";
   }
 
   /* ───────────── lesson ───────────── */
@@ -396,12 +441,67 @@
       '<h1 tabindex="-1" data-autofocus><span aria-hidden="true">' + lesson.icon + "</span> " + esc(u("level")(lesson.id)) + ": " + esc(L(lesson.title)) + "</h1>" +
       '<p class="concept">🧠 ' + esc(L(lesson.concept)) + "</p>" +
       '<div class="goal-box"><h2>' + esc(u("mission")) + "</h2><p>" + esc(L(lesson.goal)) + "</p></div>" +
+      renderPrereqAndSetup(lesson) +
       "<h2>" + esc(u("blocksTitle")) + "</h2>" + renderBlocks(lesson.blocks.map(function (b) { return { cat: b.cat, en: b.en, zh: b.zh, indent: 0 }; })) +
       '<div class="predict"><h2>' + esc(u("predictTitle")) + '</h2><p class="predict-q">' + esc(L(lesson.predict.q)) + "</p>" +
       '<p class="muted">' + esc(u("predictTip")) + "</p>" +
       '<button type="button" class="btn btn-secondary" id="btn-predict" data-action="toggle-predict" aria-expanded="' + (ui.predictOpen ? "true" : "false") + '" aria-controls="predict-answer">' + esc(ui.predictOpen ? u("hideAnswer") : u("showAnswer")) + "</button>" +
       '<div id="predict-answer" class="predict-a"' + (ui.predictOpen ? "" : " hidden") + "><p>" + esc(L(lesson.predict.a)) + "</p></div></div>" +
-      '<div class="actions"><button type="button" class="btn btn-primary btn-big" id="btn-next" data-action="next">' + esc(u("letsBuild")) + "</button></div>";
+      '<div class="actions"><button type="button" class="btn btn-primary btn-big" id="btn-next" data-action="next">' + esc(u("letsBuild")) + "</button></div>" +
+      renderParentGuide(lesson);
+  }
+
+  function renderPrereqAndSetup(lesson) {
+    var out = "";
+    if (lesson.prereqs) {
+      out += '<div class="prereq-box"><h2>' + esc(u("prereqTitle")) + "</h2><p>" + esc(L(lesson.prereqs)) + "</p>";
+      if (lesson.requires && lesson.requires.length) {
+        out += '<p class="muted">' + lesson.requires.map(function (id) {
+          var r = getLesson(id);
+          return r ? '<a href="' + lessonHash(id, 0) + '">' + esc(u("level")(id) + " · " + L(r.title)) + "</a>" : "";
+        }).join(" · ") + "</p>";
+      }
+      out += "</div>";
+    }
+    var su = lesson.setup;
+    if (su) {
+      out += '<div class="setup-box"><h2>' + esc(u("setupTitle")) + "</h2><dl class=\"setup-dl\">" +
+        "<dt>" + esc(u("setupProject")) + "</dt><dd>" + esc(L(su.project)) + "</dd>";
+      if (su.sprites && su.sprites.length) {
+        out += "<dt>" + esc(u("setupSprites")) + '</dt><dd><ul class="setup-list">' + su.sprites.map(function (sp) {
+          return '<li><strong class="name-chip">' + esc(sp.name) + "</strong> " + esc(L(sp.role)) + "</li>";
+        }).join("") + "</ul></dd>";
+      }
+      if (su.variables && su.variables.length) {
+        out += "<dt>" + esc(u("setupVars")) + '</dt><dd><ul class="setup-list">' + su.variables.map(function (v) {
+          var scope = v.scope === "sprite" ? u("scopeSprite") + (v.owner ? " · " + u("scopeOn")(v.owner) : "") : u("scopeAll");
+          return '<li><strong class="name-chip var-chip">' + esc(v.name) + '</strong> <span class="scope scope-' + esc(v.scope) + '">' + esc(scope) + "</span> " + esc(L(v.role)) + "</li>";
+        }).join("") + "</ul></dd>";
+      }
+      if (su.messages && su.messages.length) {
+        out += "<dt>" + esc(u("setupMsgs")) + '</dt><dd><ul class="setup-list">' + su.messages.map(function (m) {
+          return '<li><strong class="name-chip msg-chip">' + esc(m.name) + "</strong> " + esc(L(m.role)) + "</li>";
+        }).join("") + "</ul></dd>";
+      }
+      if (su.backdrops && su.backdrops.length) {
+        out += "<dt>" + esc(u("setupBackdrops")) + '</dt><dd><ul class="setup-list">' + su.backdrops.map(function (bd) {
+          return '<li><strong class="name-chip">' + esc(bd.name) + "</strong> " + esc(L(bd.role)) + "</li>";
+        }).join("") + "</ul></dd>";
+      }
+      out += "</dl>";
+      if (lesson.init) out += '<p class="init-line"><strong>' + esc(u("initTitle")) + ":</strong> " + esc(L(lesson.init)) + "</p>";
+      out += "</div>";
+    }
+    return out;
+  }
+
+  function renderParentGuide(lesson) {
+    var g = lesson.parentGuide;
+    if (!g) return "";
+    return '<details class="parent-guide" id="parent-guide" lang="zh-CN"><summary>' + esc(u("parentDetails")) + "</summary>" +
+      "<p><strong>本关重点：</strong>" + esc(g.focus) + "</p>" +
+      "<p><strong>可以问孩子：</strong></p><ul>" + g.ask.map(function (q) { return "<li>" + esc(q) + "</li>"; }).join("") + "</ul>" +
+      "<p><strong>注意：</strong>" + esc(g.avoid) + "</p></details>";
   }
 
   function renderHint(h, level) {
@@ -485,7 +585,7 @@
     if (sc.type === "step") nav += '<button type="button" class="btn btn-ghost" id="btn-skip" data-action="skip-step">' + esc(u("skipStep")) + "</button>";
     nav += "</div>";
 
-    return '<div class="lesson-head"><a class="btn btn-ghost btn-small" id="btn-map" href="#/">' + esc(u("map")) + '</a><span class="chip">' + esc(u("levelOf")(lesson.id)) + " · " + esc(L(lesson.title)) + "</span></div>" +
+    return '<div class="lesson-head"><a class="btn btn-ghost btn-small" id="btn-map" href="#/">' + esc(u("map")) + '</a><span class="chip">' + esc(u("levelOf")(lesson.id, C.lessons.length)) + " · " + esc(L(lesson.title)) + "</span></div>" +
       renderStepper(lesson, route.screen) +
       '<section class="card lesson-card screen-' + sc.type + '">' + body + "</section>" + nav;
   }
@@ -493,11 +593,14 @@
   function renderLevelUp(route) {
     var lesson = getLesson(route.lesson);
     var isLast = lesson.id === C.lessons.length;
+    var nextLesson = getLesson(lesson.id + 1);
+    var endsTrack = !isLast && nextLesson && (nextLesson.track || "quest") !== (lesson.track || "quest");
     var nextBtn = isLast ? "" : '<a class="btn btn-primary btn-big" id="btn-next-level" href="' + lessonHash(lesson.id + 1, store.getLesson(lesson.id + 1).screen) + '">' + esc(u("nextLevel")(lesson.id + 1)) + "</a>";
     return '<section class="card levelup-card">' +
       '<div class="stars" aria-hidden="true">⭐ 🌟 ⭐</div>' + mascot(96) +
-      '<h1 tabindex="-1" data-autofocus>' + esc(isLast ? u("allDoneTitle") : u("levelupTitle")(lesson.id)) + "</h1>" +
-      "<p>" + esc(isLast ? u("allDoneBody") : u("levelupBody")) + "</p>" +
+      '<h1 tabindex="-1" data-autofocus>' + esc(isLast ? u("allDoneTitle")(C.lessons.length) : endsTrack ? u("questDoneTitle") : u("levelupTitle")(lesson.id)) + "</h1>" +
+      "<p>" + esc(isLast ? u("allDoneBody") : endsTrack ? u("questDoneBody") : u("levelupBody")) + "</p>" +
+      (endsTrack ? "<p>" + esc(u("levelupBody")) + "</p>" : "") +
       (isLast ? "<p>" + esc(u("levelupBody")) + "</p>" : "") +
       '<div class="actions">' + nextBtn + '<a class="btn btn-secondary" id="btn-back-map" href="#/">' + esc(u("backMap")) + "</a></div></section>";
   }
@@ -534,16 +637,24 @@
       : "记录保存在本浏览器的 localStorage 中" + (d.updatedAt ? "，最近更新：" + esc(new Date(d.updatedAt).toLocaleString("zh-CN")) : "") + "。";
 
     var overview = C.lessons.map(function (l) {
-      return "<li><strong>第 " + l.id + " 关 " + esc(l.title.zh) + "</strong>：" + esc(l.concept.zh) + '<br><span class="muted">陪伴要点：' + esc(C.parentNotes[l.id]) + "</span></li>";
+      var g = l.parentGuide;
+      return "<li><strong>第 " + l.id + " 关 " + esc(l.title.zh) + "</strong>：" + esc(l.concept.zh) +
+        (l.prereqs ? '<br><span class="muted">前置知识：' + esc(l.prereqs.zh) + "</span>" : "") +
+        '<br><span class="muted">陪伴要点：' + esc(g ? g.focus : C.parentNotes[l.id]) + "</span>" +
+        (g ? '<br><span class="muted">可以问：' + esc(g.ask.join(" / ")) + "</span>" : "") + "</li>";
     }).join("");
 
     var scripts = C.finalScripts.map(function (s) {
       return "<h4>角色：" + esc(s.sprite) + "</h4>" + renderBlocks(s.blocks, "zh");
     }).join("");
+    var arcadeScripts = C.lessons.filter(function (l) { return l.reference; }).map(function (l) {
+      return '<details class="ref-scripts" id="p-scripts-' + l.id + '"><summary>第 ' + l.id + " 关 · " + esc(l.title.zh) + " 参考脚本</summary>" +
+        l.reference.map(function (s) { return "<h4>角色：" + esc(s.sprite) + "</h4>" + renderBlocks(s.blocks, "zh"); }).join("") + "</details>";
+    }).join("");
 
     return '<div lang="zh-CN">' +
       '<section class="card"><h1 tabindex="-1" data-autofocus>家长页</h1>' +
-      "<p>“Scratch 小教练 · 积木大冒险”是放在 Scratch 编辑器旁边使用的<strong>离线教学助手</strong>。孩子在官方 Scratch（网页版或桌面版）里自己搭积木，在这里看任务、逐级获取提示、记录自查。8 个关卡连起来，最终做成一个完整可玩的 2D 卡通闯关游戏。</p>" +
+      "<p>“Scratch 小教练 · 积木大冒险”是放在 Scratch 编辑器旁边使用的<strong>离线教学助手</strong>。孩子在官方 Scratch（网页版或桌面版）里自己搭积木，在这里看任务、逐级获取提示、记录自查。主线第 1–8 关连起来做成一个完整可玩的 2D 卡通闯关游戏；之后的“街机”关卡各自新建一个小游戏，用同样的概念解决新问题。</p>" +
       '<div class="note-box"><strong>请注意：</strong>本应用<strong>看不到</strong>孩子的 Scratch 项目，也<strong>不会</strong>自动检查代码对不对。“我试过了”、测试勾选和挑战标记都是孩子自己点的，只反映他的自我感受，<strong>不等于</strong>客观的能力评估。最可靠的检查方式是让孩子演示一遍游戏，并讲讲某个积木为什么这么放。</div>' +
       '<p><a class="btn btn-secondary" href="#/" id="p-back">← 回到孩子页面</a></p></section>' +
 
@@ -565,7 +676,7 @@
       "</ul></section>" +
 
       '<section class="card" id="p-progress"><h2>孩子自行标记的进度</h2>' +
-      "<p>已完成 <strong>" + doneCount() + " / 8</strong> 关（孩子自己点“完成”）。以下数据仅为自查记录，不代表能力评估。</p>" +
+      "<p>已完成 <strong>" + doneCount() + " / " + C.lessons.length + "</strong> 关（孩子自己点“完成”）。以下数据仅为自查记录，不代表能力评估。</p>" +
       '<ul class="p-list">' + progress + "</ul></section>" +
 
       '<section class="card" id="p-settings"><h2>设置</h2>' +
@@ -584,8 +695,8 @@
 
       '<section class="card"><h2>课程概览（家长版）</h2><ol class="overview">' + overview + "</ol></section>" +
 
-      '<section class="card"><h2>完整脚本参考（家长用）</h2><p>这是完成第 1–6 关后游戏的参考脚本，方便您在孩子卡住时对照。建议不要直接给孩子看完整答案，先引导他使用逐级提示。</p>' +
-      '<details class="ref-scripts" id="p-scripts"><summary>展开参考脚本</summary>' + scripts + "</details></section>" +
+      '<section class="card"><h2>完整脚本参考（家长用）</h2><p>这是主线完成第 1–6 关后游戏的参考脚本，以及每个街机关卡的参考脚本，方便您在孩子卡住时对照。建议不要直接给孩子看完整答案，先引导他使用逐级提示。</p>' +
+      '<details class="ref-scripts" id="p-scripts"><summary>主线（第 1–6 关）参考脚本</summary>' + scripts + "</details>" + arcadeScripts + "</section>" +
 
       '<section class="card"><h2>常见故障</h2><ul class="tips">' +
       "<li><strong>页面顶部提示“无法保存进度”：</strong>浏览器可能处于无痕/隐私模式，或禁用了网站数据。课程仍可正常使用，但关闭页面后记录会丢失。</li>" +

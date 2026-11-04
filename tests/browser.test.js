@@ -10,6 +10,8 @@ let chromium;
 try { ({ chromium } = require("playwright")); } catch (e) { chromium = null; }
 
 const URL = "file://" + path.resolve(__dirname, "..", "index.html");
+const COURSE = require("../js/content.js");
+const N = COURSE.lessons.length;
 const KEY = "scratchCoach.v1";
 const SHOTS = process.env.SHOT_DIR || null;
 
@@ -45,7 +47,9 @@ test("home page renders, no errors, no network requests", { skip }, async (t) =>
   const { page, errors, external } = await open(t);
   await page.waitForSelector("h1");
   assert.equal(await page.locator("h1").innerText(), "Build your own adventure game!");
-  assert.equal(await page.locator(".quest-map .map-item").count(), 8);
+  assert.equal(await page.locator(".quest-map .map-item").count(), N);
+  assert.equal(await page.locator(".track").count(), 2, "main quest + arcade");
+  assert.match(await page.locator("#track-arcade").innerText(), /Arcade/);
   assert.equal(await page.locator("#btn-continue").innerText(), "▶ Start Level 1");
   assert.deepEqual(errors, []);
   assert.deepEqual(external, []);
@@ -141,7 +145,7 @@ test("progress is restored after reload and 'Continue' resumes", { skip }, async
   assert.equal(await page.isChecked("#check-0"), true);
   assert.equal(await page.isChecked("#check-1"), false);
   assert.equal(await page.isChecked("#check-2"), true);
-  assert.match(await page.locator(".lesson-head .chip").innerText(), /Level 5 of 8/);
+  assert.match(await page.locator(".lesson-head .chip").innerText(), new RegExp("Level 5 of " + N));
 });
 
 test("language switch changes the child UI and is remembered", { skip }, async (t) => {
@@ -191,7 +195,7 @@ test("parent page: clear needs confirmation (cancel, Escape, confirm)", { skip }
   await page.click("#modal-confirm");
   assert.equal(await saved(page), null, "localStorage key removed");
   assert.match(await page.locator("#p-msg").innerText(), /已清除/);
-  assert.match(await page.locator("#p-progress").innerText(), /0 \/ 8/);
+  assert.match(await page.locator("#p-progress").innerText(), new RegExp("0 / " + N));
 });
 
 test("redo level asks first and only then resets that level", { skip }, async (t) => {
@@ -272,10 +276,10 @@ test("damaged saved data: no blank page, warning, can dismiss and continue", { s
   assert.deepEqual(errors, []);
 });
 
-test("every screen of all 8 levels renders without errors", { skip }, async (t) => {
+test("every screen of every level renders without errors", { skip }, async (t) => {
   const { page, errors } = await open(t);
   const counts = await page.evaluate(() => window.SCRATCH_COACH_CONTENT.lessons.map((l) => l.steps.length + 3));
-  assert.equal(counts.length, 8);
+  assert.equal(counts.length, N);
   for (let i = 0; i < counts.length; i++) {
     for (let s = 0; s < counts[i]; s++) {
       await page.goto(URL + `#/lesson/${i + 1}/${s}`);
@@ -288,10 +292,10 @@ test("every screen of all 8 levels renders without errors", { skip }, async (t) 
     }
     await page.goto(URL + `#/levelup/${i + 1}`);
   }
-  assert.match(await page.locator("h1").innerText(), /all 8 levels/);
+  assert.match(await page.locator("h1").innerText(), new RegExp("all " + N + " levels"));
   // Unknown routes fall back to the map instead of a blank page.
   await page.goto(URL + "#/nope");
-  assert.equal(await page.locator(".quest-map .map-item").count(), 8);
+  assert.equal(await page.locator(".quest-map .map-item").count(), N);
   assert.deepEqual(errors, []);
 });
 
@@ -343,3 +347,50 @@ for (const width of [320, 360, 420]) {
     }
   });
 }
+
+test("intro screen shows prerequisites, setup card with variable scope, and parent guidance", { skip }, async (t) => {
+  const { page, errors } = await open(t, { hash: "#/lesson/10/0" });
+  assert.match(await page.locator(".prereq-box").innerText(), /Level 4/);
+  const setup = await page.locator(".setup-box").innerText();
+  assert.match(setup, /Basket/);
+  assert.match(setup, /Fall Speed/);
+  assert.match(setup, /For this sprite only/);
+  assert.match(setup, /For all sprites/);
+  assert.match(setup, /Green flag resets/);
+  assert.equal(await page.locator("#parent-guide").getAttribute("open"), null, "parent guide starts closed");
+  await page.click("#parent-guide summary");
+  assert.match(await page.locator("#parent-guide").innerText(), /可以问孩子/);
+  // Prerequisite links go to the earlier level.
+  await page.click('.prereq-box a[href="#/lesson/4/0"]');
+  await page.waitForURL(/#\/lesson\/4\/0$/);
+  // Chinese UI translates the setup card and scope labels.
+  await page.goto(URL + "#/lesson/10/0");
+  await page.click("#btn-lang");
+  assert.match(await page.locator(".setup-box").innerText(), /仅适用于当前角色/);
+  assert.deepEqual(errors, []);
+});
+
+test("finishing Level 8 shows the main-quest complete screen and points to the arcade", { skip }, async (t) => {
+  const { page } = await open(t, { hash: "#/levelup/8" });
+  assert.match(await page.locator("h1").innerText(), /Block Quest game/);
+  assert.equal(await page.getAttribute("#btn-next-level", "href"), "#/lesson/9/0");
+});
+
+test("parent page lists arcade reference scripts (collapsed)", { skip }, async (t) => {
+  const { page } = await open(t, { hash: "#/parent" });
+  assert.equal(await page.locator("#p-scripts-9").count(), 1);
+  assert.equal(await page.locator("#p-scripts-10").count(), 1);
+  await page.click("#p-scripts-10 summary");
+  assert.match(await page.locator("#p-scripts-10").innerText(), /Basket/);
+  assert.match(await page.locator("#p-guide").innerText(), /五分钟/);
+});
+
+test("home page has a bilingual Scratch word list", { skip }, async (t) => {
+  const { page } = await open(t);
+  await page.click("#glossary summary");
+  const txt = await page.locator("#glossary").innerText();
+  assert.match(txt, /sprite/);
+  assert.match(txt, /角色/);
+  await page.click("#btn-lang");
+  assert.match(await page.locator("#glossary summary").innerText(), /词语/);
+});

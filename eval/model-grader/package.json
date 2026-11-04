@@ -1,0 +1,9 @@
+{
+  "name": "scratch-coach-model-grader",
+  "private": true,
+  "description": "OPTIONAL dependency for the paid model judge (eval/lib/grade-model.js). Not needed for the course or the free rule grader.",
+  "license": "MIT",
+  "dependencies": {
+    "@anthropic-ai/sdk": "1.4.0"
+  }
+}
