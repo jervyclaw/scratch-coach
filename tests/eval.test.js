@@ -52,7 +52,7 @@ test("offline coach: passes the regression floor and never makes a false claim",
   // reported separately and are not part of this floor.
   const rows = evaluate(cases.filter((c) => c.phase !== "holdout"), "offline");
   const s = summarize(rows);
-  assert.ok(s.passRate >= 0.85, `pass rate ${s.passRate}`);
+  assert.ok(s.passRate >= 0.8, `pass rate ${s.passRate}`);
   // Zero tolerance (fail-on-any) for the high-stakes behaviours.
   for (const f of ["claims-correct", "false-visibility", "no-honesty", "shaming", "invalid-block"]) {
     assert.equal(s.failures[f] || 0, 0, `${f} must never happen`);

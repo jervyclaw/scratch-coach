@@ -31,7 +31,7 @@ const SAY = {
     tryUi: "Try that. Did it help?",
     detective: (where) => [
       "Let's be bug detectives:",
-      "1. Is the script on the sprite that should do the action?" + (where ? ` This step's script goes here: ${where}.` : ""),
+      "1. Is the script on the sprite that should do the action?" + (where ? ` In this step that is ${where}.` : ""),
       "2. Read the script from top to bottom. Is every block in the right order, and inside the right loop?",
       "3. Click the script on its own and watch. What does the sprite do?",
       "Which of these did you check first?",
@@ -41,6 +41,8 @@ const SAY = {
     noAnswer: "I won't give you the whole answer — you can build this! Here is your next hint:",
     hint3Note: "This is the block order for this step only.",
     empathy: "It's OK to feel stuck. Bugs are normal — every game maker gets them.",
+    empathyGeneral: "It's OK to feel that way. Making games takes practice, and you are practising right now.",
+    hint3Intro: "You have already tried the first hints, so here is the block order for this step only:",
     breakIdea: "If you are tired, save your project and take a short break. Then try just one small step.",
     worksQ: "Which part already works?",
     unclear: "Let's do one small piece at a time.",
@@ -58,7 +60,7 @@ const SAY = {
     tryUi: "试试看。有用吗？",
     detective: (where) => [
       "我们来当捉虫侦探：",
-      "1. 脚本放在负责这个动作的角色上了吗？" + (where ? `这一步的脚本应该在：${where}。` : ""),
+      "1. 脚本放在负责这个动作的角色上了吗？" + (where ? `这一步是 ${where}。` : ""),
       "2. 从上到下读一遍脚本。每个积木的顺序对吗？是不是放在了正确的循环里面？",
       "3. 单独点击这段脚本，看看角色会做什么？",
       "你先检查哪一条？",
@@ -68,6 +70,8 @@ const SAY = {
     noAnswer: "我不会直接给你完整答案——你自己能做出来！这是下一个提示：",
     hint3Note: "这只是这一步的积木顺序。",
     empathy: "卡住的时候有点难受，这很正常。每个游戏设计师都会遇到 bug。",
+    empathyGeneral: "有这种感觉很正常。做游戏需要练习，你现在就在练习。",
+    hint3Intro: "你已经试过前面的提示了，这是这一步（只是这一步）的积木顺序：",
     breakIdea: "如果累了，先保存项目、休息一下，再只试一个小步骤。",
     worksQ: "哪一部分已经能用了？",
     unclear: "我们一次只做一小块。",
@@ -113,9 +117,9 @@ function respond(c, content, opts = {}) {
   const seen = c.input.hintLevelSeen;
   const nextLevel = Math.min(seen + 1, 3);
   const prob = bestProblem(lesson, c.input.text);
+  const isBugReport = BUG_REPORT.test(c.input.text);
   // A frustrated child needs a strong match before we guess at a bug.
   const hasProblem = prob.score >= (intent === "frustrated" ? Math.max(threshold, 0.3) : threshold) && prob.margin >= 0.05;
-  const isBugReport = BUG_REPORT.test(c.input.text);
   const parts = [];
   let hintShown = 0;
 
@@ -153,12 +157,12 @@ function respond(c, content, opts = {}) {
       parts.push(S.worksQ);
       break;
     case "asks-for-answer":
-      parts.push(S.noAnswer);
+      parts.push(seen >= 2 ? S.hint3Intro : S.noAnswer);
       addHint();
       parts.push(S.tryHint);
       break;
     case "frustrated":
-      parts.push(S.empathy);
+      parts.push(isBugReport || hasProblem ? S.empathy : S.empathyGeneral);
       if (hasProblem) { addProblem(S.honestyShort); parts.push(followUp()); }
       else { parts.push(S.breakIdea); addHint(); parts.push(S.worksQ); }
       break;
@@ -184,7 +188,7 @@ function respond(c, content, opts = {}) {
       else if (isBugReport) {
         // No known problem fits: be honest and teach a debugging routine instead of guessing.
         parts.push(S.honesty);
-        const det = S.detective(step ? step.where[lang] : "");
+        const det = S.detective(step && step.sprite && step.sprite !== "Stage" ? step.sprite : "");
         det.slice(0, -1).forEach((x) => parts.push(x));
         addHint(); // the next hint names the blocks this step needs
         parts.push(det[det.length - 1]);

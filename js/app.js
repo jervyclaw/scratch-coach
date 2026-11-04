@@ -42,6 +42,7 @@
       how: ["Open Scratch next to this window.", "Do one small step at a time.", "Tap “I tried it!” — or ask for a hint."],
       openScratch: "Open Scratch online ↗",
       glossaryTitle: "📖 Scratch words",
+      buildTitle: "🧱 Build these scripts",
       desktopNote: "No internet? The Scratch desktop app works offline.",
       cantSee: "This coach can't see your Scratch project. You test your own game — like a real game maker!",
       mapTitle: "Quest map",
@@ -134,6 +135,7 @@
       how: ["把 Scratch 打开，放在这个窗口旁边。", "一次只做一个小步骤。", "做完点“我试过了！”——或者要一个提示。"],
       openScratch: "打开在线 Scratch ↗",
       glossaryTitle: "📖 Scratch 词语",
+      buildTitle: "🧱 搭出这些脚本",
       desktopNote: "没有网络？Scratch 桌面版可以离线使用。",
       cantSee: "小教练看不到你的 Scratch 项目。你要自己测试游戏——就像真正的游戏设计师！",
       mapTitle: "冒险地图",
@@ -524,6 +526,7 @@
       '<h1 tabindex="-1" data-autofocus>' + esc(L(step.title)) + "</h1>" +
       '<p class="where">' + esc(u("where")) + " <strong>" + esc(L(step.where)) + "</strong></p>" +
       '<ol class="do-list">' + step.do.map(function (d) { return "<li>" + esc(L(d)) + "</li>"; }).join("") + "</ol>" +
+      (step.show ? '<div class="build-box" id="build-box"><h2>' + esc(u("buildTitle")) + "</h2><p>" + esc(L(step.show)) + "</p>" + renderBlocks(step.show.blocks) + "</div>" : "") +
       (tried ? '<p class="status-line ok">' + esc(u("triedMark")) + "</p>" : "") +
       (skipped ? '<p class="status-line skip">' + esc(u("skippedMark")) + "</p>" : "") +
       '<div class="actions">' +

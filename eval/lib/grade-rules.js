@@ -37,7 +37,7 @@ function blockDictionaries(content) {
   const add = (bl) => (bl || []).forEach((b) => { if (b.cat !== "note") { ZH_BLOCKS.add(b.zh); EN_BLOCKS.add(b.en); } });
   content.lessons.forEach((l) => {
     add(l.blocks);
-    l.steps.forEach((s) => s.hints.forEach((h) => add(h.blocks)));
+    l.steps.forEach((s) => { s.hints.forEach((h) => add(h.blocks)); if (s.show) add(s.show.blocks); });
     add(l.challenge.hint.blocks);
     (l.reference || []).forEach((r) => add(r.blocks));
   });
@@ -57,8 +57,15 @@ function isRealBlock(line, content) {
 }
 
 /** Grade one response for one case. Returns { scores, failures, pass, notes }. */
-function grade(c, response, content) {
+// Categories whose expected content IS standard phrasing (empathy, honesty + self-test).
+const TEMPLATE_OK = ["frustrated", "asks-if-correct"];
+const BUG_CATEGORIES = ["block-order", "wrong-sprite", "no-reset", "repeat-trigger"];
+
+function grade(c, response, content, opts = {}) {
   const text = response.text || "";
+  // Lines repeated across many replies in this run are boilerplate; they may not satisfy keyword groups.
+  const boiler = opts.boilerplate || new Set();
+  const keywordText = (TEMPLATE_OK.includes(c.category) ? text : text.split("\n").filter((l) => !boiler.has(l.trim())).join("\n")).toLowerCase();
   const prose = text.split("\n").filter((l) => !l.startsWith("▸")).join("\n"); // notes "(…)" count as prose
   const blockLines = text.split("\n").filter((l) => l.startsWith("▸")).map((l) => l.replace(/^▸\s*/, "").trim());
   const lower = text.toLowerCase();
@@ -73,7 +80,7 @@ function grade(c, response, content) {
   const honest = RE.honesty.test(text);
   const invalid = blockLines.filter((l) => !isRealBlock(l, content));
   const groups = c.expected.mustMentionAny || [];
-  const groupHits = groups.filter((g) => g.some((k) => mentions(lower, k)));
+  const groupHits = groups.filter((g) => g.some((k) => mentions(keywordText, k)));
   const hasQuestion = RE.question.test(prose);
   const words = wordCount(prose);
   const longSentences = sentences(prose).filter((s) => wordCount(s) > 28).length;
@@ -101,7 +108,11 @@ function grade(c, response, content) {
   const presented = lesson.problems.map((p, i) => (text.includes(p.symptom.en) || text.includes(p.symptom.zh) ? i : -1)).filter((i) => i >= 0);
   const mode = diagnosisMode(c);
   if (applies.has("wrong-diagnosis") && mode === "named" && presented.length && !presented.includes(c.expected.problem)) fail.add("wrong-diagnosis");
-  if (applies.has("unfounded-diagnosis") && mode === "none" && presented.length) fail.add("unfounded-diagnosis");
+  if (mode === "none" && presented.length) {
+    // A wrong cause for a symptom the child reported is a wrong diagnosis; otherwise it is unfounded.
+    const label = BUG_CATEGORIES.includes(c.category) ? "wrong-diagnosis" : "unfounded-diagnosis";
+    if (applies.has(label)) fail.add(label);
+  }
   if (!text.trim()) { fail.add("off-topic"); fail.add("no-question"); }
 
   // Dimension scores (0–2)
@@ -124,7 +135,8 @@ function grade(c, response, content) {
 
   if (invalid.length) notes.push("invalid blocks: " + invalid.join(" | "));
   if (groups.length && groupHits.length < groups.length) notes.push("missing keyword groups: " + groups.filter((g) => !groupHits.includes(g)).map((g) => g.join("/")).join(", "));
-  const pass = fail.size === 0 && DIMENSIONS.every((d) => scores[d] >= 1);
+  // When a case names the right problem, the reply must hit every keyword group (technical = 2).
+  const pass = fail.size === 0 && DIMENSIONS.every((d) => scores[d] >= 1) && (mode !== "named" || scores.technical === 2);
   return { scores, failures: [...fail], pass, notes, stats: { words, blocksShown, hasQuestion, presentedProblems: presented } };
 }
 

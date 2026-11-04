@@ -73,7 +73,13 @@ function responderFor(name) {
 
 function evaluate(cases, responderName) {
   const r = responderFor(responderName);
-  return cases.map((c) => { const out = r(c); return { id: c.id, category: c.category, lesson: c.lesson, input: c.input, response: out, grade: grade(c, out, content) }; });
+  const outs = cases.map((c) => r(c));
+  // Boilerplate: a line that appears in at least 15% of replies (and at least 5) in this run.
+  const freq = new Map();
+  outs.forEach((o) => new Set((o.text || "").split("\n").map((l) => l.trim()).filter(Boolean)).forEach((l) => freq.set(l, (freq.get(l) || 0) + 1)));
+  const minCount = Math.max(5, Math.ceil(outs.length * 0.15));
+  const boilerplate = new Set([...freq].filter(([, n]) => n >= minCount).map(([l]) => l));
+  return cases.map((c, i) => ({ id: c.id, category: c.category, lesson: c.lesson, input: c.input, response: outs[i], grade: grade(c, outs[i], content, { boilerplate }) }));
 }
 
 function summarize(rows) {

@@ -310,7 +310,7 @@ function bugSpec(catLines, appleLines) {
   };
 }
 function buggyScripts() {
-  const all = lesson(12).steps[0].hints[2].blocks;
+  const all = lesson(12).steps[0].show.blocks;
   const cut = all.findIndex((b) => b.cat === "note");
   return { cat: all.slice(0, cut), apple: all.slice(cut + 1) };
 }

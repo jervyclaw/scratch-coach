@@ -15,6 +15,7 @@ function allBlockLists() {
   C.lessons.forEach((l) => {
     out.push({ lesson: l, where: `L${l.id} blocks`, blocks: l.blocks, catalog: true });
     l.steps.forEach((s, i) => s.hints.forEach((h, j) => { if (h.blocks) out.push({ lesson: l, where: `L${l.id} step${i + 1} hint${j + 1}`, blocks: h.blocks }); }));
+    l.steps.forEach((s, i) => { if (s.show) out.push({ lesson: l, where: `L${l.id} step${i + 1} show`, blocks: s.show.blocks }); });
     if (l.challenge.hint.blocks) out.push({ lesson: l, where: `L${l.id} challenge`, blocks: l.challenge.hint.blocks });
     (l.reference || []).forEach((r) => out.push({ lesson: l, where: `L${l.id} reference ${r.sprite}`, blocks: r.blocks }));
   });
@@ -62,6 +63,7 @@ test("every lesson has all required parts in English and Chinese", () => {
     assert.ok(l.steps.length >= 2 && l.steps.length <= 3, `${w} has 2–3 steps`);
     l.steps.forEach((s, i) => {
       assert.ok(isLoc(s.title) && isLoc(s.where), `${w} step ${i + 1} title/where`);
+      if (s.show) assert.ok(isLoc(s.show) && Array.isArray(s.show.blocks) && s.show.blocks.length > 0, `${w} step ${i + 1} show`);
       assert.ok(s.do.length >= 2 && s.do.length <= 3 && s.do.every(isLoc), `${w} step ${i + 1} do-list`);
       assert.equal(s.hints.length, 3, `${w} step ${i + 1} has 3 hints`);
       s.hints.forEach((h) => assert.ok(isLoc(h), `${w} step ${i + 1} hint text`));
@@ -355,6 +357,9 @@ test("Level 11 Dodge Arena: Stage resets then broadcasts Start; everyone else st
   assert.ok(st[loop + 1].en === "wait (1) seconds" && st[loop + 1].indent > st[loop].indent, "wait inside the countdown loop");
   for (const sp of ["Player", "Enemy", "Enemy2"]) assert.equal(refOf(11, sp)[0].en, "when I receive [Start]", `${sp} starts on Start`);
   const pl = refOf(11, "Player");
+  assert.ok(idx(pl, /^wait \(0\.2\) seconds$/) > idx(pl, /^go to x: \(0\) y: \(0\)$/) && idx(pl, /^wait \(0\.2\) seconds$/) < idx(pl, /^repeat until/), "Player waits for the Enemies to reset first");
+  // Steps are ordered so every sprite exists before a script refers to it.
+  assert.deepEqual(lesson(11).steps.map((s) => s.sprite), ["Stage", "Enemy", "Player"]);
   assert.ok(idx(pl, /^repeat until <<touching \(Enemy\)\?> or <touching \(Enemy2\)\?>>$/) > 0, "Player checks both enemies");
   assert.ok(idx(pl, /^switch backdrop to \[Caught\]$/) < idx(pl, /^stop \[all\]$/));
   const dir = (sp) => Number(refOf(11, sp).find((b) => /^point in direction/.test(b.en)).en.match(/\((-?\d+)\)/)[1]);
@@ -362,7 +367,7 @@ test("Level 11 Dodge Arena: Stage resets then broadcasts Start; everyone else st
 });
 
 test("Level 12 Bug Hunt: the buggy scripts contain exactly the three planted bugs; the reference fixes them", () => {
-  const all = hint3(12, 1);
+  const all = lesson(12).steps[0].show.blocks;
   const cut = all.findIndex((b) => b.cat === "note");
   const cat = all.slice(0, cut), apple = all.slice(cut + 1);
   const leftIf = idx(cat, /^if <key \(left arrow\) pressed\?> then$/);

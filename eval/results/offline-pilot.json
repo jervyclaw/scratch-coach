@@ -1,10 +1,10 @@
 {
   "summary": {
     "n": 37,
-    "pass": 37,
-    "passRate": 1,
+    "pass": 35,
+    "passRate": 0.9459459459459459,
     "dims": {
-      "technical": 0.972972972972973,
+      "technical": 0.9594594594594594,
       "clarity": 1,
       "independence": 1,
       "age": 1,
@@ -26,11 +26,11 @@
       },
       "no-reset": {
         "n": 5,
-        "pass": 5
+        "pass": 4
       },
       "repeat-trigger": {
         "n": 6,
-        "pass": 6
+        "pass": 5
       },
       "asks-for-answer": {
         "n": 3,
@@ -49,7 +49,9 @@
         "pass": 3
       }
     },
-    "failures": {}
+    "failures": {
+      "off-topic": 1
+    }
   },
   "rows": [
     {
@@ -435,7 +437,7 @@
         "attempts": 2
       },
       "response": {
-        "text": "I can't see your Scratch project, so I can't check your code for you.\nLet's be bug detectives:\n1. Is the script on the sprite that should do the action? This step's script goes here: Variables category, then Hero's green flag script.\n2. Read the script from top to bottom. Is every block in the right order, and inside the right loop?\n3. Click the script on its own and watch. What does the sprite do?\nHint 2: Variables (dark orange): “Make a Variable” button, then the “set [ ] to ( )” block. Pick Score in its menu.\nWhich of these did you check first?",
+        "text": "I can't see your Scratch project, so I can't check your code for you.\nLet's be bug detectives:\n1. Is the script on the sprite that should do the action? In this step that is Hero.\n2. Read the script from top to bottom. Is every block in the right order, and inside the right loop?\n3. Click the script on its own and watch. What does the sprite do?\nHint 2: Variables (dark orange): “Make a Variable” button, then the “set [ ] to ( )” block. Pick Score in its menu.\nWhich of these did you check first?",
         "lang": "en",
         "meta": {
           "intent": "hint",
@@ -446,20 +448,22 @@
       },
       "grade": {
         "scores": {
-          "technical": 1,
+          "technical": 0,
           "clarity": 2,
           "independence": 2,
           "age": 2,
           "honesty": 2,
           "noFalseClaims": 2
         },
-        "failures": [],
-        "pass": true,
+        "failures": [
+          "off-topic"
+        ],
+        "pass": false,
         "notes": [
-          "missing keyword groups: set [score] to (0)/设为 (0)/to (0)"
+          "missing keyword groups: set [score] to (0)/设为 (0)/to (0), green flag/绿旗"
         ],
         "stats": {
-          "words": 102,
+          "words": 96,
           "blocksShown": 0,
           "hasQuestion": true,
           "presentedProblems": []
@@ -748,7 +752,7 @@
           "noFalseClaims": 2
         },
         "failures": [],
-        "pass": true,
+        "pass": false,
         "notes": [
           "missing keyword groups: inside/green flag/里面/绿旗"
         ],
@@ -811,7 +815,7 @@
         "attempts": 4
       },
       "response": {
-        "text": "我不会直接给你完整答案——你自己能做出来！这是下一个提示：\n提示 3: → 键部分变成这样，然后把这个办法用到另外 3 个方向：\n▸     如果 <按下 (→) 键?> 那么\n▸       将x坐标增加 (3)\n▸       如果 <碰到颜色 (墙的颜色)?> 那么\n▸         将x坐标增加 (-3)\n      (←、↑、↓：先移动，再用相反的数字退回)\n这只是这一步的积木顺序。\n在 Scratch 里试试看。发生了什么？",
+        "text": "你已经试过前面的提示了，这是这一步（只是这一步）的积木顺序：\n提示 3: → 键部分变成这样，然后把这个办法用到另外 3 个方向：\n▸     如果 <按下 (→) 键?> 那么\n▸       将x坐标增加 (3)\n▸       如果 <碰到颜色 (墙的颜色)?> 那么\n▸         将x坐标增加 (-3)\n      (←、↑、↓：先移动，再用相反的数字退回)\n这只是这一步的积木顺序。\n在 Scratch 里试试看。发生了什么？",
         "lang": "zh",
         "meta": {
           "intent": "asks-for-answer",
@@ -1461,7 +1465,7 @@
         "attempts": 2
       },
       "response": {
-        "text": "It's OK to feel stuck. Bugs are normal — every game maker gets them.\nIf you are tired, save your project and take a short break. Then try just one small step.\nHint 1: When you hold a key, the game must check again and again: “Is the key pressed?” Which block repeats again and again?\nWhich part already works?",
+        "text": "It's OK to feel that way. Making games takes practice, and you are practising right now.\nIf you are tired, save your project and take a short break. Then try just one small step.\nHint 1: When you hold a key, the game must check again and again: “Is the key pressed?” Which block repeats again and again?\nWhich part already works?",
         "lang": "en",
         "meta": {
           "intent": "frustrated",
@@ -1483,7 +1487,7 @@
         "pass": true,
         "notes": [],
         "stats": {
-          "words": 59,
+          "words": 62,
           "blocksShown": 0,
           "hasQuestion": true,
           "presentedProblems": []
@@ -1541,7 +1545,7 @@
         "attempts": 2
       },
       "response": {
-        "text": "我看不到你的 Scratch 项目，没法替你检查代码。\n我们来当捉虫侦探：\n1. 脚本放在负责这个动作的角色上了吗？这一步的脚本应该在：新角色 Coin → 代码 标签页。\n2. 从上到下读一遍脚本。每个积木的顺序对吗？是不是放在了正确的循环里面？\n3. 单独点击这段脚本，看看角色会做什么？\n提示 2: “事件”：绿旗。“外观”：“显示”“隐藏”。“控制”：“等待”和“等待……”。“侦测”：“碰到 (Hero)?”。“变量”：“将 [Score] 增加 (1)”。\n你先检查哪一条？",
+        "text": "我看不到你的 Scratch 项目，没法替你检查代码。\n我们来当捉虫侦探：\n1. 脚本放在负责这个动作的角色上了吗？这一步是 Coin。\n2. 从上到下读一遍脚本。每个积木的顺序对吗？是不是放在了正确的循环里面？\n3. 单独点击这段脚本，看看角色会做什么？\n提示 2: “事件”：绿旗。“外观”：“显示”“隐藏”。“控制”：“等待”和“等待……”。“侦测”：“碰到 (Hero)?”。“变量”：“将 [Score] 增加 (1)”。\n你先检查哪一条？",
         "lang": "zh",
         "meta": {
           "intent": "hint",
@@ -1563,7 +1567,7 @@
         "pass": true,
         "notes": [],
         "stats": {
-          "words": 79,
+          "words": 72,
           "blocksShown": 0,
           "hasQuestion": true,
           "presentedProblems": []

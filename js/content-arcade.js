@@ -372,6 +372,7 @@
     var player = [
       b("events", "when I receive [Start]", "当接收到 [Start]", 0),
       b("motion", "go to x: (0) y: (0)", "移到 x: (0) y: (0)", 1),
+      b("control", "wait (0.2) seconds", "等待 (0.2) 秒", 1),
       b("control", "repeat until <<touching (Enemy)?> or <touching (Enemy2)?>>", "重复执行直到 <<碰到 (Enemy)?> 或 <碰到 (Enemy2)?>>", 1),
       b("control", "if <key (right arrow) pressed?> then", "如果 <按下 (→) 键?> 那么", 2), b("motion", "change x by (4)", "将x坐标增加 (4)", 3),
       b("control", "if <key (left arrow) pressed?> then", "如果 <按下 (←) 键?> 那么", 2), b("motion", "change x by (-4)", "将x坐标增加 (-4)", 3),
@@ -409,7 +410,7 @@
         ],
         variables: [
           { name: "Time Left", scope: "all", role: t("Seconds left. The Stage sets it to 20 and counts down.", "剩余秒数。舞台把它设为 20 并倒数。") },
-          { name: "Speed", scope: "sprite", owner: "Enemy", role: t("Only for the optional challenge: each Enemy's own speed.", "只用于可选挑战：每个敌人自己的速度。") }
+          { name: "Speed", scope: "sprite", owner: "Enemy and Enemy2", role: t("Only for the optional challenge: each Enemy has its own Speed.", "只用于可选挑战：每个敌人都有自己的 Speed。") }
         ],
         messages: [{ name: "Start", role: t("Sent once by the Stage. Player, Enemy and Enemy2 listen.", "由舞台发送一次，Player、Enemy 和 Enemy2 接收。") }],
         backdrops: [
@@ -446,33 +447,33 @@
           ]
         },
         {
-          title: t("Player moves until caught", "Player 一直移动直到被抓"),
-          sprite: "Player",
-          where: t("Player sprite → Code tab", "Player 角色 → 代码 标签页"),
-          do: [
-            t("Start Player's script with “when I receive [Start]” (not the green flag), then go to x: (0) y: (0).", "Player 的脚本用“当接收到 [Start]”开头（不是绿旗），然后移到 x: (0) y: (0)。"),
-            t("Add “repeat until <<touching (Enemy)?> or <touching (Enemy2)?>>” with the 4 arrow keys inside.", "加上“重复执行直到 <<碰到 (Enemy)?> 或 <碰到 (Enemy2)?>>”，里面放 4 个方向键。"),
-            t("After the loop: switch backdrop to Caught, then stop [all].", "循环之后：换成 Caught 背景，再“停止 [全部脚本]”。")
-          ],
-          hints: [
-            t("Player should only start moving when the Stage says Start. Which hat block waits for a message? When should moving stop?", "Player 要等舞台说 Start 才开始动。哪个帽子积木会等消息？移动什么时候停？"),
-            t("Events: “when I receive [ ]”. Control: “repeat until < >”. Operators: “< > or < >”. Sensing: “touching ( )?” and “key ( ) pressed?”.", "“事件”：“当接收到 [ ]”。“控制”：“重复执行直到 < >”。“运算”：“< > 或 < >”。“侦测”：“碰到 ( )?”和“按下 ( ) 键?”。"),
-            { en: "Player's script:", zh: "Player 的脚本：", blocks: player }
-          ]
-        },
-        {
           title: t("Bouncing Enemies", "会反弹的敌人"),
           sprite: "Enemy",
-          where: t("Enemy sprite → Code tab; then duplicate it", "Enemy 角色 → 代码 标签页；然后复制它"),
+          where: t("Enemy sprite → Code tab", "Enemy 角色 → 代码 标签页"),
           do: [
-            t("On Enemy: when I receive Start → go to x: (-180) y: (120) → point in direction (15) → forever: move 5 steps, if on edge, bounce.", "在 Enemy 上：当接收到 Start → 移到 x: (-180) y: (120) → 面向 (15) 方向 → 重复执行：移动 5 步，碰到边缘就反弹。"),
-            t("Duplicate Enemy. The copy is called Enemy2. Change its start to x: (180) y: (-120) and its direction to (-165).", "复制 Enemy，复制品叫 Enemy2。把它的起点改成 x: (180) y: (-120)，方向改成 (-165)。"),
+            t("Add a sprite and name it Enemy. Give it: when I receive Start → go to x: (-180) y: (120) → point in direction (15) → forever: move 5 steps, if on edge, bounce.", "添加一个角色，命名为 Enemy。给它：当接收到 Start → 移到 x: (-180) y: (120) → 面向 (15) 方向 → 重复执行：移动 5 步，碰到边缘就反弹。"),
+            t("Right-click Enemy and duplicate it. The copy is called Enemy2. Change its start to x: (180) y: (-120) and its direction to (-165).", "右键点击 Enemy，选“复制”，复制品叫 Enemy2。把它的起点改成 x: (180) y: (-120)，方向改成 (-165)。"),
             t("Start both Enemies far from the middle, and do not point them straight at it, so nobody is caught in the first second.", "两个敌人都要从远离中间的地方出发，方向也不要正对中间，免得第一秒就被抓。")
           ],
           hints: [
             t("An Enemy keeps moving and turns around at the walls. What should it do again and again? Where should it start so the game is fair?", "敌人一直移动，碰到墙就掉头。它要一遍遍做什么？从哪里出发才公平？"),
             t("Events: “when I receive [Start]”. Motion: “go to x: y:”, “point in direction”, “move ( ) steps”, “if on edge, bounce”. Control: “forever”.", "“事件”：“当接收到 [Start]”。“运动”：“移到 x: y:”“面向 ( ) 方向”“移动 ( ) 步”“碰到边缘就反弹”。“控制”：“重复执行”。"),
             { en: "Enemy's script (Enemy2: start x: (180) y: (-120), direction (-165)):", zh: "Enemy 的脚本（Enemy2：起点 x: (180) y: (-120)，方向 (-165)）：", blocks: enemy(-180, 120, 15) }
+          ]
+        },
+        {
+          title: t("Player moves until caught", "Player 一直移动直到被抓"),
+          sprite: "Player",
+          where: t("Player sprite → Code tab", "Player 角色 → 代码 标签页"),
+          do: [
+            t("Add a sprite named Player. Start its script with “when I receive [Start]” (not the green flag), go to x: (0) y: (0), then wait 0.2 seconds so the Enemies can get back to their start spots first.", "添加一个叫 Player 的角色。它的脚本用“当接收到 [Start]”开头（不是绿旗），移到 x: (0) y: (0)，再等待 0.2 秒，让敌人先回到各自的起点。"),
+            t("Add “repeat until <<touching (Enemy)?> or <touching (Enemy2)?>>” with the 4 arrow keys inside.", "加上“重复执行直到 <<碰到 (Enemy)?> 或 <碰到 (Enemy2)?>>”，里面放 4 个方向键。"),
+            t("After the loop: switch backdrop to Caught, then stop [all].", "循环之后：换成 Caught 背景，再“停止 [全部脚本]”。")
+          ],
+          hints: [
+            t("Player should only start moving when the Stage says Start. Which hat block waits for a message? When should moving stop?", "Player 要等舞台说 Start 才开始动。哪个帽子积木会等消息？移动什么时候停？"),
+            t("Events: “when I receive [ ]”. Control: “wait ( ) seconds” and “repeat until < >”. Operators: “< > or < >”. Sensing: “touching ( )?” and “key ( ) pressed?”.", "“事件”：“当接收到 [ ]”。“控制”：“等待 ( ) 秒”和“重复执行直到 < >”。“运算”：“< > 或 < >”。“侦测”：“碰到 ( )?”和“按下 ( ) 键?”。"),
+            { en: "Player's script:", zh: "Player 的脚本：", blocks: player }
           ]
         }
       ],
@@ -488,7 +489,11 @@
         { symptom: t("I get caught after about one second, even if I don't move.", "我不动的话，大约一秒钟就被抓了。"),
           fix: t("The Enemies fly straight at the middle. Point them along the edges instead, for example direction (15) and (-165).", "敌人正对着中间飞过来了。让它们沿着边缘出发，比如方向 (15) 和 (-165)。") },
         { symptom: t("Nothing moves after the green flag.", "点绿旗后什么都不动。"),
-          fix: t("Check the message name: “broadcast (Start)” and every “when I receive [Start]” must use exactly the same name.", "检查消息名：“广播 (Start)”和每个“当接收到 [Start]”的名字必须完全一样。") },
+          fix: t("“broadcast” and every “when I receive” must use the same message. Pick Start from each block's menu (not message1 or a typo).", "“广播”和每个“当接收到”必须用同一条消息。在每个积木的菜单里都选 Start（不要选 message1 或拼错的名字）。") },
+        { symptom: t("Time Left never goes down.", "Time Left 一直不减少。"),
+          fix: t("You probably used “broadcast (Start) and wait”. The Enemies' forever loops never finish, so the Stage waits forever. Use plain “broadcast (Start)”.", "你可能用了“广播 (Start) 并等待”。敌人的“重复执行”永远不会结束，所以舞台会一直等。改用普通的“广播 (Start)”。") },
+        { symptom: t("The Enemies turn upside down after bouncing.", "敌人反弹以后倒过来了。"),
+          fix: t("Add “set rotation style [don't rotate]” at the start of each Enemy's script.", "在每个敌人脚本的开头加“将旋转方式设为 [不可旋转]”。") },
         { symptom: t("Time Left jumps to 0 straight away, or goes below 0.", "Time Left 一下子变成 0，或者变成负数。"),
           fix: t("Put “wait (1) seconds” inside the loop, and use “repeat until <(Time Left) < (1)>” instead of “forever”.", "把“等待 (1) 秒”放进循环里，并用“重复执行直到 <(Time Left) < (1)>”代替“重复执行”。") },
         { symptom: t("When I play again, the Caught backdrop is still there.", "再玩一次时，Caught 背景还在。"),
@@ -510,7 +515,7 @@
       parentGuide: {
         focus: "广播让多个角色“同时开始”；舞台也可以有脚本；倒计时用“等待 1 秒”加变量。注意两种结局都用“停止 [全部脚本]”。",
         ask: ["一次广播会让几段脚本开始运行？", "如果没有“等待 1 秒”，倒计时会怎样？", "为什么敌人不能从中间出发？"],
-        avoid: "广播名字大小写都要一致。出错时请孩子逐字比对，而不是替他改。"
+        avoid: "广播和接收必须选同一条消息（Scratch 不区分大小写，但拼错或选成 message1 就收不到）。出错时请孩子打开两个积木的菜单对照，而不是替他改。"
       },
       reference: [
         { sprite: "Stage", blocks: stageArena },
@@ -572,15 +577,15 @@
         variables: [{ name: "Score", scope: "all", role: t("Points. Watch it with the checkbox next to the variable.", "分数。勾选变量旁的方框就能在舞台上看到它。") }],
         messages: []
       },
-      init: t("When fixed: the green flag sets Score to 0 and puts Cat at the bottom. Finding that missing reset is one of the bugs!", "修好后：绿旗会把 Score 设为 0，并把 Cat 放到底部。找到这个缺失的重置，本身就是一个 bug！"),
+      init: t("When the game works, the green flag resets everything the game needs. Checking that is part of your detective job.", "游戏修好以后，绿旗会重置游戏需要的一切。检查这一点也是侦探的工作。"),
       blocks: [
         b("variables", "change [Score] by (1)", "将 [Score] 增加 (1)"),
         b("looks", "say (Score)", "说 (Score)"),
         b("control", "repeat until <<touching (Cat)?> or <(y position) < (-160)>>", "重复执行直到 <<碰到 (Cat)?> 或 <(y 坐标) < (-160)>>")
       ],
       predict: {
-        q: t("Look at the buggy Apple script before you run it. A new apple appears at the top. Does the Score go up before or after the Cat catches it?", "运行之前先看有 bug 的 Apple 脚本。新苹果出现在顶部时，Score 是在小猫接住之前加，还是之后加？"),
-        a: t("Before! “change [Score] by (1)” sits right after “go to … y: (170)”, so every new apple adds a point — caught or not. Reading the blocks in order helps you predict bugs.", "之前！“将 [Score] 增加 (1)”紧跟在“移到 … y: (170)”后面，所以每个新苹果都会加分——不管接没接住。按顺序读积木，能帮你预测 bug。")
+        q: t("A game gives points even when nobody catches anything. Before you change any block, where would you look first, and how could you check your guess?", "一个游戏没人接住东西也在加分。在改任何积木之前，你会先看哪里？怎样验证你的猜想？"),
+        a: t("Look at the script of the sprite that adds the points and read it from top to bottom. Then test one thing at a time while you watch the Score. That is how detectives check a guess — you will try it in this level.", "先看负责加分的那个角色的脚本，从上到下读一遍。然后一次只测试一样，同时盯着 Score。侦探就是这样验证猜想的——这一关你就会亲自试试。")
       },
       steps: [
         {
@@ -588,14 +593,20 @@
           sprite: "Apple",
           where: t("Cat and Apple sprites → Code tab", "Cat 和 Apple 角色 → 代码 标签页"),
           do: [
-            t("Make the variable Score “For all sprites” and tick its checkbox so it shows on the stage.", "建立“适用于所有角色”的变量 Score，勾选它旁边的方框，让它显示在舞台上。"),
-            t("Copy the two buggy scripts from Hint 3 exactly — bugs included. This time the bugs are the puzzle!", "照着提示 3 原样搭出两段有 bug 的脚本——连 bug 一起。这次 bug 就是谜题！"),
-            t("Before you click the green flag, predict: what will go wrong?", "点绿旗之前先预测：会出什么问题？")
+            t("Rename Sprite1 to Cat and add a sprite named Apple. Make the variable Score “For all sprites” and tick its checkbox.", "把“角色1”改名为 Cat，再添加一个叫 Apple 的角色。建立“适用于所有角色”的变量 Score，并勾选它旁边的方框。"),
+            t("Build the two scripts shown below exactly — bugs included. This time the bugs are the puzzle!", "照着下面的两段脚本原样搭出来——连 bug 一起。这次 bug 就是谜题！"),
+            t("Before you click the green flag, predict: what will go wrong? Then click it and compare.", "点绿旗之前先预测：会出什么问题？然后点绿旗对照一下。")
           ],
+          show: { en: "Build these BUGGY scripts as they are. First Cat, then Apple:", zh: "原样搭出这两段有 bug 的脚本。先是 Cat，然后是 Apple：", blocks: buggyCat.concat([note("— Apple sprite —", "—— Apple 角色 ——", 0)], buggyApple) },
           hints: [
-            t("This step is different: you copy scripts that are wrong on purpose. Why do you think detectives practise on a puzzle with known clues?", "这一步不一样：你要照着搭故意写错的脚本。你觉得侦探为什么要先在有线索的谜题上练习？"),
+            t("This step is different: you copy scripts that are wrong on purpose. Why do you think detectives practise on a puzzle where the clues are hidden on purpose?", "这一步不一样：你要照着搭故意写错的脚本。你觉得侦探为什么要先在故意藏好线索的谜题上练习？"),
             t("You need Motion (“go to”, “change x by”, “change y by”), Control (“forever”, “if”, “repeat until”), Sensing, Operators and Variables blocks.", "需要“运动”（“移到”“将x坐标增加”“将y坐标增加”）、“控制”（“重复执行”“如果”“重复执行直到”）、“侦测”、“运算”和“变量”积木。"),
-            { en: "The BUGGY scripts (copy them as they are). First Cat, then Apple:", zh: "有 bug 的脚本（原样照搭）。先是 Cat，然后是 Apple：", blocks: buggyCat.concat([note("— Apple sprite —", "—— Apple 角色 ——", 0)], buggyApple) }
+            { en: "Copying check — compare your blocks with the picture:", zh: "照搭检查——把你的积木和上面的对照：", list: [
+              t("Same sprite? Cat's script on Cat, Apple's script on Apple.", "角色对吗？Cat 的脚本在 Cat 上，Apple 的在 Apple 上。"),
+              t("Same numbers and signs in every white slot?", "每个白色空格里的数字和正负号一样吗？"),
+              t("Same menu choices (right arrow, left arrow, Cat, Score)?", "菜单选项一样吗（→、←、Cat、Score）？"),
+              t("Same order, and the same blocks inside each loop?", "顺序一样吗？每个循环里面的积木一样吗？")
+            ] }
           ]
         },
         {
@@ -603,28 +614,28 @@
           sprite: "Cat",
           where: t("Cat sprite → Code tab", "Cat 角色 → 代码 标签页"),
           do: [
-            t("Tool 1: click the green flag and press each arrow key. Which key moves the wrong way? Fix that number.", "工具 1：点绿旗，分别按方向键。哪个键走错方向了？改掉那个数字。"),
-            t("Tool 2: watch the Score on the stage. Stop, then click the green flag again. Does Score start at 0? If not, add the missing reset to Cat.", "工具 2：看舞台上的 Score。停止后再点绿旗，Score 从 0 开始吗？如果不是，就给 Cat 加上缺少的重置。"),
-            t("Tool 3: drag a “say (Score)” block into a loop to see the number change. Remove it when you are done.", "工具 3：把“说 (Score)”拖进循环里，看数字怎么变。用完记得删掉。")
+            t("Tool 1 — run: click the green flag and press each arrow key. Does each key move the Cat the right way? If not, find the wrong block and fix it.", "工具 1——运行：点绿旗，分别按方向键。每个键都让小猫朝正确方向走吗？如果不是，找到出错的积木修好它。"),
+            t("Tool 2 — watch: stop, click the green flag again and look at Score right away. Does every new game start at 0? If not, fix it. (Another bug may still add a point when an apple appears — that one is for the next step.)", "工具 2——观察：停止后再点绿旗，马上看 Score。每局新游戏都从 0 开始吗？如果不是，就修好它。（另一个 bug 可能会在苹果出现时加一分——那是下一步的事。）"),
+            t("Tool 3 — say: drag a “say ( )” block into Apple's forever loop and drop the orange Score block into its slot, so Apple shows the Score. Remove it when you are done.", "工具 3——说出来：把“说 ( )”积木拖进 Apple 的“重复执行”里，再把橙色的 Score 积木放进它的空格，让 Apple 说出分数。用完记得删掉。")
           ],
           hints: [
             t("Test one thing at a time. Press only the left arrow: what do you expect, and what really happens? What number does Score show right after the green flag?", "一次只测一样。只按 ← 键：你预期会怎样？实际怎样？点绿旗后 Score 一开始是多少？"),
-            t("The fixes use Motion (“change x by”, a negative number for left) and Variables (“set [Score] to (0)” at the top of the green flag script). Looks: “say ( )” is a handy detective block.", "修正要用“运动”（“将x坐标增加”，向左用负数）和“变量”（绿旗脚本顶部的“将 [Score] 设为 (0)”）。“外观”里的“说 ( )”是好用的侦探积木。"),
-            { en: "Cat after fixing bugs 1 and 2:", zh: "修好 bug 1 和 bug 2 之后的 Cat：", blocks: fixedCat }
+            t("Look at the numbers inside the arrow-key blocks, and at the top of Cat's green flag script: is something missing there? The blocks involved are in Motion and Variables.", "看看方向键积木里的数字，再看看 Cat 绿旗脚本的最上面：是不是少了什么？涉及的积木在“运动”和“变量”里。"),
+            { en: "Cat after fixing the first two bugs:", zh: "修好前两个 bug 之后的 Cat：", blocks: fixedCat }
           ]
         },
         {
-          title: t("The sneaky bug: points without catching", "狡猾的 bug：没接住也加分"),
+          title: t("The sneaky bug", "狡猾的 bug"),
           sprite: "Apple",
           where: t("Apple sprite → Code tab", "Apple 角色 → 代码 标签页"),
           do: [
             t("Move the Cat far away from the falling apple and watch the Score. Does it still go up?", "把小猫移得远离下落的苹果，观察 Score。它还在涨吗？"),
-            t("Move “change [Score] by (1)” out of its spot. Put it inside a new “if <touching (Cat)?> then” UNDER the repeat until loop.", "把“将 [Score] 增加 (1)”从原来的位置拿出来，放进一个新的“如果 <碰到 (Cat)?> 那么”，这个“如果”放在“重复执行直到”的下面。"),
+            t("Read the Apple script from top to bottom. Where is the point added? Change it so a point is added only when the Cat really catches the apple.", "从上到下读 Apple 的脚本。分数是在哪里加的？改一改，让小猫真的接住苹果时才加分。"),
             t("Run all your tests again from a fresh green flag. Remove any detective “say” blocks.", "从全新的绿旗开始，再把所有测试跑一遍。删掉侦探用的“说”积木。")
           ],
           hints: [
             t("When exactly should a point be added? Read the Apple script from top to bottom: where does the point happen now?", "到底什么时候才该加分？从上到下读 Apple 的脚本：现在是在哪里加分的？"),
-            t("Control: “if < > then”. Sensing: “touching (Cat)?”. Move the existing Variables block — you do not need a new one.", "“控制”：“如果 < > 那么”。“侦测”：“碰到 (Cat)?”。移动现有的“变量”积木就行，不需要新的。"),
+            t("Control: “if < > then”. Sensing: “touching (Cat)?”. Move the existing Variables block (drag it, don't copy it) — you do not need a new one.", "“控制”：“如果 < > 那么”。“侦测”：“碰到 (Cat)?”。移动现有的“变量”积木（拖过去，不要复制）——不需要新的。"),
             { en: "The fixed Apple script:", zh: "修好后的 Apple 脚本：", blocks: fixedApple }
           ]
         }
@@ -644,6 +655,10 @@
           fix: t("In the left-arrow “if”, the number must be negative: change x by (-10).", "在 ← 键的“如果”里，数字要是负数：将x坐标增加 (-10)。") },
         { symptom: t("Score keeps last game's points.", "Score 保留着上一局的分数。"),
           fix: t("Add “set [Score] to (0)” at the top of Cat's green flag script.", "在 Cat 绿旗脚本的最上面加“将 [Score] 设为 (0)”。") },
+        { symptom: t("One apple gives 2 points after my fix.", "修好以后，一个苹果加 2 分。"),
+          fix: t("You probably copied “change [Score] by (1)” instead of moving it. Delete the old one so only the one inside “if <touching (Cat)?>” is left.", "你大概复制了“将 [Score] 增加 (1)”，而不是把它移过去。删掉旧的，只留下“如果 <碰到 (Cat)?>”里面那一个。") },
+        { kind: "ui", symptom: t("My detective say block shows nothing.", "侦探用的“说”积木什么都不显示。"),
+          fix: t("Drop the orange Score block into the white slot of “say ( )”, and put the say block inside a loop that is running.", "把橙色的 Score 积木放进“说 ( )”的白色空格里，并把“说”积木放在正在运行的循环里。") },
         { kind: "ui", symptom: t("I can't see the Score on the stage.", "舞台上看不到 Score。"),
           fix: t("In the Variables category, tick the checkbox next to Score.", "在“变量”分类里，勾选 Score 旁边的方框。") }
       ],

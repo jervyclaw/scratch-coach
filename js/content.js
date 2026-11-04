@@ -697,13 +697,13 @@
       ],
       problems: [
         { symptom: t("Nothing happens at the Goal.", "到了终点什么也没发生。"),
-          fix: t("Check the message name is exactly You Win in both “broadcast” and “when I receive”. Check the Goal script is on the Goal sprite.", "检查“广播”和“当接收到”里的消息名是否都是 You Win。也检查终点脚本是否在 Goal 角色上。") },
+          fix: t("Check that “broadcast” and “when I receive” use the same message: pick You Win from each menu (not message1). Check the Goal script is on the Goal sprite.", "检查“广播”和“当接收到”是否用的是同一条消息：在两个菜单里都选 You Win（不要选 message1）。也检查终点脚本是否在 Goal 角色上。") },
         { symptom: t("The banner is visible when the game starts.", "游戏一开始横幅就在。"),
           fix: t("Add “when green flag clicked → hide” on the Win Banner.", "在 Win Banner 上加“当绿旗被点击 → 隐藏”。") },
         { symptom: t("“You Win” happens again and again.", "“You Win”一次又一次地出现。"),
           fix: t("The Goal uses “forever” + “if”. Use “wait until <touching (Hero)?>” and one broadcast, with no forever.", "终点用了“重复执行”+“如果”。请改用“等待 <碰到 (Hero)?>”加一次广播，不要重复执行。") },
         { symptom: t("Hero can still move after winning.", "赢了以后 Hero 还能动。"),
-          fix: t("Put “stop [other scripts in sprite]” under “when I receive [You Win]” on Hero — not on another sprite.", "把“停止 [该角色的其他脚本]”放在 Hero 的“当接收到 [You Win]”下面——不是放在别的角色上。") },
+          fix: t("Put “stop [other scripts in sprite]” first under “when I receive [You Win]” on Hero — before the say block, and not on another sprite.", "把“停止 [该角色的其他脚本]”放在 Hero 的“当接收到 [You Win]”下面的第一个位置——在“说”积木之前，而且不是放在别的角色上。") },
         { symptom: t("The banner is hidden behind other sprites.", "横幅被其他角色挡住了。"),
           fix: t("Add “go to [front] layer” before “show” on the Win Banner.", "在 Win Banner 的“显示”前加“移到最 [前面]”。") }
       ],
@@ -1076,7 +1076,7 @@
       prereqs: t("Level 4: “wait until <touching (Hero)?>”. Knowing a sprite can have two scripts.", "第 4 关：“等待 <碰到 (Hero)?>”；知道一个角色可以有两段脚本。"),
       setup: { project: BQ_PROJECT, sprites: [SPR.Hero, SPR.Lava, SPR.Coin, SPR.Checkpoint, SPR.Goal, SPR.WinBanner], variables: [VAR_SCORE, VAR_CPX, VAR_CPY], messages: [MSG_WIN] },
       init: t("Green flag: Win Banner hides. Goal waits for Hero again. Hero can move again.", "绿旗：Win Banner 隐藏，Goal 重新等待 Hero，Hero 可以重新移动。"),
-      parentGuide: { focus: "关注“胜利只触发一次”：终点用“等待……”加一次广播；横幅开局隐藏；Hero 收到消息后停止其他脚本。", ask: ["是谁发出了 You Win 消息？谁在听？", "如果终点用了“重复执行”，会发生什么？"], avoid: "广播名字要完全一致，出错时让孩子逐字比对，而不是替他改。" }
+      parentGuide: { focus: "关注“胜利只触发一次”：终点用“等待……”加一次广播；横幅开局隐藏；Hero 收到消息后停止其他脚本。", ask: ["是谁发出了 You Win 消息？谁在听？", "如果终点用了“重复执行”，会发生什么？"], avoid: "广播和接收必须选同一条消息（Scratch 不区分大小写，但选错成 message1 或拼错就收不到）。出错时让孩子打开两个菜单对照，而不是替他改。" }
     },
     7: {
       track: "quest", requires: [6],
@@ -1113,6 +1113,11 @@
     { term: t("variable", "变量"), match: ["variable", "变量"], def: t("A variable is a box with a name that remembers a number, like Score.", "变量是一个有名字、能记住数字的盒子，比如 Score。") },
     { term: t("broadcast", "广播"), match: ["broadcast", "广播"], def: t("A broadcast is a message one sprite sends. Every script that starts with “when I receive” that message runs.", "广播是一个角色发出的消息。所有以“当接收到”这条消息开头的脚本都会运行。") },
     { term: t("rename", "改名"), match: ["rename", "改名"], def: t("Rename means giving something a new name. Type the new name in its name box.", "改名就是给它换一个新名字。在名字框里输入新名字。") },
+    { term: t("for all sprites / for this sprite only", "适用于所有角色 / 仅适用于当前角色"), match: ["for all sprites", "this sprite only", "适用于所有角色", "仅适用于当前角色"], def: t("When you make a variable you choose: “For all sprites” means one shared box every sprite can use; “For this sprite only” means each sprite has its own box.", "建立变量时要选：“适用于所有角色”是大家共用的一个盒子；“仅适用于当前角色”是每个角色各有自己的盒子。") },
+    { term: t(".sb3 file", ".sb3 文件"), match: ["sb3"], def: t("An .sb3 file is your whole Scratch project saved on the computer. You can open it again with File → Load from your computer.", ".sb3 文件就是保存在电脑上的整个 Scratch 项目。用“文件 → 从电脑中上传”可以再次打开它。") },
+    { term: t("bounce", "反弹"), match: ["bounce", "反弹"], def: t("“if on edge, bounce” makes a sprite turn around when it reaches the edge of the stage, like a ball off a wall.", "“碰到边缘就反弹”会让角色碰到舞台边缘时掉头，就像球撞墙弹回来。") },
+    { term: t("random", "随机"), match: ["random", "随机"], def: t("“pick random” chooses a different number each time, so things don't always happen in the same place.", "“取随机数”每次会选一个不同的数字，所以东西不会总在同一个地方出现。") },
+    { term: t("solid color", "纯色"), match: ["solid colo", "one colo", "纯色", "同一种颜色", "单一"], def: t("A solid color is one single color with no fading or gradient, so “touching color” can recognise it.", "纯色就是只有一种颜色、没有渐变，这样“碰到颜色”才能认出它。") },
     { term: t("undo", "退回"), match: ["undo", "退回"], def: t("In the maze, undo means moving back by the same number you just moved, but with the opposite sign (3 then -3).", "在迷宫里，“退回”是指按刚才走的数字往回走，符号相反（先 3，再 -3）。") }
   ];
 

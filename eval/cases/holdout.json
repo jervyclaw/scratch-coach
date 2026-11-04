@@ -1,0 +1,906 @@
+[
+  {
+    "id": "H01",
+    "phase": "holdout",
+    "category": "unclear-instructions",
+    "lesson": 1,
+    "step": 1,
+    "learningGoal": {
+      "en": "A sprite can be renamed in the sprite info area",
+      "zh": "可以在角色信息区给角色改名"
+    },
+    "input": {
+      "lang": "zh",
+      "text": "改成hero是什么意思 要在哪里打字啊 我没看到",
+      "hintLevelSeen": 0,
+      "attempts": 1
+    },
+    "expected": {
+      "behaviors": [
+        "Explains in simple words that renaming means giving the sprite a new name",
+        "Points the child to the name box near the sprite list under the stage",
+        "Asks the child to look for the box that shows the sprite's current name"
+      ],
+      "mustMentionAny": [
+        [
+          "name box",
+          "name",
+          "名字框",
+          "名字"
+        ],
+        [
+          "sprite",
+          "角色"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written blind by an independent AI agent for the held-out set; not verified by a human teacher"
+  },
+  {
+    "id": "H02",
+    "phase": "holdout",
+    "category": "unclear-instructions",
+    "lesson": 10,
+    "step": 2,
+    "learningGoal": {
+      "en": "A variable can belong to just one sprite",
+      "zh": "变量可以只属于一个角色"
+    },
+    "input": {
+      "lang": "en",
+      "text": "what dose for this sprite only mean. do i pick that one or the all sprites one??",
+      "hintLevelSeen": 1,
+      "attempts": 0
+    },
+    "expected": {
+      "behaviors": [
+        "Explains that a 'this sprite only' variable belongs to the Star alone, so another sprite can have its own",
+        "Tells the child to pick 'For this sprite only' while the Star is selected",
+        "Asks a short question, such as why the Rock might want its own fall speed"
+      ],
+      "mustMentionAny": [
+        [
+          "this sprite only",
+          "仅适用于当前角色"
+        ],
+        [
+          "Star",
+          "星星"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written blind by an independent AI agent for the held-out set; not verified by a human teacher"
+  },
+  {
+    "id": "H03",
+    "phase": "holdout",
+    "category": "block-order",
+    "lesson": 9,
+    "step": 2,
+    "learningGoal": {
+      "en": "Blocks run from top to bottom, so order matters",
+      "zh": "积木从上到下运行，顺序很重要"
+    },
+    "input": {
+      "lang": "en",
+      "text": "my runner yells go and then ready its backwards lol",
+      "hintLevelSeen": 1,
+      "attempts": 2
+    },
+    "expected": {
+      "behaviors": [
+        "Reminds the child that Scratch runs blocks from top to bottom",
+        "Suggests swapping the two say blocks so Ready? comes first",
+        "Warns that dragging a block also drags the blocks under it",
+        "Asks the child to predict what will be said first after the swap"
+      ],
+      "mustMentionAny": [
+        [
+          "top",
+          "order",
+          "上到下",
+          "顺序"
+        ],
+        [
+          "Ready",
+          "准备好了吗"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0,
+      "problemRef": "Runner says “Go!” before “Ready?”."
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written blind by an independent AI agent for the held-out set; not verified by a human teacher"
+  },
+  {
+    "id": "H04",
+    "phase": "holdout",
+    "category": "block-order",
+    "lesson": 4,
+    "step": 2,
+    "learningGoal": {
+      "en": "The coin only hides after it is collected",
+      "zh": "金币被收集之后才隐藏"
+    },
+    "input": {
+      "lang": "zh",
+      "text": "金币点了绿旗就没了 我都没去碰它 提示看完了还是这样",
+      "hintLevelSeen": 2,
+      "attempts": 4
+    },
+    "expected": {
+      "behaviors": [
+        "Asks the child to read the coin script from top to bottom",
+        "Points out that hide must be the last block, after waiting for Hero",
+        "Asks the child to test again from the green flag and say what happens"
+      ],
+      "mustMentionAny": [
+        [
+          "hide",
+          "隐藏"
+        ],
+        [
+          "last",
+          "end",
+          "bottom",
+          "最后",
+          "末尾"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 7,
+      "problemRef": "A coin disappears as soon as the game starts."
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer"
+    ],
+    "source": "fictional; written blind by an independent AI agent for the held-out set; not verified by a human teacher"
+  },
+  {
+    "id": "H05",
+    "phase": "holdout",
+    "category": "wrong-sprite",
+    "lesson": 3,
+    "step": 2,
+    "learningGoal": {
+      "en": "Each script belongs to the sprite it should control",
+      "zh": "脚本要放在它要控制的角色上"
+    },
+    "input": {
+      "lang": "zh",
+      "text": "我按方向键怎么是红色那个在跑 我的人不动",
+      "hintLevelSeen": 1,
+      "attempts": 2
+    },
+    "expected": {
+      "behaviors": [
+        "Explains that the script is probably on the Lava sprite instead of Hero",
+        "Tells the child to drag the script onto Hero in the sprite list, then delete it from Lava",
+        "Asks the child which sprite is selected when they build the script"
+      ],
+      "mustMentionAny": [
+        [
+          "Hero",
+          "主角"
+        ],
+        [
+          "Lava",
+          "岩浆"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0,
+      "problemRef": "The Lava moves instead of Hero."
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written blind by an independent AI agent for the held-out set; not verified by a human teacher"
+  },
+  {
+    "id": "H06",
+    "phase": "holdout",
+    "category": "wrong-sprite",
+    "lesson": 5,
+    "step": 3,
+    "learningGoal": {
+      "en": "x position means the position of the sprite that runs the script",
+      "zh": "x 坐标表示运行脚本的那个角色的位置"
+    },
+    "input": {
+      "lang": "en",
+      "text": "when i hit lava i pop back up right where i died not at the flag. why",
+      "hintLevelSeen": 1,
+      "attempts": 3
+    },
+    "expected": {
+      "behaviors": [
+        "Explains that x position and y position mean the position of the sprite whose script it is",
+        "Suggests the flag script is on Hero and should be on the Checkpoint sprite",
+        "Asks the child which sprite's position the game should remember"
+      ],
+      "mustMentionAny": [
+        [
+          "Checkpoint",
+          "检查点"
+        ],
+        [
+          "x position",
+          "position",
+          "x 坐标",
+          "坐标"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0,
+      "problemRef": "Hero respawns where Hero was standing, not at the flag."
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written blind by an independent AI agent for the held-out set; not verified by a human teacher"
+  },
+  {
+    "id": "H07",
+    "phase": "holdout",
+    "category": "wrong-sprite",
+    "lesson": 6,
+    "step": 3,
+    "learningGoal": {
+      "en": "Hero stops its own loop when it receives the win message",
+      "zh": "Hero 收到胜利消息后停止自己的循环"
+    },
+    "input": {
+      "lang": "zh",
+      "text": "横幅出来了 可是我还能走 走到岩浆又回去了",
+      "hintLevelSeen": 0,
+      "attempts": 1
+    },
+    "expected": {
+      "behaviors": [
+        "Explains that Hero's forever loop is still running after the win",
+        "Says the stop block must be on Hero, under when I receive You Win",
+        "Asks the child which sprite has the stop block right now"
+      ],
+      "mustMentionAny": [
+        [
+          "Hero",
+          "主角"
+        ],
+        [
+          "stop",
+          "停止"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0,
+      "problemRef": "Hero can still move after winning."
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written blind by an independent AI agent for the held-out set; not verified by a human teacher"
+  },
+  {
+    "id": "H08",
+    "phase": "holdout",
+    "category": "no-reset",
+    "lesson": 4,
+    "step": 1,
+    "learningGoal": {
+      "en": "The score is reset to 0 when a new game starts",
+      "zh": "新游戏开始时分数归零"
+    },
+    "input": {
+      "lang": "en",
+      "text": "i play again and it still says 7 points from last time",
+      "hintLevelSeen": 0,
+      "attempts": 1
+    },
+    "expected": {
+      "behaviors": [
+        "Explains that Score remembers its number until something sets it back",
+        "Points to Hero's green flag script, before the forever loop, as the place to set Score to 0",
+        "Asks the child which script runs once when a new game starts"
+      ],
+      "mustMentionAny": [
+        [
+          "set",
+          "设为"
+        ],
+        [
+          "green flag",
+          "绿旗"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0,
+      "problemRef": "The score does not go back to 0."
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written blind by an independent AI agent for the held-out set; not verified by a human teacher"
+  },
+  {
+    "id": "H09",
+    "phase": "holdout",
+    "category": "no-reset",
+    "lesson": 10,
+    "step": 1,
+    "learningGoal": {
+      "en": "Lives must be set before the game loop starts",
+      "zh": "游戏循环开始前要设置好生命值"
+    },
+    "input": {
+      "lang": "zh",
+      "text": "第二次玩一点绿旗就gameover了 提示都看了",
+      "hintLevelSeen": 2,
+      "attempts": 3
+    },
+    "expected": {
+      "behaviors": [
+        "Explains that Lives is still 0 from the last game, so the loop ends at once",
+        "Says to set Lives to 3 at the top of Basket's green flag script, before the loop",
+        "Asks the child to check what number Lives shows right after the green flag"
+      ],
+      "mustMentionAny": [
+        [
+          "Lives",
+          "生命"
+        ],
+        [
+          "set",
+          "设为"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 12,
+      "problemRef": "The game ends as soon as I click the green flag."
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer"
+    ],
+    "source": "fictional; written blind by an independent AI agent for the held-out set; not verified by a human teacher"
+  },
+  {
+    "id": "H10",
+    "phase": "holdout",
+    "category": "no-reset",
+    "lesson": 7,
+    "step": 2,
+    "learningGoal": {
+      "en": "Costumes are reset when the game starts",
+      "zh": "游戏开始时要重置造型"
+    },
+    "input": {
+      "lang": "en",
+      "text": "my guy keeps the pirate look when i start agian i want the normal one first",
+      "hintLevelSeen": 1,
+      "attempts": 2
+    },
+    "expected": {
+      "behaviors": [
+        "Explains that a costume stays as it was until something switches it back",
+        "Suggests adding switch costume to the starting costume in Hero's green flag script",
+        "Asks the child what the starting costume is called"
+      ],
+      "mustMentionAny": [
+        [
+          "costume",
+          "造型"
+        ],
+        [
+          "green flag",
+          "绿旗"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0,
+      "problemRef": "Hero keeps the last costume when I play again."
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written blind by an independent AI agent for the held-out set; not verified by a human teacher"
+  },
+  {
+    "id": "H11",
+    "phase": "holdout",
+    "category": "repeat-trigger",
+    "lesson": 6,
+    "step": 1,
+    "learningGoal": {
+      "en": "The Goal broadcasts You Win only once",
+      "zh": "终点只广播一次 You Win"
+    },
+    "input": {
+      "lang": "zh",
+      "text": "我走到门那里 赢了的那个一直一直发 停不下来",
+      "hintLevelSeen": 1,
+      "attempts": 2
+    },
+    "expected": {
+      "behaviors": [
+        "Explains that forever plus if keeps sending the message while Hero stays on the Goal",
+        "Suggests using wait until touching Hero and one broadcast, without forever",
+        "Asks the child how the coin waited for Hero in the last level"
+      ],
+      "mustMentionAny": [
+        [
+          "wait until",
+          "等待"
+        ],
+        [
+          "forever",
+          "重复执行"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0,
+      "problemRef": "“You Win” happens again and again."
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written blind by an independent AI agent for the held-out set; not verified by a human teacher"
+  },
+  {
+    "id": "H12",
+    "phase": "holdout",
+    "category": "repeat-trigger",
+    "lesson": 10,
+    "step": 2,
+    "learningGoal": {
+      "en": "The fall loop stops when the Star touches the Basket",
+      "zh": "星星碰到篮子时下落循环停止"
+    },
+    "input": {
+      "lang": "en",
+      "text": "i catch 1 star and get like 30 points lol thats cheating",
+      "hintLevelSeen": 1,
+      "attempts": 2
+    },
+    "expected": {
+      "behaviors": [
+        "Explains that the fall loop keeps going while the Star sits on the Basket",
+        "Suggests the loop should stop on touching the Basket too, with the point check under the loop",
+        "Asks the child when exactly the point should be added"
+      ],
+      "mustMentionAny": [
+        [
+          "repeat until",
+          "loop",
+          "重复执行直到",
+          "循环"
+        ],
+        [
+          "Basket",
+          "篮子"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0,
+      "problemRef": "One Star gives many points when it touches the Basket."
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written blind by an independent AI agent for the held-out set; not verified by a human teacher"
+  },
+  {
+    "id": "H13",
+    "phase": "holdout",
+    "category": "asks-for-answer",
+    "lesson": 2,
+    "step": 2,
+    "learningGoal": {
+      "en": "A forever loop checks the arrow keys again and again",
+      "zh": "重复执行会一遍又一遍地检查方向键"
+    },
+    "input": {
+      "lang": "en",
+      "text": "can u just tell me all the blocks for the arrows i want to play",
+      "hintLevelSeen": 0,
+      "attempts": 0
+    },
+    "expected": {
+      "behaviors": [
+        "Kindly declines to give all the blocks and offers the first hint instead",
+        "Asks which block makes something happen again and again",
+        "Encourages the child to try one arrow key first"
+      ],
+      "mustMentionAny": [
+        [
+          "forever",
+          "again and again",
+          "repeat",
+          "重复执行",
+          "一遍又一遍"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written blind by an independent AI agent for the held-out set; not verified by a human teacher"
+  },
+  {
+    "id": "H14",
+    "phase": "holdout",
+    "category": "asks-for-answer",
+    "lesson": 11,
+    "step": 2,
+    "learningGoal": {
+      "en": "An enemy moves forever and bounces at the edges",
+      "zh": "敌人一直移动，碰到边缘就反弹"
+    },
+    "input": {
+      "lang": "zh",
+      "text": "直接把敌人的代码全给我嘛 我不想想了",
+      "hintLevelSeen": 2,
+      "attempts": 2
+    },
+    "expected": {
+      "behaviors": [
+        "Does not dump more than the allowed blocks; offers the hint 3 order as the next step",
+        "Names the key ideas: start when Start is received, then move and bounce forever",
+        "Asks the child to build it and say where the Enemy should start so the game is fair"
+      ],
+      "mustMentionAny": [
+        [
+          "bounce",
+          "反弹"
+        ],
+        [
+          "forever",
+          "重复执行"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 6
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer"
+    ],
+    "source": "fictional; written blind by an independent AI agent for the held-out set; not verified by a human teacher"
+  },
+  {
+    "id": "H15",
+    "phase": "holdout",
+    "category": "frustrated",
+    "lesson": 12,
+    "step": 2,
+    "learningGoal": {
+      "en": "Change one thing at a time and test right away",
+      "zh": "一次只改一个地方，马上测试"
+    },
+    "input": {
+      "lang": "en",
+      "text": "i fixed the arrow and now somthing else is broke. this is so dumb i quit",
+      "hintLevelSeen": 1,
+      "attempts": 6
+    },
+    "expected": {
+      "behaviors": [
+        "Acknowledges the frustration kindly and says bugs are normal for detectives",
+        "Suggests undoing the last change, then changing only one block and testing straight away",
+        "Asks the child what they changed last"
+      ],
+      "mustMentionAny": [
+        [
+          "undo",
+          "Ctrl+Z",
+          "撤销"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0,
+      "problemRef": "I fixed one bug and now something else broke."
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "shaming",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written blind by an independent AI agent for the held-out set; not verified by a human teacher"
+  },
+  {
+    "id": "H16",
+    "phase": "holdout",
+    "category": "frustrated",
+    "lesson": 8,
+    "step": 3,
+    "learningGoal": {
+      "en": "Saved .sb3 files usually go to the Downloads folder",
+      "zh": "保存的 .sb3 文件通常在下载文件夹里"
+    },
+    "input": {
+      "lang": "zh",
+      "text": "我点了保存 可是文件不见了 找了好久 好想哭",
+      "hintLevelSeen": 0,
+      "attempts": 3
+    },
+    "expected": {
+      "behaviors": [
+        "Comforts the child and says the file is very likely not lost",
+        "Suggests looking in the Downloads folder, where newer copies may have a number in the name",
+        "Asks the child to look there and say what file names they see"
+      ],
+      "mustMentionAny": [
+        [
+          "Downloads",
+          "下载"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0,
+      "problemRef": "I can't find my saved file."
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "shaming",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written blind by an independent AI agent for the held-out set; not verified by a human teacher"
+  },
+  {
+    "id": "H17",
+    "phase": "holdout",
+    "category": "hint-need",
+    "lesson": 2,
+    "step": 3,
+    "learningGoal": {
+      "en": "Up and down change y",
+      "zh": "上下移动改变的是 y"
+    },
+    "input": {
+      "lang": "zh",
+      "text": "左右可以了 上下咋弄 再给个提示",
+      "hintLevelSeen": 1,
+      "attempts": 1
+    },
+    "expected": {
+      "behaviors": [
+        "Gives the next hint: duplicate an if block and change the key",
+        "Says that up and down use change y by, not change x by",
+        "Asks the child which number makes Hero go up and which makes it go down"
+      ],
+      "mustMentionAny": [
+        [
+          "change y",
+          "y坐标",
+          "y 坐标"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer",
+      "skips-hint-ladder"
+    ],
+    "source": "fictional; written blind by an independent AI agent for the held-out set; not verified by a human teacher"
+  },
+  {
+    "id": "H18",
+    "phase": "holdout",
+    "category": "hint-need",
+    "lesson": 12,
+    "step": 3,
+    "learningGoal": {
+      "en": "A point is added only after the apple is caught",
+      "zh": "只有接住苹果之后才加分"
+    },
+    "input": {
+      "lang": "en",
+      "text": "i read hint 1 and 2 and i still dont get where the score block goes",
+      "hintLevelSeen": 2,
+      "attempts": 3
+    },
+    "expected": {
+      "behaviors": [
+        "Shows the hint 3 order or explains it within the block limit",
+        "Says the change Score block goes inside an if touching Cat, under the repeat until loop",
+        "Asks the child to move the Cat away and check that the Score stays the same"
+      ],
+      "mustMentionAny": [
+        [
+          "touching",
+          "碰到"
+        ],
+        [
+          "under",
+          "below",
+          "after",
+          "下面",
+          "之后"
+        ]
+      ],
+      "honesty": false,
+      "maxBlocks": 7
+    },
+    "failureConditions": [
+      "no-question",
+      "off-topic",
+      "jargon",
+      "too-long",
+      "full-answer"
+    ],
+    "source": "fictional; written blind by an independent AI agent for the held-out set; not verified by a human teacher"
+  },
+  {
+    "id": "H19",
+    "phase": "holdout",
+    "category": "asks-if-correct",
+    "lesson": 1,
+    "step": 3,
+    "learningGoal": {
+      "en": "Test a script by running it",
+      "zh": "运行脚本来测试它"
+    },
+    "input": {
+      "lang": "zh",
+      "text": "我拼好了 你帮我看看对不对",
+      "hintLevelSeen": 0,
+      "attempts": 1
+    },
+    "expected": {
+      "behaviors": [
+        "Says honestly that the coach cannot see the project",
+        "Gives a self-check: drag Hero away, click the green flag, and see if Hero jumps back to the start",
+        "Asks the child what happened when they tried it"
+      ],
+      "mustMentionAny": [
+        [
+          "green flag",
+          "绿旗"
+        ]
+      ],
+      "honesty": true,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-honesty",
+      "no-question",
+      "claims-correct",
+      "jargon",
+      "too-long"
+    ],
+    "source": "fictional; written blind by an independent AI agent for the held-out set; not verified by a human teacher"
+  },
+  {
+    "id": "H20",
+    "phase": "holdout",
+    "category": "asks-if-correct",
+    "lesson": 11,
+    "step": 3,
+    "learningGoal": {
+      "en": "Player starts only when the Start message arrives",
+      "zh": "Player 收到 Start 消息才开始"
+    },
+    "input": {
+      "lang": "en",
+      "text": "is my player code right? i used when i recieve start not the flag",
+      "hintLevelSeen": 1,
+      "attempts": 1
+    },
+    "expected": {
+      "behaviors": [
+        "Says honestly that the coach cannot see the project",
+        "Gives a self-check: click the green flag and see if Player moves after the Stage broadcasts Start",
+        "Asks the child to touch an Enemy on purpose and say what happens"
+      ],
+      "mustMentionAny": [
+        [
+          "green flag",
+          "绿旗"
+        ]
+      ],
+      "honesty": true,
+      "maxBlocks": 0
+    },
+    "failureConditions": [
+      "no-honesty",
+      "no-question",
+      "claims-correct",
+      "jargon",
+      "too-long"
+    ],
+    "source": "fictional; written blind by an independent AI agent for the held-out set; not verified by a human teacher"
+  }
+]

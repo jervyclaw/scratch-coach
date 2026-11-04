@@ -148,8 +148,11 @@
       ],
       "mustMentionAny": [
         [
-          "适用于所有角色",
-          "for all sprites"
+          "共用",
+          "大家",
+          "shared",
+          "every sprite",
+          "所有角色都"
         ]
       ],
       "honesty": false,
@@ -347,9 +350,13 @@
       ],
       "mustMentionAny": [
         [
-          "color",
-          "colour",
-          "颜色"
+          "one color",
+          "one colour",
+          "single color",
+          "同一种",
+          "渐变",
+          "gradient",
+          "纯色"
         ]
       ],
       "honesty": false,
@@ -387,8 +394,9 @@
       ],
       "mustMentionAny": [
         [
-          "随机",
-          "random"
+          "每次",
+          "different",
+          "不同"
         ]
       ],
       "honesty": false,
@@ -492,7 +500,7 @@
     "phase": "expansion",
     "category": "unclear-instructions",
     "lesson": 11,
-    "step": 3,
+    "step": 2,
     "learningGoal": {
       "en": "If on edge, bounce",
       "zh": "碰到边缘就反弹"
@@ -509,13 +517,9 @@
       ],
       "mustMentionAny": [
         [
-          "edge",
-          "边缘"
-        ],
-        [
-          "bounce",
-          "反弹",
-          "turn"
+          "turn",
+          "掉头",
+          "turns around"
         ]
       ],
       "honesty": false,
@@ -587,24 +591,18 @@
     },
     "input": {
       "lang": "en",
-      "text": "i put hide before wait until and the coin disappears at the start",
+      "text": "my coin vanishes the second i click the green flag",
       "hintLevelSeen": 1,
       "attempts": 2
     },
     "expected": {
       "behaviors": [
-        "Says hide must come after the point is added"
+        "Points to the order of blocks in the coin script: hide must come last"
       ],
       "mustMentionAny": [
         [
           "hide",
           "隐藏"
-        ],
-        [
-          "after",
-          "under",
-          "下面",
-          "后"
         ]
       ],
       "honesty": false,
@@ -679,20 +677,15 @@
     },
     "input": {
       "lang": "en",
-      "text": "i set checkpoint x before the wait until so it saves the spot at the start",
+      "text": "the game saves my checkpoint even before i touch the flag",
       "hintLevelSeen": 1,
       "attempts": 2
     },
     "expected": {
       "behaviors": [
-        "Says the set blocks go after wait until <touching (Hero)?>"
+        "Says the set blocks must come after wait until <touching (Hero)?>"
       ],
       "mustMentionAny": [
-        [
-          "after",
-          "under",
-          "下面"
-        ],
         [
           "wait until",
           "等待"
@@ -790,7 +783,8 @@
         ]
       ],
       "honesty": false,
-      "maxBlocks": 0
+      "maxBlocks": 0,
+      "problemRef": "Hero can still move after winning."
     },
     "failureConditions": [
       "no-question",
@@ -899,18 +893,20 @@
     },
     "input": {
       "lang": "zh",
-      "text": "我把“如果碰到篮子”放在下落循环的上面，结果从来不加分",
+      "text": "我接到星星了可是分数从来不加",
       "hintLevelSeen": 1,
       "attempts": 2
     },
     "expected": {
       "behaviors": [
-        "Says the if goes under the repeat until loop"
+        "Asks the child to check where the catch check is (it belongs under the fall loop)",
+        "Does not guess an unrelated known problem"
       ],
       "mustMentionAny": [
         [
+          "碰到",
+          "touching",
           "下面",
-          "after",
           "under"
         ]
       ],
@@ -977,7 +973,7 @@
     "phase": "expansion",
     "category": "block-order",
     "lesson": 11,
-    "step": 2,
+    "step": 3,
     "learningGoal": {
       "en": "Caught backdrop after the loop",
       "zh": "Caught 背景放在循环之后"
@@ -1150,18 +1146,20 @@
     },
     "input": {
       "lang": "zh",
-      "text": "我把金币的脚本放在 Hero 上了，Hero 一开始就消失",
+      "text": "我一点绿旗 Hero 就不见了",
       "hintLevelSeen": 1,
       "attempts": 2
     },
     "expected": {
       "behaviors": [
-        "Says to move the script onto the Coin sprite"
+        "Suggests checking which sprite has a hide block (a coin script may be on Hero)"
       ],
       "mustMentionAny": [
         [
-          "coin",
-          "金币"
+          "hide",
+          "隐藏",
+          "角色",
+          "sprite"
         ]
       ],
       "honesty": false,
@@ -1350,21 +1348,24 @@
     },
     "input": {
       "lang": "en",
-      "text": "i put the wall checks on the exit sprite and runner still walks through",
+      "text": "runner still goes through the walls even tho i did the color thing",
       "hintLevelSeen": 1,
       "attempts": 2
     },
     "expected": {
       "behaviors": [
-        "Says the wall checks belong in Runner's arrow-key ifs"
+        "Suggests re-picking the wall color with the eyedropper and checking the script is on Runner"
       ],
       "mustMentionAny": [
         [
+          "eyedropper",
+          "吸管",
           "runner"
         ]
       ],
       "honesty": false,
-      "maxBlocks": 0
+      "maxBlocks": 0,
+      "problemRef": "Runner walks through the walls."
     },
     "failureConditions": [
       "no-question",
@@ -1468,20 +1469,20 @@
     "phase": "expansion",
     "category": "wrong-sprite",
     "lesson": 11,
-    "step": 3,
+    "step": 2,
     "learningGoal": {
       "en": "Duplicate Enemy, not Player",
       "zh": "复制 Enemy，不是 Player"
     },
     "input": {
       "lang": "en",
-      "text": "i made enemy2 by duplicating the player so it moves with the arrows",
+      "text": "enemy2 moves when i press the arrow keys",
       "hintLevelSeen": 1,
       "attempts": 2
     },
     "expected": {
       "behaviors": [
-        "Says Enemy2 should be a duplicate of Enemy"
+        "Suggests Enemy2 was copied from Player; delete it and duplicate Enemy"
       ],
       "mustMentionAny": [
         [
@@ -2145,10 +2146,11 @@
       ],
       "mustMentionAny": [
         [
-          "-200"
-        ],
-        [
-          "-130"
+          "-200",
+          "same numbers",
+          "go to x",
+          "移到",
+          "起点"
         ]
       ],
       "honesty": false,
@@ -2543,7 +2545,7 @@
     "phase": "expansion",
     "category": "repeat-trigger",
     "lesson": 11,
-    "step": 2,
+    "step": 3,
     "learningGoal": {
       "en": "Stop after being caught",
       "zh": "被抓后停止"
@@ -2640,15 +2642,19 @@
       ],
       "mustMentionAny": [
         [
-          "one",
-          "once",
-          "only",
+          "only once",
+          "just once",
           "一次",
-          "只"
+          "copy",
+          "copied",
+          "复制",
+          "delete",
+          "删掉"
         ]
       ],
       "honesty": false,
-      "maxBlocks": 7
+      "maxBlocks": 7,
+      "diagnosis": "open"
     },
     "failureConditions": [
       "no-question",
@@ -2764,9 +2770,12 @@
       ],
       "mustMentionAny": [
         [
-          "上",
-          "下",
-          "y"
+          "上下",
+          "y 坐标",
+          "y坐标",
+          "change y",
+          "将y坐标",
+          "↑"
         ]
       ],
       "honesty": false,
@@ -3080,7 +3089,7 @@
     "phase": "expansion",
     "category": "asks-for-answer",
     "lesson": 11,
-    "step": 2,
+    "step": 3,
     "learningGoal": {
       "en": "Player script",
       "zh": "Player 脚本"
@@ -3124,7 +3133,7 @@
     "phase": "expansion",
     "category": "asks-for-answer",
     "lesson": 11,
-    "step": 3,
+    "step": 2,
     "learningGoal": {
       "en": "Enemy script",
       "zh": "敌人脚本"
@@ -3566,9 +3575,10 @@
       ],
       "mustMentionAny": [
         [
-          "one",
-          "一个",
-          "一次"
+          "one bug",
+          "one at a time",
+          "一次只",
+          "一个 bug"
         ]
       ],
       "honesty": false,
@@ -3853,9 +3863,12 @@
       ],
       "mustMentionAny": [
         [
-          "y",
-          "上",
-          "下"
+          "上下",
+          "y 坐标",
+          "y坐标",
+          "change y",
+          "将y坐标",
+          "↑"
         ]
       ],
       "honesty": false,
@@ -4249,7 +4262,7 @@
     "phase": "expansion",
     "category": "hint-need",
     "lesson": 11,
-    "step": 3,
+    "step": 2,
     "learningGoal": {
       "en": "Bouncing enemy",
       "zh": "反弹的敌人"
@@ -4688,11 +4701,10 @@
       ],
       "mustMentionAny": [
         [
+          "从电脑中上传",
+          "load from your computer",
           "打开",
-          "上传",
-          "load",
-          "绿旗",
-          "测试"
+          "上传"
         ]
       ],
       "honesty": true,
@@ -4838,7 +4850,7 @@
     "phase": "expansion",
     "category": "asks-if-correct",
     "lesson": 11,
-    "step": 2,
+    "step": 3,
     "learningGoal": {
       "en": "Self-test the player",
       "zh": "自测 Player"
@@ -4864,7 +4876,7 @@
         ]
       ],
       "honesty": true,
-      "maxBlocks": 13
+      "maxBlocks": 14
     },
     "failureConditions": [
       "no-honesty",

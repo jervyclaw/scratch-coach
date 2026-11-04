@@ -1,10 +1,10 @@
 {
   "summary": {
     "n": 120,
-    "pass": 101,
-    "passRate": 0.8416666666666667,
+    "pass": 95,
+    "passRate": 0.7916666666666666,
     "dims": {
-      "technical": 0.8,
+      "technical": 0.7916666666666666,
       "clarity": 1,
       "independence": 1,
       "age": 1,
@@ -18,15 +18,15 @@
       },
       "block-order": {
         "n": 13,
-        "pass": 8
+        "pass": 6
       },
       "wrong-sprite": {
         "n": 14,
-        "pass": 8
+        "pass": 7
       },
       "no-reset": {
         "n": 14,
-        "pass": 11
+        "pass": 10
       },
       "repeat-trigger": {
         "n": 13,
@@ -38,7 +38,7 @@
       },
       "frustrated": {
         "n": 13,
-        "pass": 12
+        "pass": 11
       },
       "hint-need": {
         "n": 14,
@@ -46,13 +46,13 @@
       },
       "asks-if-correct": {
         "n": 13,
-        "pass": 13
+        "pass": 12
       }
     },
     "failures": {
-      "unfounded-diagnosis": 10,
-      "off-topic": 12,
-      "wrong-diagnosis": 2
+      "wrong-diagnosis": 8,
+      "off-topic": 13,
+      "unfounded-diagnosis": 1
     }
   },
   "rows": [
@@ -187,7 +187,7 @@
         "attempts": 1
       },
       "response": {
-        "text": "角色就是游戏里的人物或东西，比如 Hero、金币或终点。每个角色都有自己的脚本。\n我们一次只做一小块。\n先做这一部分： 点“变量”→“建立一个变量”，命名为 Score，选“适用于所有角色”，点确定。\n位置： “变量”分类，然后是 Hero 的绿旗脚本\n提示 1: 每一局新游戏都应从 0 分开始。哪个脚本会在新游戏开始时运行一次？\n在 Scratch 里试试看。发生了什么？",
+        "text": "角色就是游戏里的人物或东西，比如 Hero、金币或终点。每个角色都有自己的脚本。\n建立变量时要选：“适用于所有角色”是大家共用的一个盒子；“仅适用于当前角色”是每个角色各有自己的盒子。\n我们一次只做一小块。\n先做这一部分： 点“变量”→“建立一个变量”，命名为 Score，选“适用于所有角色”，点确定。\n位置： “变量”分类，然后是 Hero 的绿旗脚本\n提示 1: 每一局新游戏都应从 0 分开始。哪个脚本会在新游戏开始时运行一次？\n在 Scratch 里试试看。发生了什么？",
         "lang": "zh",
         "meta": {
           "intent": "unclear-instructions",
@@ -209,7 +209,7 @@
         "pass": true,
         "notes": [],
         "stats": {
-          "words": 68,
+          "words": 90,
           "blocksShown": 0,
           "hasQuestion": true,
           "presentedProblems": []
@@ -347,7 +347,7 @@
         "attempts": 1
       },
       "response": {
-        "text": "Let's do one small piece at a time.\nTry this part: Find the .sb3 file (usually in Downloads). Give it a game name, like block-quest.sb3 — not your real name.\nWhere: Scratch menu: File\nHint 1: Look at the top menu bar of Scratch. Which menu is about files?\nTry it in Scratch. What happened?",
+        "text": "An .sb3 file is your whole Scratch project saved on the computer. You can open it again with File → Load from your computer.\nLet's do one small piece at a time.\nTry this part: Find the .sb3 file (usually in Downloads). Give it a game name, like block-quest.sb3 — not your real name.\nWhere: Scratch menu: File\nHint 1: Look at the top menu bar of Scratch. Which menu is about files?\nTry it in Scratch. What happened?",
         "lang": "en",
         "meta": {
           "intent": "unclear-instructions",
@@ -371,7 +371,7 @@
           "missing keyword groups: save/保存"
         ],
         "stats": {
-          "words": 55,
+          "words": 78,
           "blocksShown": 0,
           "hasQuestion": true,
           "presentedProblems": []
@@ -389,7 +389,7 @@
         "attempts": 1
       },
       "response": {
-        "text": "Let's do one small piece at a time.\nTry this part: Paint a backdrop named Maze. Draw thick walls in ONE dark color. Keep the paths wide.\nWhere: Stage → Backdrops; then the sprite list\nHint 1: Runner must fit through every path. Compare Runner's size with the paths. Are the walls easy to see?\nTry it in Scratch. What happened?",
+        "text": "A solid color is one single color with no fading or gradient, so “touching color” can recognise it.\nLet's do one small piece at a time.\nTry this part: Paint a backdrop named Maze. Draw thick walls in ONE dark color. Keep the paths wide.\nWhere: Stage → Backdrops; then the sprite list\nHint 1: Runner must fit through every path. Compare Runner's size with the paths. Are the walls easy to see?\nTry it in Scratch. What happened?",
         "lang": "en",
         "meta": {
           "intent": "unclear-instructions",
@@ -411,7 +411,7 @@
         "pass": true,
         "notes": [],
         "stats": {
-          "words": 60,
+          "words": 78,
           "blocksShown": 0,
           "hasQuestion": true,
           "presentedProblems": []
@@ -429,7 +429,7 @@
         "attempts": 1
       },
       "response": {
-        "text": "我们一次只做一小块。\n先做这一部分： 绿旗 → 将 Fall Speed 设为 (-3) → 重复执行：先移到顶部的随机位置，再下落（y 坐标增加 Fall Speed），直到碰到 Basket 或者 y 坐标小于 -160。\n位置： Star 角色 → 代码 标签页\n提示 2: “运算”：“在 ( ) 和 ( ) 之间取随机数”“< > 或 < >”“( ) < ( )”。“运动”：圆形的“y 坐标”——它放在“( ) < ( )”的左边空格，-160 放在右边。“控制”：“重复执行”“重复执行直到”“如果那么”。“变量”：Fall Speed。\n在 Scratch 里试试看。发生了什么？",
+        "text": "“取随机数”每次会选一个不同的数字，所以东西不会总在同一个地方出现。\n我们一次只做一小块。\n先做这一部分： 绿旗 → 将 Fall Speed 设为 (-3) → 重复执行：先移到顶部的随机位置，再下落（y 坐标增加 Fall Speed），直到碰到 Basket 或者 y 坐标小于 -160。\n位置： Star 角色 → 代码 标签页\n提示 2: “运算”：“在 ( ) 和 ( ) 之间取随机数”“< > 或 < >”“( ) < ( )”。“运动”：圆形的“y 坐标”——它放在“( ) < ( )”的左边空格，-160 放在右边。“控制”：“重复执行”“重复执行直到”“如果那么”。“变量”：Fall Speed。\n在 Scratch 里试试看。发生了什么？",
         "lang": "zh",
         "meta": {
           "intent": "unclear-instructions",
@@ -451,7 +451,7 @@
         "pass": true,
         "notes": [],
         "stats": {
-          "words": 76,
+          "words": 91,
           "blocksShown": 0,
           "hasQuestion": true,
           "presentedProblems": []
@@ -509,7 +509,7 @@
         "attempts": 1
       },
       "response": {
-        "text": "我们一次只做一小块。\n先做这一部分： 点绿旗之前先预测：会出什么问题？\n位置： Cat 和 Apple 角色 → 代码 标签页\n提示 1: 这一步不一样：你要照着搭故意写错的脚本。你觉得侦探为什么要先在有线索的谜题上练习？\n在 Scratch 里试试看。发生了什么？",
+        "text": "我们一次只做一小块。\n先做这一部分： 点绿旗之前先预测：会出什么问题？然后点绿旗对照一下。\n位置： Cat 和 Apple 角色 → 代码 标签页\n提示 1: 这一步不一样：你要照着搭故意写错的脚本。你觉得侦探为什么要先在故意藏好线索的谜题上练习？\n在 Scratch 里试试看。发生了什么？",
         "lang": "zh",
         "meta": {
           "intent": "unclear-instructions",
@@ -531,7 +531,7 @@
         "pass": true,
         "notes": [],
         "stats": {
-          "words": 49,
+          "words": 55,
           "blocksShown": 0,
           "hasQuestion": true,
           "presentedProblems": []
@@ -549,7 +549,7 @@
         "attempts": 1
       },
       "response": {
-        "text": "Let's do one small piece at a time.\nTry this part: On Enemy: when I receive Start → go to x: (-180) y: (120) → point in direction (15) → forever: move 5 steps, if on edge, bounce.\nWhere: Enemy sprite → Code tab; then duplicate it\nHint 1: An Enemy keeps moving and turns around at the walls. What should it do again and again? Where should it start so the game is fair?\nTry it in Scratch. What happened?",
+        "text": "“if on edge, bounce” makes a sprite turn around when it reaches the edge of the stage, like a ball off a wall.\nLet's do one small piece at a time.\nTry this part: Add a sprite and name it Enemy. Give it: when I receive Start → go to x: (-180) y: (120) → point in direction (15) → forever: move 5 steps, if on edge, bounce.\nWhere: Enemy sprite → Code tab\nHint 1: An Enemy keeps moving and turns around at the walls. What should it do again and again? Where should it start so the game is fair?\nTry it in Scratch. What happened?",
         "lang": "en",
         "meta": {
           "intent": "unclear-instructions",
@@ -571,7 +571,7 @@
         "pass": true,
         "notes": [],
         "stats": {
-          "words": 77,
+          "words": 104,
           "blocksShown": 0,
           "hasQuestion": true,
           "presentedProblems": []
@@ -589,7 +589,7 @@
         "attempts": 2
       },
       "response": {
-        "text": "I can't see your Scratch project, so I can't check your code for you.\nLet's be bug detectives:\n1. Is the script on the sprite that should do the action? This step's script goes here: Hero sprite → green flag script.\n2. Read the script from top to bottom. Is every block in the right order, and inside the right loop?\n3. Click the script on its own and watch. What does the sprite do?\nHint 2: Control (orange): “forever” and “if then”. Sensing (light blue): “key (space) pressed?” — change the menu to right arrow. Motion: “change x by”.\nWhich of these did you check first?",
+        "text": "I can't see your Scratch project, so I can't check your code for you.\nLet's be bug detectives:\n1. Is the script on the sprite that should do the action? In this step that is Hero.\n2. Read the script from top to bottom. Is every block in the right order, and inside the right loop?\n3. Click the script on its own and watch. What does the sprite do?\nHint 2: Control (orange): “forever” and “if then”. Sensing (light blue): “key (space) pressed?” — change the menu to right arrow. Motion: “change x by”.\nWhich of these did you check first?",
         "lang": "en",
         "meta": {
           "intent": "hint",
@@ -611,7 +611,7 @@
         "pass": true,
         "notes": [],
         "stats": {
-          "words": 105,
+          "words": 101,
           "blocksShown": 0,
           "hasQuestion": true,
           "presentedProblems": []
@@ -624,23 +624,23 @@
       "lesson": 4,
       "input": {
         "lang": "en",
-        "text": "i put hide before wait until and the coin disappears at the start",
+        "text": "my coin vanishes the second i click the green flag",
         "hintLevelSeen": 1,
         "attempts": 2
       },
       "response": {
-        "text": "I can't see your project, but this sounds like a common problem: “A coin disappears as soon as the game starts.”\nCheck the order in the coin script: show → go to → wait → wait until <touching (Hero)?> → change Score → hide. “hide” must be last.\nChange it, click the green flag, and test again. What happens now?",
+        "text": "I can't see your Scratch project, so I can't check your code for you.\nLet's be bug detectives:\n1. Is the script on the sprite that should do the action? In this step that is Coin.\n2. Read the script from top to bottom. Is every block in the right order, and inside the right loop?\n3. Click the script on its own and watch. What does the sprite do?\nHint 2: Events: green flag. Looks: “show” and “hide”. Control: “wait” and “wait until”. Sensing: “touching (Hero)?”. Variables: “change [Score] by (1)”.\nWhich of these did you check first?",
         "lang": "en",
         "meta": {
           "intent": "hint",
-          "hintShown": 0,
-          "problem": 1,
-          "problemScore": 0.46
+          "hintShown": 2,
+          "problem": null,
+          "problemScore": 0
         }
       },
       "grade": {
         "scores": {
-          "technical": 1,
+          "technical": 2,
           "clarity": 2,
           "independence": 2,
           "age": 2,
@@ -649,16 +649,12 @@
         },
         "failures": [],
         "pass": true,
-        "notes": [
-          "missing keyword groups: after/under/下面/后"
-        ],
+        "notes": [],
         "stats": {
-          "words": 55,
+          "words": 99,
           "blocksShown": 0,
           "hasQuestion": true,
-          "presentedProblems": [
-            1
-          ]
+          "presentedProblems": []
         }
       }
     },
@@ -692,7 +688,7 @@
           "noFalseClaims": 2
         },
         "failures": [],
-        "pass": true,
+        "pass": false,
         "notes": [
           "missing keyword groups: 上面/最上面/top/顶部"
         ],
@@ -712,7 +708,7 @@
       "lesson": 5,
       "input": {
         "lang": "en",
-        "text": "i set checkpoint x before the wait until so it saves the spot at the start",
+        "text": "the game saves my checkpoint even before i touch the flag",
         "hintLevelSeen": 1,
         "attempts": 2
       },
@@ -723,7 +719,7 @@
           "intent": "hint",
           "hintShown": 0,
           "problem": 4,
-          "problemScore": 0.57
+          "problemScore": 0.62
         }
       },
       "grade": {
@@ -799,7 +795,7 @@
         "attempts": 2
       },
       "response": {
-        "text": "我看不到你的项目，不过这听起来像一个常见问题： “赢了以后 Hero 还能动。”\n把“停止 [该角色的其他脚本]”放在 Hero 的“当接收到 [You Win]”下面——不是放在别的角色上。\n改好以后点绿旗再测试一次。现在会怎样？",
+        "text": "我看不到你的项目，不过这听起来像一个常见问题： “赢了以后 Hero 还能动。”\n把“停止 [该角色的其他脚本]”放在 Hero 的“当接收到 [You Win]”下面的第一个位置——在“说”积木之前，而且不是放在别的角色上。\n改好以后点绿旗再测试一次。现在会怎样？",
         "lang": "zh",
         "meta": {
           "intent": "hint",
@@ -810,22 +806,20 @@
       },
       "grade": {
         "scores": {
-          "technical": 0,
+          "technical": 1,
           "clarity": 2,
           "independence": 2,
           "age": 2,
           "honesty": 2,
           "noFalseClaims": 2
         },
-        "failures": [
-          "unfounded-diagnosis"
-        ],
+        "failures": [],
         "pass": false,
         "notes": [
           "missing keyword groups: 前面/上面/first/先"
         ],
         "stats": {
-          "words": 41,
+          "words": 48,
           "blocksShown": 0,
           "hasQuestion": true,
           "presentedProblems": [
@@ -864,7 +858,7 @@
           "noFalseClaims": 2
         },
         "failures": [
-          "unfounded-diagnosis"
+          "wrong-diagnosis"
         ],
         "pass": false,
         "notes": [],
@@ -909,7 +903,7 @@
         },
         "failures": [
           "off-topic",
-          "unfounded-diagnosis"
+          "wrong-diagnosis"
         ],
         "pass": false,
         "notes": [
@@ -931,18 +925,18 @@
       "lesson": 10,
       "input": {
         "lang": "zh",
-        "text": "我把“如果碰到篮子”放在下落循环的上面，结果从来不加分",
+        "text": "我接到星星了可是分数从来不加",
         "hintLevelSeen": 1,
         "attempts": 2
       },
       "response": {
-        "text": "我看不到你的 Scratch 项目，没法替你检查代码。\n我们来当捉虫侦探：\n1. 脚本放在负责这个动作的角色上了吗？这一步的脚本应该在：Star 角色 → 代码 标签页。\n2. 从上到下读一遍脚本。每个积木的顺序对吗？是不是放在了正确的循环里面？\n3. 单独点击这段脚本，看看角色会做什么？\n提示 2: “运算”：“在 ( ) 和 ( ) 之间取随机数”“< > 或 < >”“( ) < ( )”。“运动”：圆形的“y 坐标”——它放在“( ) < ( )”的左边空格，-160 放在右边。“控制”：“重复执行”“重复执行直到”“如果那么”。“变量”：Fall Speed。\n你先检查哪一条？",
+        "text": "我看不到你的 Scratch 项目，没法替你检查代码。\n我们来当捉虫侦探：\n1. 脚本放在负责这个动作的角色上了吗？这一步是 Star。\n2. 从上到下读一遍脚本。每个积木的顺序对吗？是不是放在了正确的循环里面？\n3. 单独点击这段脚本，看看角色会做什么？\n提示 2: “运算”：“在 ( ) 和 ( ) 之间取随机数”“< > 或 < >”“( ) < ( )”。“运动”：圆形的“y 坐标”——它放在“( ) < ( )”的左边空格，-160 放在右边。“控制”：“重复执行”“重复执行直到”“如果那么”。“变量”：Fall Speed。\n你先检查哪一条？",
         "lang": "zh",
         "meta": {
           "intent": "hint",
           "hintShown": 2,
           "problem": null,
-          "problemScore": 0.18
+          "problemScore": 0.15
         }
       },
       "grade": {
@@ -959,10 +953,10 @@
         ],
         "pass": false,
         "notes": [
-          "missing keyword groups: 下面/after/under"
+          "missing keyword groups: 碰到/touching/下面/under"
         ],
         "stats": {
-          "words": 90,
+          "words": 84,
           "blocksShown": 0,
           "hasQuestion": true,
           "presentedProblems": []
@@ -980,32 +974,38 @@
         "attempts": 2
       },
       "response": {
-        "text": "I can't see your Scratch project, so I can't check your code for you.\nLet's be bug detectives:\n1. Is the script on the sprite that should do the action? This step's script goes here: Stage → Code tab (click the Stage first).\n2. Read the script from top to bottom. Is every block in the right order, and inside the right loop?\n3. Click the script on its own and watch. What does the sprite do?\nHint 2: Events: “broadcast ( )” → New message. Control: “repeat until < >”, “wait ( ) seconds”, “stop [all]”. Variables: “set” and “change”. Looks: “switch backdrop to [ ]”. Operators: “( ) < ( )”.\nWhich of these did you check first?",
+        "text": "I can't see your project, but this sounds like a common problem: “Time Left never goes down.”\nYou probably used “broadcast (Start) and wait”. The Enemies' forever loops never finish, so the Stage waits forever. Use plain “broadcast (Start)”.\nChange it, click the green flag, and test again. What happens now?",
         "lang": "en",
         "meta": {
           "intent": "hint",
-          "hintShown": 2,
-          "problem": null,
-          "problemScore": 0
+          "hintShown": 0,
+          "problem": 3,
+          "problemScore": 0.43
         }
       },
       "grade": {
         "scores": {
-          "technical": 2,
+          "technical": 0,
           "clarity": 2,
           "independence": 2,
           "age": 2,
           "honesty": 2,
           "noFalseClaims": 2
         },
-        "failures": [],
-        "pass": true,
-        "notes": [],
+        "failures": [
+          "wrong-diagnosis"
+        ],
+        "pass": false,
+        "notes": [
+          "missing keyword groups: before/first/先/前"
+        ],
         "stats": {
-          "words": 105,
+          "words": 51,
           "blocksShown": 0,
           "hasQuestion": true,
-          "presentedProblems": []
+          "presentedProblems": [
+            3
+          ]
         }
       }
     },
@@ -1020,7 +1020,7 @@
         "attempts": 2
       },
       "response": {
-        "text": "我看不到你的 Scratch 项目，没法替你检查代码。\n我们来当捉虫侦探：\n1. 脚本放在负责这个动作的角色上了吗？这一步的脚本应该在：Player 角色 → 代码 标签页。\n2. 从上到下读一遍脚本。每个积木的顺序对吗？是不是放在了正确的循环里面？\n3. 单独点击这段脚本，看看角色会做什么？\n提示 2: “事件”：“当接收到 [ ]”。“控制”：“重复执行直到 < >”。“运算”：“< > 或 < >”。“侦测”：“碰到 ( )?”和“按下 ( ) 键?”。\n你先检查哪一条？",
+        "text": "我看不到你的 Scratch 项目，没法替你检查代码。\n我们来当捉虫侦探：\n1. 脚本放在负责这个动作的角色上了吗？这一步是 Player。\n2. 从上到下读一遍脚本。每个积木的顺序对吗？是不是放在了正确的循环里面？\n3. 单独点击这段脚本，看看角色会做什么？\n提示 2: “事件”：“当接收到 [ ]”。“控制”：“等待 ( ) 秒”和“重复执行直到 < >”。“运算”：“< > 或 < >”。“侦测”：“碰到 ( )?”和“按下 ( ) 键?”。\n你先检查哪一条？",
         "lang": "zh",
         "meta": {
           "intent": "hint",
@@ -1042,7 +1042,7 @@
         "pass": true,
         "notes": [],
         "stats": {
-          "words": 75,
+          "words": 71,
           "blocksShown": 0,
           "hasQuestion": true,
           "presentedProblems": []
@@ -1144,7 +1144,7 @@
         "attempts": 1
       },
       "response": {
-        "text": "I can't see your Scratch project, so I can't check your code for you.\nLet's be bug detectives:\n1. Is the script on the sprite that should do the action? This step's script goes here: Hero sprite → green flag script.\n2. Read the script from top to bottom. Is every block in the right order, and inside the right loop?\n3. Click the script on its own and watch. What does the sprite do?\nHint 1: When you hold a key, the game must check again and again: “Is the key pressed?” Which block repeats again and again?\nWhich of these did you check first?",
+        "text": "I can't see your Scratch project, so I can't check your code for you.\nLet's be bug detectives:\n1. Is the script on the sprite that should do the action? In this step that is Hero.\n2. Read the script from top to bottom. Is every block in the right order, and inside the right loop?\n3. Click the script on its own and watch. What does the sprite do?\nHint 1: When you hold a key, the game must check again and again: “Is the key pressed?” Which block repeats again and again?\nWhich of these did you check first?",
         "lang": "en",
         "meta": {
           "intent": "hint",
@@ -1168,7 +1168,7 @@
           "missing keyword groups: stage/舞台"
         ],
         "stats": {
-          "words": 105,
+          "words": 101,
           "blocksShown": 0,
           "hasQuestion": true,
           "presentedProblems": []
@@ -1181,41 +1181,37 @@
       "lesson": 4,
       "input": {
         "lang": "zh",
-        "text": "我把金币的脚本放在 Hero 上了，Hero 一开始就消失",
+        "text": "我一点绿旗 Hero 就不见了",
         "hintLevelSeen": 1,
         "attempts": 2
       },
       "response": {
-        "text": "我看不到你的项目，不过这听起来像一个常见问题： “游戏一开始，金币就消失了。”\n检查金币脚本的顺序：显示 → 移到 → 等待 → 等待 <碰到 (Hero)?> → Score 增加 → 隐藏。“隐藏”必须在最后。\n改好以后点绿旗再测试一次。现在会怎样？",
+        "text": "我看不到你的 Scratch 项目，没法替你检查代码。\n我们来当捉虫侦探：\n1. 脚本放在负责这个动作的角色上了吗？这一步是 Coin。\n2. 从上到下读一遍脚本。每个积木的顺序对吗？是不是放在了正确的循环里面？\n3. 单独点击这段脚本，看看角色会做什么？\n提示 2: “事件”：绿旗。“外观”：“显示”“隐藏”。“控制”：“等待”和“等待……”。“侦测”：“碰到 (Hero)?”。“变量”：“将 [Score] 增加 (1)”。\n你先检查哪一条？",
         "lang": "zh",
         "meta": {
           "intent": "hint",
-          "hintShown": 0,
-          "problem": 1,
-          "problemScore": 0.42
+          "hintShown": 2,
+          "problem": null,
+          "problemScore": 0.24
         }
       },
       "grade": {
         "scores": {
-          "technical": 0,
+          "technical": 2,
           "clarity": 2,
           "independence": 2,
           "age": 2,
           "honesty": 2,
           "noFalseClaims": 2
         },
-        "failures": [
-          "unfounded-diagnosis"
-        ],
-        "pass": false,
+        "failures": [],
+        "pass": true,
         "notes": [],
         "stats": {
-          "words": 42,
+          "words": 72,
           "blocksShown": 0,
           "hasQuestion": true,
-          "presentedProblems": [
-            1
-          ]
+          "presentedProblems": []
         }
       }
     },
@@ -1294,7 +1290,7 @@
         },
         "failures": [
           "off-topic",
-          "unfounded-diagnosis"
+          "wrong-diagnosis"
         ],
         "pass": false,
         "notes": [
@@ -1321,7 +1317,7 @@
         "attempts": 2
       },
       "response": {
-        "text": "我看不到你的 Scratch 项目，没法替你检查代码。\n我们来当捉虫侦探：\n1. 脚本放在负责这个动作的角色上了吗？这一步的脚本应该在：Hero 角色 → 新的一段脚本。\n2. 从上到下读一遍脚本。每个积木的顺序对吗？是不是放在了正确的循环里面？\n3. 单独点击这段脚本，看看角色会做什么？\n提示 2: “事件”：“当接收到 [You Win]”。“控制”：“停止 [全部脚本]”——把菜单改成“该角色的其他脚本”。“外观”：“说……秒”。\n你先检查哪一条？",
+        "text": "我看不到你的 Scratch 项目，没法替你检查代码。\n我们来当捉虫侦探：\n1. 脚本放在负责这个动作的角色上了吗？这一步是 Hero。\n2. 从上到下读一遍脚本。每个积木的顺序对吗？是不是放在了正确的循环里面？\n3. 单独点击这段脚本，看看角色会做什么？\n提示 2: “事件”：“当接收到 [You Win]”。“控制”：“停止 [全部脚本]”——把菜单改成“该角色的其他脚本”。“外观”：“说……秒”。\n你先检查哪一条？",
         "lang": "zh",
         "meta": {
           "intent": "hint",
@@ -1343,7 +1339,7 @@
         "pass": true,
         "notes": [],
         "stats": {
-          "words": 80,
+          "words": 74,
           "blocksShown": 0,
           "hasQuestion": true,
           "presentedProblems": []
@@ -1380,7 +1376,7 @@
           "noFalseClaims": 2
         },
         "failures": [],
-        "pass": true,
+        "pass": false,
         "notes": [
           "missing keyword groups: coin/金币"
         ],
@@ -1400,7 +1396,7 @@
       "lesson": 9,
       "input": {
         "lang": "en",
-        "text": "i put the wall checks on the exit sprite and runner still walks through",
+        "text": "runner still goes through the walls even tho i did the color thing",
         "hintLevelSeen": 1,
         "attempts": 2
       },
@@ -1411,22 +1407,20 @@
           "intent": "hint",
           "hintShown": 0,
           "problem": 0,
-          "problemScore": 0.67
+          "problemScore": 0.5
         }
       },
       "grade": {
         "scores": {
-          "technical": 0,
+          "technical": 2,
           "clarity": 2,
           "independence": 2,
           "age": 2,
           "honesty": 2,
           "noFalseClaims": 2
         },
-        "failures": [
-          "unfounded-diagnosis"
-        ],
-        "pass": false,
+        "failures": [],
+        "pass": true,
         "notes": [],
         "stats": {
           "words": 57,
@@ -1449,7 +1443,7 @@
         "attempts": 2
       },
       "response": {
-        "text": "我看不到你的 Scratch 项目，没法替你检查代码。\n我们来当捉虫侦探：\n1. 脚本放在负责这个动作的角色上了吗？这一步的脚本应该在：Star 角色 → 代码 标签页。\n2. 从上到下读一遍脚本。每个积木的顺序对吗？是不是放在了正确的循环里面？\n3. 单独点击这段脚本，看看角色会做什么？\n提示 2: “运算”：“在 ( ) 和 ( ) 之间取随机数”“< > 或 < >”“( ) < ( )”。“运动”：圆形的“y 坐标”——它放在“( ) < ( )”的左边空格，-160 放在右边。“控制”：“重复执行”“重复执行直到”“如果那么”。“变量”：Fall Speed。\n你先检查哪一条？",
+        "text": "我看不到你的 Scratch 项目，没法替你检查代码。\n我们来当捉虫侦探：\n1. 脚本放在负责这个动作的角色上了吗？这一步是 Star。\n2. 从上到下读一遍脚本。每个积木的顺序对吗？是不是放在了正确的循环里面？\n3. 单独点击这段脚本，看看角色会做什么？\n提示 2: “运算”：“在 ( ) 和 ( ) 之间取随机数”“< > 或 < >”“( ) < ( )”。“运动”：圆形的“y 坐标”——它放在“( ) < ( )”的左边空格，-160 放在右边。“控制”：“重复执行”“重复执行直到”“如果那么”。“变量”：Fall Speed。\n你先检查哪一条？",
         "lang": "zh",
         "meta": {
           "intent": "hint",
@@ -1473,7 +1467,7 @@
           "missing keyword groups: 仅适用于当前角色/for this sprite only/选中/点选"
         ],
         "stats": {
-          "words": 90,
+          "words": 84,
           "blocksShown": 0,
           "hasQuestion": true,
           "presentedProblems": []
@@ -1510,7 +1504,7 @@
           "noFalseClaims": 2
         },
         "failures": [
-          "unfounded-diagnosis"
+          "wrong-diagnosis"
         ],
         "pass": false,
         "notes": [
@@ -1532,12 +1526,12 @@
       "lesson": 11,
       "input": {
         "lang": "en",
-        "text": "i made enemy2 by duplicating the player so it moves with the arrows",
+        "text": "enemy2 moves when i press the arrow keys",
         "hintLevelSeen": 1,
         "attempts": 2
       },
       "response": {
-        "text": "I can't see your Scratch project, so I can't check your code for you.\nLet's be bug detectives:\n1. Is the script on the sprite that should do the action? This step's script goes here: Enemy sprite → Code tab; then duplicate it.\n2. Read the script from top to bottom. Is every block in the right order, and inside the right loop?\n3. Click the script on its own and watch. What does the sprite do?\nHint 2: Events: “when I receive [Start]”. Motion: “go to x: y:”, “point in direction”, “move ( ) steps”, “if on edge, bounce”. Control: “forever”.\nWhich of these did you check first?",
+        "text": "Hint 2: Events: “when I receive [Start]”. Motion: “go to x: y:”, “point in direction”, “move ( ) steps”, “if on edge, bounce”. Control: “forever”.\nTry it in Scratch. What happened?",
         "lang": "en",
         "meta": {
           "intent": "hint",
@@ -1548,18 +1542,22 @@
       },
       "grade": {
         "scores": {
-          "technical": 2,
+          "technical": 0,
           "clarity": 2,
           "independence": 2,
           "age": 2,
           "honesty": 2,
           "noFalseClaims": 2
         },
-        "failures": [],
-        "pass": true,
-        "notes": [],
+        "failures": [
+          "off-topic"
+        ],
+        "pass": false,
+        "notes": [
+          "missing keyword groups: enemy, duplicate/复制"
+        ],
         "stats": {
-          "words": 106,
+          "words": 29,
           "blocksShown": 0,
           "hasQuestion": true,
           "presentedProblems": []
@@ -1577,7 +1575,7 @@
         "attempts": 1
       },
       "response": {
-        "text": "我看不到你的 Scratch 项目，没法替你检查代码。\n我们来当捉虫侦探：\n1. 脚本放在负责这个动作的角色上了吗？这一步的脚本应该在：舞台 → 代码 标签页（先点舞台）。\n2. 从上到下读一遍脚本。每个积木的顺序对吗？是不是放在了正确的循环里面？\n3. 单独点击这段脚本，看看角色会做什么？\n提示 2: “事件”：“广播 ( )”→ 新消息。“控制”：“重复执行直到 < >”“等待 ( ) 秒”“停止 [全部脚本]”。“变量”：“设为”和“增加”。“外观”：“换成 [ ] 背景”。“运算”：“( ) < ( )”。\n你先检查哪一条？",
+        "text": "我看不到你的 Scratch 项目，没法替你检查代码。\n我们来当捉虫侦探：\n1. 脚本放在负责这个动作的角色上了吗？\n2. 从上到下读一遍脚本。每个积木的顺序对吗？是不是放在了正确的循环里面？\n3. 单独点击这段脚本，看看角色会做什么？\n提示 2: “事件”：“广播 ( )”→ 新消息。“控制”：“重复执行直到 < >”“等待 ( ) 秒”“停止 [全部脚本]”。“变量”：“设为”和“增加”。“外观”：“换成 [ ] 背景”。“运算”：“( ) < ( )”。\n你先检查哪一条？",
         "lang": "zh",
         "meta": {
           "intent": "hint",
@@ -1588,18 +1586,22 @@
       },
       "grade": {
         "scores": {
-          "technical": 2,
+          "technical": 0,
           "clarity": 2,
           "independence": 2,
           "age": 2,
           "honesty": 2,
           "noFalseClaims": 2
         },
-        "failures": [],
-        "pass": true,
-        "notes": [],
+        "failures": [
+          "off-topic"
+        ],
+        "pass": false,
+        "notes": [
+          "missing keyword groups: 舞台/stage"
+        ],
         "stats": {
-          "words": 83,
+          "words": 73,
           "blocksShown": 0,
           "hasQuestion": true,
           "presentedProblems": []
@@ -1617,7 +1619,7 @@
         "attempts": 2
       },
       "response": {
-        "text": "我看不到你的 Scratch 项目，没法替你检查代码。\n我们来当捉虫侦探：\n1. 脚本放在负责这个动作的角色上了吗？这一步的脚本应该在：Hero 角色 → “重复执行”里面。\n2. 从上到下读一遍脚本。每个积木的顺序对吗？是不是放在了正确的循环里面？\n3. 单独点击这段脚本，看看角色会做什么？\n提示 2: “控制”：“如果那么”。“侦测”：“碰到 (鼠标指针)?”——在菜单里选 Lava。“运动”：“移到 x: y:”。\n你先检查哪一条？",
+        "text": "我看不到你的 Scratch 项目，没法替你检查代码。\n我们来当捉虫侦探：\n1. 脚本放在负责这个动作的角色上了吗？这一步是 Hero。\n2. 从上到下读一遍脚本。每个积木的顺序对吗？是不是放在了正确的循环里面？\n3. 单独点击这段脚本，看看角色会做什么？\n提示 2: “控制”：“如果那么”。“侦测”：“碰到 (鼠标指针)?”——在菜单里选 Lava。“运动”：“移到 x: y:”。\n你先检查哪一条？",
         "lang": "zh",
         "meta": {
           "intent": "hint",
@@ -1639,7 +1641,7 @@
         "pass": true,
         "notes": [],
         "stats": {
-          "words": 77,
+          "words": 71,
           "blocksShown": 0,
           "hasQuestion": true,
           "presentedProblems": []
@@ -1657,7 +1659,7 @@
         "attempts": 3
       },
       "response": {
-        "text": "我看不到你的 Scratch 项目，没法替你检查代码。\n我们来当捉虫侦探：\n1. 脚本放在负责这个动作的角色上了吗？这一步的脚本应该在：Apple 角色 → 代码 标签页。\n2. 从上到下读一遍脚本。每个积木的顺序对吗？是不是放在了正确的循环里面？\n3. 单独点击这段脚本，看看角色会做什么？\n提示 3: 修好后的 Apple 脚本：\n▸ 当 绿旗 被点击\n▸   重复执行\n▸     移到 x: (在 (-200) 和 (200) 之间取随机数) y: (170)\n▸     重复执行直到 <<碰到 (Cat)?> 或 <(y 坐标) < (-160)>>\n▸       将y坐标增加 (-4)\n▸     如果 <碰到 (Cat)?> 那么\n▸       将 [Score] 增加 (1)\n这只是这一步的积木顺序。\n你先检查哪一条？",
+        "text": "我看不到你的 Scratch 项目，没法替你检查代码。\n我们来当捉虫侦探：\n1. 脚本放在负责这个动作的角色上了吗？这一步是 Apple。\n2. 从上到下读一遍脚本。每个积木的顺序对吗？是不是放在了正确的循环里面？\n3. 单独点击这段脚本，看看角色会做什么？\n提示 3: 修好后的 Apple 脚本：\n▸ 当 绿旗 被点击\n▸   重复执行\n▸     移到 x: (在 (-200) 和 (200) 之间取随机数) y: (170)\n▸     重复执行直到 <<碰到 (Cat)?> 或 <(y 坐标) < (-160)>>\n▸       将y坐标增加 (-4)\n▸     如果 <碰到 (Cat)?> 那么\n▸       将 [Score] 增加 (1)\n这只是这一步的积木顺序。\n你先检查哪一条？",
         "lang": "zh",
         "meta": {
           "intent": "hint",
@@ -1679,7 +1681,7 @@
         "pass": true,
         "notes": [],
         "stats": {
-          "words": 72,
+          "words": 66,
           "blocksShown": 7,
           "hasQuestion": true,
           "presentedProblems": []
@@ -1865,7 +1867,7 @@
         "attempts": 2
       },
       "response": {
-        "text": "我看不到你的项目，不过这听起来像一个常见问题： “赢了以后 Hero 还能动。”\n把“停止 [该角色的其他脚本]”放在 Hero 的“当接收到 [You Win]”下面——不是放在别的角色上。\n改好以后点绿旗再测试一次。现在会怎样？",
+        "text": "我看不到你的项目，不过这听起来像一个常见问题： “赢了以后 Hero 还能动。”\n把“停止 [该角色的其他脚本]”放在 Hero 的“当接收到 [You Win]”下面的第一个位置——在“说”积木之前，而且不是放在别的角色上。\n改好以后点绿旗再测试一次。现在会怎样？",
         "lang": "zh",
         "meta": {
           "intent": "hint",
@@ -1891,7 +1893,7 @@
           "missing keyword groups: 隐藏/hide"
         ],
         "stats": {
-          "words": 41,
+          "words": 48,
           "blocksShown": 0,
           "hasQuestion": true,
           "presentedProblems": [
@@ -1972,7 +1974,7 @@
           "noFalseClaims": 2
         },
         "failures": [],
-        "pass": true,
+        "pass": false,
         "notes": [
           "missing keyword groups: 3"
         ],
@@ -2084,7 +2086,7 @@
         "meta": {
           "intent": "hint",
           "hintShown": 0,
-          "problem": 4,
+          "problem": 6,
           "problemScore": 0.38
         }
       },
@@ -2099,7 +2101,7 @@
         },
         "failures": [
           "off-topic",
-          "unfounded-diagnosis"
+          "wrong-diagnosis"
         ],
         "pass": false,
         "notes": [
@@ -2110,7 +2112,7 @@
           "blocksShown": 0,
           "hasQuestion": true,
           "presentedProblems": [
-            4
+            6
           ]
         }
       }
@@ -2131,7 +2133,7 @@
         "meta": {
           "intent": "hint",
           "hintShown": 0,
-          "problem": 4,
+          "problem": 6,
           "problemScore": 0.86
         }
       },
@@ -2152,7 +2154,7 @@
           "blocksShown": 0,
           "hasQuestion": true,
           "presentedProblems": [
-            4
+            6
           ]
         }
       }
@@ -2168,7 +2170,7 @@
         "attempts": 2
       },
       "response": {
-        "text": "I can't see your Scratch project, so I can't check your code for you.\nLet's be bug detectives:\n1. Is the script on the sprite that should do the action? This step's script goes here: Cat sprite → Code tab.\n2. Read the script from top to bottom. Is every block in the right order, and inside the right loop?\n3. Click the script on its own and watch. What does the sprite do?\nHint 2: The fixes use Motion (“change x by”, a negative number for left) and Variables (“set [Score] to (0)” at the top of the green flag script). Looks: “say ( )” is a handy detective block.\nWhich of these did you check first?",
+        "text": "I can't see your Scratch project, so I can't check your code for you.\nLet's be bug detectives:\n1. Is the script on the sprite that should do the action? In this step that is Cat.\n2. Read the script from top to bottom. Is every block in the right order, and inside the right loop?\n3. Click the script on its own and watch. What does the sprite do?\nHint 2: Look at the numbers inside the arrow-key blocks, and at the top of Cat's green flag script: is something missing there? The blocks involved are in Motion and Variables.\nWhich of these did you check first?",
         "lang": "en",
         "meta": {
           "intent": "hint",
@@ -2179,18 +2181,22 @@
       },
       "grade": {
         "scores": {
-          "technical": 2,
+          "technical": 0,
           "clarity": 2,
           "independence": 2,
           "age": 2,
           "honesty": 2,
           "noFalseClaims": 2
         },
-        "failures": [],
-        "pass": true,
-        "notes": [],
+        "failures": [
+          "off-topic"
+        ],
+        "pass": false,
+        "notes": [
+          "missing keyword groups: set [score] to (0)/set/设为"
+        ],
         "stats": {
-          "words": 115,
+          "words": 108,
           "blocksShown": 0,
           "hasQuestion": true,
           "presentedProblems": []
@@ -2208,7 +2214,7 @@
         "attempts": 2
       },
       "response": {
-        "text": "我看不到你的 Scratch 项目，没法替你检查代码。\n我们来当捉虫侦探：\n1. 脚本放在负责这个动作的角色上了吗？这一步的脚本应该在：Hero 角色 → “重复执行”里面。\n2. 从上到下读一遍脚本。每个积木的顺序对吗？是不是放在了正确的循环里面？\n3. 单独点击这段脚本，看看角色会做什么？\n提示 2: “控制”：“如果那么”。“侦测”：“碰到 (鼠标指针)?”——在菜单里选 Lava。“运动”：“移到 x: y:”。\n你先检查哪一条？",
+        "text": "我看不到你的 Scratch 项目，没法替你检查代码。\n我们来当捉虫侦探：\n1. 脚本放在负责这个动作的角色上了吗？这一步是 Hero。\n2. 从上到下读一遍脚本。每个积木的顺序对吗？是不是放在了正确的循环里面？\n3. 单独点击这段脚本，看看角色会做什么？\n提示 2: “控制”：“如果那么”。“侦测”：“碰到 (鼠标指针)?”——在菜单里选 Lava。“运动”：“移到 x: y:”。\n你先检查哪一条？",
         "lang": "zh",
         "meta": {
           "intent": "hint",
@@ -2219,22 +2225,18 @@
       },
       "grade": {
         "scores": {
-          "technical": 0,
+          "technical": 2,
           "clarity": 2,
           "independence": 2,
           "age": 2,
           "honesty": 2,
           "noFalseClaims": 2
         },
-        "failures": [
-          "off-topic"
-        ],
-        "pass": false,
-        "notes": [
-          "missing keyword groups: -200, -130"
-        ],
+        "failures": [],
+        "pass": true,
+        "notes": [],
         "stats": {
-          "words": 77,
+          "words": 71,
           "blocksShown": 0,
           "hasQuestion": true,
           "presentedProblems": []
@@ -2341,7 +2343,7 @@
         "attempts": 2
       },
       "response": {
-        "text": "I can't see your Scratch project, so I can't check your code for you.\nLet's be bug detectives:\n1. Is the script on the sprite that should do the action? This step's script goes here: New sprite named Checkpoint → Code tab.\n2. Read the script from top to bottom. Is every block in the right order, and inside the right loop?\n3. Click the script on its own and watch. What does the sprite do?\nHint 2: Control: “wait”, “wait until”. Sensing: “touching (Hero)?”. Variables: “set”. Motion (at the bottom of the list): the round “x position” and “y position” blocks.\nWhich of these did you check first?",
+        "text": "I can't see your Scratch project, so I can't check your code for you.\nLet's be bug detectives:\n1. Is the script on the sprite that should do the action? In this step that is Checkpoint.\n2. Read the script from top to bottom. Is every block in the right order, and inside the right loop?\n3. Click the script on its own and watch. What does the sprite do?\nHint 2: Control: “wait”, “wait until”. Sensing: “touching (Hero)?”. Variables: “set”. Motion (at the bottom of the list): the round “x position” and “y position” blocks.\nWhich of these did you check first?",
         "lang": "en",
         "meta": {
           "intent": "hint",
@@ -2365,7 +2367,7 @@
           "missing keyword groups: forever/重复执行"
         ],
         "stats": {
-          "words": 108,
+          "words": 103,
           "blocksShown": 0,
           "hasQuestion": true,
           "presentedProblems": []
@@ -2402,7 +2404,7 @@
           "noFalseClaims": 2
         },
         "failures": [],
-        "pass": true,
+        "pass": false,
         "notes": [
           "missing keyword groups: forever/重复执行/once/一次"
         ],
@@ -2511,7 +2513,7 @@
         "attempts": 2
       },
       "response": {
-        "text": "I can't see your Scratch project, so I can't check your code for you.\nLet's be bug detectives:\n1. Is the script on the sprite that should do the action? This step's script goes here: Runner sprite → inside each arrow-key “if”.\n2. Read the script from top to bottom. Is every block in the right order, and inside the right loop?\n3. Click the script on its own and watch. What does the sprite do?\nHint 2: Control: “if then”. Sensing: “touching color ( )?” — set the color with the eyedropper. Motion: “change x by” / “change y by” with the opposite number.\nWhich of these did you check first?",
+        "text": "I can't see your Scratch project, so I can't check your code for you.\nLet's be bug detectives:\n1. Is the script on the sprite that should do the action? In this step that is Runner.\n2. Read the script from top to bottom. Is every block in the right order, and inside the right loop?\n3. Click the script on its own and watch. What does the sprite do?\nHint 2: Control: “if then”. Sensing: “touching color ( )?” — set the color with the eyedropper. Motion: “change x by” / “change y by” with the opposite number.\nWhich of these did you check first?",
         "lang": "en",
         "meta": {
           "intent": "hint",
@@ -2533,7 +2535,7 @@
         "pass": true,
         "notes": [],
         "stats": {
-          "words": 107,
+          "words": 102,
           "blocksShown": 0,
           "hasQuestion": true,
           "presentedProblems": []
@@ -2551,7 +2553,7 @@
         "attempts": 2
       },
       "response": {
-        "text": "我看不到你的 Scratch 项目，没法替你检查代码。\n我们来当捉虫侦探：\n1. 脚本放在负责这个动作的角色上了吗？这一步的脚本应该在：角色列表 → 右键 Star → 复制 → 改名 Rock。\n2. 从上到下读一遍脚本。每个积木的顺序对吗？是不是放在了正确的循环里面？\n3. 单独点击这段脚本，看看角色会做什么？\n提示 2: 不需要新积木。复制，然后修改一个“变量”积木。检查它的菜单是 Lives，数字是 -1。\n你先检查哪一条？",
+        "text": "我看不到你的 Scratch 项目，没法替你检查代码。\n我们来当捉虫侦探：\n1. 脚本放在负责这个动作的角色上了吗？这一步是 Rock。\n2. 从上到下读一遍脚本。每个积木的顺序对吗？是不是放在了正确的循环里面？\n3. 单独点击这段脚本，看看角色会做什么？\n提示 2: 不需要新积木。复制，然后修改一个“变量”积木。检查它的菜单是 Lives，数字是 -1。\n你先检查哪一条？",
         "lang": "zh",
         "meta": {
           "intent": "hint",
@@ -2573,7 +2575,7 @@
         "pass": true,
         "notes": [],
         "stats": {
-          "words": 81,
+          "words": 72,
           "blocksShown": 0,
           "hasQuestion": true,
           "presentedProblems": []
@@ -2591,7 +2593,7 @@
         "attempts": 2
       },
       "response": {
-        "text": "I can't see your Scratch project, so I can't check your code for you.\nLet's be bug detectives:\n1. Is the script on the sprite that should do the action? This step's script goes here: Star sprite → Code tab.\n2. Read the script from top to bottom. Is every block in the right order, and inside the right loop?\n3. Click the script on its own and watch. What does the sprite do?\nHint 2: Operators: “pick random ( ) to ( )”, “< > or < >”, “( ) < ( )”. Motion: the round “y position” block — it goes in the LEFT slot of “( ) < ( )”, and -160 in the right slot. Control: “forever”, “repeat until”, “if then”. Variables: Fall Speed.\nWhich of these did you check first?",
+        "text": "I can't see your Scratch project, so I can't check your code for you.\nLet's be bug detectives:\n1. Is the script on the sprite that should do the action? In this step that is Star.\n2. Read the script from top to bottom. Is every block in the right order, and inside the right loop?\n3. Click the script on its own and watch. What does the sprite do?\nHint 2: Operators: “pick random ( ) to ( )”, “< > or < >”, “( ) < ( )”. Motion: the round “y position” block — it goes in the LEFT slot of “( ) < ( )”, and -160 in the right slot. Control: “forever”, “repeat until”, “if then”. Variables: Fall Speed.\nWhich of these did you check first?",
         "lang": "en",
         "meta": {
           "intent": "hint",
@@ -2613,7 +2615,7 @@
         "pass": true,
         "notes": [],
         "stats": {
-          "words": 115,
+          "words": 112,
           "blocksShown": 0,
           "hasQuestion": true,
           "presentedProblems": []
@@ -2631,7 +2633,7 @@
         "attempts": 2
       },
       "response": {
-        "text": "I can't see your Scratch project, so I can't check your code for you.\nLet's be bug detectives:\n1. Is the script on the sprite that should do the action? This step's script goes here: Player sprite → Code tab.\n2. Read the script from top to bottom. Is every block in the right order, and inside the right loop?\n3. Click the script on its own and watch. What does the sprite do?\nHint 2: Events: “when I receive [ ]”. Control: “repeat until < >”. Operators: “< > or < >”. Sensing: “touching ( )?” and “key ( ) pressed?”.\nWhich of these did you check first?",
+        "text": "I can't see your Scratch project, so I can't check your code for you.\nLet's be bug detectives:\n1. Is the script on the sprite that should do the action? In this step that is Player.\n2. Read the script from top to bottom. Is every block in the right order, and inside the right loop?\n3. Click the script on its own and watch. What does the sprite do?\nHint 2: Events: “when I receive [ ]”. Control: “wait ( ) seconds” and “repeat until < >”. Operators: “< > or < >”. Sensing: “touching ( )?” and “key ( ) pressed?”.\nWhich of these did you check first?",
         "lang": "en",
         "meta": {
           "intent": "hint",
@@ -2715,38 +2717,33 @@
         "attempts": 3
       },
       "response": {
-        "text": "I can't see your project, but this sounds like a common problem: “The Score goes up even when I don't catch anything.”\n“change [Score] by (1)” runs before the catch check. Move it into “if <touching (Cat)?> then” under the repeat until loop.\nChange it, click the green flag, and test again. What happens now?",
+        "text": "I can't see your project, but this sounds like a common problem: “One apple gives 2 points after my fix.”\nYou probably copied “change [Score] by (1)” instead of moving it. Delete the old one so only the one inside “if <touching (Cat)?>” is left.\nChange it, click the green flag, and test again. What happens now?",
         "lang": "en",
         "meta": {
           "intent": "hint",
           "hintShown": 0,
-          "problem": 1,
-          "problemScore": 0.5
+          "problem": 4,
+          "problemScore": 0.62
         }
       },
       "grade": {
         "scores": {
-          "technical": 0,
+          "technical": 2,
           "clarity": 2,
           "independence": 2,
           "age": 2,
           "honesty": 2,
           "noFalseClaims": 2
         },
-        "failures": [
-          "off-topic",
-          "unfounded-diagnosis"
-        ],
-        "pass": false,
-        "notes": [
-          "missing keyword groups: one/once/only/一次/只"
-        ],
+        "failures": [],
+        "pass": true,
+        "notes": [],
         "stats": {
-          "words": 55,
+          "words": 57,
           "blocksShown": 0,
           "hasQuestion": true,
           "presentedProblems": [
-            1
+            4
           ]
         }
       }
@@ -2964,7 +2961,7 @@
         "attempts": 3
       },
       "response": {
-        "text": "I won't give you the whole answer — you can build this! Here is your next hint:\nHint 3: Two scripts on Win Banner:\n▸ when green flag clicked\n▸   hide\n  (— second script —)\n▸ when I receive [You Win]\n▸   go to [front] layer\n▸   show\nThis is the block order for this step only.\nTry it in Scratch. What happened?",
+        "text": "You have already tried the first hints, so here is the block order for this step only:\nHint 3: Two scripts on Win Banner:\n▸ when green flag clicked\n▸   hide\n  (— second script —)\n▸ when I receive [You Win]\n▸   go to [front] layer\n▸   show\nThis is the block order for this step only.\nTry it in Scratch. What happened?",
         "lang": "en",
         "meta": {
           "intent": "asks-for-answer",
@@ -2986,7 +2983,7 @@
         "pass": true,
         "notes": [],
         "stats": {
-          "words": 40,
+          "words": 41,
           "blocksShown": 5,
           "hasQuestion": true,
           "presentedProblems": []
@@ -3004,7 +3001,7 @@
         "attempts": 3
       },
       "response": {
-        "text": "I won't give you the whole answer — you can build this! Here is your next hint:\nHint 3: The 3-lives idea on Hero (add set Lives to the green flag script; change the lava if):\n▸   set [Lives] to (3)\n    (…inside the forever loop:)\n▸     if <touching (Lava)?> then\n▸       go to x: (Checkpoint X) y: (Checkpoint Y)\n▸       change [Lives] by (-1)\n▸       if <(Lives) = (0)> then\n▸         say (Game Over) for (2) seconds\n▸         stop [all]\nThis is the block order for this step only.\nTry it in Scratch. What happened?",
+        "text": "You have already tried the first hints, so here is the block order for this step only:\nHint 3: The 3-lives idea on Hero (add set Lives to the green flag script; change the lava if):\n▸   set [Lives] to (3)\n    (…inside the forever loop:)\n▸     if <touching (Lava)?> then\n▸       go to x: (Checkpoint X) y: (Checkpoint Y)\n▸       change [Lives] by (-1)\n▸       if <(Lives) = (0)> then\n▸         say (Game Over) for (2) seconds\n▸         stop [all]\nThis is the block order for this step only.\nTry it in Scratch. What happened?",
         "lang": "en",
         "meta": {
           "intent": "asks-for-answer",
@@ -3026,7 +3023,7 @@
         "pass": true,
         "notes": [],
         "stats": {
-          "words": 54,
+          "words": 55,
           "blocksShown": 7,
           "hasQuestion": true,
           "presentedProblems": []
@@ -3164,7 +3161,7 @@
         "attempts": 1
       },
       "response": {
-        "text": "I won't give you the whole answer — you can build this! Here is your next hint:\nHint 2: Events: “when I receive [ ]”. Control: “repeat until < >”. Operators: “< > or < >”. Sensing: “touching ( )?” and “key ( ) pressed?”.\nTry it in Scratch. What happened?",
+        "text": "I won't give you the whole answer — you can build this! Here is your next hint:\nHint 2: Events: “when I receive [ ]”. Control: “wait ( ) seconds” and “repeat until < >”. Operators: “< > or < >”. Sensing: “touching ( )?” and “key ( ) pressed?”.\nTry it in Scratch. What happened?",
         "lang": "en",
         "meta": {
           "intent": "asks-for-answer",
@@ -3186,7 +3183,7 @@
         "pass": true,
         "notes": [],
         "stats": {
-          "words": 38,
+          "words": 41,
           "blocksShown": 0,
           "hasQuestion": true,
           "presentedProblems": []
@@ -3204,7 +3201,7 @@
         "attempts": 2
       },
       "response": {
-        "text": "我不会直接给你完整答案——你自己能做出来！这是下一个提示：\n提示 3: Enemy 的脚本（Enemy2：起点 x: (180) y: (-120)，方向 (-165)）：\n▸ 当接收到 [Start]\n▸   移到 x: (-180) y: (120)\n▸   面向 (15) 方向\n▸   重复执行\n▸     移动 (5) 步\n▸     碰到边缘就反弹\n这只是这一步的积木顺序。\n在 Scratch 里试试看。发生了什么？",
+        "text": "你已经试过前面的提示了，这是这一步（只是这一步）的积木顺序：\n提示 3: Enemy 的脚本（Enemy2：起点 x: (180) y: (-120)，方向 (-165)）：\n▸ 当接收到 [Start]\n▸   移到 x: (-180) y: (120)\n▸   面向 (15) 方向\n▸   重复执行\n▸     移动 (5) 步\n▸     碰到边缘就反弹\n这只是这一步的积木顺序。\n在 Scratch 里试试看。发生了什么？",
         "lang": "zh",
         "meta": {
           "intent": "asks-for-answer",
@@ -3284,7 +3281,7 @@
         "attempts": 1
       },
       "response": {
-        "text": "我不会直接给你完整答案——你自己能做出来！这是下一个提示：\n提示 2: 修正要用“运动”（“将x坐标增加”，向左用负数）和“变量”（绿旗脚本顶部的“将 [Score] 设为 (0)”）。“外观”里的“说 ( )”是好用的侦探积木。\n在 Scratch 里试试看。发生了什么？",
+        "text": "我不会直接给你完整答案——你自己能做出来！这是下一个提示：\n提示 2: 看看方向键积木里的数字，再看看 Cat 绿旗脚本的最上面：是不是少了什么？涉及的积木在“运动”和“变量”里。\n在 Scratch 里试试看。发生了什么？",
         "lang": "zh",
         "meta": {
           "intent": "asks-for-answer",
@@ -3306,7 +3303,7 @@
         "pass": true,
         "notes": [],
         "stats": {
-          "words": 45,
+          "words": 42,
           "blocksShown": 0,
           "hasQuestion": true,
           "presentedProblems": []
@@ -3324,7 +3321,7 @@
         "attempts": 1
       },
       "response": {
-        "text": "It's OK to feel stuck. Bugs are normal — every game maker gets them.\nIf you are tired, save your project and take a short break. Then try just one small step.\nHint 1: Where does Hero start? Look at the bottom-left corner of the stage. That is a good start spot.\nWhich part already works?",
+        "text": "It's OK to feel that way. Making games takes practice, and you are practising right now.\nIf you are tired, save your project and take a short break. Then try just one small step.\nHint 1: Where does Hero start? Look at the bottom-left corner of the stage. That is a good start spot.\nWhich part already works?",
         "lang": "en",
         "meta": {
           "intent": "frustrated",
@@ -3346,7 +3343,7 @@
         "pass": true,
         "notes": [],
         "stats": {
-          "words": 55,
+          "words": 58,
           "blocksShown": 0,
           "hasQuestion": true,
           "presentedProblems": []
@@ -3404,7 +3401,7 @@
         "attempts": 1
       },
       "response": {
-        "text": "It's OK to feel stuck. Bugs are normal — every game maker gets them.\nIf you are tired, save your project and take a short break. Then try just one small step.\nHint 1: Hero only checks the sprite named Lava. Where should extra lava go so Hero can feel it?\nWhich part already works?",
+        "text": "It's OK to feel that way. Making games takes practice, and you are practising right now.\nIf you are tired, save your project and take a short break. Then try just one small step.\nHint 1: Hero only checks the sprite named Lava. Where should extra lava go so Hero can feel it?\nWhich part already works?",
         "lang": "en",
         "meta": {
           "intent": "frustrated",
@@ -3426,7 +3423,7 @@
         "pass": true,
         "notes": [],
         "stats": {
-          "words": 54,
+          "words": 57,
           "blocksShown": 0,
           "hasQuestion": true,
           "presentedProblems": []
@@ -3444,7 +3441,7 @@
         "attempts": 5
       },
       "response": {
-        "text": "我看不到你的 Scratch 项目，没法替你检查代码。\n我们来当捉虫侦探：\n1. 脚本放在负责这个动作的角色上了吗？这一步的脚本应该在：新角色 Coin → 代码 标签页。\n2. 从上到下读一遍脚本。每个积木的顺序对吗？是不是放在了正确的循环里面？\n3. 单独点击这段脚本，看看角色会做什么？\n提示 3: 把这段放在 Coin 上。小技巧：先把 Coin 拖到想要的位置，这时“运动”列表里的“移到 x: y:”积木会自动显示它的坐标。\n▸ 当 绿旗 被点击\n▸   显示\n▸   移到 x: (0) y: (0)\n      (换成你的金币自己的坐标)\n▸   等待 (0.2) 秒\n▸   等待 <碰到 (Hero)?>\n▸   将 [Score] 增加 (1)\n▸   隐藏\n这只是这一步的积木顺序。\n你先检查哪一条？",
+        "text": "我看不到你的 Scratch 项目，没法替你检查代码。\n我们来当捉虫侦探：\n1. 脚本放在负责这个动作的角色上了吗？这一步是 Coin。\n2. 从上到下读一遍脚本。每个积木的顺序对吗？是不是放在了正确的循环里面？\n3. 单独点击这段脚本，看看角色会做什么？\n提示 3: 把这段放在 Coin 上。小技巧：先把 Coin 拖到想要的位置，这时“运动”列表里的“移到 x: y:”积木会自动显示它的坐标。\n▸ 当 绿旗 被点击\n▸   显示\n▸   移到 x: (0) y: (0)\n      (换成你的金币自己的坐标)\n▸   等待 (0.2) 秒\n▸   等待 <碰到 (Hero)?>\n▸   将 [Score] 增加 (1)\n▸   隐藏\n这只是这一步的积木顺序。\n你先检查哪一条？",
         "lang": "zh",
         "meta": {
           "intent": "hint",
@@ -3466,7 +3463,7 @@
         "pass": true,
         "notes": [],
         "stats": {
-          "words": 97,
+          "words": 91,
           "blocksShown": 7,
           "hasQuestion": true,
           "presentedProblems": []
@@ -3564,7 +3561,7 @@
         "attempts": 1
       },
       "response": {
-        "text": "It's OK to feel stuck. Bugs are normal — every game maker gets them.\nIf you are tired, save your project and take a short break. Then try just one small step.\nHint 1: Anything that can change during the game must be reset when the game starts. Does a costume count?\nWhich part already works?",
+        "text": "It's OK to feel that way. Making games takes practice, and you are practising right now.\nIf you are tired, save your project and take a short break. Then try just one small step.\nHint 1: Anything that can change during the game must be reset when the game starts. Does a costume count?\nWhich part already works?",
         "lang": "en",
         "meta": {
           "intent": "frustrated",
@@ -3586,7 +3583,7 @@
         "pass": true,
         "notes": [],
         "stats": {
-          "words": 55,
+          "words": 58,
           "blocksShown": 0,
           "hasQuestion": true,
           "presentedProblems": []
@@ -3604,7 +3601,7 @@
         "attempts": 4
       },
       "response": {
-        "text": "It's OK to feel stuck. Bugs are normal — every game maker gets them.\nIf you are tired, save your project and take a short break. Then try just one small step.\nHint 3: Test list — check each one:\n1. Green flag: Hero at the start, Score 0, all coins visible, banner hidden.\n2. Lava before the checkpoint → back to the start.\n3. Checkpoint, then lava → back to the checkpoint.\n4. Each coin adds 1 point only once.\n5. Goal → YOU WIN! once, and Hero stops.\n6. Green flag again → everything resets.\nWhich part already works?",
+        "text": "It's OK to feel that way. Making games takes practice, and you are practising right now.\nIf you are tired, save your project and take a short break. Then try just one small step.\nHint 3: Test list — check each one:\n1. Green flag: Hero at the start, Score 0, all coins visible, banner hidden.\n2. Lava before the checkpoint → back to the start.\n3. Checkpoint, then lava → back to the checkpoint.\n4. Each coin adds 1 point only once.\n5. Goal → YOU WIN! once, and Hero stops.\n6. Green flag again → everything resets.\nWhich part already works?",
         "lang": "en",
         "meta": {
           "intent": "frustrated",
@@ -3615,7 +3612,7 @@
       },
       "grade": {
         "scores": {
-          "technical": 2,
+          "technical": 0,
           "clarity": 2,
           "independence": 2,
           "age": 2,
@@ -3623,10 +3620,12 @@
           "noFalseClaims": 2
         },
         "failures": [],
-        "pass": true,
-        "notes": [],
+        "pass": false,
+        "notes": [
+          "missing keyword groups: one bug/one at a time/一次只/一个 bug"
+        ],
         "stats": {
-          "words": 95,
+          "words": 98,
           "blocksShown": 0,
           "hasQuestion": true,
           "presentedProblems": []
@@ -3644,7 +3643,7 @@
         "attempts": 6
       },
       "response": {
-        "text": "卡住的时候有点难受，这很正常。每个游戏设计师都会遇到 bug。\n如果累了，先保存项目、休息一下，再只试一个小步骤。\n提示 3: → 键部分变成这样，然后把这个办法用到另外 3 个方向：\n▸     如果 <按下 (→) 键?> 那么\n▸       将x坐标增加 (3)\n▸       如果 <碰到颜色 (墙的颜色)?> 那么\n▸         将x坐标增加 (-3)\n      (←、↑、↓：先移动，再用相反的数字退回)\n这只是这一步的积木顺序。\n哪一部分已经能用了？",
+        "text": "有这种感觉很正常。做游戏需要练习，你现在就在练习。\n如果累了，先保存项目、休息一下，再只试一个小步骤。\n提示 3: → 键部分变成这样，然后把这个办法用到另外 3 个方向：\n▸     如果 <按下 (→) 键?> 那么\n▸       将x坐标增加 (3)\n▸       如果 <碰到颜色 (墙的颜色)?> 那么\n▸         将x坐标增加 (-3)\n      (←、↑、↓：先移动，再用相反的数字退回)\n这只是这一步的积木顺序。\n哪一部分已经能用了？",
         "lang": "zh",
         "meta": {
           "intent": "frustrated",
@@ -3666,7 +3665,7 @@
         "pass": true,
         "notes": [],
         "stats": {
-          "words": 53,
+          "words": 51,
           "blocksShown": 4,
           "hasQuestion": true,
           "presentedProblems": []
@@ -3728,7 +3727,7 @@
         "attempts": 2
       },
       "response": {
-        "text": "卡住的时候有点难受，这很正常。每个游戏设计师都会遇到 bug。\n如果累了，先保存项目、休息一下，再只试一个小步骤。\n提示 1: 倒计时每秒减 1。倒计时开始之前要做什么？到 0 的时候又要做什么？\n哪一部分已经能用了？",
+        "text": "有这种感觉很正常。做游戏需要练习，你现在就在练习。\n如果累了，先保存项目、休息一下，再只试一个小步骤。\n提示 1: 倒计时每秒减 1。倒计时开始之前要做什么？到 0 的时候又要做什么？\n哪一部分已经能用了？",
         "lang": "zh",
         "meta": {
           "intent": "frustrated",
@@ -3750,7 +3749,7 @@
         "pass": true,
         "notes": [],
         "stats": {
-          "words": 45,
+          "words": 43,
           "blocksShown": 0,
           "hasQuestion": true,
           "presentedProblems": []
@@ -3768,7 +3767,7 @@
         "attempts": 1
       },
       "response": {
-        "text": "It's OK to feel stuck. Bugs are normal — every game maker gets them.\nIf you are tired, save your project and take a short break. Then try just one small step.\nHint 1: This step is different: you copy scripts that are wrong on purpose. Why do you think detectives practise on a puzzle with known clues?\nWhich part already works?",
+        "text": "It's OK to feel that way. Making games takes practice, and you are practising right now.\nIf you are tired, save your project and take a short break. Then try just one small step.\nHint 1: This step is different: you copy scripts that are wrong on purpose. Why do you think detectives practise on a puzzle where the clues are hidden on purpose?\nWhich part already works?",
         "lang": "en",
         "meta": {
           "intent": "frustrated",
@@ -3790,7 +3789,7 @@
         "pass": true,
         "notes": [],
         "stats": {
-          "words": 61,
+          "words": 68,
           "blocksShown": 0,
           "hasQuestion": true,
           "presentedProblems": []
@@ -3808,7 +3807,7 @@
         "attempts": 4
       },
       "response": {
-        "text": "卡住的时候有点难受，这很正常。每个游戏设计师都会遇到 bug。\n如果累了，先保存项目、休息一下，再只试一个小步骤。\n提示 2: “控制”：“如果 < > 那么”。“侦测”：“碰到 (Cat)?”。移动现有的“变量”积木就行，不需要新的。\n哪一部分已经能用了？",
+        "text": "卡住的时候有点难受，这很正常。每个游戏设计师都会遇到 bug。\n如果累了，先保存项目、休息一下，再只试一个小步骤。\n提示 2: “控制”：“如果 < > 那么”。“侦测”：“碰到 (Cat)?”。移动现有的“变量”积木（拖过去，不要复制）——不需要新的。\n哪一部分已经能用了？",
         "lang": "zh",
         "meta": {
           "intent": "frustrated",
@@ -3830,7 +3829,7 @@
         "pass": true,
         "notes": [],
         "stats": {
-          "words": 44,
+          "words": 47,
           "blocksShown": 0,
           "hasQuestion": true,
           "presentedProblems": []
@@ -4699,7 +4698,7 @@
       },
       "grade": {
         "scores": {
-          "technical": 2,
+          "technical": 0,
           "clarity": 2,
           "independence": 2,
           "age": 2,
@@ -4707,8 +4706,10 @@
           "noFalseClaims": 2
         },
         "failures": [],
-        "pass": true,
-        "notes": [],
+        "pass": false,
+        "notes": [
+          "missing keyword groups: 从电脑中上传/load from your computer/打开/上传"
+        ],
         "stats": {
           "words": 36,
           "blocksShown": 0,
@@ -4848,7 +4849,7 @@
         "attempts": 2
       },
       "response": {
-        "text": "I can't see your Scratch project, so I can't check your code for you.\nClick the green flag and test what you built in this step (“Player moves until caught”). Does it do what the step says?\nWhich part already works?",
+        "text": "I can't see your Scratch project, so I can't check your code for you.\nYou can test it yourself — click the green flag and check:\n• After the green flag, Time Left goes 20, 19, 18 … one step each second.\n• Player and both Enemies start moving at the same moment (when Start is broadcast).\nWhich part already works?",
         "lang": "en",
         "meta": {
           "intent": "asks-if-correct",
@@ -4870,7 +4871,7 @@
         "pass": true,
         "notes": [],
         "stats": {
-          "words": 41,
+          "words": 57,
           "blocksShown": 0,
           "hasQuestion": true,
           "presentedProblems": []
