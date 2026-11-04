@@ -1,0 +1,12 @@
+{
+  "name": "scratch-coach",
+  "version": "1.0.0",
+  "description": "Scratch 小教练 · 积木大冒险：放在 Scratch 编辑器旁边使用的离线教学助手",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "test": "node --test tests/content.test.js tests/storage.test.js",
+    "test:browser": "node --test tests/browser.test.js",
+    "test:all": "node --test tests/"
+  }
+}
